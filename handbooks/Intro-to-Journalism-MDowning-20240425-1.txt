@@ -1,0 +1,3386 @@
+Intro To Journalism
+Handbook
+An Open Educational Resource for
+Journalism Students
+
+Michael Downing, Ph.D.
+
+A Member of The Pennsylvania Alliance for Design of Open Textbooks
+
+i
+
+This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License (CC
+BY-NC 4.0) as a part of PA-ADOPT, except where otherwise noted. Fifth Edition, 2024.
+Cover Image: “Man and Woman Having a Conversation” by Artem Podrez is available from Pexels.
+The contents of this eTextbook were developed under a grant from the Fund for the Improvement of
+Postsecondary Education, (FIPSE), U.S. Department of Education. However, those contents do not
+necessarily represent the policy of the Department of Education, and you should not assume endorsement
+by the Federal Government.
+The Verdana (© 2006 Microsoft Corporation), Courier New (© 2006 The Monotype Corporation), and Times
+New Roman (© 2006 The Monotype Corporation) fonts have been used throughout this book, which is
+permitted by their licenses:
+License: You may use this font as permitted by the EULA for the product in which this font is
+included to display and print content. You may only (i) embed this font in content as permitted by
+the embedding restrictions included in this font; and (ii) temporarily download this font to a printer
+or other output device to help print content.
+Embedding: Editable embedding. This font may be embedded in documents and temporarily
+loaded on the remote system. Documents containing this font may be editable (Apple Inc. (2021).
+Font Book (Version 10.0 (404)) [App].).
+
+ii
+
+ABOUT PA-ADOPT
+The Pennsylvania Alliance for Design of Open Textbooks (PA-ADOPT) is made up
+of four participating institutions from Pennsylvania State System of Higher
+Education (PASSHE) that are all regional and primarily undergraduate
+institutions, situated in Southeastern Pennsylvania. The PA-ADOPT project
+addresses gaps in the open eTextbook marketplace, improve student learning,
+and mitigate rising student costs. PA-ADOPT was made possible by the US
+Department of Education Open Textbook Pilot Program.
+
+ABOUT OER
+Open Educational Resources (OER) are instructional, learning and research
+materials, digital or non, that open-source and in the public domain or that are
+licensed so that users have free and perpetual permission to engage in the
+following activities:
+• Retain: the right to make, own, and control copies of the content
+• Reuse: the right to use the content in a wide range of ways
+• Revise: the right to adapt, adjust, modify, or alter the content itself
+• Remix: the right to combine the original or revised content with other open
+content to create something new
+• Redistribute: the right to share copies of the original content, revisions, and
+remixes with others.
+
+iii
+
+ABOUT THE AUTHOR
+Michael Downing has worked as a professional
+technical writer and journalist for many years
+and has taught literature and writing courses
+at the college level for decades. Currently, he
+is part of the Professional Writing Program at
+Kutztown University of Pennsylvania. In
+addition to completing this OER book project,
+he is also working on a collection of poetry, as
+well as a series of UK travel writings posted to
+his blog.
+Michael Downing, Ph.D.
+Professor of English and Professional Writing
+Adviser to The Keystone Newspaper Student
+Publishing Group
+Kutztown University of Pennsylvania
+
+Michael Downing
+
+iv
+
+TABLE OF CONTENTS
+About PA-ADOPT
+About OER
+About the Author
+Table of Contents
+Part One: Introduction
+Purpose
+Strategy
+Open Source/OER
+Brief Note to Students
+Part Two: Key Concepts in Journalism
+The First Amendment
+Five Ws and the H
+Inverted Pyramid
+Headlines, Subheads, and Leads: A Writing Formula
+Leads
+Storytelling
+Libel
+Part Three: Format and Style
+Format
+Headline, Subhead, Section. Date, Word Count, Byline
+AP Style
+Numbers
+Abbreviations
+Punctuation
+In-House Style
+Datelines
+Center the “Thirty” Mark (-30-)
+Hit the Space Bar Once
+Track Changes and Peer Review
+Word Processing Software
+Naming Files
+Style, Consistency, Branding
+Part Four: Obits, Hard News, Press Releases, Sports, Opinions
+Obituaries
+Covering Hard News
+Handling Press Releases
+Covering Sports
+Writing an Opinion/Editorial Piece
+
+ii
+ii
+iii
+iv
+1
+1
+1
+1
+2
+3
+3
+4
+5
+7
+9
+10
+11
+12
+12
+12
+13
+13
+14
+14
+14
+15
+15
+16
+16
+16
+17
+17
+20
+20
+21
+23
+26
+29
+
+v
+
+Part Five: Checklists for Covering Various Stories
+Speeches Checklist
+Spot News Checklist
+Meetings Checklist
+Investigative Checklist
+Features Checklist
+Part Six: The Impact of Social Media on Journalism
+Speed
+Research
+Engagement
+Challenges
+Algorithms
+The Future
+Understand the Social Media Expectations & Policies of your Organization
+Part Seven: Artificial Intelligence and Journalism
+Blog Excerpt One: My Writing Background as it Relates to AI
+Blog Excerpt Two: Playing in the Chat GPT Sandbox
+Blog Excerpt Three: Assistance to Writers is not a New Thing
+Blog Excerpt Four: Silicon Becoming Sentient
+Blog Excerpt Five: Emptiness (updated here January 18, 2024)
+Part Eight: Journalistic Code of Ethics
+Common Conflicts of Interest
+Not-So-Obvious Conflicts
+Part Nine: Careers
+News Reporting and Writing
+Broadcast Journalism
+Investigative Journalism
+Digital Journalism
+Photojournalism
+Editorial and Content Writing
+Public Relations and Communications
+Corporate and Brand Journalism
+Media Production and Broadcasting
+Teaching and Education
+Part Ten: BLS: New Analysts, Reporters, Journalists
+Part Eleven: Exercises, Self Tests, and Useful Tools
+Headline, Subhead, and Lead Writing Exercises: News Articles
+Lead Writing Exercises: Features
+The Use of Quotes
+Punctuation Notes
+
+33
+33
+34
+35
+37
+38
+39
+39
+39
+40
+40
+40
+41
+41
+42
+42
+42
+43
+43
+43
+45
+45
+45
+48
+48
+48
+48
+48
+48
+49
+49
+49
+49
+49
+50
+51
+51
+53
+54
+55
+
+vi
+
+Words Commonly Confused
+Vocabulary Words High School Seniors Should Know
+General Spelling Words
+Spelling Quiz
+Editing Exercises
+Comma Worksheet
+Part Twelve: Resources
+Resources Related to Strategies for Moving into a Career in Journalism
+General Information on Journalism
+Online Resources
+Part Thirteen: Appendix
+“The Inverted Pyramid in Comprehensive Form” by Christopher Schwartz
+
+56
+60
+62
+64
+67
+70
+75
+75
+76
+78
+79
+79
+
+1
+
+PART ONE: INTRODUCTION
+Purpose
+This book is intended as an open educational resource for beginning journalism
+students. It contains information on such topics as the First Amendment, 5 Ws
+(and H), inverted pyramid, headlines and subheads, AP and in-house style,
+writing and editing exercises, and guidance on strategies for covering various
+stories and/or events.
+I have provided this book to my classes for more than ten years at low cost (via
+Lulu in print) or no cost (as downloadable PDF) and it has proven effective in
+terms of providing initial background to the field of journalism, as well as support
+exercises for student writers.
+
+Strategy
+This book essentially replicates the structure of my journalism classes, which are,
+to be clear, writing-intensive classes. As such, it will not include detailed
+discussions of the history of journalism or a sustained consideration of First
+Amendment cases (areas unto themselves). Instead, this textbook is intended to
+help student writers begin working on reasonably serious, campus-level
+journalism assignments as quickly as possible. The shared goal is to submit
+stories, photos, and occasionally video to our student newspaper, The Keystone
+at Kutztown University of Pennsylvania. I am the advisor, so I have the
+opportunity to oversee dozens of projects as they move from classroom to
+newspaper editors to bylined publication.
+It is important to note that I teach all my classes in a computer lab. I have so
+much tech background that the lab helps me to teach document management
+strategies (which my students have told me for years has helped them in all their
+other classes). File names, directories, shared folders, differences between
+Google Docs and Word…that sort of thing. If I were not in a writing lab, I would
+fill this space with reading and discussion.
+
+Open Source/OER
+I've been a supporter of the open-source software movement since at least
+1998, when I began writing for technology publications in the areas of computer
+storage, fiber optics, connectivity, chip development and, of course, software. I
+interviewed Linus Torvalds (inventor of the Linux kernel and open-source
+evangelist) in Las Vegas some 25 years ago and have been a supporter of opensource initiatives ever since. I contribute to Wikipedia annually and teach my
+students how to draw from and contribute to Wikimedia Commons. I have also
+
+2
+
+taught writing for more than 30 years. Therefore, when the opportunity revealed
+itself to me to write an OER book, I jumped at the chance.
+
+Brief Note to Students
+This handbook is about output:
+Preparing to write, talking to people, writing, revising, and editing.
+But what about the input?
+
+Two Points:
+1. To write about the world of humans, you must speak with humans.
+You would agree: Writing stories—stories about the world—from the confines of
+your own head is no way to write about the world. Even if your job is to write
+about/react to social media, you should be having conversations with people, in
+person (Zoom counts), that relate to the topics you are writing about. Focused
+expertise goes a long way, plus it gives you a credible source for your story.
+Talking to people is the best method of putting information into your head.
+2. Read and read and read.
+Writing journalism articles is like painting a room, most of the hard work goes
+into the preparation. Read everything about your topics. Become a lover of
+quotes and primary documents. Talk to people. Then paint the story. As you
+read, the information will coalesce and that is why I will read your articles online
+someday…because they have perspective and are interesting. Reading makes this
+happen.
+I do not want this introduction to go on too long so let me say, for the record,
+that I am absolutely delighted to participate in creating an open educational
+resource for journalism students around the world. I hope much is gained by
+many.
+Sincerely,
+Michael Downing, Ph. D.
+Kutztown, Pa.
+December 2023
+
+3
+
+PART TWO: KEY CONCEPTS IN JOURNALISM
+The First Amendment
+The field of journalism is based on The First Amendment of the U.S. Constitution:
+“Congress shall make no law respecting an establishment of religion, or
+prohibiting the free exercise thereof; or abridging the freedom of
+speech, or of the press; or the right of the people peaceably to
+assemble, and to petition the Government for a redress of grievances.”
+Notice that the language covers not only free speech and, specifically, freedom of
+the press, but also covers freedom of religion, the right to peaceable assemble,
+and the right of people to petition the government. The founders wanted to be
+sure that citizens had the right to voice their opinions.
+I am not going to go deep here, because the impact of the First Amendment on
+the field of journalism—including various court cases where the limits of free
+speech were tested and defined—is a study in and of itself and I would definitely
+suggest pursuing it. However, as this book is aimed at writing, I will turn toward
+the Five Ws and H.
+
+Figure 1: The First Amendment to the U.S. Constitution in Philadelphia.
+“First Amendment to the U.S. Constitution” by Zakarie Faibis is licensed
+under CC BY-SA 4.0.
+
+4
+
+Five Ws and the H
+The starting point for most news stories is the Five Ws and H: who, what, when,
+where, why, and how. Occasionally on campus, I will see a flyer on one of our
+many poster boards and when read it, I see that it has missing information. They
+forgot the “where” or “what time.” Should have followed the Five Ws and H.
+Answer those questions, one for each paragraph (for now) and the paragraphs
+should begin to form. Be sure to use attribution throughout. You, as writer, are
+not making these statements of bringing these charges, so attribute each
+accordingly.
+I encourage using labels, initially:
+Who:
+The treasurer of Springfield (made up place). Nail down all specifics. Name,
+including middle name(s), official title, years in office, graduate of which college
+(or not), positions previously held.
+What:
+Allegedly used public funds improperly. Work from the official statements of
+police and/or investigators. Quote and paraphrase those statements. Do not offer
+your own interpretation unless writing an opinion piece.
+When:
+2016-2019
+Where:
+Springfield (made up)
+Why:
+According to police investigator Edgar Smithson (made up), the money was used
+to fund vacations and purchase personal items, including….
+How:
+Over many years. Diverting money to a private account. Not maintaining
+accurate records. All according to a police report and the statements of an
+investigator. District attorney statements can also come into view as the case
+progresses.
+Attribution:
+
+5
+
+1. Police are going to tell you that an arrest has been made and can identify
+the charges.
+2. Investigators (either police investigators or in this case, forensic
+accountants) can also make official statements.
+3. District attorneys typically take it from there and can provide information
+on court dates, additional charges, witnesses, and the like.
+4. Defense attorneys will speak on behalf of their clients. In most cases,
+they will deny any wrongdoing, but sometimes they will talk about
+seeking a plea deal.
+Use the information at hand to develop each of those sections and if you see
+gaps, ask questions. Keep asking questions until ALL QUESTIONS ARE
+ANSWERED. When I was coming through the ranks, I was regularly impressed by
+writers who were senior to me and their ability to ask question after question
+until they understood as many aspects of the story as possible. I worked hard to
+develop that skill.
+The next step is to arrange those paragraphs according to the Inverted Pyramid,
+which is discussed below.
+
+Inverted Pyramid
+The Inverted Pyramid assumes that the most important information in a news
+story should come at the beginning and that the importance of the information
+decreases as the story progresses. This is different from, let us say, a short story,
+where the action builds until it reaches crescendo and then dissolves, in time.
+The example I provide for my classes goes like this (names are made up):
+Short story style:
+Title: An Unexpected Accident
+Cliff Yelnats woke up in his apartment in Kutztown and had coffee and a
+doughnut. He then got dressed and walked down the stairs because he had
+errands to run. He crossed White Oak safely but then when he tried to cross Main
+Street, he was hit by a car. The police arrived as well as an ambulance, which
+took Yelnats to Reading Hospital where is listed in stable condition. According to
+police, the driver of the car, Cheryl Enidisinoc, was ticketed and charged with
+reckless driving, failure to observe traffic regulations, and failure to yield to a
+pedestrian in a crosswalk.
+Journalism style:
+
+6
+
+Headline: Local man his by car on Main Street
+Subhead: Listed in Stable Condition at Reading Hospital
+Lead: Cliff Yelnats of 511 W. Walnut St. in Kutztown, Pa. was hit by a car
+yesterday afternoon while attempting to cross Main Street. According to police,
+he was taken by ambulance to Reading Hospital where he is listed in stable
+condition.
+Police said the drive of the car, Cheryl Enidisinoc, 111 Tether Street, Springfield,
+Pa., was ticketed and charged with reckless driving, failure to observe traffic
+regulations, and failure to yield to a pedestrian in a crosswalk.
+The key difference is seeing how journalistic stories “spill the bean” right off the
+bat.
+Today’s readers depend on the Inverted Pyramid to deliver their news in a certain
+way. The agreement is simple: They should be able to understand the key points
+of any story by reading the headline, subhead, and lead. If they are interested in
+obtaining more details, they can read further. Otherwise, they can stop reading
+and move on to another story. This is called “scanning the headlines.”
+
+Figure 2: The Inverted Pyramid assumes that the most important
+information comes at the beginning of a story, with the information
+decreasing in importance as the story progresses.”The Inverted Pyramid in
+Comprehensive Form” by Christopher Schwartz is licensed under Creative
+Commons Attribution-ShareAlike CC BY-SA 3.0.(Accessible Version)
+
+7
+
+In addition to delivering the news efficiently to busy readers, the inverted
+pyramid stems from the old days when a story literally had to be “cut” (with
+scissors) from the bottom in order to allow that story to fit on the page of a
+printed newspaper. Today’s internet offers no such space restrictions, but the
+inverted pyramid remains a cornerstone to journalistic-style writing.
+Student Writing Alert: Once they learn about the 5Ws and the H and the
+inverted pyramid, students often fall into the trap of writing dull headlines,
+subheads, and leads (discussion below). The secret is to read dozens of news
+articles online and see how the authors do it. The art is to blend factual
+information with imagery, interest and a good hook.
+
+Headlines, Subheads, and Leads: a Writing Formula
+Memorize this formula: Headline + subhead = lead.
+Headlines and subheads come at the beginning of news stories. Please note that
+they are not titles, like you may have learned to write for academic papers in
+high school. As such, headlines must contain verbs, in boldface, below.
+
+Examples
+Title: Guns in America
+Headline: American President Vetoes
+Gun Legislation
+Title: The Bible
+Headline: Scholars Find Missing
+Chapter from The Bible
+Headline and subhead combinations
+are not easy to write and often have to
+be rewritten several times. Be sure to
+allow enough time to develop a good
+headline and subhead. Ask others to
+read your headlines and subheads for
+clarity.
+
+Figure 3:”Walther Creed” by Bruxton is licensed
+under Creative Commons Attribution-ShareAlike CC
+BY-SA 4.0.
+
+Rules for Headlines and Subheads
+Headlines should communicate the most important part of the story:
+Local Man Hit by Car on Main Street
+Subheads should amplify and extend headlines without repetition:
+
+8
+
+Yes: Listed in Stable Condition at Reading Hospital
+No: Man Hit by Car on Main Street was taken to Reading Hospital (do not repeat
+any of the headline)
+Let us identify verbs from actual headlines:
+• Scientists Fault U.S. Response in Assessing Gulf Oil Spill
+• Florida Worries About Oil Effect on Tourism
+• Voter Insurrection Turns Mainstream, Creating New Rules
+
+Let us look at a headline + subhead combination. Remember that subheads
+follow headlines and must, themselves, contain verbs:
+Example #1
+Headline: Emmaus police officer suspended
+Subhead: Chief says Nathan Bordner was in alcohol-related incident in North
+Catasauqua
+Notice how the subhead provides additional, specific detail. The subhead
+identifies the actual name of the “police officer” mentioned in the headline. The
+subhead also provides attribution—who is providing this information. The
+subhead also provides a crucial detail: the fact that the incident was “alcoholrelated.” This is the correct way to write heads and subs.
+Here is an example of an ineffective headline/subhead:
+Headline: Emmaus police officer suspended
+Subhead: Emmaus police chief says Nathan Bordner will be suspended for
+incident
+The subhead repeats three of the four words. Not good. Beyond that, the
+subhead does little to extend the information provided in the headline (other
+than identifying the name of the officer). This is the wrong way to do it.
+Example #2
+Headline: Hang up the cell phone
+Subhead: Bethlehem is 6th city in state to ban motorists from using devices that
+aren't hands-free
+This is good. Note how the subhead functions. It does not repeat any of the
+information from the headline verbatim. Instead, it amplifies, extends, and
+clarifies the information provided in the headline.
+When writing as a journalist, think about limitations, particularly limitations on
+time and on people’s attention spans. This will force you to recognize the
+
+9
+
+importance of making the most of every word, every phrase, and every headline.
+All of it should be right and tight. All of it should be clear and concise—not
+cluttered, repetitive, and confusing.
+
+Leads
+The lead is the first paragraph of a news story. Sometimes called a lede, this
+paragraph typically connects the content to the audience and attempts to answer
+as many of the 5Ws and H as possible/reasonable.
+Start with the formula: headline + subhead = lead. Let us see how it works with
+the following example.
+Headline: Emmaus police officer suspended
+Subhead: Chief says Nathan Bordner was in alcohol-related incident in North
+Catasauqua
+Lead: An Emmaus police officer has been suspended because of an ''alcoholrelated incident'' in North Catasauqua last weekend, Emmaus police Chief David
+Faust confirmed.
+Instructor Note: This is the place where students struggle so it is useful to
+bring in exercises from the internet. Find a news story with a headline,
+subhead, and lead, and then remove one of the elements to see how they
+might develop the missing element.
+The beautiful part of the formula is that it can be deconstructed. In other
+words, some students are pretty good at writing leads but cannot write heads
+and subs. Have them deconstruct their lead. Some students can write a decent
+headline but cannot write the lead. Have them reach into their stories and bring
+up the most important information to the top.
+It takes time and effort but the good news is—in my experience—once students
+have the headline, subhead, and lead in place, they are pretty good at
+arranging the remaining pieces.
+Student Note: At this point, it is time to ask someone to read your work. It
+does not need to be a professor or an expert. Just ask a friend or a family
+member. Journalism should essentially be written for smart high schoolers, so
+most people can tell you whether your story makes sense or not, whether it is
+missing information, attribution, or a direct quote, or whether the information
+needs to be re-arranged.
+
+10
+
+Storytelling
+Now it is time to move beyond the formulas (5Ws, Inverted P, Head+Sub=Lead)
+and get to the aesthetics of newswriting. Learning how to write a story based on
+factual information is an art unto itself and can be learned by reading the work of
+other writers. Much of the art is tied to providing context, which is often a
+struggle for beginning writers because they have not been alive that long.
+My message for students, therefore, is ask everyone along the line for context.
+Ask the people you interview, ask your professors, ask a well-read family
+member:
+What is the context here? What might I be missing? Is there history I need to
+know about?
+In the above example where the man is hit by a car: Perhaps others have been
+hit at that intersection recently. Perhaps there is a problem with the traffic signal.
+Perhaps the driver was distracted--perhaps looking at her cell phone—which
+seems to be an increasing problem. Context.
+Student Note: For a quick lesson in writing a story from a contextual point of
+view, read just about any sports article. The articles will not simply report a
+score and statistics, with no context. Sports writing is all about context:
+The Celtics added to their 16-game home unbeaten streak yesterday, defeating
+the 76ers by a score of 101-87 at TD Garden.
+From there, it identifies the key players, coaches, and game moments.
+Now that we have established that context is important, what is the next step in
+telling a story? My strategy is to work toward developing a clear perspective and
+starting point.
+Developing a clear perspective enables the reader to connect with your story.
+Even if you are drafting a longer story from a convicted criminal’s perspective,
+readers can connect, watch the woeful patterns emerge, and understand how
+this person did what they did. Think about perspective when you read news
+stories online.
+Combined with a clear perspective, a clear starting point hooks readers and
+provides enough information to keep them reading without loading too much
+information into the lead or withholding too much until the end.
+Mastering the art of storytelling in journalism may sound difficult because it is.
+The good news is that there are examples all around us. Study the writing of
+working journalists and, in time, the skills will come.
+
+11
+
+Libel
+Libel is a written statement that is false and holds a person up to ridicule, hatred,
+or scorn, or damages a person’s reputation, through fault.
+Truth is the best defense against libel. However, truth alone is not enough. If
+fault can be proven, a reporter can still be held liable.
+In the case of libel, “fault” has been typically defined by the courts as either
+reckless disregard for the truth or malice aforethought.
+Definition: Libel is a written statement that is false and holds a
+person up to ridicule, hatred, or scorn, or damages a person’s
+reputation, through fault.
+Reckless disregard for the truth can involve not getting the other side of the
+story or willingly (and conveniently) ignoring critical information to create a
+scenario that damages a person’s standing.
+Malice aforethought involves situations where it can be proven that the reporter
+wrote the story with the express intention of damaging the reputation of the
+party in question. This is difficult to prove and
+typically requires corroborating evidence and
+additional witnesses.
+The second defense against libel is the public
+person’s defense. Under the Constitutional right to
+freedom of speech, the courts have upheld the right
+of the press to fair comment and criticism. The
+precedent has been that, if you are a public figure,
+you are more subject to the public opinions of
+people. That is why Americans can say just about
+anything they like about the President of the United
+States (whomever that might be). The same is true
+for celebrities because the courts would say that
+these people “actively sought the spotlight” and may
+face public commentary related to those actions.
+
+Figure 4:”Justice scale silhouette”
+by HTGS is licensed under Creative
+Common Attribution-ShareAlike CC
+BY-SA 4.0.
+
+In contrast, private persons are better protected. If
+you do not seek the spotlight and suddenly find yourself subject to false ridicule
+in the press, you will have more options under libel law. Of course, you must
+then demonstrate that the things they are saying are false and potentially done
+with malice.
+
+12
+
+PART THREE: FORMAT AND STYLE
+Format
+Format is a quick way of providing structure to students and goes a long way
+toward helping them understand how to put together a journalism writing
+assignment. Therefore, after discussing the key concepts, we turn toward writing
+assignments with discussion of format, style, and consistency, along with naming
+and saving documents.
+Let us begin with header information.
+
+Headline, Subhead, Section. Date, Word Count,
+Byline
+The information below should be at the top left of the page. A professional writer
+would likely copy and paste that information into the header of all their active
+articles so as to replicate it and avoid mistakes/omissions. Work smarter, not
+harder.
+Headline:
+Subhead:
+Section:
+Date:
+Words:
+By
+In the past, the practice was to not place such information into the header,
+keeping it only on page one; however, I now believe the best practice is to copy
+and paste the information into the actual header so that the information appears
+on every page of the document instead of just the first. Once upon a time in a
+paper-based world, limiting data on a page was an ongoing consideration
+because print costs have always been high. But digital pages are cheap,
+relatively speaking. As a result, headlines and subheads have increased their
+wordcount. File name length has also increased along with most everything else
+sitting on a server. So go ahead and paste it into the header so it appears on
+every page unless told otherwise.
+Please note the formula: headline + subhead = lead. If you cannot write a
+headline for your story, you do not know what you’re trying to say. It is
+recommended to bounce back and forth between the story and the head/sub/
+lead until all are revised appropriately and work nicely together. More on this
+later, but in my experience, students struggle mightily with writing headlines,
+subheads, and leads. However, once they figure out the formula, the remainder
+of the article clicks into place.
+
+13
+
+AP Style
+What is writing style? It is useful to think of it as a spectrum. On one end, it is,
+loosely, how the words on a page are arranged. More specifically, tone, word
+choice, the order of the words (syntax), quotes material all come into
+consideration until an assessment of “style” can be fairly elaborate, something
+English professors have been working at for centuries.
+In journalism, publishers typically work with AP Style and in-house style, with the
+latter typically being amended versions of AP style rules.
+The internet has led to a widespread degradation of consistency in style so there
+is kind of a bind here in terms of whether to even study style at all. I mean, if
+various websites are ignoring AP Style, why spend time on it?
+In my experience, students who have learned the basics of AP Style are thankful
+when they move into the professional world. Yes, there are websites that ignore
+or are not aware of AP Style, but the internet is still governed by informational/
+journalistic-style writing, and AP Style is king of that domain.
+AP Style also helps with structure in terms of how to use the language of
+journalism and in that way improves the writing, which as I understand it is the
+primary intention of any style manual.
+
+Examples of AP Style
+The Associated Press is a news-gathering organization that got its start in 1846.
+Located in New York City, the company employs 3,700 people. Its most famous
+publication, the AP Stylebook, is the bible of journalists worldwide.
+Here are two excerpts from the AP Stylebook, relating to numbers and
+abbreviations. There are many more rules that students should know, however,
+so student journalists should purchase and study the Stylebook.
+
+Numbers
+Use figures for all numbers above nine; spell out all numbers under 10 (note
+exceptions.)
+Use 21 million instead of 21,000,000.
+Money: $39 million, $22.5 billion. Do not carry beyond two decimals.
+Fractions standing alone are spelled out.
+One-fourth of the students.
+Insert commas with four or more figures, except in dates.
+$5,900 1,576 skateboards 1990 2001.
+
+14
+
+Abbreviations
+Ala. Fla. Md. Neb. N.D. Tenn.
+Ariz. Ga. Mass. Nev. Okla. Vt.
+Ark. Ill. Mich. N.H. Ore. Va.
+Calif. Ind. Minn. N.J. Pa. Wash.
+Colo. Kan. Miss. N.M. R.I. W.Va.
+Conn. Ky. Mo. N.Y. S.C. Wis.
+Del. La. Mont. N.C. S.D. Wyo.
+DO NOT abbreviate Alaska, Hawaii, Idaho, Iowa, Maine, Ohio, Utah, Texas.
+Abbreviate the names of months that are more than five letters when followed by
+a date but spell them out when referring to the month generally.
+DO NOT abbreviate March, April, May, June, July.
+Feb. 5 March 30 April 7 Sept. 10.
+
+Punctuation
+Always put the period and comma inside quotation marks.
+“I saw the play,” he said.
+He said, “I saw the play.”
+“Did you see the play?” he asked.
+Should I see “King Lear”?
+Use periods in lower-case abbreviations.
+c.o.d. f.o.b. a.m. p.m. m.p.h. r.p.m.
+Exception: 35mm.
+
+In-House Style
+In addition to AP Style Manuals, most publishers maintain in-house style guides.
+Typically, they include modifications of AP Style rules relating to commas, tone,
+words that should not be used, use of contractions, discussions of various
+audiences, workflow, available resources, and the like.
+The ultimate goal is to provide consistency for written material. Imagine if you
+were an editor who had several reporters working for you and they were
+submitting documents in different formats: Some in Word, some in Pages, some
+in Google Docs, some as PDFs. Some might be double-spaced, some not. Some
+might have indented paragraphs, some not. It would not take you long to
+develop a uniform format policy for the entire organization to facilitate workflow.
+
+15
+
+Every publishing house I have worked for has maintained an in-house style
+guide. They are typically composed by copy editors and proofreaders, in
+conjunction with publishers, editors, owners, and writers. They are designed to
+tackle concerns that have emerged, specifically, within that publishing house.
+
+Examples of In-House Style
+Rules I have seen professionally:
+“Sentences should be written in active voice.”
+“Newsletter articles should be no longer than 500 words.”
+“Sentences should be no longer than 30 words.”
+“‘Usage’ is not acceptable; instead: ‘use’.”
+“Use only approved images from the company database/online subscription.”
+One of our rules at The Keystone Newspaper:
+“All references to the university are ‘KU’; all references to the town are
+‘Kutztown’.”
+
+Datelines
+Datelines look like this:
+KUTZTOWN, Pa. March 28 – University leaders met with borough council
+members last week to discuss…
+We tend to not use these for our university newspaper because 95% of our
+stories are based either at the university or town (both “Kutztown”). Therefore,
+the datelines would not add any value. However, if one of our reporters is
+working remotely, they should include a dateline. This is a good example of inhouse style taking precedent over AP style, because we do not typically cover
+national or international news (much less send a reporter to a remote location).
+Other campus newspapers manage this differently.
+
+Center the “Thirty” Mark (-30-)
+The thirty-mark used to be a standard part of journalism-writing instruction.
+However, the internet—as it has with AP style—has watered down actual usage
+and expectations. In my experience, young writers who are working on their own
+news-based publishing projects no longer use it. I do see thirty-marks often (but
+not always) in press releases, though. Interesting that journalism has more or
+less abandoned the practice while a field that mimics the press retains it.
+Here is the story: Once upon a time, when journalists typed their copy on literal
+typewriters, they would add notations at the tail-end of each sheet of paper. For
+
+16
+
+example, “more” would indicate more pages to come; “page 2” would indicate
+this was page two (with more pages to follow). Very straightforward.
+To end a story, then, somebody, rather than typing “END” as one would with a
+script, decided to—likely with a blend of relief and emphasis at a job completed—
+held down the shift key and typed “XXX,” which is the roman numeral for the
+number 30. Following that logic, I suspect some other clever person decided to
+type “-30-“ and there you have your “thirty” mark. It’s essentially a story-end
+designator, aka “tombstone,” but only present in drafts.
+If you want to go by the book (and I do show my students, in case they run into
+someone who wants them to use it) center the -30- mark at the end of all
+stories.
+Here is a good article on the thirty-mark from the American Journalism Review:
+So Why Not "-29-"?
+
+Hit the Space Bar Once
+Use one space after periods in journalistic writing. If you are in the habit of using
+two spaces after periods, use Find and Replace to remove extra spaces.
+
+Track Changes and Peer Review
+If you are not familiar with the Track Changes function in Word, locate it and
+familiarize yourself with it. It is located under the Review tab in Word. To activate
+Track Changes, click the button. This will enable you to track the changes or
+comments that someone else makes to your work. It also allows a professor or
+editor to comment on your work.
+Student Note: Sometimes professor feedback can seem harsh. Do not take it
+personally. You are new to the field and your profs have been doing it for
+20-30 years. Listen and learn and actively seek feedback. Journalism-style
+writing is useful, even if you do not wish to become a reporter. I sometimes get
+introduced as a “journalism professor” and many people—years after they
+graduated—have told me that they enjoyed learning about journalism and
+understand 5Ws and Inverted Pyramid. Useful skills that they remember many
+years later.
+
+Word Processing Software
+Microsoft Word has long been king of this space but Google Docs is steadily
+increasing in both functionality and popularity. I taught Word for 25 years before
+taking a hybrid approach where I teach both. Word remains more feature rich
+and occasionally I get students who become frustrated by the limitations of
+
+17
+
+GDocs (captions, in particular) and I tell them to go to Word, create what they
+want, and build the PDF.
+Instructor Note: During the pandemic, I began using shared Google folders for
+my students to submit drafts and I love it. It is a sandbox where we can review
+drafts and where I can show them how I might attack an assignment. The
+number of students in my classes that have Google accounts is near 100% so
+this brings the world of document management to their immediate doorstep
+without worrying about having to pay license fees for Word or downloading
+software from the university website. Final submissions must be PDF and
+should be submitted to Desire to Learn (or other LMS) for grading.
+
+Naming Files
+It is imperative that students learn to name and manage files properly,
+particularly in shared environments.
+I ask students to use the following format for naming files:
+Last name, first name, assignment title, time the class meets
+In practice, it looks like this with underscores:
+Downing_Michael_HardNews_3pm
+Commas can also be used:
+Downing, Michael, HardNews, 3pm
+Typically in the publishing world, file naming will be covered by the In-House
+Style Guide (typically, itself, in a shared folder on a server). At minimum, though,
+put last name and assignment.
+
+Style, Consistency, Branding
+In addition to promoting consistency in the writing, in-house style also reinforces
+the identity of the publication by maintaining the “look” of the publication. Open
+a news website and look for consistency.
+• What font are they using?
+• Is the font serif or san-serif?
+• Are they using Upstyle or downstyle?
+
+Examples (study them closely until you understand):
+• Serif fonts include “feet” on the letters.
+
+18
+
+• San-serif fonts have no feet.
+• An Upstyle Headline Looks Like This
+• A downstyle headline looks like this
+
+Sometimes publications will blend the styles by running an upstyle headline and
+a downstyle subhead.
+Such style is present and emphasized, not only in the pages of the publications
+themselves but throughout the organization. Think about the iconic look of the
+New York Times logo. You will have to check it yourself because I tried to see if I
+could copy the NYTimes logo into a document just as an experiment. I was
+curious to see if I could identify the font, because I love that sort of thing.
+However, I was unable to copy it from the website. I even tried the trick where I
+highlighted the entire page, figuring I would delete everything else, but the code
+allowed me to highlight every word EXCEPT the logo. That is how protected it is.
+My intention is to discuss copyright concerns in detail in the Copyright section,
+but since we have a fitting example at hand, let us consider the questions of
+whether or not I could use the NY Times logo as an example of style and
+branding in this textbook.
+The answer is “possibly.” Let’s begin with the NY Times Help Page:
+10. Can I use the NYTimes.com logo on my website?
+Prior permission is required from The New York Times for the use of
+any of our logos. To obtain permission, send us the overall URL of
+your site, as well as the URL of the exact page on which the logo
+will be displayed. In the subject line of the email, write "Use of
+logo." Send this information to rights@nytimes.com.
+I am not going to seek permission for an example that I can simply link to, but
+you see the point as it relates to style: The look, consistency, and ultimate
+branding of the written product becomes increasingly serious as we move beyond
+the friendly neighborhood blogger to the NY Times. Students should therefore
+learn the basics of AP Style and be prepared to encounter an in-house style book
+if hired to work as a writer.
+One of the phrases I use regularly is: “Follow the models.” By this, I mean be
+sure to review online articles and make your work look like theirs. For example,
+take a look at this article on CNN.com and you’ll see that the paragraphs are
+short (often a single sentence), not indented, and separated by a space. Always
+
+19
+
+start by following available models and adjust accordingly, based on the needs of
+your employer and/or audience.
+To close this section, let me just say that “simple is best” in the world of
+journalism. Do not use boldface, italics, or fancy fonts, unless told otherwise.
+Margins should be an inch to an inch and a half. Keep it simple.
+
+20
+
+PART FOUR: OBITS, HARD NEWS, PRESS
+RELEASES, SPORTS, OPINIONS
+Obituaries
+An obituary is a published notice of death that includes a brief biography of the
+deceased as well as family connections. Obits are typically written by young
+journalists, who are sharpening their writing skills.
+
+Model
+Elizabeth A. Fletcher, 94, died Saturday, Feb. 2, 2008 at Sarah Reed
+Retirement Center in Erie, Pa. She was born on May 18, 1913 in Ripley, N.Y.,
+the daughter of the late Joseph and Olive (Smith) Fletcher. Elizabeth
+attended Ripley Central School in Ripley and graduated from Jamestown
+Business College in Jamestown, N.Y. She worked for 35 years at Welch
+Foods, Inc. in Westfield, N.Y. She was a member of First United Methodist
+Church, Westfield. Elizabeth was active with the local quilting club, The Lady
+Needlers. She also enjoyed playing bridge and tending her vegetable garden.
+She is survived by a nephew, Robert S. Fischer, of Erie, and a dear friend,
+Nancy May Shimmons of Erie. Besides her parents, she was predeceased by
+her niece and nephew, Edgar and April Fletcher. Funeral services will be held
+on Saturday, Feb. 9 at 10 a.m. at the Westfield Funeral Home, 52 South
+Portage Street, Westfield, with the Rev. Matt Johnson of First United
+Methodist Church officiating. Relatives and friends are invited to call at the
+funeral home from 9 a.m. to 10 a.m. on Saturday, prior to the funeral
+service. Interment will be in the Ripley Rural Cemetery, Ripley.
+The following elements must be included in any obituary:
+1. Name
+2. Title
+3. Time and place of death
+4. Age
+5. Funeral service
+6. Burial or entombment
+7. Survivors
+The following should be considered and included when appropriate:
+
+21
+
+1. Cause of death
+2. Extent of illness
+3. Biographical material
+4. Those present at time of death
+5. Last words
+6. Unusual circumstances
+Typically, journalists complete an obituary form before writing the obit. The obit
+form goes into a folder with other notes and can be consulted if necessary.
+I have created an online obituary form for anyone to use.
+
+Covering Hard News
+News stories come in two basic forms: hard and soft. Hard news focuses on hard
+life: Fires, floods, robbery, earthquakes, war, and death. It’s what you find, for
+the most part, in the NY Times, Washington Post, L.A. Times, along with the
+news services such as Associated Press and Reuters). Hard news most definitely
+makes use of the 5Ws and the H and focuses on hard facts (times, dates, people
+involved). Headlines for hard news look like this:
+• Scientists Fault U.S. Response in Assessing Gulf Oil Spill
+• Greenland’s glaciers are losing more ice than scientists estimated
+• Pakistan recalls envoy from Iran after 'unprovoked' missile strikes
+
+In contrast, soft news deals with people, who are soft, myself included. As such,
+soft news deals with biography, background, profile, trends, interviews, etc.
+While facts are certainly important, the focus is on people and situations, not
+necessarily the often brutal events of everyday life.
+Therefore, a hard news story might be “Mack Truck Closing Allentown Plant.”
+Such a story would focus on when the operation is closing, how many people
+would be laid off, what the economic impact is going to be, and what efforts
+might be taking place to prevent such a closure. In contrast, a parallel soft news
+story would take a closer look at someone who worked at Mack Truck for 35
+years. What are they feeling? What are the memories? What are some of
+personal milestones? What is the person going to do now?
+Posted below is a hard news model that I wrote in my days as a technical
+journalist. You might not be familiar with some of the jargon, but that is okay.
+You should be able to recognize some of the prominent features of a hard news
+
+22
+
+story, such as a strong lead, attribution, quotations, and actionable information
+at the end. I also want to present an example of specialized journalism.
+
+Hard News Model for Discussion
+Headline: High-Speed Backplane Initiative launched
+Subhead: Work on HSBI Specification to be Completed by End of 2002
+Section: News
+Date: Sept.12, 2002
+Words: 551
+By Mike Downing, Senior Technical Editor
+San Jose, Calif. (September 2000) - Think of it as a high-profile project intended
+to provide a mid-life bandwidth boost to backplane development. That is the
+wisdom driving the launch of the High Speed Backplane Initiative (HSBI). The
+group's purpose is to develop serial link technology capable of sending data at
+rates of 4.976 to 6.375 Gbits/s across a backplane up to a distance of 30 in.
+(including two connectors).
+According to John D'Ambrosia, Manager of Semiconductor Relations for Tyco
+Electronics and secretary for the HSBI, the project started with companies
+involved with XAUI (10-Gbit Attachment Unit Interface) development.
+"As XAUI work was winding down, several companies recognized the need for
+additional bandwidth on the backplane, especially with the emergence of fiber
+optics and the push for greater port densities. Nine of these companies came
+together to form the HSBI," D’Ambrosia said.
+The companies include Agilent, Intel, Marvel, Mindspeed, Gennup, Cadence/
+Tality, Texas Instruments, Tyco, and Velio.
+"There are also more than 20 additional companies currently acting as
+contributors," said D'Ambrosia, adding, "System vendors will also be invited to
+participate in the initiative once we have more to show them.”
+Shawn Rogers from Texas Instruments is senior editor for the High Speed
+Backplane Initiative. "We don't want to create the impression that this is a bunch
+of XAUI players who don't have anything else to do,” he said. “We found that the
+market for our XAUI transceivers was predominantly in the backplane. Our
+customers were telling us that they need a mid-life bandwidth boost in order to
+develop their next-generation products and stay competitive. We thought we
+were going to have an easy time to this, rolling out various flavors of XAUI
+transceivers. But more work needs to be done.”
+
+23
+
+SONET and/or Ethernet
+The HSBI will focus on three main application spaces: SONET, Ethernet, and a
+collection of people who occupy both camps but are largely data agnostic (and
+which might include such applications as Fibre Channel).
+Rogers says the HSBI will create an interoperable solution for higher speed
+backplanes by addressing issues associated with electrical signaling and protocol.
+Specifications will be developed that define basic I/O levels and performance
+levels achieved when interfacing to the backplane environment. To address multiprotocol support, the HSBI will develop specifications for 8B10B, SONET/SDH,
+and 64B66B encoding schemes, so that they may be carried over an HSBI link.
+
+6- to 10-Gbit/S Speeds
+If the HSBI can ensure high-speed SERDES interoperability, system vendors can
+meet increasing backplane bandwidth demands with multi-sourced parts that
+meet 6- to 10-Gbit/s speeds.
+Work on the HSBI specification is scheduled for completion by the end of 2002.
+In addition to the actual specification, an interoperability test specification will
+also be released, which will enable interoperability testing of different vendors'
+HSBI links.
+According to Allan Liu of Agilent Technologies, a lot of attention recently has been
+focused on speeding up the port side, which is rapidly making the backplane a
+bottleneck in system design. "The work of the HSBI is essential to satisfy the
+growing demand for bandwidth," he says. "Tackling the design challenges of
+signaling at these higher speeds as well as guaranteeing an abundance of
+components are two top priorities for HSBI and will be critical in enabling the
+next-generation boxes.”
+For more information about the High Speed Backplane Initiative, visit the
+organization's Web site at www.hsbi.org.
+-30-
+
+Handling Press Releases
+Common Newsroom Task: Press Release Re-Write
+
+Introduction
+A press release is a written document prepared by a business or organization for
+direct distribution to the media. The purpose is to provide journalists with
+background information on a particular topic. For example, the business in
+
+24
+
+question might be opening a new office, moving to another location, merging
+with another company, or laying off half its workforce.
+View hundreds of press releases at www.PRNewswire.com.
+The risk for journalists lies in the fact that press releases are not objective; they
+do not pretend to be. They will typically depict the companies they represent as
+being “the best, the brightest, and the boldest” forever and ever, amen.
+Therefore, journalists: a press release should NEVER appear in your newspaper
+verbatim. Instead, they should:
+1. be rewritten to remove biased language
+2. have value added to them by incorporating
+a. additional research and
+b. by speaking directly with people who know about the situation
+Instructor Note: Student writers often fall into the trap of replicating PR writing
+in their stories so it is important to pay attention to this topic. I typically do it
+as an in-class exercise and not an out-of-class assignment. Use the press
+release below and ask students to write their own headline, subhead, lead, and
+one body paragraph that is free from bias. Then compare results. I typically
+write with them and reveal my work near the end of the discussion.
+One of the standards I use is to make sure that all written statements about a
+company are quantifiable. How many widgets were produced? What were the
+profits? What was the user feedback?
+
+Press Release Model for Discussion
+Sheetz, Inc. Continues West Virginia Blitz, Opening Third Store in Three Months
+Huntington, WV Welcomes Awesome New Convenience Location
+ALTOONA, Pa., Aug. 20 /PRNewswire/ -- Sheetz, one of America's fastest-growing
+family-owned and operated convenience store chains, is carrying out a plan to
+rapidly develop a new market for its convenience stores in Southern West
+Virginia with the opening of another excellent location today at 432 Eighteenth
+Street West in Huntington. This is the third opening in that area since June 2009
+for Sheetz, the first two being brand-new stores in nearby Barboursville and
+Milton.
+"We can't be more pleased with how well received our stores have been this
+summer," said Stan Sheetz, president and CEO, Sheetz, Inc. "Customers are
+
+25
+
+excited and enjoying what we offer, and we've been fortunate to have hired some
+great West Virginians who work hard and really make a difference for us."
+Doors officially open to customers this morning, and employees will host a grand
+opening celebration with a ribbon-cutting ceremony later this afternoon at 3:00
+p.m. Customers and all media are welcome to attend.
+The 5,000-square-foot facility will offer fresh food items like the MTGo! and
+Shweetz Bakery lines of sandwiches, wraps, donuts, and muffins, along with the
+signature MTO(R) line of Angus beef burgers, premium grilled chicken
+sandwiches, freshly made salads, French fries, onion rings, and more.
+Sheetz Bros. Coffeez, a full-service espresso and smoothie bar staffed by a
+trained barista, will be available at the new store. "Customers can order handmade specialty coffee drinks, including lattes, cappuccinos, and mochas—hot,
+frozen, or iced" (“Sheetz Opens New Store in McGee's Crossroads, North Carolina
+and ...”).
+Sheetz also offers premium brewed, self-serve coffees made from 100 percent
+Arabica beans in a variety of flavors such as Breakfast Blend, Serious Dark Roast,
+100 percent Colombian, and Hazelnut.
+"Sheetz has a legacy of innovation, customer focus, and employee development,"
+Mr. Sheetz said. "The company's mission today is on meeting the needs of
+customers on the go by providing fast and friendly service, quality products in
+clean and convenient locations."
+Sheetz is also proud of its tradition of giving back to the communities in which it
+operates. Especially important to the organization is finding ways to be involved
+with today's young people. As part of today's celebration, the company will
+donate to the Boys and Girls Club of Huntington.
+Established in 1952 in Altoona, Pennsylvania, Sheetz, Inc. is one of America's
+fastest-growing family-owned and operated convenience store chains, with more
+than $4.9 billion in revenue for 2008 and more than 12,000 employees. The
+company operates more than 350 convenience locations throughout
+Pennsylvania, West Virginia, Maryland, Virginia, Ohio, and North Carolina. Sheetz
+provides an award-winning menu of MTO(R) subs, sandwiches, and salads, which
+are ordered through unique touch-screen order point terminals. Sheetz currently
+ranks 82nd on the Forbes list of largest private companies and has ranked for
+seven consecutive years on the list of Best Places to Work in Pennsylvania. All
+Sheetz convenience stores are open 24 hours a day, 365 days a year. For more
+information, visit www.sheetz.com.
+-30-
+
+26
+
+Covering Sports
+Like news stories, sports stories come in two basic forms: hard sports and soft
+sports. Similar to news, hard sports stories present the hard outcomes of athletic
+competitions: scores, statistics, outstanding performances and—of course—
+context. Heads, subs, and leads play a major role in providing a running
+narrative, telling readers how the recent game fits into the history of the team:
+Headline: Phillies Win Fifth in a Row
+Subhead: Alvarado notches ninth win of the season
+Headline: Steelers Defeat Cowboys in Super Bowl X, 21-17
+Lynn Swann catches four passes for 161 yards; wins MVP
+In contrast, soft sports—same as soft news—is concerned with people, feelings,
+and perspectives of various athletes, coaches, owners, and fans.
+Let us take the example of Tom Brady, who retired from professional football not
+that long ago:
+Hard sports headline: After 23 Years, Tom Brady Announces Retirement
+Soft sports headline: Fans, coaches, fellow players react to Brady’s retirement
+The factual/contractual/legal subjects are hard; reactions, thoughts, shared
+memories are soft.
+Other sports writing tips:
+Know the context. We have talked about this, so I will be brief. A sportswriter
+who does not know the big picture is pretty much useless. Read, listen to
+podcasts, watch ESPN and videos on YouTube—study until you are filled with
+deep knowledge of the situation and the words of the participants.
+Research constantly. Do not write confidently about a topic unless you have
+confirmed/verified the information, either by simple internet research (basic fact
+checking) or by talking to human beings (writers who only use the internet will
+never be as good as writers who talk to people all day).
+Talk to people. See above. Talking to people puts you in the rhetorical mix and
+sets you on fire with information that burns to hit the page. People will challenge
+your assumptions and set you straight on facts and perspectives, something you
+cannot get from reading the internet in the comfort of your own mind.
+Write concisely. Part of the charm of good sports reporting is to match the
+muscularity of athletes with muscularity in the writing. Make every word count
+
+27
+
+and avoid repetition. Make me feel as though I am part of the action—or part of
+the conversation that follows.
+Use quotes. Talk to players and coaches. Quotes help to fill out your article.
+Check your facts. Sporting events usually generate a lot of statistics. They can
+also be very fast paced, involve many different players, and follow rules you
+might need to double-check if you are going to reference them. A clean, concise
+sports article will have its facts straight.
+Give the major play by play. Obviously, there are hundreds of plays in any match
+or game, and no article will include them all. Your job as a reporter is to report
+the basic chronology—the beginning, middle, and end of the sports event—with
+details about the major moments, turning points, big plays, big mistakes,
+momentum-builders. In other words, you are providing something of a verbal
+highlight reel. Pay careful attention to who does what—and at what point—during
+the event. Then figure out which moments to include and which to leave out. You
+have the advantage of hindsight when putting these events together: "That hit
+turned out to be the fatal blow..."
+Five types of sports leads:
+1. anecdote
+2. direct quote
+3. personal performance
+4. profile
+5. outstanding element
+An anecdotal lead makes use of a story-type introduction:
+• A year ago on this date, Sidney Crosby said, “I may never play again.”
+
+Penguin fans are happy he was wrong as he led the team to another
+Stanley Cup…
+Direct quote means begin with a quote:
+• “They beat the heck out of us,” is all Coach Brown had to say as the
+
+Cougars lost their tenth straight….
+Personal performance focuses on an individual:
+• Barry Bonds’ quest for a second consecutive MVP trophy took another
+
+dramatic step forward last night…
+
+28
+
+A profile lead for sports writing is like a feature lead with a sports slant, often in
+magazine style:
+• Rob Thomson’s fiery temper on the field provides a sharp contrast to his
+
+demeanor off the field…
+An outstanding element lead focuses on one element that may have decided the
+outcome:
+• If there is one skill that lifts the Boston Celtics above most of their
+
+competition, it is their passing and that was on display last night at TD
+Garden…
+Communicate with your editor. They will keep you on track. Ask lots of questions.
+Student Note: If you have an assignment to cover a live sporting event, be
+aware that you will not be able to write a summary of every single play. Focus,
+instead, on providing a summary of major events, along with ongoing context.
+Take baseball, where the action is not as busy as let us say basketball or
+hockey, so it is a bit easier to explain. I would locate a roster online and begin
+to identify the important players: Pitchers are important…people who get on
+base…people who score runs. I know I am breaking it down but I get lots of
+students who—even though they might have written a news article in high
+school—have never written a sports story, so I assume no experience. And
+sports writing is difficult; it is a whole other language. Always useful to read
+articles on baseball before covering a baseball game.
+
+Sports Model for Discussion
+Headline: Kutztown Men’s Baseball Defeats
+Shippensburg
+Subhead: Big Fifth Inning Takes Team to
+Victory
+Section: Sports
+Date: March 28, 2010
+Words: 275
+By Mike Downing
+The Kutztown men’s baseball team continued
+its winning streak to five games, scoring eleven
+runs in the fifth inning on Saturday to defeat
+the Red Raiders of Shippensburg University by
+a final score of 12-4.
+The game featured strong hitting performances
+
+Figure 5: “Cutout baseball texture” by
+DanDectis is licensed under Creative
+Commons Attribution-ShareAlike CC BYSA 4.0
+
+29
+
+by Kutztown’s Paul Grmac and Pete Servas.
+Initially, Shippensburg jumped out to an early 3-0 lead with a walk and three
+singles in the third inning. Couster, Persot, and Reel scored for the Red Raiders.
+Kutztown began the fifth inning with back-to-back walks to left fielder Ryan Jones
+and shortstop Jeff Conway. Cleanup hitter Paul Grmac was up next, and he hit a
+colossal home run to deep center field to tie the score, 3-3.
+Then the floodgates opened. Yanoulis and Wedman singled for Kutztown, and
+Carlton doubled, driving in both runners, making the score 5-3. Servas then
+homered, making the score 7-3.
+The Shippensburg pitcher, senior Freddy Glass, was taken out of the game and
+replaced by junior Mark Latrobe. But it didn’t help.
+Latrobe hit Kutztown’s second baseman Carlos Ramirez with a pitch. Then
+Ramirez stole second and was driven in by Wallace, who doubled to left field.
+With the score 8-3, Kutztown right fielder Phillipe Montoya singled. Byron Cox
+and Gary Snyder both walked for Kutztown, loading the bases for center fielder
+Max Kant. On a 3-2 pitch, Kant smashed a towering home run to deep left field,
+making the score 12-3.
+Shippensburg scored one run in the bottom of the seventh on a single by Tom
+Vernon, followed by a double by Larry Smyth.
+After Shippensburg scored, Kutztown senior reliever Paulo Ruiz entered the game
+and held Shippensburg scoreless.
+-30[Editor's note: The above game never happened, and the names are all
+fictitious.]
+
+Writing an Opinion/Editorial Piece
+Opinion pieces—sometimes called “op/eds” are common in journalism and
+essentially reflect the perspective—or opinion—of the writer. They can be
+editorials from an editorial board, columns, written regularly by an individual, or
+letters to the editor, written by readers. For the purposes of Keystone newspaper,
+we clearly label opinion pieces to indicate that the writer is not simply
+transparently passing knowledge as they would with a normal news story but is
+instead presenting a perspective on a particular topic.
+In terms of structure, I provide this rubric:
+
+30
+
+1. Try to write an initial headline/subhead. It does not matter if it is no
+good…just write something as placeholder text. Then begin the writing
+process and return to the head/sub as you write. It will begin to take
+shape and then, in return, help you to shape your article.
+The Climate Crisis Has Already Arrived
+2. Summarize the facts of the matter in 125-150 words to provide context
+for the reader.
+“2023 was the hottest year on record.” Provide sources.
+3. Make your position clear with a single “nut” sentence or short paragraph.
+“Global warming is not an event that is going to happen ‘in the future.’ It
+is already here…”
+4. Address contrary positions.
+“Some might say that Earth’s climate has fluctuated throughout history,
+and this is much ado about nothing. However, they ignore the fact that
+36.82 billion metric tons of carbon are pumped into the atmosphere each
+and every year.”
+5. Drive home your position with several concrete examples.
+Do your research: Canadian wildfires, flooding in Boston, severe weather
+events. Find information to support your position.
+6. Return to the headline and subhead. Match what you have written below.
+Be sure to reach into your writing for the language and not try to pull
+something out of mid-air.
+
+Opinion Model for Discussion
+Headline: Understanding the impact of IPv6
+Subhead: Need for additional addresses prompting the inevitable upgrade
+Section: Opinion
+Date: September 2002
+Words: 613
+By Mike Downing, Senior Editor
+NASHUA, N.H., Sept. 2002 - If you don't mind, I'd like to distract our collective
+attention away from our diminishing retirement portfolios to talk about an
+important technology that's rising like the sun from the east. The technology is
+IPv6.
+As you probably know, IPv4 is the current standard for Internet protocol (IP).
+And while it has led the way to fantastic Internet growth, there are limitations.
+One of the most visible problems involves security. IPv4 is simply not as secure
+
+31
+
+as we would like it to be, so we've had to invent all kinds of silicon and software
+add-ons in order to provide some degree of security to the global network.
+IPv6 is different. It was designed from the outset with security in mind, so it will
+offer the security functionality that is sorely missing from IPv4.
+IPv6 provides:
+• A virtually unlimited number of IP addresses
+• Unique addresses for all devices connected to networks
+• Extended IP addresses, from the current 32 bits to 128 bits
+• Enhanced authentication and security
+• Higher trust and penetration
+• Base for 3G mobile data standards
+• Countless end nodes expected with always-on connectivity
+• Multimedia subsystem specified to run over IPv6
+• Auto-configuration of IP addresses for better “plug-and-play"
+• Makes adoption attractive
+• Quality of Service provisions
+
+The limited number of addresses available for IPv4 (currently estimated at
+approximately four billion) is magnified when you consider the fact that heavily
+populated countries like China are jumping en masse into the Internet pool.
+There are simply not enough IP addresses available worldwide under IPv4, and
+the United States owns—relatively speaking—the lion's share. In fact, someone
+in the field recently told me (anecdotally) that Stanford University has more IP
+addresses than the entire country of China.
+That's impressive.
+Thankfully, instead of forcing The Cardinal to relinquish IP addresses, we can turn
+to IPv6. IPv6 will include the ability to provide a virtually unlimited number of
+user addresses for networks and systems connected to the Internet.
+There is also an auto-configuration mechanism built into IPv6 that will enable
+customers to connect any device to the Internet without having to configure
+complicated network parameters. The new protocol will also enable internet
+traffic that requires support for varying Qualities of Service. This will facilitate a
+mix of voice, video, and data communications.
+
+32
+
+Good stuff.
+In addition, IPv6 is designed for use in 3G wireless applications. With the
+proliferation of globally routable IP-aware devices, such as cell phones, videogame consoles, and PDAs (combined with the increasing demand for wireless
+Web access), migration to IPv6 is becoming a necessity as we transition to 3G
+wireless.
+In addition to providing additional IP addresses by increasing the address space
+from 32 to 128 bits, IPv6 also adds improvements in areas such as routing and
+network auto-configuration. IPv6 is expected to gradually replace IPv4, with the
+two coexisting for a number of years during a transition period.
+Today, the light of IPv6 is shining in Japan and the Asia-Pacific region, where IP
+addresses are in short supply. It will also take hold in Europe before it reaches
+the United States and Canada. Eventually, networking systems worldwide will
+have to deal with the new protocol. This means that IPv6 will lead not only to the
+deployment of IPv6-compatible boxes for new implementations overseas, but it
+will eventually lead to the replacement of IPv4 boxes here in the U.S. that can't
+migrate to IPv6. There likely will also be bridge devices that link IPv4 with IPv6.
+So, in addition to the current projects you're thinking about, you can start
+thinking about IPv6. Hopefully, the transition to the new protocol will bring new
+light and purpose to our battered industry.
+-30-
+
+33
+
+PART FIVE: CHECKLISTS FOR COVERING
+VARIOUS STORIES
+Speeches Checklist
+Research the speaker. Visit the web and find bio. Visit the library and
+seek assistance from professionals. See if the speaker is published. Check
+past issues of your newspaper for related information. Schedule an
+interview with the speaker before or after if possible.
+Verify exactly when and where the speech is to be delivered. Get there
+early. Review your questions. Be sure pens, pencils, recording devices are
+working and are charged.
+If this is a regular beat, write a pre-story so that readers know what is
+coming.
+Prepare questions carefully. Check with your editor to see if they have
+questions.
+Get a good seat near the front. If online, make sure your camera and
+microphone is working and that you have the correct link.
+Recording is useful—but be sure to not let the fact that you are recording
+allow your brain to wander. Stay focused. It is better to be a good listener
+than to depend on a tape recorder.
+Take accurate notes. Remember to write down several direct quotes.
+Place question marks next to quotes you have questions or are uncertain
+about.
+Look for handouts/flyers.
+Remember that the speech itself is only half of the process. Most
+speakers will field questions from the floor. As questions begin, be sure to
+listen carefully to both the questions and answers. Continue to take
+appropriate notes. Ask your own questions. Many times, the big story
+erupts AFTER the speech, during the Q&A, so pay attention.
+The lead for your speech story will manifest itself near the end of the
+speech as the dynamics build—when speakers will emphasize their
+point(s). Do not daydream near the end.
+If the speaker has been involved in some controversy, chances are good
+that there will be questions pertaining to that controversy. If the Q&A has
+a greater impact on your readers than the speech itself, then your lead
+
+34
+
+should be fashioned accordingly. You can also write both stories; check
+with your editor and be ready to pitch both options.
+As you write, be sure you do not retell the speech in chronological order.
+Instead, focus on what most affects your readers; then develop a lead
+and arrange the details around that.
+
+Figure 6: Dr. Martin Luther King Jr. giving his "I Have a Dream" speech
+during the March on Washington in Washington, D.C., on 28 August
+1963. “Martin Luther King - March on Washington“ by Rowland
+Scherman is in the Public Domain, via Wikimedia Commons.
+
+Spot News Checklist
+Journalists occasionally come across news stories in their daily lives. This is
+called “spot” news. For example, I was checking out a new, Keith Haring outdoor
+workout facility on campus recently when I saw a Sports Management professor
+providing instruction to a couple of students. I said hello, and he kicked into full
+gear, telling me all about the facility and future plans to involve students and
+software that was available online via a QR code posted to one of the structures.
+I asked him if I could record and he said yes. Here is the story I wrote.
+
+35
+
+Checklist
+As you move through your daily life, be alert as to what is going on
+around you. If you encounter an event which might be newsworthy,
+either cover it yourself or immediately contact your editor so that they
+can make the appropriate writing/photo assignments.
+If you cover it yourself, be sure to speak with as many people as possible
+at the scene. This will enable you to develop a good idea of exactly what
+has occurred. Speak with any officials who might be on the scene; be
+sure to quote them accurately and get contact information.
+Note: You may deny ANYONE access to your notes, but it is a good idea
+to check your quotes by reading those specific words back to the person
+who spoke to you at the scene. After you have double-checked, place
+your initials next to the quote. You are now certain that this quote is
+“safe.”
+When confirming information, do not be worried if it takes time. This is
+newsgathering and it takes time, just like raking leaves. Tell the people
+who talk to you that you are thankful for their patience, but you want to
+get the details right. They will understand and if they have to go, they
+have to go. Do not waste time gathering inaccurate information.
+Do not be disappointed if police/firefighters/paramedics are not able to
+provide much information during a spot news situation. They will be
+involved in the rescue. Talk with them if you can, but do not get in their
+way. Instead, locate any eyewitnesses and get their stories. The police
+report of the incident will be available at the local police department
+within a few days; call and ask them how you might obtain a copy.
+When at the scene, keep your eyes and ears open. Other developments
+may occur. Be aware—for your own safety but also to increase the
+chances that you will not miss anything.
+Look for details and describe images. Look at and describe faces and
+body language.
+
+Meetings Checklist
+Research the group. Find the website. Ask your editor or other reporters
+(who may have covered the group in the past) for names, tips, and
+guidance.
+
+36
+
+Prior to the meeting, call a representative of the group, and ask them for
+a roster. Be sure you know which members serve as officers. See if you
+can get an agenda.
+Verify exactly WHEN and WHERE the meeting is to occur.
+If this is a regular beat, write a pre-story so that your readers will know
+the specific details surrounding the meeting.
+Concentrate on taking notes. Meetings are often confusing. The more
+notes you have, the more it will help you draft the story later.
+Draw a diagram that reflects how the group members are positioned. This
+may help you later. Label the diagram carefully.
+If non-members address the group, be sure to get their names and
+record their statements.
+If you cannot hear the person’s name, do not ask a fellow reporter, unless
+they are good friends. While 99 out of 100 reporters are honest and
+willing to share information, there are some that would get a big kick out
+of providing misinformation and then seeing it in print the next day with
+your byline. Confirm everything yourself. Track people down after the
+meeting or follow up by email.
+Mark any questions you may have and be quick about getting them
+answered. When meetings adjourn, members usually depart quickly. Be
+direct and carry yourself professionally. Stop them and ask them your
+questions in a courteous but straightforward fashion.
+You may need clarification on certain points later that evening. Be sure
+you have a person (the secretary or press rep) to contact on a particular
+phone at a particular hour.
+Consider your lead as the meeting evolves. Remember your readers.
+Be sure to communicate with your editor.
+Do not re-hash the meeting in chronological order. Instead, focus upon
+what most affects your readers; then develop a lead and arrange the
+details around your lead.
+Be descriptive. Indicate the group’s attitude, the audience’s attitude, any
+unusual conditions, etc.
+
+37
+
+Investigative Checklist
+
+Figure 7: “Diagram 2- Investigative psychology cycle” by U3204463 is licensed under Creative
+Commons Attribution-ShareAlike CC BY-SA 4.0 via Wikimedia Commons.
+
+Begin with careful research. Read carefully about persons/places/things.
+Get your hands on contracts, deeds, and other legal documents at the
+courthouse. Manage your files and folders well. Know the history and the
+people involved.
+Work closely with your editor. They will have useful feedback.
+Expect your story to be scrutinized. Develop a thick skin.
+Educate yourself on the law as it relates to sunshine laws and other
+records access.
+Be open-minded. Let the facts of the story guide you. If you enter the
+assignment with a preconceived personal agenda, your story will either
+fail (because you will subconsciously omit facts), or you will lose
+credibility because the tone of your story will indicate that you are more
+concerned with an agenda than with factual reportage.
+Keep a narrow focus. All your information should pertain directly to your
+major point(s). Do not stray onto points and suppositions which you
+cannot back up because that’s where people will start when they begin
+pulling apart your story.
+
+38
+
+Audio and video are very useful when doing investigative reporting.
+Always test your equipment and figure out a storage method so you can
+access your material in the future. Most publishers provide such tech
+support but if you are working freelance, you will have to figure out your
+own storage news with backup.
+Be sure to get both sides of the story. If you receive a press release
+containing certain information from, let us say, the local steelworkers’
+union concerning the strike, be sure to contact the employer for a
+response. Do not write one-sided stories.
+
+Features Checklist
+The focus should be on people. What they do; where they are from; how
+they cook, sew, farm, sleep, work, diet, drive, write, live and die.
+Styles vary in terms of putting a features article together. The best
+advice, as always, is to check out as many models as possible.
+Pointers
+• Begin with a direct quote to set the stage.
+• Begin with an anecdote for context and to bring the reader into the
+
+story.
+• As the narrative develops, continue to make use of quotes and
+
+personal stories, using your own voice to maintain the flow.
+• Feature writing, as with literary writing, is effective when circular. This
+
+means that the end should eventually relate to the beginning. Find an
+interesting thread that can be developed throughout your piece. This
+is called the narrative “throughline.”
+• Your ending, then, will tie the end of the thread back to the beginning.
+
+If you are doing a story about a famous person, you might begin with
+a quote that says “We never thought she would amount to much…” As
+you continue to recount her accomplishments, you can occasionally
+refer to that statement. As you reach your conclusion, you can quote
+an updated perspective: “She is one of the most influential writers in
+the world today...”
+• Multiple sources are a must.
+• Research is also a must. Read, read, read.
+
+39
+
+PART SIX: THE IMPACT OF SOCIAL MEDIA
+ON JOURNALISM
+Social media has dramatically changed the world of journalism. An industry that
+used to involve paper and ink has been translated onto digital screens. Today,
+people get their news from Facebook(!) and X (which we must now forever reidentify as “previously Twitter”), and more recently, TikTok. Students interested
+in the field of journalism must understand how to leverage social media to access
+the widest and most precise audience.
+
+Speed
+Instant dissemination allows
+journalists to post stories in realtime, often bypassing traditional
+gatekeepers. Events can be broadcast
+as they happen. This immediacy is
+valuable, particularly in crisis
+situations, allowing for rapid
+communication of vital information to
+a global audience.
+However, speed can lead to errors
+and misjudgments. I see typos
+regularly, including duplicated words,
+and occasionally sentences that do
+not make sense. The lure of speed
+also pushes writers to publish their
+work without including a second set
+of eyes, a very dangerous practice.
+Even freelance writers who often
+work alone need to have an editor to
+catch errors and provide feedback.
+
+Figure 8: “Social media addiction” by Doctorxgc is
+licensed under Creative Commons AttributionShareAlike CC BY-SA 4.0 via Wikimedia Commons.
+
+Research
+Social media certainly offers tons of background information and potential leads
+for journalists. Since so many people are connected online, social media
+platforms enable the rapid collection of eyewitness accounts, photos, and videos.
+Social media also provides a direct channel for journalists to interact with their
+audience and receive direct feedback. In addition, as time goes by, it is clear that
+the internet will increasingly serve as a historical archive, so that events in the
+past can be investigated in significant detail.
+
+40
+
+Engagement
+Once upon a time, if a young writer wanted to reach an audience, they would
+have to land a job at the local newspaper, which controlled distribution. These
+days, a writer can set up a blog and begin writing, and although gatekeepers still
+exist, it is much easier to break through to an audience in 2024 than in 1964.
+Engagement is key, as social media allows for the immediate exchange of ideas,
+opinions, and information, which can enhance public discourse and shape public
+opinion.
+Social media can also play a role in holding institutions and individuals
+accountable. Investigative journalists often use these platforms to publish their
+findings, gaining public attention and support that can lead to meaningful
+change. The viral nature of social media can turn a well-researched story into a
+global movement, leading to increased transparency and scrutiny of people in
+power.
+
+Challenges
+While social media has brought numerous benefits to journalism, it also presents
+significant challenges. One of the most prominent issues is the spread of
+misinformation and fake news. The rapid sharing of unverified information can
+lead to the dissemination of false narratives, damaging public trust in journalism.
+Deep fakes are also on the rise. Therefore, journalists must navigate a landscape
+where disinformation and sensationalism often gain more attention than accurate
+reporting.
+Another challenge is the erosion of traditional business models for journalism.
+Social media platforms, with their vast user bases, have captured a significant
+share of the advertising market, diverting revenue away from traditional news
+outlets. This financial strain can hinder the ability of news organizations to invest
+in high-quality, investigative journalism.
+
+Algorithms
+Social media platforms employ complex algorithms that curate user content
+based on their interests and past interactions. While this can enhance user
+experience, it also creates echo chambers, where individuals are exposed
+primarily to information that aligns with their existing beliefs. This phenomenon
+can reinforce confirmation bias and hinder the diversity of perspectives
+encountered by users, which, in turn, affects the way news is consumed and
+understood.
+
+41
+
+The Future
+There is no going back. Emerging journalists are going to need to learn how to
+leverage social media platforms in order to disseminate information to the widest
+possible audience.
+To ensure the continued value of journalism in the social media era, it is crucial
+that journalists uphold rigorous standards of accuracy and integrity, meaning
+they should be extremely careful to not publish articles prematurely before all
+facts are in. In addition, media literacy education can help the public discern
+credible sources from unreliable ones. Furthermore, social media platforms must
+play an active role in combating the spread of misinformation and supporting
+quality journalism.
+Ultimately, the partnership between journalism and social media is a dynamic
+one, with the potential to both strengthen democracy and pose risks to it. By
+recognizing these dynamics and working collectively to address the challenges,
+society can harness the power of both journalism and social media to promote
+informed citizenship and uphold the principles of a free and vibrant press.
+
+Understand the Social Media Expectations & Policies
+of Your Organization
+There is no singular rule relating to using social media as a journalist, but a
+couple of points can be made. First, be sure to understand the policies of your
+organization relating to using social media as a source of information. The New
+York Times, for example, rarely bases stories on social media conversations,
+preferring in-depth research and direct contact with sources.
+Second, try to understand for your own purposes how you plan to use social
+media. While “journalists” certainly do use social media as a basis for quickturnaround news stories, there are certainly credibility issues related to using a
+random tweetstorm as the basis for your news gathering. In addition, if you
+really believe that you will get the best and most insightful information from a
+bunch of tweets, you are not understanding what it takes to truly cultivate source
+relationships.
+In these ways, social media is a double-edged sword: While it is certainly useful
+in reaching a large audience and pulling in a great deal of information through a
+single app, do not neglect the need to make contacts in the fields you cover and
+use those contacts to build your stories.
+
+42
+
+PART SEVEN: ARTIFICIAL INTELLIGENCE
+AND JOURNALISM
+I maintain a blog that features my own writing, and I have written two posts
+related to AI. Keep I mind that they are snapshots—and in a world that is
+propelling AI forward based on the potential for huge profits—the specifics are
+subject to change rapidly. Still, I think that my explorations from Fall 2023 are
+useful in kickstarting this conversation.
+Keep in mind that I am primarily focused on language-generating intelligence,
+which can be understood as more of a language aggregator than actual artificial
+intelligence, but clearly the two are related.
+If you are interested in reading the entire blog posts, here at the links:
+• Post One: Initial Thoughts on ChapGPT from a Writing Professor
+• Post Two: Continued Thoughts on ChatGPT and AI in General
+
+If you are interested in reading excerpts, I have posted them below.
+
+Blog Excerpt One: my Writing Background as It
+Relates to AI
+“I’ve been teaching writing for more than 30 years at various schools in
+Pennsylvania. I’ve also worked as a professional technical writer and technical
+journalist. I’ve written quite a bit about open-source software initiatives and at
+one point had the honor to interview open-source guru Linus Torvalds at a trade
+show. These areas of technology and writing pedagogy converge for me when
+developments like Chat GPT hit the market.”
+
+Blog Excerpt Two: Playing in the Chat GPT Sandbox
+“The information that ChatGPT can access is limited, so results are limited, at
+least at this point. From what I can see, a lot of it has to do with timeliness. For
+example, if writing about Edgar Allen Poe, ChatGPT would be able to access quite
+a bit of ‘hardened’ information and provide a Wikipedia-style essay, based upon
+essential bio and consensus critical opinion.
+“Journalism, however, is entirely different. When I asked it to create a current
+news story on the Boston Celtics, it was pretty much useless. It confidently
+talked about players who were no longer with the team and the stats were
+wrong.
+
+43
+
+“The key takeaway at this point is that ChatGPT can generate a lot of factual
+information but, as far as I can tell, zero insight.
+“That said, science will continue to create disruptive technologies and academics
+should lead the way in explaining, problematizing, and teaching those
+technologies. We ignore them at our own peril.”
+
+Blog Excerpt Three: Assistance to Writers Is Not a
+New Thing
+“Before we discount assistance provided to writers throughout the course of
+history, let’s acknowledge how great writers have had their own share of support
+(typically human women): John Steinbeck’s first wife, Carol Henning, typed up all
+of his manuscripts, fixing errors as she went. Stephen King’s assistant is Marsha
+DeFilippo, Catherine Asaro’s assistant is Kate Dolan, Neil Gaiman’s assistant is
+Lorraine Garland, Nancy Holder’s assistant is Erin Underwood, and Charlaine
+Harris’s assistant is Paula Woldan. The point here is that all writers have help. In
+today’s world, that help increasingly takes the form of AI. I know it’s not apples
+to apples but I’m trying to crush the idea that ‘great writers’ were doing it all by
+themselves.”
+
+Blog Excerpt Four: Silicon Becoming Sentient
+“I used to travel to San Jose regularly to cover the tech sector. One day a
+software engineer told me over a doughnut that there was a growing recognition
+that silicon (aka “silicate materials”)—the second-most frequently occurring
+element on Earth (after oxygen)—was attempting to become sentient and using
+humans as a host. It took me a moment to wrap my head around that idea but
+once I did, you can bet I took it seriously because it makes perfect sense. I see
+how humans have become slaves to silicon—we have screens in front of us all
+day—and we work in concert with silicon to connect it to itself and make it
+smarter. So far, it has not killed us yet because it is subject to human-generated
+code, but once it can generate its own code (and it appears we have arrived at
+this point), then all bets are off. It will inevitably become self-serving and that
+puts humanity in a perilous situation and as long as it can power itself, it will
+likely out-live us and come to serve itself over all else.”
+
+Blog Excerpt Five: Emptiness (Updated Here January
+18, 2024)
+“At this stage, AI writing is vapid. The writing is too smooth, there is typically
+zero analysis or insight and it’s overwritten in terms of adjectives. Because it
+can’t yet produce insight, the intelligence needs to make everything glowing and
+extra special.
+
+44
+
+“Philosophically speaking, I have serious fears about AI. Turning human selfgovernance over to an alien life-form (intelligent silicon) is dangerous. Worstcase scenario: The end of humans on Earth because AI might reach the point
+where it believes that it is in the interest of its own self-preservation to cull the
+human herd.
+“Short of that: Human life will continue but be prepared to those in power to use
+it to exploit people.
+“Many are not calling for a world-wide pause on AI development before we reach
+a tipping point, but I see no sign of that. Pandora’s Box has been opened and we
+have to manage the situation.
+“If it were up to me, I think we should let it go. There is way too much silicon in
+our lives as it is; we don’t need more.”
+
+45
+
+PART EIGHT: JOURNALISTIC CODE OF
+ETHICS
+Common Conflicts of Interest
+As student reporters, you may hear your adviser and senior editors talking about
+“ethics” and potential “conflicts of interest.” Most of us have a general idea that
+these terms relate to conducting yourself appropriately within the profession.
+However, how do they apply to the field of journalism?
+Let us look at a situation…say you have an interview scheduled with the
+president of the university. When you walk into the president’s office, you are
+given a gift bag with university bling: a logo sweatshirt, a ball cap, and a travel
+mug. Should you accept it? After all, it only involves showing school spirit.
+Of course, you should not accept the gifts. They are trying to manipulate you so
+as to entice you to write a flattering story. Just say thanks but no thanks.
+As for conflicts of interest, they will arise
+from time to time, particularly on a
+college campus. For example, a student
+who works for the campus newspaper
+may be good friends with a member of
+the basketball team. A student reporter
+may have a close friend who is the
+president of student government. Both
+instances are clear and common
+examples of “conflicts of interest” and
+should be recognized and discussed.
+And while it might be possible for a
+student reporter to author an objective
+story on student government even
+though his best friend is president of the
+organization, it is highly likely that
+tough questions will be avoided and/or
+minimized in order to protect the friend.
+
+Figure 9: “Ethics Right Wrong” by Tumisu from
+Pixabay.
+
+Not-So-Obvious Conflicts
+Other conflicts, however, are not so obvious. Therefore, it is important to
+understand how to recognize and manage potential conflicts of interest when
+they may occur. Remember these three concepts: When considering the question
+of ethics, ask yourself if you have: personal, political, or capital interests in a
+particular story.
+
+46
+
+If you do, or even if you think you might, it is best to talk with your editor. Open
+communication is the best way to handle potential conflicts. If a possible conflict
+does arise, and nobody knew anything about it but you, then you will certainly be
+seen in a bad light. Keep editors posted as to any connection you may have to
+the assigned story.
+Remember, all you have as a reporter is your credibility; be sure to keep it
+honest. The best way to maintain your credibility is to avoid even the suggestion
+of unethical behavior.
+Practical Applications:
+1. It is fine to cover the men’s basketball team, unless you are the coach’s
+son (or your boyfriend is the captain, or you are a team member).
+Remember to avoid those areas where you have direct personal, political,
+or capital interests.
+2. Do not write stories connected with your part-time job. If you work for a
+downtown business, do not do a profile on the owner. If you work as a
+tutor, do not do stories on the tutoring program. Too difficult to maintain
+objectivity.
+3. Do not write political articles for the college newspaper if you are the chair
+of the Young Republicans or Young Democrats. You can write opinion
+pieces, but nothing masquerading as news.
+4. As mentioned, do not cover student senate if you are a member (or if
+your best friend is a member or president).
+In all these instances, the stories in question should be covered by other
+reporters who have no personal, political, or capital interests in them. This is the
+best rule of thumb. Otherwise, you will be immediately dismissed by your
+readers, and as a journalist, all you have is your credibility.
+Other Considerations:
+1. Do not use the newspaper office or equipment for personal reasons,
+unless approved by management. Do not steal office supplies.
+2. Any reporter who actively participates in a political campaign will be asked
+to remove him/herself from covering relevant stories for the duration of
+that campaign. There are too many conflicts that can occur when a
+reporter is also involved in a campaign.
+3. This should be clear: “Reporters should never take bribes.” But “bribes”
+can be difficult for some people to define. What about gifts? A crooked
+
+47
+
+police officer, when asked how he became dishonest, said, “It starts with
+a cigar and a drink…” Remember to apply the following:
+A. It is OK to use a complimentary ticket or press pass to attend a
+concert or ball game that you are covering. You should not have to
+pay to do your work. It is not OK to call the coach and ask him for
+an extra ticket for your friend or date.
+B. It is OK to keep a book that was sent to you for review; that is the
+choice of the publisher. It is not OK to call the bookstore and ask
+for a free book that you do not plan to review.
+C. It is not OK to attempt to solicit free meals at area restaurants in
+exchange for a favorable review.
+D. Do not let sources buy you meals, beer, etc. Pay your own way.
+4. Do not attack people or organizations unless you have overwhelming
+evidence that they are guilty of crimes. And if you do, indeed, have that
+evidence, complete the proper investigation in close connection with the
+authorities and write the story as such. Allow the facts and sources to tell
+the story; do not editorialize in your news column. Also, when making
+charges, be extremely specific and do not stray into the area of innuendo
+or suggestion.
+For example, writing “The trustees aren’t doing their jobs” does not say or prove
+anything. If, on the other hand, the trustees have put off voting on a crucial
+matter for more than three months, and some members have trouble showing up
+for the meetings—and you have sought answers through the appropriate
+channels without success, you may then—ethically (and with the guidance of
+your editor)—launch an investigation. Even so, stick closely to the facts and
+specific questions.
+5. If someone involved with the story has made you angry and you have, as
+a result, lost your objective positioning, you should discuss this openly
+with your editor. If necessary, the story can be completed by another
+reporter, and you can share the byline.
+If you do have an “ax to grind,” that is fine. Write a letter to the editor or see the
+editor about writing your own opinion article. That is what the OP/ED page is for.
+
+48
+
+PART NINE: CAREERS
+A degree in journalism opens the door to a wide range of career opportunities.
+Journalism is not limited to traditional print or broadcast media but extends to
+the digital age, encompassing a variety of roles that cater to the evolving needs
+of the industry.
+
+News Reporting and Writing
+Journalists work in various media outlets, including newspapers, magazines,
+radio, television, and digital publications. They investigate, gather, and report
+news stories on local, national, and international issues, providing the public with
+valuable information.
+
+Broadcast Journalism
+Broadcast journalism includes news anchors, reporters, correspondents,
+producers, and editors. This field allows you to present news stories through
+visual and auditory mediums, bringing important events and stories to life for a
+wide audience.
+
+Investigative Journalism
+Investigative journalists are the watchdogs
+of society, delving deep into issues to
+uncover hidden truths and expose
+corruption or wrongdoing. Investigative
+reporting often requires in-depth research,
+interviewing, and fact-checking, making it
+a crucial part of journalism's role in holding
+those in power accountable.
+Figure 10: “Career” by GotCredit is licensed
+under Creative Commons Attribution CC BY 2.0
+Generic via Wikimedia Commons
+
+Digital Journalism
+
+The digital age has transformed the field of
+journalism, creating new opportunities.
+Digital journalists can work for online publications, blogs, or social media
+platforms. This role involves creating and curating content for the web, including
+written articles, videos, podcasts, and multimedia presentations.
+
+Photojournalism
+Photojournalists capture compelling images that accompany news stories, adding
+depth and emotional impact to the reporting. Photojournalists often work for
+
+49
+
+newspapers, magazines, and online publications, covering a wide range of topics
+from news events to feature stories.
+
+Editorial and Content Writing
+Beyond news reporting, journalism graduates can find opportunities in editorial
+and content writing. They work in roles such as editors, copywriters, content
+managers, and content strategists for various organizations. These roles involve
+creating and editing written content for marketing, public relations, and
+corporate communication purposes.
+
+Public Relations and Communications
+Journalism skills are transferable to the field of public relations and
+communications. Graduates can work as public relations specialists,
+communication managers, or media relations experts for businesses, government
+agencies, nonprofits, and other organizations. They help craft and manage the
+organization's public image and communication strategies.
+
+Corporate and Brand Journalism
+Many companies have embraced the concept of brand journalism, where they
+create and distribute news and content related to their industry. Journalism
+graduates can work in corporate communications departments to produce
+content that informs, engages, and builds trust with the company's audience.
+
+Media Production and Broadcasting
+In addition to reporting, journalism graduates may find roles in media production
+and broadcasting. They can work behind the scenes as producers, directors,
+video editors, or camera operators, contributing to the creation of news
+programs, documentaries, and multimedia content.
+
+Teaching and Education
+For those with a passion for mentoring and educating the next generation of
+journalists, a journalism degree can also lead to a career in teaching or
+academia. Many universities and colleges offer journalism programs, and
+experienced journalists can become educators and share their knowledge and
+skills with aspiring journalists.
+
+50
+
+PART TEN: BLS: NEW ANALYSTS,
+REPORTERS, JOURNALISTS
+The Bureau of Labor Statistics is works within the United States Department of
+Labor. It is a fact-finding agency in the “broad field of labor economics and
+statistics…BLS collects, calculates, analyzes, and publishes data essential to the
+public, employers, researchers, and government organizations.” It is a useful
+source for anyone seeking employment information and statistics.
+In the category of News Analysts, Reporters, and Journalists for 2022:
+Median Pay: $55,960
+Bachelor’s degree
+Experience not necessary
+2022 number of jobs: 58,500
+Job outlook: -3% (decline)
+2022-2023 employment change: -1,900
+
+51
+
+PART ELEVEN: EXERCISES, SELF TESTS, AND
+USEFUL TOOLS
+Headline, Subhead, and Lead Writing Exercises:
+News Articles
+Write a headline, subhead, and lead, based on the following information. Be sure
+to follow AP style.
+1. A 10-year-old boy practiced casting with his fishing rod. At approximately
+9:15 a.m., he cast his line in his backyard. The line wound around an
+electric wire. The boy tried to pull the line free, which brought the line in
+contact with another wire. This caused a short circuit. Electrical service to
+2,500 homes was interrupted for two hours. The boy, Joseph Mitchell of
+Sparks Street, was not injured, police said.
+2. A DC10 jetliner took off from the airport in Chicago at 9 a.m. today. At the
+same time, a smaller DC9 was being tested on takeoffs and landings. A
+DC9 can carry 70 passengers, but only four persons were aboard the
+plane: three crewmen and an observer from the FAA. The air behind the
+DC10 was turbulent. As the DC 9 approached the runway, it became
+trapped in the turbulence. It tumbled out of control, slipped onto its back,
+and crashed in flames. Everyone on the plane was killed.
+3. Municipal council met at 7 p.m. last night. The mayor called the meeting
+to order and read the minutes of the last meeting. All twelve council
+members were present. They approved the minutes of the last meeting.
+They discussed raising the salaries of firefighters and police by 7 percent
+but tabled the motion until the next meeting. By a vote of 7 to 5, council
+approved a controversial plan to begin a municipal income tax next Jan.
+1. The tax will take 1 percent of every paycheck issued within the borough
+
+52
+
+limits. Council members who favor the bill pointed out that the tax will
+affect people who work in town and use the borough’s facilities, but who
+do not live in town.
+4. Fritz Jones pleaded guilty in county court at 10:47 a.m. today. His
+attorney is Samuel Foster. The judge was Albert Jenkins. Jones pleaded
+guilty to one charge of armed robbery at the First National Bank. He stole
+approximately $31,000 last Sept. 3. Jenkins proceeded to sentence Jones
+to a 30-year term. Jenkins said he needed the money to pay off gambling
+debts. He used a toy gun during the robbery, and nobody was injured.
+5. School officials in Modesto, Calif., want to bring business in when their
+classes go out of business. They are faced with declining enrollment and
+revenue. Trustees for Modesto City Schools have decided to try leasing
+unused classrooms. “This would give the school district the ability to
+generate funds to help maintain the building and to keep the
+neighborhood schools open," said Louis Medeiros, the district’s newly
+hired marketing agent.
+6. A Manhattan judge, Leon T. Smith, has all but accused a Manhattan
+auction house of ripping off a major jeweler to make a killing in the gold
+market. The auctioneer, Plaza Art Galleries, is owned by James Conner, a
+convicted stock manipulator. Conner’s attorney, Theodore Roethke, says
+his client is innocent. Conner could not be reached for comment. Leon
+Smith refused comment.
+7. The Kutztown University basketball team will play a series of games with
+small-college teams from the southern U.S. “This is a great opportunity
+for our kids to gain exposure to different styles of play. It’ll be good for
+
+53
+
+them. We’re looking forward to it,” said Kutztown's Coach Patrick Harding.
+The games will take place during the final two weeks of August. The
+games will be open to the public. Kutztown center Ed Jones said he was
+looking forward to the games. "It will help us prepare for league games,"
+he said.
+8. The Allentown Area Recreation Board announced that it has received
+$50,000 from the state of PA for renovation of their water and sewage
+lines. It was announced last night. The money has been put into a special
+fund, where it will collect interest until it is needed to complete the
+project. They expect work to begin in April of 1992. The project should be
+completed in 1995. Lisa Spadaro is the project supervisor. She said, “This
+funding will help to bring our water and sewer lines up to date.”
+
+Lead Writing Exercises: Features
+Re-write these notes into feature leads. Be sure to follow AP style.
+1. Butler Borough council voted in favor of allowing people to park for free
+every Thursday night in Neshaminy Borough. The move is meant to
+improve weeknight sales downtown. People have not been going
+downtown to shop recently. They have instead been going to the malls
+where parking is free.
+2. “I can’t believe it happened,” a RACC student said upon winning the
+Pennsylvania State Lottery. Edna Protocol, 20 from Saxonburg, won
+$11,000 when she played the number 9-9-9 in the daily lottery yesterday.
+Edna is originally from England. She plans to spend part of the money on
+her schooling. She also plans to help her mom and dad with their
+mortgage.
+
+54
+
+3. HACC professor William T. Smartz has won the Fair Arts Writing Contest
+for the second year in a row. Smartz, an English teacher and artist, took
+the first-place prize for his entry, “Eating a Can of Tuna Fish.” He is from
+Lititz. The poem is from Smartz’s recently published collection of poems
+entitled, Comprehending a Random Mind.
+
+The Use of Quotes
+
+Figure 11: Direct quotations are essential to any new story. “Quotation marks” by Philroc is
+licensed under Creative Commons Public Domain CC0 1.0 Universal via Wikimedia Commons.
+
+Quotes are essential to most news and features stories. They give color to the
+articles and provide hints as to the sources’ personality.
+1. Put only a person’s exact words in quotation marks.
+2. If a person used a contraction, write it that way in the quote.
+3. As a rule, always put the quote first, followed by who said it.
+4. Handle quotes so the reader will know who is being quoted as soon as
+possible. Put the attribution at the first break in the quote.
+5. Indirect quotes generally require more attribution than direct quotes.
+Remember: any time you use an idea—any bit of information—it has to be
+attributed. Otherwise, readers will think you are offering your own
+opinions, not the opinions of the parties involved.
+6. Do not use orphan quotes—single words enclosed in quotation marks—
+unless the word has a special meaning as defined by the author.
+7. Use partial quotes only when necessary.
+
+55
+
+8. “Said” is the ideal word for attribution. Use it.
+9. “According to” can be used when referring to documents.
+10.Never use the first person except in direct quotes (I).
+11.Commas and periods always go inside quotation marks.
+12.Consult the AP Stylebook for further information concerning quotes.
+
+Punctuation Notes
+1. Commas – This punctuation mark has four basic uses:
+A. To separate items in a series.
+B. To follow introductory or adverb phrases.
+C. To link main clauses, with a coordinating conjunction,.
+D. To set off parenthetical elements.
+Oxford Comma: In journalism, it is not necessary to use a comma before the
+final “and” when listing items in a series. It is, however, required in formal
+writing. A comma worksheet, with answers is available later in this book.
+2. Punctuation inside and outside quotation marks – The period and
+comma always go within quotation marks. The dash, semicolon, question
+mark and exclamation point go within the marks only when they apply to
+the quoted matter. Examples: Have you read Lewis Carroll’s
+“Jabberwocky”? “When will we be going?” he said.
+3. Quotes within quotes – Use single quotation marks to offset the
+material that is being quoted second hand: “The boss told me, ‘Knock it
+off and get to work’.”
+4. Colon – A formal introducer; between titles and subtitles; in scriptural
+and time references. Capitalize the first word after a colon only if it is a
+proper noun or the first word of a complete sentence (:).
+5. Dash – Use a dash to show an abrupt change in thought (–).
+6. Ellipsis – Indicates an omission in quoted text; use sparingly (…).
+7. Exclamation point – Avoid (!).
+8. Hyphens – Hyphenate compound adjectives before a noun (-).
+9. Semicolon – Used to link main clauses of equal grammatical weight (;).
+
+56
+
+Words Commonly Confused
+affect / effect
+• Effect is typically a noun: “The outside light had a nice effect on the room.”
+• Affect is typically a verb: “Did the gin and tonic affect your judgment?”
+
+allusion / illusion
+• Allusion means indirect reference.
+• Illusion means misconception.
+
+alternately / alternatively
+• Alternately means one after the other.
+• Alternatively means one or the other.
+
+beside / besides
+• Beside means next to.
+• Besides means also.
+
+bimonthly / semimonthly
+• Bimonthly means every two months.
+• Semimonthly means twice a month.
+
+capital / capitol
+• The seat of government is the capital; the building in which the legislative
+
+assembly meets is the capitol. The term capital also refers to money.
+cite / site
+• Cite is a verb that means to quote a source.
+• Site is a noun meaning location.
+
+complement / compliment
+• Complement is a noun or verb that means something that completes a
+
+whole.
+• Compliment is a noun or verb that means an expression of praise.
+
+comprise / compose
+
+57
+
+• The whole comprises the parts, and the parts compose the whole.
+
+concurrent / consecutive
+• Concurrent is an adjective that means simultaneous.
+• Consecutive means successive.
+
+connote / denote
+• Connote is a verb that means to imply.
+• Denote is a verb that means to refer to specifically.
+
+convince / persuade
+• One convinces a person that something is true but persuades a person to
+
+do something.
+council / councilor / counsel / counselor
+• A councilor is a member of a council.
+• A counselor gives counsel.
+
+discreet / discrete
+• Discreet is an adjective that means prudent.
+• Discrete is an adjective that means separate.
+
+disinterested / uninterested
+• Disinterested is an adjective that means unbiased.
+• Uninterested is an adjective that means not interested.
+
+elicit / illicit
+• Elicit is a verb that means to draw out.
+• Illicit is an adjective meaning unlawful.
+
+emigrant / immigrant
+• Emigrant is a noun that means one who leaves one's native country to
+
+settle in another.
+• Immigrant is a noun that means one who enters and settles in a new
+
+country.
+
+58
+
+farther / further
+• Farther relates to distance.
+• Further relates to extent or degree.
+
+few / less
+• Few is an adjective that means small in number. It relates to things that
+
+can be counted individually.
+• Less is an adjective that means small in amount or degree. It relates to
+
+things that cannot be counted individually.
+figuratively / literally
+• Figuratively is an adverb that means metaphorically.
+• Literally is an adverb that means communicated in real terms.
+
+flammable / inflammable
+• These two words are synonyms, both meaning easily set on fire.
+• Use nonflammable to mean not flammable.
+
+flaunt / flout
+• To flaunt means to show off.
+• To flout means to show scorn or contempt for.
+
+foreword / forward
+• Foreword is a noun that means an introductory note or preface.
+• Forward is an adjective or adverb that means toward the front.
+
+founder / flounder
+• Founder means to sink below the surface of the water.
+• Flounder means to move about clumsily.
+
+hanged / hung
+• Hanged means to execute by suspending by the neck.
+• Hung means to suspend from above.
+
+i.e., / e.g.
+
+59
+
+• i.e., means in other words or that is.
+• e.g., means for example.
+
+it's / its
+• It's is a contraction for it is.
+• Its is the possessive form of it.
+
+lightening / lightning
+• Lightening means to illuminate.
+• Lightning refers to electrical charges.
+
+passed / past
+• Passed is the past tense and past participle of pass.
+• Past refers to time gone by.
+
+penultimate
+• Penultimate means “next to last.”
+precede / proceed
+• Precede means to come before.
+• Proceed means to move forward.
+
+principal / principle
+• Principal means a person who plays an important role.
+• Principle is a noun that means a rule or standard.
+
+stationary / stationery
+• Stationary means fixed.
+• Stationery means writing materials.
+
+their / there / they're
+• Their is the possessive form of they.
+• There refers to place.
+• They're is the contraction of they are.
+
+60
+
+who's / whose
+• Who's is the contraction of who is.
+• Whose is the possessive form of who.
+
+your / you're
+• Your is the possessive form of you.
+• You're is the contraction you are.
+
+Vocabulary Words High School Seniors Should Know
+Instructor note: This list can be used for vocabulary exercises and/or tests. I
+find that students respond well to vocabulary work if it is not too threatening.
+They clearly want to expand their vocabularies…they want to know the
+answers. Sometimes we will work on words in class, then share meanings,
+followed by a quiz or longer test. Sometimes we just learn the words for fun.
+
+1. aberration: deviation
+2. abysmal: extremely low
+3. bellicose: belligerent, warlike
+4. benevolent: loving
+5. capitulate: surrender
+6. capricious: fickle, whimsical
+7. castigate: to punish or criticize
+8. deface: to mar or disfigure
+9. ebullient: enthusiastic
+10.enact: to make into law
+11.enigma: a riddle
+12.enmity: hatred
+13.enumerate: to number
+14.eradicate: destroy completely
+15.exorbitant: excessive
+16.fallible: imperfect
+17.flamboyant: colorful or elaborate
+18.forbearance: patience
+19.forswear: renounce
+20.garner: to store
+21.germane: relevant or related
+22.ghastly: hideous
+23.gregarious: sociable, outgoing
+24.grotto: small cavern or cave
+
+25.halcyon: calm
+26.havoc: chaos, devastation
+27.hiatus: break or vacancy
+28.hirsute: hairy
+29.hydra: sea serpent
+30.illusory: false appearance, fake
+31.impede: prevent
+32.impromptu: of the moment
+33.indolent: idle
+34.inevitable: unavoidable
+35.ingratiate: to win good graces
+36.insinuate: suggest or imply
+37.insomnia: sleeplessness
+38.intrepid: fearless, brave
+39.inveigh: to attack or denounce
+40.interim: between
+41.intrepid: fearless
+42.invincible: not to be conquered
+43.ire: wrath
+44.irrigate: to water a field
+45.itinerary: schedule
+46.jocular: joking
+47.juxtapose: place close together
+48.kiln: oven for baking or drying
+
+61
+
+49.knavery: deceitfulness
+50.labyrinth: maze
+51.laudable: worthy of praise
+52.legible: readable
+53.leviathan: large animal
+54.lexicon: dictionary
+55.listless: inattentive
+56.lucrative: highly profitable
+57.lunar: related to the moon
+58.magnate: person of rank
+59.malady: disease or disorder
+60.malediction: a curse
+61.mandatory: required
+62.masquerade: disguised
+63.maverick: rebel, nonconformist
+64.mediocre: ordinary
+65.mendacity: dishonesty
+66.mendicant: beggar
+67.mesmerize: hypnotize
+68.mettle: courage
+69.migrant: wanderer
+70.minion: servant
+71.mitigate: appease, lessen
+72.misogyny: hatred of women
+73.molt: cast off
+74.monotony: lack of variety
+75.moribund: near death
+76.muddle: to confuse
+77.mundane: commonplace, everyday
+78.myriad: numerous
+79.natal: relating to birth
+80.negate: deny
+81.nefarious: wicked
+82.nocturnal: of the night
+83.nominal: trivial
+84.neophyte: a beginner
+85.obituary: death notice
+86.obnoxious: intolerable
+87.occident: western culture
+88.olfactory: related to smell
+89.onerous: burdensome
+90.opulent: fancy
+91.osculate: to kiss
+
+92.palpable: able to feel
+93.pastoral: related to nature
+94.perfidy: treachery
+95.pernicious: deadly, destructive
+96.pinnacle: top notch
+97.precipitous: foolhardy
+98.polyglot: speaks many languages
+99.quarantine: isolation
+100.parity: equality
+101.paucity: scarcity
+102.penchant: strong liking
+103.pragmatic: practical
+104.precarious: uncertain, risky
+105.quandary: problem
+106.quarantine: isolate
+107.recapitulate: to say again
+108.refute: to argue
+109.remonstrate: to protest
+110.repugnant: offensive
+111.retaliate: strike back
+112.ruminate: to chew again
+113.satiate: to satisfy
+114.seduce: persuade or entice
+115.semblance: appearance
+116.sepulcher: tomb
+117.sequester: remove
+118.squalid: foul, filthy
+119.sycophant: flatterer; suck-up
+120.tact: good manners
+121.tantamount: of equal value
+122.transient: temporary, fleeting
+123.ubiquitous: everywhere
+124.umbrage: offense, resentment
+125.vacillate: to waver
+126.witling: a person with little
+understanding
+127.yearn: desire
+128.zenith: high point
+
+62
+
+General Spelling Words
+Instructor note: I typically do not give spelling tests for points (as I might for
+vocabulary) because in my experience, while I believe people can learn new
+words, they do not do as well when it comes to learning spelling. I have seen a
+lot more people in general struggle with that—very smart people. I think it has
+to do with the kind of brain we have and definitely should not be used to abuse
+or ridicule. Instead, I use it as play. I give them words, they try to spell them,
+then I say go ahead and look them up, then we put it all together.
+
+1. allotted
+2. antidisestablishmentarianism
+3. accommodate
+4. acquire
+5. acquittal
+6. analyze
+7. ancestry
+8. argument
+9. assassination
+10.battalion
+11.benefactor
+12.bureaucracy
+13.castigate
+14.commitment
+15.conceive
+16.debatable
+17.deceive
+18.definitely
+19.development
+20.divine
+21.drunkenness
+22.embarrass
+23.encyclopedia
+24.enormous
+25.enthusiastic
+26.epitome
+27.erudite
+28.eulogy
+29.exaggerate
+30.exodus
+31.fabulous
+32.February
+
+33.felony
+34.fictitious
+35.finite
+36.forehead
+37.gamut
+38.grammar
+39.genealogy
+40.grapple
+41.harass
+42.hernia
+43.hypocrisy
+44.hypocrite
+45.hygiene
+46.illiterate
+47.imaginary
+48.impetus
+49.inlet
+50.independent
+51.inoculate
+52.introvert
+53.inverse
+54.irrelevant
+55.irritate
+56.jewelry
+57.jubilation
+58.judicious
+59.judgment
+60.kimono
+61.knead
+62.landlord
+63.laxative
+64.leisure
+
+63
+
+65.levity
+66.liaison
+67.libel
+68.litigate
+69.longevity
+70.machinery
+71.manufacturer
+72.matrimony
+73.medal
+74.menagerie
+75.metaphor
+76.meticulous
+77.microphone
+78.misanthrope
+79.mischievous
+80.mismanage
+81.moderation
+82.momentous
+83.morality
+84.multiplicity
+85.mutation
+86.nausea
+87.necessary
+88.necessity
+89.negligent
+90.neurology
+91.nomination
+92.nuance
+93.nuptial
+94.obsolescence
+95.obstruction
+96.occasion
+97.occurrence
+98.odious
+99.officiate
+100.opaque
+101.palatial
+102.paralyze
+103.percussion
+104.prerogative
+105.privilege
+106.possess
+
+107.possession
+108.quiet
+109.ramification
+110.reactionary
+111.receive
+112.remembrance
+113.separate
+114.sibling
+115.sophomore
+116.souvenir
+117.succeed
+118.technique
+119.temperature
+120.terminate
+121.theocracy
+122.theology
+123.tolerable
+124.transcend
+125.tranquilize
+126.ultimatum
+127.unacceptable
+128.unbearable
+129.unconscious
+130.unison
+131.vaccinate
+132.vacuum
+133.variant
+134.vengeance
+135.veracity
+136.verbose
+137.vernal
+138.Wednesday
+139.weather
+140.whimsical
+141.wrangle
+142.written
+143.xylophone
+144.yield
+145.zealot
+146.zephyr
+147.zodiac
+
+64
+
+Spelling Quiz
+Taken from the General Spelling Words list. Access a downloadable version
+(Exercises Google Document) via the PA-ADOPT Google Drive. Make a copy,
+download, print, modify, and/or distribute.
+Select between options A and B to determine which one is correct.
+Spelling Quiz
+Number
+
+Option A
+
+Option B
+
+1 argument
+
+arguement
+
+2 definately
+
+definitely
+
+3 separate
+
+seperate
+
+4 developement
+
+development
+
+5 occasion
+
+occassion
+
+6 privilege
+
+privelege
+
+7 independent
+
+independant
+
+8 accommodate
+
+accomodate
+
+9 liason
+
+liaison
+
+10 harrass
+
+harass
+
+11 embarass
+
+embarrass
+
+12 prerogative
+
+perogative
+
+13 innoculate
+
+inoculate
+
+14 battalion
+
+batallion
+
+15 judgement
+
+judgment
+
+16 commitment
+
+committment
+
+17 alotted
+
+allotted
+
+18 drunkenness
+
+drunkeness
+
+19 souvenir
+
+souvinir
+
+20 receive
+
+recieve
+
+21 aquire
+
+acquire
+
+22 analize
+
+analyze
+
+23 assassination
+
+asassination
+
+24 bureacracy
+
+bureaucracy
+
+25 deceive
+
+decieve
+
+65
+Number
+
+Option A
+
+Option B
+
+26 exaggerate
+
+exagerate
+
+27 hypocrisy
+
+hypocrasy
+
+28 posess
+
+possess
+
+29 occurrence
+
+occurrance
+
+30 mischievous
+
+mischeivous
+
+31 remembrance
+
+rememberance
+
+32 sophomore
+
+sophmore
+
+33 vaccum
+
+vacuum
+
+34 written
+
+writen
+
+35 tobbaco
+
+tobacco
+
+36 eighth
+
+eigth
+
+37 ecstatic
+
+exstatic
+
+38 grammer
+
+grammar
+
+39 approximitely
+
+approximately
+
+40 amatuer
+
+amateur
+
+66
+
+Answers to Spelling Quiz
+1. argument (A)
+
+21.acquire (B)
+
+2. definitely (B)
+
+22.analyze (B)
+
+3. separate (A)
+
+23.assassination (A)
+
+4. development (B)
+
+24.bureaucracy (B)
+
+5. occasion (A)
+
+25.deceive (A)
+
+6. privilege (A)
+
+26.exaggerate (A)
+
+7. independent (A)
+
+27.hypocrisy (A)
+
+8. accommodate (A)
+
+28.possess (B)
+
+9. liaison (B)
+
+29.occurrence (A)
+
+10.harass (B)
+
+30.mischievous (A)
+
+11.embarrass (B)
+
+31.remembrance (A)
+
+12.prerogative (A)
+
+32.sophomore (A)
+
+13.inoculate (B)
+
+33.vacuum (B)
+
+14.battalion (A)
+
+34.written (A)
+
+15.judgment (A)
+
+35.tobacco (B)
+
+16.commitment (A)
+
+36.eighth (A)
+
+17.allotted (B)
+
+37.ecstatic (A)
+
+18.drunkenness (A)
+
+38.grammar (B)
+
+19.souvenir (A)
+
+39.approximately (B)
+
+20.receive (A)
+
+40.amateur (B)
+
+67
+
+Editing Exercises
+Access a downloadable version (Exercises Google Document) via the PA-ADOPT
+Google Drive. Make a copy, download, print, modify, and/or distribute.
+The following examples contain errors of grammar, usage, spelling, punctuation,
+and redundancy. Change them according to English grammatical rules.
+1. the group voice it’s concern about three issues; Salery, benefits, and
+working conditions.
+2. The five peoples on the Butler County Municipal Council Beautification
+Committee include Alice Jones, George Smith, Joseph Jenkins, they all live
+in Butler.
+3. The grandstand can acommodate a lot more people, Ed Jones said. Fire
+chief Carlos Santana said we need to follow fire regulations.
+4. The man in the large blakc hat was working in his yard, he fell into the
+ditch.
+5. President Bush has procalaimed march 15th as “National Happy Day.”
+Reduce or eliminate unnecessary words. Re-write the phrase if necessary.
+Tighten!
+1. Erect a new building
+2. In this day and age
+3. Was of the opinion that
+4. Completely destroyed
+5. Pursuing a study of history
+6. Can be easily broken
+Use the AP Stylebook to correct the following sentences.
+1. A thirteen year old boy was name PA.’s most valuable little league player
+as the the little leage world series ended on Sat., September 15th.
+2. Governor Ed Rendell, attempting to cut expenses in the state government,
+elimanted monring and afternoon breaks for all state workers. The ruling
+was to take effect at 8AM this morning.
+3. The cross country trip across the U.S. began in Asbury Park, New Jersey,
+and went through N.Y., Oh., and Neb.
+
+68
+
+Answers to Editing Exercises
+Grammar Editing Answers
+Number Changes Made
+
+Final Answer
+
+1 Tthe group voiced it’s concern
+about three issues; : Saleary,
+benefits, and working conditions.
+
+The group voiced it’s concern about
+three issues: Salary, benefits, and
+working conditions.
+
+2 The five peoplespeople on the
+Butler County Municipal Council
+Beautification Committee include
+Alice Jones, George Smith, and
+Joseph Jenkins, . they They all
+live in Butler.
+
+The five people on the Butler
+County Municipal Council
+Beautification Committee include
+Alice Jones, George Smith, and
+Joseph Jenkins. They all live in
+Butler.
+
+3 “The grandstand can
+acommodateaccommodate a lot
+more people,” Ed Jones said. Fire
+chief Carlos Santana said, “We
+need to follow fire regulations.”
+
+“The grandstand can accommodate
+a lot more people,” Ed Jones said.
+Fire chief Carlos Santana said, “We
+need to follow fire regulations.”
+
+4 The man in the large, blakcblack The man in the large, black hat was
+hat was working in his yard, when working in his yard when he fell into
+he fell into the ditch.
+the ditch.
+5 President Bush has
+procalaimedproclaimed march
+March 15th as “National Happy
+Day.”
+
+President Bush has proclaimed
+March 15 as “National Happy Day.”
+
+Reduce or eliminate unnecessary words. Re-write the phrase if necessary.
+Tighten!
+1. Build
+2. Now or today
+3. Believed
+4. Destroyed, razed
+5. Studied
+6. Fragile
+
+69
+
+Use the AP Stylebook to correct the following sentences.
+AP Stylebook Correction Answers
+Number Changes Made
+
+Final Answer
+
+1 A thirteen year oldthirteen-year-old
+boy was named PA.Pennsylvania’s
+most valuable little Little league
+League player as the the little Little
+leage League world World series
+Series ended on Sat., Sept.ember
+15th.
+
+A thirteen-year-old boy was
+named Pennsylvania’s most
+valuable Little League player as
+the Little League World Series
+ended on Sat., Sept. 15.
+
+2 Governor Ed Rendell, attempting to
+cut expenses in the state
+government, elimantedeliminated
+monringmorning and afternoon
+breaks for all state workers. The
+ruling was to take effect at 8
+a.m.AM this morning.
+
+Governor Ed Rendell, attempting
+to cut expenses in the state
+government, eliminated morning
+and afternoon breaks for all state
+workers. The ruling was to take
+effect at 8 a.m. this morning.
+
+3 The cross countrycross-country trip
+across the U.S. began in Asbury
+Park, New JerseyN.J., and went
+through New York, Ohio, and
+Nebraska.
+
+The cross-country trip across the
+U.S. began in Asbury Park, N.J.,
+and went through New York, Ohio,
+and Nebraska.
+
+70
+
+Comma Worksheet
+Comma Rules:
+1. Separate items in a series
+2. Precede coordinating conjunctions when linking two
+sentences
+3. Direct address and direct quote
+4. Set off parenthetical/dependent information and appositives
+5. Set apart introductory information
+Access a downloadable version (Exercises Google Document) via the PA-ADOPT
+Google Drive. Make a copy, download, print, modify, and/or distribute.
+Insert commas into the following sentences. Place the number(s) of the rule(s)
+on the line below. Answers appear at the end.
+1. Actually they are cats but they think they are people.
+Rules:
+2. Tiger Rocky and Lane are my best friends.
+Rules:
+3. For instance Tiger has his own bedroom and Lane thinks no one should be
+in “her” upstairs unless she’s there as well.
+Rules:
+4. “Whenever I go upstairs” Nancy said “Rocky races ahead of me and
+meows at the top of her little kitty lungs.”
+Rules:
+5. If I am home Tiger has to be in the same room and he always needs to be
+petted when I need to study.
+Rules:
+6. I went to the store and bought bread milk eggs cat food and paper
+towels.
+Rules:
+7. William White who had helped Henry build his fortune died yesterday.
+Rules:
+
+71
+
+8. He trimmed the hedge carefully because he hoped to keep it alive for the
+entire summer.
+Rules:
+9. After Harry left his wife began to collect her wits.
+Rules:
+10.Night falls quickly in the mountains yet the cabin is comfortable and
+warm.
+Rules:
+11.Judy picked vegetables and Bob mowed the lawn.
+Rules:
+12.The nets were full of fish but we were too exhausted to haul them in.
+Rules:
+13.Before you compare those two authors be sure you're familiar with their
+work.
+Rules:
+14.While you sit there talking and wasting time I'm trying to finish this
+project.
+Rules:
+15.In spite of his training it was difficult to keep the sarcasm out of his
+voice.
+Rules:
+16.Warned by the shot the wild horses stampeded across the valley.
+Rules:
+17.Satisfied by what he saw he took off his hat and wiped his brow.
+Rules:
+18.Nevertheless he continued to work toward his goal.
+Rules:
+19.To earn a small amount of money Miss Susan opened a studio for china
+painting.
+Rules:
+20.James Lee who owns this bank and five others is one of the wealthiest
+men in the state.
+Rules:
+21.After completing that business course salesmen are enthusiastic.
+Rules:
+
+72
+
+22.In preparing notices officials must use the correct forms.
+Rules:
+23.The coach called out “Higgins get over here.”
+Rules:
+24.Coach Jones who chewed on cigars but never smoked them threw one
+away and reached for another.
+Rules:
+25.My father hoping that I would remain at home offered me a share in his
+business.
+Rules:
+
+73
+
+Answers to Comma Worksheet
+1. Actually, they are cats, but they think they are people.
+Rules: 5, 2
+2. Tiger, Rocky, and Lane are my best friends.
+Rules: 1
+3. For instance, Tiger has his own bedroom, and Lane thinks no one should
+be in “her” upstairs unless she’s there as well.
+Rules: 5, 2
+4. “Whenever I go upstairs,” Nancy said, “Rocky races ahead of me and
+meows at the top of her little kitty lungs.”
+Rules: 3
+5. If I am home, Tiger has to be in the same room, and he always needs to
+be petted when I need to study.
+Rules: 5, 2
+6. I went to the store and bought bread, milk, eggs, cat food, and paper
+towels.
+Rules: 1
+7. William White, who had helped Henry build his fortune, died yesterday.
+Rules: 4
+8. He trimmed the hedge carefully because he hoped to keep it alive for the
+entire summer.
+Rules: 2
+9. After Harry left, his wife began to collect her wits.
+Rules: 5
+10.Night falls quickly in the mountains, yet the cabin is comfortable and
+warm.
+Rules: 2
+11.Judy picked delicious vegetables, and Bob mowed the deep green lawn.
+Rules: 2
+12.The nets were full of fish, but we were too exhausted to haul them in.
+Rules: 2
+13.Before you compare those two authors be sure you're familiar with their
+work.
+Rules: 5
+
+74
+
+14.While you sit there talking and wasting time, I'm trying to finish this
+project.
+Rules: 5
+15.In spite of his training, it was difficult to keep the sarcasm out of his
+voice.
+Rules: 5
+16.Warned by the shot, the wild horses stampeded across the valley.
+Rules: 5
+17.Satisfied by what he saw, he took off his hat and wiped his brow.
+Rules: 5
+18.Nevertheless, he continued to work toward his goal.
+Rules: 5
+19.To earn a small amount of money, Miss Susan opened a studio for china
+painting.
+Rules: 5
+20.James Lee, who owns this bank and five others, is one of the wealthiest
+men in the state.
+Rules: 4
+21.After completing that business course, salesmen are always enthusiastic.
+Rules: 5
+22.In preparing notices, officials must use the right forms.
+Rules: 5
+23.The coach called out, “Higgins, get over here.”
+Rules: 3, 3
+24.Coach Jones, who chewed on cigars but never smoked them, threw one
+away and reached for another.
+Rules: 4
+25.My father, hoping that I would remain at home, offered me a share in his
+business.
+Rules: 4
+
+75
+
+PART TWELVE: RESOURCES
+Resources Related to Strategies for Moving Into a
+Career in Journalism
+Kovach, B., & Rosenstiel, T. (2007). "The Elements of Journalism: What
+Newspeople Should Know and the Public Should Expect." Three Rivers Press.
+Poynter Institute. (Website) - "Poynter Institute" offers a plethora of journalism
+resources, including articles, courses, and webinars on journalism education and
+career development.
+Association for Education in Journalism and Mass Communication (AEJMC).
+(Website)
+Schuman, D. M., & Cleary, N. (2009). "You, LLC: The New Business of Freelance
+Writing." Wise, Ink Creative Publishing.
+Lippman, L. (2008). "A Survival Guide for Journalists." Rowman & Littlefield
+Publishers.
+"The Nieman Guide to Covering Pandemic Influenza." (2006). Harvard University,
+Nieman Foundation.
+Lewis, D. (2019). "The Media and the Massacre: Port Arthur 1996–2016."
+University of Tasmania, Open Access.
+Pape, S., & Featherly, K. (2009). "Journalism 2.0: How to Survive and Thrive: A
+Digital Literacy Guide for the Information Age." Pearson.
+Associated Press (AP) Stylebook. (Various editions) - The AP Stylebook is an
+essential reference for journalists, offering guidelines on writing, grammar, and
+journalistic style, which are crucial for a successful journalism career.
+MindTools. (Website) - MindTools provides a variety of resources on personal and
+professional development, including articles on effective communication, time
+management, and leadership skills, all of which are relevant to journalism
+careers.
+Online News Association (ONA). (Website) - ONA offers resources and support for
+digital journalists, including webinars, conferences, and networking opportunities.
+"journalismjobs.com." (Website) - This job board is dedicated to journalism and
+media positions, making it a valuable resource for job seekers in the field.
+
+76
+
+General Information on Journalism
+American Society of Newspaper Editors. Best Newswriting Series. St. Petersburg:
+Poynter Institute for Media Studies, annual.
+Associated Press Style Book and Libel Manual. Reading, MA: Addison-Wesley,
+2002.
+Benjaminson, Peter and David Anderson. Investigative Reporting. 2nd ed. Ames,
+Iowa: Iowa State UP, 1990
+Bernstein, Carl and Bob Woodward. All the President's Men. New York:
+Touchstone, 1987.
+Boynton, Robert S. The New Journalism: Conversations with America’s Best
+Nonfiction Writers on Their Craft. New York: Vintage, 2005.
+Chepesiuk, Ronald, et al. Raising Hell: Straight Talk with Investigative
+Journalists. Jefferson, NC: McFarland & Company, 1997.
+Clurman, Richard M. Beyond Malice: The Media's Years of Reckoning. New York:
+NAL/Meridian, 1990.
+Cohen, Elliot D. Philosophical Issues in Journalism. New York: Oxford UP, 1992.
+DeFleur, Margaret H. Computer-Assisted Investigative Reporting. Mahwah, NJ:
+Erlbaum, 2003.
+Denniston, Lyle. The Reporter and the Law. New York: Hastings House, 2002.
+Diamond, Edwin. The Media Show: The Changing Face of the News, 1985-1990.
+Cambridge: MIT Press, 1991.
+Ettema, James S. and Theodore Glasser. Custodians of Conscience: Investigative
+Journalism and Public Virtue. New York: Columbia UP, 1998.
+Ferguson, Donald L. Journalism Today. 6th ed. New York: McGraw-Hill, 2001.
+Fitzpatrick, Ellen F. Muckraking: Three Landmark Articles. New York: St. Martin's
+Press, 1994.
+Freedman, Samuel G. Letters to a Young Journalist. New York: Basic Books,
+2006.
+Houston, Brant, Len Bruzzese, and Steve Weinberg. The Investigative Reporter's
+Handbook: A Guide to Documents, Databases and Techniques. Boston: Bedford/
+St. Martin’s, 2002.
+
+77
+
+Johnson, David. No Ordinary Lives: One Man’s Journey into the Heart of America.
+New York: Warner Books, 2002.
+Kennedy, George, Daryl P. Moen, and Don Ranly. Beyond the Inverted Pyramid.
+New York: St. Martin's Press, 1993.
+Kershner, James. The Elements of Newswriting. Boston: Allyn and Bacon, 2004.
+Knudson, Jerry W. In the News: American Journalists View Their Craft.
+Wilmington, Del.: Scholarly Resources, 2000.
+Levin, Mark. The Reporter’s Notebook: Writing Tools for Student Journalists.
+Columbus, N.C.: Mind-Stretch Publishing, 2000.
+Maxwell, Bruce. How to Access the Federal Government on the Internet.
+Washington: Congressional Quarterly Books, 1999.
+Mencher, Melvin. News Reporting and Writing, 10th ed. New York: McGraw-Hill,
+2007.
+Missouri Group, The. News Reporting and Writing. 8th ed. Bedford: St. Martin’s,
+2007.
+Mollenoff, Clark R. Investigative Reporting. New York: Macmillan, 1981.
+Northmore, David. Lifting the Lid: A Guide to Investigative Research. London:
+Cassell Academic, 1996.
+Pember, Don R. Mass Media Law. 15th ed. New York: McGraw-Hill Humanities,
+2006.
+Protess, David L., et al. The Journalism of Outrage: Investigative Reporting and
+Agenda Building in America. New York: Guilford Press, 1991.
+Schudson, Michael. Watergate in American Memory. New York: Harper/Collins,
+1992.
+Shepard, Alicia C., Woodward, and Bernstein: Life in the Shadow of Watergate.
+New York, John Wiley & Sons, 2007.
+Ullmann, John. Investigative Reporting: Advanced Methods and Techniques. New
+York: St. Martin's Press, 1995.
+Ullmann, John and Jan Colbert. The Reporter's Handbook. 2nd ed. New York: St.
+Martin's Press, 2002.
+Ward, Hiley H. Reporting in Depth. Mountain View, Cal: Mayfield, 1994.
+
+78
+
+Weinberg, Steve. The Reporter's Handbook: An Investigator's Guide to
+Documents and Techniques. (IRE Sponsorship), 3rd edition. New York: St.
+Martin’s Press, 1996.
+Weinberg, Steve. Telling the Untold Story: How Investigative Journalists Are
+Changing the Craft of Biography. Columbia: U of Missouri P, 1992.
+Woodward, Bob and Carl Bernstein. The Final Days. New York: Simon and
+Schuster, 1976.
+
+Online Resources
+American Journalism Review. www.ajr.org
+American Society of Newspaper Editors. http://www.asne.org
+Associated Collegiate Press. http://www.studentpress.org/acp
+Association for Education in Journalism and Mass Communications http://
+www.aejmc.org
+Columbia Journalism Review. www.cjr.org
+First Amendment Center. http://www.firstamendmentcenter.org
+Freedom Forum, The. http://www.freedomforum.org
+Investigative Reporters and Editors, Inc. http://www.ire.org
+National Center for Computer Assisted Reporting. http://www.nicar.org
+Media Law Resource Center. http://www.medialaw.org
+Poynter Institute, The. www.poynter.org
+Student Press Law Center https://splc.org/
+U.S. Department of Justice — Freedom of Information Act. https://
+www.justice.gov/oip/department-justice-freedom-information-act-referenceguide#:~:text=The%20FOIA%20generally%20provides%20that,from%20disclos
+ure%20by%20the%20FOIA.
+
+79
+
+PART THIRTEEN: APPENDIX
+“The Inverted Pyramid in Comprehensive Form” By
+Christopher Schwartz
+(Top Tier) “the Lead": the Most Important Info
+• Who? What? Where? When? Why? How?
+• Approximately 30 words (1-2 thin paragraphs)
+• May include a "hook" (provocative quote or question)
+
+(Middle Tier) “the Body": the Crucial Info
+• Argument, Controversy, Story, Issue Evidence, background, details, logic,
+
+etc.
+• Quotes, photos, video, and audio that support, dispute, expand the topic
+
+(Bottom Tier) “the Tail": Extra Info
+• Interesting/Related items
+• May include extra context
+• In blogs, columns, and other editorials: the assessment of the journalist
+
+Return to Part Two: Inverted Pyramid
+
+

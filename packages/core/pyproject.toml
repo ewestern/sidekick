@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sidekick-core"
+version = "0.1.0"
+description = "Shared data layer for the local news pipeline"
+requires-python = ">=3.12"
+dependencies = [
+    "sqlmodel>=0.0.21",
+    "alembic>=1.13",
+    "psycopg2-binary>=2.9",
+    "asyncpg>=0.29",
+    "pgvector>=0.3",
+    "boto3>=1.34",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "numpy>=1.26",
+    "openai>=1.30",
+    "python-dotenv>=1.0",
+    "ulid-py>=1.1",
+    "croniter>=2.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sidekick"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[dependency-groups]
+dev = [
+    "moto[s3]>=5.1.22",
+    "pytest>=9.0.2",
+    "pytest-asyncio>=1.3.0",
+    "pytest-env>=1.6.0",
+]

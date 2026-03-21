@@ -1,0 +1,4762 @@
+H a ndbo o k
+
+o f
+
+I n d e p e n d e n t
+J o u r n a l i s m
+
+H a n d b o o k
+
+I n d ep e nd e nt
+b y
+
+o f
+
+Jo u rn alis m
+
+D e b o r a h
+
+P o t t e r
+
+Deborah Potter is executive director of NewsLab (www.newslab.org), an online resource center
+for journalists in Washington, D.C., that she founded in 1998. She has taught journalism as a
+faculty member at The Poynter Institute and at American University, and is a past executive
+director of the Radio and Television News Directors Foundation. Potter leads workshops for
+journalists in newsrooms across the United States and around the world. She is a featured
+columnist writing about broadcast news for American Journalism Review and the author of
+Ready, Set, Lead: A Resource Guide for News Leaders. Potter spent more than 20 years in TV news,
+including 16 as a network correspondent for CBS News and CNN, covering the White House,
+State Department, Congress, national politics, and environmental issues. She also hosted the
+PBS TV series “In the Prime.” She has a BA from the University of North Carolina at Chapel Hill and
+a master’s degree from American University.
+
+C o n t e n t s
+
+1
+What Is News?
+
+2
+[4]
+
+Types of news
+Where the news comes
+from
+The journalist’s role
+Objectivity and fairness
+News providers
+
+5
+Broadcast and
+Online
+
+[ 38 ]
+Broadcast story forms
+and terms
+Broadcast writing
+Sound
+Pictures
+Newscasts
+Online news
+Online story forms
+Online writing
+
+3
+
+4
+
+Getting the Story
+
+Telling the Story
+
+Five W’s and an H
+Observation
+Research
+Sources
+Interviews
+Ground rules
+Getting it right
+
+Focus
+Writing
+Leads
+Story structure
+Endings
+Attribution
+Quotes and sound bites
+Numbers
+
+[ 12 ]
+
+6
+Specialized
+Journalism
+
+[ 22 ]
+
+7
+Ethics and Law
+[ 46 ]
+
+Beat reporting skills
+Government and politics
+Business and economics
+Health, science, and the
+environment
+Police and courts
+Sports
+Questions journalists
+should ask about polls
+
+Editing the Story
+
+[ 30 ]
+Newspaper jobs
+Broadcast jobs
+The editor’s role
+Copy editing
+Coaching
+Headlines, captions, and
+teases
+Graphics and visuals
+Supervising
+
+8
+[ 54 ]
+
+Ethical principles
+Ethical decision-making
+Ethics codes
+Codes of conduct
+Community standards
+Legal issues
+
+Journalism
+Resources
+
+[ 61 ]
+Membership groups
+Reporting and editing
+Specialized journalism
+Journalism training
+Freedom of expression
+Books
+Ethics codes
+
+INTRODUCTION
+
+Journalism is both a profession and a craft, since journalists
+draw on specialized skills and adhere to common standards.
+So what makes journalism different from other occupations like
+medicine or law, which could be described in similar terms?
+Perhaps the greatest difference is the special role the news
+media play in a free society.
+A free press has often been called the oxygen of
+democracy, because one cannot survive without
+the other. The French political writer Alexis de
+Tocqueville noted as much when he visited the
+United States almost 200 years ago. “You can’t
+have real newspapers without democracy, and
+you can’t have democracy without newspapers,”
+he wrote. Since then, that simple statement has
+been proven true in nations all over the world.
+Democracies, established or emerging, depend
+on the consent of an informed citizenry, and
+the news media are a primary source of the
+information people need in order to govern
+themselves.
+
+To ensure that journalists are able to provide
+that information, many countries have
+established legal protections for a free press.
+In the United States, for example, journalism
+is the only profession mentioned in the
+Constitution, which states: “Congress shall
+make no law … abridging the freedom of speech
+or of the press.” As Thomas Jefferson, the third
+president of the United States, wrote in 1787,
+“The basis of our government being the
+opinion of the people, the very first object
+should be to keep that right; and were it
+left to me to decide whether we should
+have a government without newspapers, or
+newspapers without a government, I should
+not hesitate a moment to prefer the latter.”
+Journalists in a free society not only have
+certain legal protections, they also have
+responsibilities. In some countries, these
+responsibilities are spelled out and in others
+they are implicit. But in almost every case they
+amount to the same thing: to keep citizens
+informed, journalists have a responsibility
+to provide information that is accurate and
+reported fairly — and independently — from
+outside influences.
+
+2
+
+“The central
+purpose of
+journalism is to
+provide citizens
+with accurate
+and reliable
+information they
+need to function in
+
+This handbook offers a brief introduction
+to the fundamentals of journalism as it is
+practiced in democratic systems — a journalism
+that attempts to base itself on fact and not
+opinion. Opinions have their place, but in the
+best-edited newspapers they are confined to
+the editorial pages and op-ed (guest writer)
+columns. It is the kind of journalism I practiced
+myself for more than 20 years as a reporter
+and editor, and that I now teach in professional
+workshops in the United States and around
+the world. My goal is to provide a useful and
+practical guide that will help all journalists do
+better work for the communities they serve.
+
+a f r e e s o c i e t y .”
+
+In democratic societies around the world, the
+news media have come to serve an additional
+function as watchdogs on the activities of the
+political and judicial branches of government.
+They have kept democracies viable by giving
+voice to the voiceless, ensuring that a ruling
+majority cannot trample the rights of a
+minority. A 19th century American writer
+and humorist, Finley Peter Dunne, once
+said that a journalist’s job is “to comfort the
+afflicted and afflict the comfortable.” But the
+primary role of journalism in a free society has
+remained the same for generations. When a
+U.S.-based group, the Committee of Concerned
+Journalists, surveyed journalists about the
+character of their profession at the very end of
+the 20th century, they came to this common
+understanding: “The central purpose of
+journalism is to provide citizens with accurate
+and reliable information they need to function
+in a free society.”
+Deborah Potter
+
+3
+
+1
+
+4
+
+W H AT I S N E W S?
+
+The answer to the question “What is news?” may seem obvious.
+News is what is new; it’s what’s happening. Look it up in the
+dic tionar y, and you’ll find news described as “a repor t of recent
+events or previously unknown information.” But most of the
+things that happen in the world ever y day don’t find their way
+into the newspaper or onto the air in a newscast.
+So what makes a story newsworthy enough
+to be published or broadcast? The real answer
+is, it depends on a variety of factors. Generally
+speaking, news is information that is of broad
+interest to the intended audience, so what’s big
+news in Buenos Aires may not be news at all in
+Baku. Journalists decide what news to cover
+based on many of the following “news values”:
+
+Timeliness
+Did something happen recently or did we
+just learn about it? If so, that could make it
+newsworthy. The meaning of “recently” varies
+depending on the medium, of course. For a
+weekly news magazine, anything that happened
+since the previous edition the week before may
+be considered timely. For a 24-hour cable news
+channel, the timeliest news may be “breaking
+news,” or something that is happening this very
+minute and can be covered by a reporter live at
+the scene.
+Impact
+Are many people affected or just a few?
+Contamination in the water system that serves
+your town’s 20,000 people has impact because
+it affects your audience directly. A report that
+10 children were killed from drinking polluted
+water at a summer camp in a distant city has
+impact too, because the audience is likely to
+have a strong emotional response to the story.
+The fact that a worker cut a utility line is not
+big news, unless it happens to cause a blackout
+across the city that lasts for several hours.
+
+Proximity
+Did something happen close to home, or did
+it involve people from here? A plane crash in
+Chad will make headlines in N’Djamena, but it’s
+unlikely to be front-page news in Chile unless
+the plane was carrying Chilean passengers.
+Controversy
+Are people in disagreement about this? It’s
+human nature to be interested in stories that
+involve conflict, tension, or public debate.
+People like to take sides, and see whose position
+will prevail. Conflict doesn’t always entail
+pitting one person’s views against another.
+Stories about doctors battling disease or citizens
+opposing an unjust law also involve conflict.
+Prominence
+Is a well-known person involved? Ordinary
+activities or mishaps can become news if
+they involve a prominent person like a prime
+minister or a film star. That plane crash in Chad
+would make headlines around the world if one
+of the passengers were a famous rock musician.
+Currency
+Are people here talking about this? A
+government meeting about bus safety might
+not draw much attention, unless it happens to
+be scheduled soon after a terrible bus accident.
+An incident at a football match may be in the
+news for several days because it’s the main topic
+of conversation in town.
+
+5
+
+Oddity
+Is what happened unusual? As the saying goes,
+“If a dog bites a man, that is not news. But if a
+man bites a dog, it’s news!” The extraordinary
+and the unexpected appeal to our natural
+human curiosity.
+What makes news also depends on the
+makeup of the intended audience, not just
+where they live but who they are. Different
+groups of people have different lifestyles and
+concerns, which make them interested in
+different types of news. A radio news program
+targeted at younger listeners might include
+stories about music or sports stars that would
+not be featured in a business newspaper aimed
+at older, wealthier readers. A weekly magazine
+that covers medical news would report on the
+testing of an experimental drug because the
+doctors who read the publication presumably
+would be interested. But unless the drug is
+believed to cure a well-known disease, most
+general-interest local newspapers would
+ignore the story. The exception might be
+the newspaper in the community where the
+research is being conducted.
+News organizations see their work as
+a public service, so news is made up of
+information that people need to know in
+order to go about their daily lives and to be
+productive citizens in a democracy. But most
+news organizations also are businesses that
+have to make a profit to survive, so the news
+also includes items that will draw an audience:
+stories people may want to know about
+just because they’re interesting. Those two
+characteristics need not be in conflict. Some
+of the best stories on any given day, in fact, are
+both important and interesting. But it’s fairly
+common for news organizations to divide
+stories into two basic categories: hard news and
+soft news, also called features.
+
+6
+
+Types o f News
+
+H
+
+ard news is essentially the news of the
+day. It’s what you see on the front page
+of the newspaper or the top of the
+Web page, and what you hear at the
+start of a broadcast news report. For example,
+war, politics, business, and crime are frequent
+hard news topics. A strike announced today
+by the city’s bus drivers that leaves thousands
+of commuters unable to get to work is hard
+news. It’s timely, controversial, and has a wide
+impact close to home. The community needs
+the information right away, because it affects
+people’s daily lives.
+By contrast, a story about a world-famous
+athlete who grew up in an orphanage would fit
+the definition of soft news. It’s a human-interest
+story involving a prominent person and it’s an
+unusual story that people likely would discuss
+with their friends. But there’s no compelling
+reason why it has to be published or broadcast
+on any particular day. By definition, that makes
+it a feature story. Many newspapers and onlinenews sites have separate feature sections for
+stories about lifestyles, home and family, the
+arts, and entertainment. Larger newspapers
+even may have weekly sections for specific
+kinds of features on food, health, education, and
+so forth.
+
+Topic isn’t the only thing that separates hard
+news from features. In most cases, hard news
+and soft news are written differently. Hard
+news stories generally are written so that the
+audience gets the most important information
+as quickly as possible. Feature writers often
+begin with an anecdote or example designed
+primarily to draw the audience’s interest, so the
+story may take longer to get to the central point.
+Some stories blend these two approaches.
+Stories that are not time-sensitive but that focus
+on significant issues are often called “news
+features.” A story about one community’s
+struggle to deal with AIDS, for example, is a
+news feature. A story about a new treatment
+option for AIDS patients would be hard news.
+News features are an effective way to explore
+trends or complex social problems by telling
+individual human stories about how people
+experience them. (We’ll discuss these different
+writing styles in more detail in Chapter 3,
+“Telling the Story.”)
+
+Whe re the News Co me s Fro m
+
+J
+
+ournalists find news in all sorts of places,
+but most stories originate in one of three
+basic ways:
+• naturally occurring events, like disasters
+and accidents;
+• planned activities, like meetings and news
+conferences;
+• reporters’ enterprise.
+Unplanned events frequently become major
+news stories. A ferry sinking, a plane crash, a
+tsunami, or a mudslide is newsworthy not just
+when it happens but often for days and weeks
+afterwards. The extent of the coverage depends
+in part on proximity and who was involved. A
+fatal automobile accident in Paris might not be
+big news on any given day. But an accident in
+Paris in 1997 was a huge news story, not just in
+France but also around the world, because one
+of the victims was Britain’s Princess Diana.
+Citizens who witness a disaster will often
+contact a news organization. Journalists also
+learn about these events from first responders:
+police, fire, or rescue officials. In some
+
+countries, news organizations are able to
+monitor emergency communications between
+first responders and can dispatch journalists to
+the scene quickly so they can watch the story
+unfold.
+In many newsrooms, the most obvious
+source of news is the daily schedule of events
+in town, which includes government meetings,
+business openings, or community events.
+Often called a “daybook,” this list of activities is
+not automatically newsworthy but it provides a
+good starting point for reporters searching for
+news. Reporters who regularly cover specific
+kinds of issues or institutions, also called “beat”
+reporters, say they often get story ideas by
+looking at agendas for upcoming meetings.
+Press releases can be another source of
+news, but again, they are just a starting point.
+Dozens of press releases arrive in newsrooms
+every day, by mail, by fax, or even on video via
+satellite. Government officials and agencies
+generate many of them, but other large
+organizations like private businesses and nonprofit groups also issue press releases to let
+the news media know what they are doing. A
+press release may resemble a news story but
+because it is produced by someone with a
+vested interest in the subject it is not likely to
+tell the complete story. Press releases may be
+factually correct, but they usually include only
+those facts that reflect positively on the person
+or organization featured in the release. Even if
+a press release looks newsworthy, a professional
+journalist first must verify its authenticity, and
+then begin asking questions to determine the
+real story before deciding if it’s worth reporting.
+Staged events, such as demonstrations,
+also can produce news, but journalists must be
+wary of being manipulated by the organizers
+who want to tell only their side of the story.
+Politicians have become adept at staging events
+and “photo opportunities” in order to attract
+coverage, even when they have no real news
+value. That does not mean journalists should
+ignore these events, but only that they need to
+do additional reporting to get a complete story.
+
+7
+
+Most reporters say their best stories come
+from their own enterprise. Sometimes story
+suggestions come from strangers, who may
+visit, telephone, or e-mail the newsroom
+with a complaint or concern. Some news
+organizations actively solicit ideas from people
+who live in the communities they serve, by
+providing a telephone number or an e-mail
+address where suggestions can be submitted.
+Journalists spend a lot of time building
+relationships with people who can provide them
+with information. (We’ll talk more about source
+building in Chapter 2, “Getting the Story.”)
+Journalists frequently find stories simply by
+looking around and listening to what people are
+talking about. What you overhear at a sports
+event or in line at the post office could turn into
+a news story. Ask the people you meet when
+you are not covering a story what is going on
+in their lives or their neighborhoods and you
+might find yourself on the trail of a news story
+no one else has covered.
+Another way to find news is to ask what
+has happened since the last time a story was
+in the paper or on the air. Follow-ups often
+lead to surprising developments that are even
+more newsworthy than the original report.
+For example, a story about a fire the day after
+it happened might tell you how many people
+were killed and the extent of the property
+damage. But a follow-up several weeks later
+could discover that a faulty radio system made
+it impossible for firefighters to respond quickly
+enough to save more lives.
+Documents, data, and public records can
+lead to terrific stories as well. Reporters can use
+them to look for trends or to spot irregularities.
+This kind of work requires more effort, but the
+results are almost always worth the trouble. It’s
+considerably easier when the data are made
+available electronically, of course, but reporters
+have been known to enter data from paper
+records into computer database programs
+just so they can search for the most significant
+information in a pile of statistics. For example,
+a list of people who have received speeding
+tickets might yield a story if it could be sorted
+by name instead of date. That’s how television
+8
+
+reporter Nancy Amons learned that one driver
+in her town had managed to amass a dozen
+traffic violations in three years and had even
+caused an accident that killed another driver
+without ever losing his driver’s license. When
+she investigated, city officials admitted they had
+failed to do their job.
+
+Th e J o ur n a l ist ’s R o l e
+
+N
+
+ew technologies have made it possible
+for anyone with a computer to
+disseminate information as widely as
+the largest news organizations. But
+a well-designed Internet site, no matter how
+well it’s written or how often it’s updated, is not
+necessarily a reliable source of news. The truth
+is that in a complex world where information
+is no longer a scarce commodity, the role of the
+journalist has become more important than ever.
+Unlike a propagandist or a gossip, the
+journalist sorts through the information
+available and determines how much of it is
+valuable and reliable before passing it on to the
+public. News stories, whether hard news or
+features, must be accurate. Journalists not only
+collect the information they need to tell the
+story, they have to verify the information before
+they can use it. Journalists rely on first-hand
+observation whenever possible and consult
+
+In a complex world
+where information
+is no longer a scarce
+commodit y, the role
+of the journalist
+has become more
+
+Keller, executive editor of The New York Times,
+is “applying judgment to information.”
+Unlike other purveyors of information,
+journalists owe their primary allegiance to the
+public. As Canada’s Montreal Gazette states
+in its code of ethics, “A newspaper’s greatest
+asset is its integrity. Respect for that integrity is
+painfully won and easily lost.” To maintain that
+integrity, journalists work hard to avoid conflicts
+of interest, real or perceived. (We’ll talk more
+about that in Chapter 7, “Ethics and Law.”)
+
+i m p o r t a n t t h a n e ve r.
+Objec t iv it y a n d Fa ir n ess
+
+multiple sources to make sure the information
+they receive is reliable. And, except on rare
+occasions, they identify the sources of their
+information so the audience can evaluate its
+credibility.
+But journalism is more than just the
+distribution of fact-based information.
+Propaganda also may be based on facts, but
+those facts are presented in such a way as to
+influence people’s opinions. As we’ve already
+noted, public relations professionals use facts,
+as well, but may tell only one side of a story.
+Journalists, on the other hand, strive to be fair
+and complete. They strive to tell an accurate
+and authentic story, one that reflects reality, not
+their own perception of it or anyone else’s.
+Another distinction between journalism
+and other forms of information is that
+journalists strive for independence from
+the people they cover. A public relations
+professional who is employed by the
+organization he or she is writing about is
+unlikely to include information that might make
+the organization look bad. A journalist, on the
+other hand, will attempt to provide a complete
+picture, even if it is not entirely positive.
+Journalists are not mere transmission belts
+for their own viewpoints or for information
+provided by others. They do original reporting,
+they do not confuse fact with opinion or rumor,
+and they make sound editorial decisions. A
+principal responsibility of journalism, says Bill
+
+T
+
+he concept of objectivity in journalism
+developed almost a century ago, as a
+reaction to the sensational, opiniondriven reporting that was common
+in most newspapers of the day. The term
+“objectivity” was originally used to describe a
+journalistic approach or method; journalists
+would seek to present the news in an objective
+way, without reflecting any personal or
+corporate bias.
+Over time, objectivity was required from
+the journalists themselves. The executive
+editor of the American newspaper The
+Washington Post, Leonard Downie, took the
+concept so seriously that he refused to register
+to vote. But many journalists today concede
+that total objectivity is impossible. In 1996,
+the U.S. Society of Professional Journalists
+dropped the word “objectivity” from its code of
+ethics. Journalists are human beings, after all.
+They care about their work and they do have
+opinions. Claiming that they are completely
+objective suggests that they have no values.
+Instead, journalists have largely agreed that they
+must be aware of their own opinions so they
+can keep them in check. The audience should
+not be able to tell from the story what the
+journalist’s opinion is. By using an objective,
+scientific method for verifying information,
+journalists can report stories that do not reflect
+their own personal views. The story itself, in
+other words, should be impartial and fair.
+9
+
+Journalists also strive to be fair in their
+reporting by not telling one-sided stories.
+They look for contrasting views and report on
+them without favoring one side or another. In
+addition to verifying assertions of fact, they will
+seek out differing opinions in cases where the
+facts are in dispute.
+Fairness is not the same thing as balance,
+however. Balance suggests that there are only
+two sides to any story, which is rarely the case,
+and that each side should be given equal weight.
+Journalists who seek that kind of artificial
+balance in their stories actually may produce
+coverage that is fundamentally inaccurate. For
+example, the vast majority of independent
+economists may agree on the consequences of a
+particular spending policy while a small handful
+has a different opinion, which has been proven
+wrong by past experience. A story giving equal
+time or space to the views of both groups would
+be misleading.
+The challenge for journalists is to report
+all significant viewpoints in a way that is
+fair to those involved and that also presents
+a complete and honest picture to the audience.
+“Fairness means, among other things, listening
+to different viewpoints, and incorporating them
+into the journalism,” says reporter and blogger
+Dan Gillmor. “It does not mean parroting lies
+or distortions to achieve that lazy equivalence
+that leads some journalists to get opposing
+quotes when the facts overwhelmingly support
+one side.”
+
+News Prov id e r s
+
+J
+
+ournalists the world over share certain
+characteristics. They are curious and
+persistent. They want to know why
+things happen and they don’t take no for
+an answer. They are not intimidated by the
+powerful and they care deeply about the work
+they do. Kevin Marsh, an editor at the British
+Broadcasting Company’s (BBC) Radio 4, says
+a good journalist has “the ability to grasp the
+big truths — with the humility to let them go
+again when the facts don’t fit.” A journalist’s
+
+10
+
+job is challenging and complicated. As Philip
+Graham, late chairman of the board of the
+Washington Post Company, once said, “(A
+journalist has the) inescapably impossible task
+of providing every week a first rough draft of
+a history that will never be completed about a
+world we can never understand.”
+Journalists today have more outlets for their
+work than at any other time in history, from
+small community newspapers to worldwide
+television news channels and online-news
+sites. Each of the media outlets has different
+strengths and weaknesses.
+In most countries, daily newspapers
+generally have the largest staffs and offer
+more depth on a wider range of topics than
+the broadcast media. With the addition of
+online sites, many newspapers have begun to
+overcome the limitations of their traditional
+once-a-day publication schedule. But they
+largely reach only a literate, affluent audience,
+people who can read and who have enough
+money to buy the newspaper or have access to a
+computer to read it on line.
+Radio, one of the most widely used sources
+of news in the world, has the advantage of
+speed and easy availability. Radio journalists
+can get the news on the air quickly and anyone
+with a battery-powered radio can hear the news
+almost anywhere at any time. Radio reporters
+tell stories with sound as well as words, so
+listeners feel they have experienced some of
+what the event was really like. Radio news is
+on the air many times a day, so it is frequently
+updated. But most radio stations provide only
+a limited amount of time for each newscast,
+which tends to be a short summary of only the
+biggest stories, without the depth or breadth
+that a newspaper can offer.
+With both sound and pictures, television
+newscasts can show viewers what is happening,
+not just tell them about it. One of television’s
+strengths is its ability to convey emotion and
+share experiences with viewers. Technological
+advances — smaller cameras, digital editing,
+and mobile uplinks — have made it possible for
+television to be almost as fast as radio in getting a
+story on the air. But the medium’s dependence
+
+on pictures can be a drawback: Television news
+sometimes avoids telling complicated stories
+because they are not visually compelling.
+Recently, the distinction between the
+traditional categories of print and broadcast
+news has blurred. In the United States and
+other countries, many news organizations
+now produce news in a variety of media,
+including the Internet. Since the Internet
+is infinitely expandable, online news is not
+necessarily subject to the same restrictions
+of space and time imposed on the print and
+broadcast media. News sites can provide more
+information and keep it available for a longer
+time. And they can make it possible for users to
+search for the news that most interests them.
+Online-news sites affiliated with
+newspapers, radio, and television stations may
+look very similar. They illustrate their stories
+with photographs, and many offer streaming
+video of stories or complete newscasts.
+They also may supply a “podcast” version,
+publishing their files to the Internet so that
+their subscribers can download the files onto
+a computer or portable media player for later
+consumption. On some sites, you can read the
+text of a story or listen as the writer reads it to
+you. News organizations are even posting their
+own Web logs (commonly known by the shorthand term “blogs”), letting journalists write
+online diaries about the stories they’re covering
+or the decisions being made in the newsroom.
+In this evolving world of news, many
+journalists find they need additional skills to do
+the job that is expected of them. Reporters may
+be expected to shoot photographs for use on
+the Internet, in addition to interviewing sources
+and writing stories for the newspaper. Editors
+may be asked to post stories on the Internet,
+in addition to checking reporters’ copy and
+writing headlines. Photographers may need
+to shoot video as well as still pictures, and they
+also may have to provide text to go along with
+their pictures. Many news organizations are
+providing training for journalists who are taking
+on new roles in the newsroom. And some
+journalism educators are now implementing
+what they call a “convergence curriculum” to
+
+help students learn the multiple skills they may
+need in the future.
+But for all these new demands, the heart
+of good journalism remains the same. As Bill
+Kovach and Tom Rosenstiel write in their book,
+The Elements of Journalism: What Newspeople
+Should Know and the Public Should Expect,
+there are some clear principles that journalists
+in a democratic society agree on and that
+citizens have a right to expect:
+• Journalism’s first obligation is to the truth.
+• Its first loyalty is to citizens.
+• Its essence is a discipline of verification.
+• Its practitioners must maintain an
+independence from those they cover.
+• Journalism must serve as an independent
+monitor of power.
+• It must provide a forum for public criticism
+and compromise.
+• It must strive to make the significant
+interesting and relevant.
+• It must keep the news comprehensive and
+proportional.
+• Its practitioners must be allowed to exercise
+their personal conscience.
+These values distinguish journalism from
+all other forms of communication. Abiding by
+them is not easy. Journalists face pressure to
+compromise on these standards almost every
+day. But keeping them in mind is the best
+way to ensure that journalism can serve its
+primary function, supplying citizens with the
+information they need to make decisions about
+their lives.
+
+11
+
+2
+
+12
+
+G E T T I N G T H E S TO RY
+
+The tip came in an e -mail from a former government official
+who suggested looking into the supply of life rafts on ferries in
+Washington state. Repor ter Eric Nalder, then with the Seattle
+Times, decided to check it out. His first phone call was to
+the ferr y system’s safety direc tor, who was new on the job,
+but who gave Nalder the name and location of
+his predecessor. When the reporter reached
+the retired director by phone, he confirmed the
+shortage of life rafts. Far from being satisfied
+that he had uncovered a good story, Nalder was
+just getting started.
+To get the full story, Nalder needed
+documents showing the number of life rafts
+on every ferry, the capacity of each raft, and
+the maximum number of passengers each
+ferry could carry. He had to analyze the data
+to determine the seriousness of the shortage.
+He also wanted to ride the ferries and talk to
+passengers and crew. Only then was he ready
+to write his front-page story, which revealed
+that ferries in his state had only enough life rafts
+to evacuate one passenger out of seven.
+Reporting is a painstaking process that
+involves collecting facts and checking them
+carefully for accuracy. Journalists sometimes
+witness stories first-hand, but more typically
+they learn the details from others who have
+experienced something directly or who are
+experts in the topic. That information is
+reinforced or corroborated by additional
+sources, and checked against documentary
+evidence in public records, reports, or archives.
+The information a journalist collects should
+answer questions that are commonly known as
+the five W’s and an H: who, what, where, when,
+why, and how. Depending on the complexity of
+the story, a reporter might ask those questions
+in several different ways.
+
+WHO:
+• Who is involved in this story?
+• Who is affected by it?
+• Who is the best person to tell the story?
+• Who is missing from this story? Who has
+more information about this?
+• Who is in conflict in this story? Do they have
+anything in common?
+• Who else should I talk to about this?
+WHAT:
+• What happened?
+• What is the point of this story? What am I
+really trying to say?
+• What does the reader, viewer, or listener need
+to know to understand this story?
+• What surprised me? What is the most
+important single fact I learned?
+• What is the history here? What happens
+next?
+• What can people do about it?
+WHERE:
+• Where did this happen?
+• Where else should I go to get the full story?
+•W
+ here is this story going next? How will
+it end?
+WHEN:
+• When did this happen?
+• When did the turning points occur in this
+story?
+• When should I report this story?
+
+13
+
+WHY:
+•W
+ hy is this happening? Is it an isolated case
+or part of a trend?
+•W
+ hy are people behaving the way they are?
+What are their motives?
+•W
+ hy does this story matter? Why should
+anyone watch, read, or listen to it?
+•W
+ hy am I sure I have this story right?
+HOW:
+•H
+ ow did this happen?
+•H
+ ow will things be different because of what
+happened?
+•H
+ ow will this story help the reader, listener, or
+viewer? The community?
+•H
+ ow did I get this information? Is the
+attribution clear?
+•H
+ ow would someone describe this story to
+a friend?
+Many reporters use mental checklists like
+this one to make sure they have covered all of
+the important elements of a story.
+
+Obs er vation
+
+O
+
+n-the-scene observation is one of
+the fundamentals of good reporting.
+Journalists want to witness events for
+themselves whenever possible so they
+can describe them accurately to the audience.
+Good reporters use all of their senses on the
+scene. They look, listen, smell, taste, and feel
+the story so the audience can, too.
+To do this well, journalists need an accurate
+record of their observations. A print reporter
+can do his or her job with a notebook and
+a pencil or pen, but many also carry audio
+recorders and cameras, especially if they are
+expected to file stories for an online edition
+as well. For radio, journalists need to capture
+sound, and for television, both sound and video.
+
+14
+
+Good reporters
+use all of their
+senses on
+the scene.
+
+Using a recorder is one way of making sure
+that any quotations you might use are accurate.
+But electronics have been known to fail, so it’s
+important for all journalists to be skilled notetakers. Here are some tips on note-taking from
+experienced reporters:
+• Write down facts, details, thoughts, and ideas.
+Make clear which is which, and where they
+came from.
+• Draw diagrams of rooms, scenes, or items in
+relationship to each other.
+• Always get correctly spelled names, titles, and
+contact information. Ask for birth date and
+year, to make sure you have the person’s age
+right.
+• Spell out interview ground rules in the
+notebook.
+• Don’t crowd the notebook. Leave space for
+annotating notes.
+• Leave the inside covers blank to write down
+questions to ask later.
+• Annotate the notes as soon as possible.
+Many reporters use their own shorthand
+for common words so they can take notes
+more quickly. Then they annotate their
+notes, spelling out abbreviations to avoid any
+confusion later. They also will mark the most
+important information they have learned, good
+quotes they may use in the story, anything they
+need to follow up on or check for accuracy, and
+questions that still need to be answered.
+It sounds obvious, but reporters must
+be sure they have the tools they need before
+heading out to cover a story: notebook, pen,
+tape or digital recorder, and fresh batteries.
+There’s nothing more embarrassing than
+
+arriving on the scene only to discover there
+is no film or tape in the camera, or that the
+only pen in your pocket is out of ink. Today’s
+journalists often carry additional tools: a mobile
+telephone and a laptop computer. A few other
+simple items can be useful, as well. Putting a
+rubber band around your notebook to mark the
+next blank page makes it easy to find quickly. A
+plastic bag will protect your notebook when it
+rains, so the pages stay dry and the ink doesn’t
+run. A small pair of binoculars will help you see
+what’s going on even if you can’t get very close.
+A calculator will help you convert information
+like the number of tons of fuel carried by
+an aircraft into terms more familiar to the
+audience, in this case, liters or gallons.
+
+R ese a rc h
+
+J
+
+ournalists tend to collect much more
+information than they can put into a
+story, but that information always helps
+them better understand the event or issue
+they are covering. Sometimes, background
+information is essential to give a story deeper
+meaning. In Eric Nalder’s story about life rafts,
+for example, he included the fact that the water
+the ferries cross is cold enough in January to kill
+someone within half an hour. That information
+
+puts the shortage of life rafts in context by
+explaining more clearly why it matters. It’s
+exactly the kind of information reporters look
+for when they do research on a story, either
+before they leave the newsroom or along the
+way as questions come up.
+Journalists have more research tools
+available today than ever before, thanks to
+computers and the Internet. Many of them are
+just high-tech versions of the basic tools of the
+trade: directories, almanacs, encyclopedias, and
+maps. Others are databases and reports that
+would have been much harder to find in the
+days before the Internet, requiring a personal
+visit to a library or government building. Still
+others are resources that few would have
+imagined two decades ago when the Internet
+was young: search engines, blogs, chat rooms,
+and e-mail lists. All of these resources are
+useful to journalists collecting background
+on a story. But one of the most basic research
+tools has not changed in a century: the news
+organization’s own library of previously
+published or broadcast stories. Whether these
+“clips” are kept on paper in filing drawers or in
+computer files, they are a useful starting place
+for all kinds of stories. Many journalists also
+keep their own “clip files” of stories they have
+saved about specific topics.
+Imagine that the former president of a
+neighboring country has died. A reporter
+assigned to write the story would want to
+know some basic facts: age, cause of death, and
+where and when he died. But the journalist
+would also want information about his time
+in office, and how the country has changed
+since he was president. A first step would be
+to consult previous news reports, either in the
+newsroom’s archive or online. Those reports
+might mention someone who was close to the
+former president, whom the reporter could ask
+for an interview. The reporter would want to
+have some background on that person before
+conducting the interview, and might learn that
+the former president’s friend kept all of his
+letters, which could reveal some surprising new
+information.
+15
+
+Doing an interview without having done
+any background research is like driving to an
+unfamiliar place without consulting a map. You
+might get where you intend to go, but it’s just as
+likely that you will miss a turn along the way.
+
+S o urce s
+
+R
+
+eporters use both primary and
+secondary sources when reporting news
+stories. A primary source could be an
+interview with a person who has direct
+experience of an event or topic, or an original
+document related to that topic. The journalist
+as eyewitness also is considered a primary
+source. A secondary source might be a written
+report based on the original document. In the
+case of a fire, for example, the person whose
+house burned down would be a primary source.
+So would a firefighter who had been involved in
+putting out the fire. But the press release issued
+by the fire department the next day would be a
+secondary source.
+One rule of thumb reporters follow when
+researching a story is that no single source can
+provide all of the information they might need.
+In the case of the former president, each source
+the reporter consulted led to another source.
+Sometimes, sources contradict each other. To
+clear up discrepancies, reporters may have to
+see where the weight of the evidence lies or
+seek out original sources, such as documents,
+to determine which version is true. Secondary
+sources are most useful as a way of confirming
+information acquired from primary sources.
+Whatever sources you use to research the
+background of a story, it’s critical to consider
+the validity or credibility of the source. These
+days, anyone can design a professional-looking
+Web site, or arrange to send an e-mail that
+looks authentic but is really a hoax. Just
+because you can find it online does not mean
+that it’s true. Journalists need to verify the
+source of all information to determine whether
+it’s credible enough to use in a news story.
+
+16
+
+Good reporters
+“work” their
+sources regularly,
+contacting them
+to ask if anything
+interesting is
+happening.
+
+Deciding what sources to use for a story is
+a large part of a journalist’s job. Here are some
+useful questions for evaluating whether you
+have chosen the right source or the best source
+for your story.
+• How does this source know what he or she
+knows? (Is this person in a position to know
+these things, either personal or professional?)
+• How can I confirm this information through
+other sources or through documents?
+• How representative is my source’s point of
+view? (Is this just one person who complains
+loudly about the landlord, because they
+have a personal problem? Or is this the
+most articulate voice speaking for an entire
+group of tenants who have serious, legitimate
+problems?)
+• Has this source been reliable and credible in
+the past?
+• Am I only using this source because it’s the
+easy way to go or because I know I’ll get
+something I can use?
+• What is the source’s motive for providing
+information? (Is this person trying to make
+himself look good, or to make his boss look
+bad? Why is he or she talking to me in the
+first place?)
+
+Once you discover a helpful source of
+information for one story, it’s a good idea to
+stay in touch with that person over the long
+term. Get as much contact information as
+possible for every source, not just an office
+address and telephone number, but mobile and
+home telephones and e-mail addresses as well.
+Good reporters “work” their sources regularly,
+contacting them to ask if anything interesting
+is happening. Make it easy for sources to get in
+touch with you, as well, by giving your business
+card to everyone you meet on a story.
+Anyone with access to information,
+including secretaries and clerks, can be a useful
+source for a journalist. They can provide copies
+of documents, and they often know who is the
+most knowledgeable person on a given topic.
+A reporter who treats them with respect may
+find his or her request for an interview with the
+secretary’s supervisor accepted more quickly.
+
+I nte r v iews
+
+A
+
+merican reporter Kristin Gilger says,
+“Skillful interviewing is the basis for
+all good reporting and writing.” An
+interview is defined as information,
+opinion, or experience shared by a source in
+conversation with a reporter. What makes an
+interview a little different from an ordinary
+conversation is that the reporter determines the
+direction of the questioning.
+Setting up an interview is not always easy.
+People may not want to talk with a journalist,
+especially if the story is controversial. When
+dealing with public officials, start from the
+premise that the public has a right to know
+what the officials are doing. Experienced
+reporters have found they can persuade
+even the most reluctant officials to agree to
+an interview by anticipating the excuses and
+roadblocks they may use.
+• Th
+ ey don’t have time.
+The reporter can offer to meet at the most
+convenient time or place for the person they
+want to speak with. Limiting the amount of
+time requested also may help.
+
+• Th
+ ey are afraid because they think the story
+will make them look bad.
+Treating people with respect and telling them
+precisely why you want to talk with them will
+help sources be less anxious.
+• Th
+ ey don’t know what to say.
+Reporters need to be clear about why the
+story needs a particular person’s point of view.
+• Th
+ ey are hard to reach.
+Reporters often have to go through a
+secretary or public relations officer to
+contact the person they want to interview. If
+they suspect that their request is not being
+forwarded, some reporters will write a letter
+to the source, or call during lunch or after
+business hours in an effort to get through.
+Once you have secured the interview and
+researched the person and the topic, there is
+still more preparation to do. Most reporters
+develop a list of questions or topics, which they
+take with them but do not read from during
+the interview. Instead, they refer to the list only
+near the end to make sure they haven’t forgotten
+something important. The list also includes
+other information, documents, or photographs
+they want to obtain from that source.
+Questions are the backbone of an interview.
+They are the rudder, keeping the ship going in
+the right direction. Good questions can reward
+you with unexpected answers, rich information,
+and surprises. Poor questions can leave you
+wondering why you bothered to talk to that
+person anyway. Questions that are too specific
+can lead you down the wrong trail.
+
+“Skillful interviewing
+is the basis for
+all good reporting
+a n d w r i t i n g .”
+
+17
+
+The first question in an interview is
+important because it sets the tone for what
+follows. A lot of journalists like to begin with an
+“ice-breaker” question that lets the source relax.
+It’s something they’re comfortable answering. It
+may, in fact, have nothing to do with the reason
+you are there. But often it helps to establish
+your credentials with the source, and that can
+establish a sense of trust and openness.
+Most of the time, the best questions are
+open-ended questions that cannot be answered
+with a simple yes or no. They are also nonjudgmental, in that they do not establish the
+reporter’s point of view. It’s the difference
+between, “What do you think about that?” and
+“What could you have been thinking!” While
+it’s important to ask good questions, it’s also
+important to be quiet and let the interviewee
+talk. Good journalists are good listeners, and
+often learn the most significant information
+by being silent. What you hear also can lead
+to additional questions that may not have
+occurred to you.
+
+18
+
+Robert Siegel, who works for National
+Public Radio in Washington, D.C., tells the story
+of an interview he did with a Turkish diplomat
+after Pope John Paul II was shot and wounded
+by a Turk in Rome. His first question, “Do you
+know any details about this man, Mehmet
+Ali Agca; where he lived in Italy, what he did
+there, what kind of visa the Italians gave him?”
+The answers were all no. After several more
+tries, Siegel paused, about to give up. And the
+diplomat filled the silence with this, “… except
+that he is the most famous convicted murderer
+in Turkey, who escaped from prison after
+assassinating the editor of one of our major
+newspapers.” Siegel says he almost lost a good
+story by asking questions that were too narrow.
+He acknowledges that a better way to open the
+interview might have been, “Tell me about
+this man.”
+Reporters can do interviews in person,
+by telephone, or online via e-mail or instant
+messaging. Each approach has advantages
+and disadvantages. Interviewing in person
+gives the reporter a more complete sense of
+the individual. What kinds of photos are on
+the wall? Is the desk messy or neat? What
+books are in the bookcase? Meeting in person
+also gives the reporter the ability to judge the
+source’s credibility based on his demeanor.
+Does he look nervous or comfortable? Is she
+willing to look the reporter in the eye?
+Christopher (Chip) Scanlan, director of
+writing workshops for The Poynter Institute,
+a journalism school in the United States, tells
+the story of interviewing a woman who lost her
+husband to cancer. She gave him a tour of her
+home, and in the bedroom she said, “You know,
+every night I put just a little of [my husband’s]
+cologne on the pillow, so I can believe he is
+still with me.” It’s a detail that the reader can
+smell and feel, which Scanlan never would have
+learned over the phone or online.
+Telephone interviews take less time, and
+some reporters find it easier to take good
+notes when they don’t have to worry about
+maintaining eye contact with the source. They
+can even type their notes into the computer.
+E-mail interviews are useful for reaching people
+
+in distant places, but the reporter can’t listen to
+what’s being said and follow up in “real time.”
+Instant messaging via the Internet is more
+akin to a telephone interview. But both online
+methods raise the question of whether the
+person they appear to be from actually sent
+the answers.
+Because of these concerns, The VirginianPilot newspaper in Norfolk, Virginia, has
+instituted this newsroom policy for online
+reporting: “In quoting from electronic
+communications, we will make certain the
+communication is genuine, as it is easy to fake
+Internet return addresses or log on as someone
+else. The Internet is not controlled like a wire
+service [such as Reuters or the Associated
+Press]; hoaxes can come from anywhere.”
+Reporters using e-mail or other online
+forms of communication should follow the
+same professional standards as they would in
+any other form. They must identify themselves
+as journalists and tell what information they are
+seeking and why. They need to apply the same
+fact-checking and thinking skills they would to
+any other source of information.
+No matter which way they conduct
+an interview, reporters usually have some
+questions they save for the end. First, they may
+summarize the conversation to be sure they’ve
+heard accurately what was being said. Then
+they will ask if there is anything else the person
+being interviewed wants to add. They also
+ask for the best way to get back in touch with
+the person, especially after hours, and they
+thank the person for his or her time. And
+many journalists have one last question they
+ask at all interviews, “Who else should I talk to
+about this?”
+
+Questions are
+
+G ro un d Rul es
+
+M
+
+ost interviews are conducted “on the
+record,” which means the reporter
+can use anything that is said and
+attribute it directly to the person who
+is speaking. It is important to make sure the
+source knows this, especially when the reporter
+is dealing with ordinary people who are not
+accustomed to being quoted in the newspaper
+or on the air.
+If the information is not to be on the record,
+both the reporter and the source must agree
+in advance to the conditions under which the
+information can be used. An interview “on
+background” or “not for attribution” generally
+means the information can be used in a story
+and the source’s words can be quoted directly,
+although he or she cannot be named. However,
+the source can be identified in a general way,
+for example, as “a foreign ministry official” or “a
+company engineer” — as long as the source and
+the journalist both agree on the description to
+be used.
+Many news organizations have written
+policies regarding the use of anonymous
+sources. The New York Times newspaper,
+for example, says: “The use of unidentified
+sources is reserved for situations in which
+the newspaper could not otherwise print
+information it considers reliable and
+newsworthy. When we use such sources, we
+accept an obligation not only to convince a
+reader of their reliability but also to convey
+what we can learn of their motivation.”
+Reporters should not be too quick to agree to
+talk on background because sources sometimes
+try to use it as a cover for a personal or partisan
+attack, knowing it cannot be traced back to
+them. And using an unnamed source makes it
+more difficult for the audience to evaluate the
+credibility of the information.
+
+the backbone of
+an inter view.
+19
+
+There are times when reporters have to get
+information on background because it’s the
+only way a source will agree to talk. A source
+who fears for her safety if others learn that she
+has spoken to a reporter may agree to provide
+information only on background. Here are
+some guidelines for deciding whether to accept
+and use background information:
+• Th
+ e story is of overwhelming public concern.
+• Th
+ ere is no other way to get the information
+on the record.
+• Th
+ e source is in a position to know the truth.
+•Y
+ ou are willing to explain (in your story) why
+the source could not be named.
+In some capitals, government officials will
+talk to reporters on background as well as “deep
+background,” which means the information
+can be used but not in a direct quote, and the
+source cannot be identified. A reporter could
+write only that officials are known to believe
+something or another. Information that is
+offered “off the record” cannot be used at all,
+so most reporters will fight this arrangement
+unless the source is so important to the story
+that they have no other choice. Off-the-record
+information cannot even be repeated to
+another source, but it can tip reporters off to a
+story that is worth pursuing.
+Whatever the arrangement, it’s up to the
+reporter to make sure both sides understand
+and agree to the ground rules before the
+interview. Sometimes sources try to change
+the rules in the middle, by telling the reporter
+something important and then adding, “But
+you can’t use that, of course.” That’s why it’s
+a good idea to spell things out at the beginning,
+and not to agree to withhold information unless
+a separate deal is reached before proceeding
+with the interview.
+
+20
+
+Credibility is a
+j o u r n a l i s t ’s m o s t
+important asset,
+and accuracy is
+the best way to
+protect it.
+
+Journalists also should be clear about
+how far they will go to protect the identity of
+a source. In some jurisdictions, journalists
+may risk going to jail if they refuse to reveal
+information about a confidential source in a
+court of law. If a journalist is not willing to risk
+facing time in prison to protect a source, he or
+she should say so.
+Some reporters are quite skilled at getting
+off-the-record information back on the record.
+Eric Nalder is one of them. When an off-therecord interview is over, he reads back a quote
+that is quite innocuous and asks, “Why can’t
+you say that on the record?” When the source
+agrees, he goes on through his notes, reading
+back quotes and getting them approved for
+use. He says he once got an entire interview
+changed from off the record to on. In part,
+that’s because the source now trusted him to
+be accurate because he had heard the quotes
+read back.
+
+One other ground rule that is important
+for journalists to understand is the use of an
+“embargo” on information provided by a source.
+That means the information is provided on the
+condition that it is not to be used until a specific
+time. A government agency announcing a new
+policy may provide a written summary several
+hours in advance or even a day ahead. That
+gives reporters time to digest the information
+before the press conference making the policy
+official. Reporters who accept information
+under an embargo are bound to honor it
+unless the news becomes public before the
+specified time.
+
+G e tting I t R ig ht
+
+C
+
+redibility is a journalist’s most important
+asset, and accuracy is the best way to
+protect it. To ensure accuracy, reporters
+must check and double-check all of
+the information they collect for a news story.
+Reporters will make mistakes, but they should
+be rare. When an American newspaper,
+Portland’s Oregonian, studied its own errors,
+editors concluded they happened mainly
+because of three causes:
+•W
+ orking from memory;
+•M
+ aking assumptions;
+•D
+ ealing with second-hand sources.
+We’ll talk more about getting it right in
+Chapter 4 (“Editing the Story”). But reporters
+are the news organization’s first line of defense
+against errors. Reporters who take excellent
+notes and consult them often, and who search
+for primary sources whenever possible, are
+better able to abide by the late American
+publisher Joseph Pulitzer’s three rules of
+journalism: “Accuracy, accuracy, and accuracy.”
+
+21
+
+3
+
+22
+
+T E L L I N G T H E S TO RY
+
+All news stories are made up of facts, obser vations, quotations,
+and details. Repor ters almost always have more than they
+can use, and because they’ve worked hard to collect all of that
+information, their natural impulse is to use as much of it as
+possible in their stories. But cramming in all the facts that will fit
+rarely results in a well-told stor y that will engage the audience.
+It is harder to understand stories that are
+overstuffed with information. A reporter who
+tries to explain everything may succeed only in
+confusing the audience. Besides, newspapers
+have only so much space; radio and television
+news programs only so much airtime; and
+readers, listeners, and viewers only so much
+spare time and attention to devote to catching
+up on the news.
+Good journalism involves selection, not
+compression. Reporters must use their news
+judgment to decide what is most important
+to include in a story and in what order to put
+it. For many reporters, the most difficult part
+of telling a story is deciding what to leave out.
+One way to make those decisions is to choose
+a central point or a theme for the story, also
+called a focus.
+
+Fo cu s
+
+T
+
+he focus of a story is basically the answer
+to the question, “What is this story really
+about?” To determine the focus, Poynter
+Institute writing instructor Chip Scanlan
+suggests asking five additional questions:
+• What’s the news?
+• What’s the story?
+• What’s the image?
+• How can I tell it in six words?
+• So what?
+Imagine that you’re covering a fast-moving
+wildfire. You’ve been out talking to people and
+observing the damage all day. Now, you need
+
+to focus your story before you begin writing.
+Here’s how you might use Scanlan’s questions to
+find your focus:
+•W
+ hat’s the news?
+A fire destroyed two houses in the mountains
+east of the city, but no one was injured and
+the city business district was spared.
+•W
+ hat’s the story?
+Two families are homeless but grateful to be
+alive.
+•W
+ hat’s the image?
+Family members hug each other near the
+smoking ruins of their house.
+•H
+ ow can I tell it in six words or less?
+Fire destroys homes but not spirits.
+•S
+ o what?
+Property damage from a dangerous fire was
+limited.
+The reporter writing this story now knows
+that his lead will be about the families who
+lost their homes; that he’ll use a quote high up
+in the story from a family member expressing
+gratitude that everyone survived; and that he’ll
+also include general information about property
+damage. The reporter knows that he can leave
+out some of the information he collected about
+the number of fire companies that responded in
+the business district, but he still might include a
+quote from the fire chief.
+The results of this focus exercise are not
+meant to suggest that every story has only one
+acceptable focus. On the contrary, reporters
+for different news organizations may take the
+same basic facts and write their stories quite
+differently because they have decided on a
+23
+
+different focus. In the case of the wildfire story,
+a reporter could use the same five questions to
+come up with a different focus.
+•W
+ hat’s the news?
+Businesses in our city escaped damage from
+a wildfire that destroyed two houses in the
+mountains east of downtown.
+•W
+ hat’s the story?
+Business owners grateful the fire spared them
+this time.
+•W
+ hat’s the image?
+A business owner shakes hands with a
+firefighter outside his store.
+•H
+ ow can I tell it in six words?
+Fire can’t stop business.
+•S
+ o what?
+Economic impact of a dangerous fire was
+limited.
+This version of the story would lead with
+the relief of business owners, and use a quote
+high up from one businessman whose store
+was spared. Both stories would include the
+same basic information — that two houses were
+destroyed while businesses were unaffected
+— but their emphasis would be different.
+Knowing what to emphasize before beginning
+to write helps the reporter decide what facts
+and quotes to include and what to leave out. As
+William Zinsser notes in his book On Writing
+Well, “Clear thinking becomes clear writing;
+one can’t exist without the other.”
+Experienced reporters don’t wait until
+the end of the day, after they’ve done all their
+research, interviews, and observation, before
+seeking a focus for their story. They may
+actually start the reporting process with a focus
+in mind, which helps them decide where to go
+and whom to interview. Of course, the focus
+can change as they collect more information,
+and it often does. The most important thing is
+for the reporter to have decided on a focus for
+the story before sitting down to write.
+Having a focus in mind is just the first
+step in planning to write a story. The second
+is to organize the story so you know what
+information goes where. Begin by listing the
+basic facts of the story and decide what should
+be at the top, at the end, and in the middle.
+24
+
+Select the best quotes or sound bites from your
+interviews, and decide where they should go in
+the story. Make note of any details you want to
+be sure to include. Before they begin to write,
+some reporters find it useful to create an outline
+on paper that they use as a kind of road map for
+the story.
+
+Writ in g
+
+G
+
+ood news writing is concise, clear, and
+accurate. That sounds simple enough,
+but it’s actually quite challenging. As
+we’ve already mentioned, reporters have
+a tendency to want to include everything they
+have learned in their stories. But stories that
+get to the point are more likely to appeal to busy
+news consumers, and a news organization that
+lets stories run on won’t have much space or
+time left to cover other news.
+Generally speaking, news stories have
+shorter sentences and paragraphs than most
+other types of writing. Each paragraph contains
+one main idea. A new paragraph begins when a
+new idea, character, or setting is introduced.
+Journalists use simple, direct language that
+is easy to understand, with more nouns and
+verbs than adjectives and adverbs. Well-written
+news stories are not vague, ambiguous, or
+repetitious, because every word counts. As E.B.
+White notes in his classic book, The Elements of
+Style, one of the basic rules of writing is simply
+this: “Omit needless words.”
+Good writers always make an effort to
+choose the most appropriate word to convey
+what they mean. As the 19th-century
+American writer Mark Twain said, “The
+difference between the right word and almost
+the right word is the difference between
+lightning and the lightning bug.” Reporters
+routinely consult dictionaries and reference
+books to make sure the words they choose
+really mean what they think they do.
+Because they write stories for a general
+audience, journalists also try to avoid jargon
+— specialized language or technical terms
+unfamiliar to most people. A hospital
+spokesman might describe a person as suffering
+
+Good news writing
+i s c o n c i s e , c l e a r,
+and accurate.
+
+from “lacerations and contusions,” but a
+reporter should use simpler terms: “cuts and
+bruises.” If a technical term must be used for
+accuracy, it’s a good idea to include a definition
+as well. For example, the term “fossil fuels”
+in a story about global energy issues should
+include a short list of what those fuels are: coal,
+oil, and natural gas. Journalists also must steer
+clear of euphemisms — words or phrases that
+may confuse or mislead the audience. If the
+city council votes to approve “a new interment
+facility,” the story on the radio or in the next
+day’s newspaper should tell residents that the
+city “plans to build a new cemetery.”
+One key principle of news writing is to
+show the audience what happened rather than
+just telling them about it. For example, instead
+of saying that family members attending a
+funeral were grief-stricken, a well-written news
+story would show their grief by describing how
+they hugged each other and sobbed. Instead
+of just telling the reader that a person is tall, a
+good writer would mention that he has to stoop
+to enter the front door.
+Accuracy is critically important in news
+writing. An accurate story gets the basics
+right: grammar, spelling, punctuation, dates,
+addresses, numbers, and all the other details
+that go into a news story. Getting someone’s
+name or age wrong is the kind of error that can
+erode a journalist’s credibility. An accurate
+story also tells a complete story, not just one
+side or another. That doesn’t mean that any
+single story should include everything there
+is to say about a topic, but it does mean that
+reporters must not leave out key information
+that could distort the story’s meaning. For
+example, writing that a new test makes it easier
+to detect oral cancer suggests that the old test
+
+was unreliable. If the new test is merely faster,
+the reporter should say so. We’ll talk at greater
+length about accuracy in Chapter 4, “Editing
+the Story.”
+
+Lea d s
+
+T
+
+he beginning of a news story is known as
+the lead. It is meant to capture attention
+and to draw the reader, listener, or viewer
+into the story. There are two basic types
+of leads: hard and soft. A hard lead summarizes
+the essential facts of the story — the five Ws
+and an H discussed in Chapter 2 — while a soft
+lead may set the scene or introduce a character.
+Another way to look at the difference between
+these types of leads is to consider a hard lead as
+the answer to the question, “What’s the news?”
+and a soft lead as the answer to the question,
+“What’s the story?”
+Either type of lead can be used for a hardnews story. For example, a story about the
+election of a new prime minister could be
+written one of several different ways. A hard
+lead might read like this:
+Former rebel leader Joshua Smith was elected
+prime minister tonight, winning more than
+80 percent of the vote in the country’s first
+democratic election since 1993.
+A soft lead would take a different approach:
+Growing up in Youngtown, Joshua Smith was
+a little boy with big dreams. Always small
+for his age, he says the bigger boys at school
+bullied him. When he told his grammar
+school teacher he’d be prime minister some
+day, she laughed.
+No one is laughing now. Smith won
+yesterday’s election with more than 80
+percent of the vote, becoming the country’s
+first democratically elected leader since 1993.
+As you can see, a hard lead tends to be
+shorter than a soft lead — often only one
+sentence long. While soft leads can be longer,
+every sentence in the lead supports the main
+point of the story. And both leads include the
+most newsworthy elements of the story.
+25
+
+Choosing the right kind of lead depends
+on many factors, including the importance
+and timing of the story and the type of news
+organization, publication, or broadcast
+involved. Wire services, online-news sites,
+and radio newscasts that thrive on immediacy
+generally use hard leads. A weekly news
+program or magazine is more likely to use a
+soft lead, on the assumption that most of the
+audience already would know the central facts
+of the story.
+The most common type of soft lead is the
+anecdotal lead, similar to the example used in
+the prime minister story. An anecdote is, by
+definition, a brief tale; when used as a lead it
+illustrates or foreshadows the larger story. A
+story about a social trend might begin with
+several related anecdotes or examples. On rare
+occasions, a quotation or a question may be the
+best way to begin a story. All of these leads also
+can be described as “delayed” leads, because the
+reader has to wait for several sentences to find
+out what the story is really about.
+
+Sto r y Str u c tu re
+
+A
+
+ll stories have a structure in the same
+way that people have a spine, or, at
+least, they should! Without a structure,
+stories would be a jumble of facts with
+nothing to hold them together. Structure
+is essential for stories to be understandable
+and meaningful, but not all stories should be
+structured in the same way. Good writers
+choose the most suitable shape for the story
+they are telling.
+
+Inverted Pyramid
+Many news stories begin with
+the most newsworthy information,
+following a traditional story structure
+developed more than 100 years ago. The
+“inverted pyramid” form puts the most
+important information at the top, followed
+by other information in descending order
+of importance. This shape is useful when
+reporting important or breaking news, when
+timeliness is of the essence. If you are the first
+26
+
+to report a significant development, you’ll want
+to tell the audience what has happened right
+at the top of your story. A report on a massive
+storm, for example, likely would begin with
+the death toll and the location of the heaviest
+damage. Writers who resist using this structure
+when it is called for may be accused of “burying
+the lead,” making it more difficult for the
+audience to determine the story’s importance.
+In the inverted-pyramid structure,
+information following the lead expands or
+develops the point that is made in the lead. In
+the case of the storm report, the writer might
+describe the scene of the worst devastation,
+and then include a quote from a survivor or
+an emergency worker. Supporting paragraphs
+would elaborate on the topic, filling in details
+and providing background on the storm.
+In a longer story, a reporter might include
+secondary information that is related to the
+primary theme but not directly. The storm
+story, for example, could include information
+about international relief efforts, and the needs
+of survivors, both immediate and long term.
+One reason for the popularity of this structure
+is that editors can cut from the bottom to save
+space and time without worrying about cutting
+vital information.
+
+Hourglass
+A modified form of the inverted
+pyramid is known as the “hourglass”
+structure. It begins, in a similar
+fashion, with the most important
+information — but after a few
+paragraphs it takes a turn and becomes a
+narrative, usually told in chronological order.
+Sticking with the example of the story about
+the massive storm, a reporter could start
+with a hard lead, provide a few paragraphs of
+support, and then tell the story of the storm as
+witnessed by one survivor. This kind of story
+form requires a clear transition between the
+opening section and the narrative. A reporter
+might write something like, “Farmer Iqbal
+Khan was in his barn when the wind kicked
+up …” to begin the bottom half of an hourglass
+story. Some stories are written in a purely
+
+chronological form, but this structure is most
+often used for features.
+
+Diamond
+Still another story form is the
+“diamond” structure. A reporter
+using this structure would begin
+with an anecdote, introducing a
+character whose experience illustrates
+what the story is all about. This small story
+would then broaden out to show its wider
+significance. Toward the end, the reporter
+would return to the individual character’s story
+as a way of concluding the narrative.
+Reporters using this structure often use a
+device known as a “nut” paragraph (or nut graph)
+to explain why the story matters — the word
+“nut” signifying the hard center of the story. Jack
+Hart, managing editor of Portland’s Oregonian
+newspaper, says nut graphs “can answer any
+questions raised in leads, explain why stories
+are significant, and place stories in meaningful
+contexts.” The nut graph needs to be early
+enough in the story to make clear to the reader
+why he or she should bother to keep reading.
+The diamond form is frequently used in
+television news and newspaper reports. For
+example, a reporter might begin a story about a
+new AIDS treatment by introducing a patient
+who needs the treatment, then describe the
+experimental drug and how it works, and
+conclude by noting that doctors give the patient
+we met earlier only a limited time to live if the
+new treatment is not effective. Whatever form
+you choose, the middle of the story should keep
+the audience engaged and interested. Good
+writing, a magazine editor once said, makes the
+reader want to find out what happens next.
+End ing s
+
+U
+
+nless you are using the traditional
+inverted pyramid style and you expect
+the bottom of your story to be trimmed
+by an editor, it’s a good idea to have
+an ending in mind when you begin writing,
+much as it is helpful to have a destination in
+mind when you set out on a journey. This
+
+is particularly important in broadcast news
+because of the way it’s presented. Unlike print
+or online news, broadcast news is linear — the
+audience can’t choose the order in which
+they’ll receive the information — and research
+has found that viewers and listeners tend to
+remember best what they hear last. For that
+reason, many broadcast stories conclude with
+a summary ending, reinforcing the story’s main
+point.
+Endings often echo beginnings, in that they
+return to an important place or a person. In
+a chronological narrative, the ending is what
+happens last. If a story has raised a problem,
+the ending might offer a solution. Endings
+frequently look toward the future, to what
+might happen next. And occasionally a story
+may end with a strong quote or a sound bite.
+This is rarely justified, however, and should be
+used only when the quote is so powerful that
+writing anything more would be a letdown for
+the audience.
+
+At t ribut io n
+
+A
+
+key difference between a news story
+and an editorial or opinion column
+is the use of attribution. Attribution
+simply answers the question, “Who
+says?” It identifies the source of the information
+reported, particularly any controversial
+statements or questionable information.
+Attribution can be explicit or implied.
+Here’s an example of explicit or direct
+attribution: “The man was arrested and charged
+with murder, police sergeant Antonio Costa
+said.” Rewritten, using implied or indirect
+attribution, the sentence would read, “Police
+arrested the man and charged him with
+murder.” In both cases, the audience can tell
+that the source of the information is the police.
+One major reason to attribute information
+in most news stories is to allow readers,
+listeners, and viewers to decide for themselves
+whether to believe it. For example, a report
+that North Korea has decided to suspend its
+nuclear program could be seen as more or less
+credible by some audiences, depending on who
+27
+
+is quoted as saying so: a visiting Chinese official
+or an international team of scientists.
+Another reason for attribution is to place
+responsibility for a controversial statement
+where it belongs, with the person who said it,
+not with the reporter or the news organization.
+This does not imply immunity from lawsuits, as
+legal protections vary from country to country.
+But it is good journalistic practice to make clear
+who is making allegations or taking a particular
+stand.
+Not all information in a news story needs
+to be attributed, however. Naming the source
+of every bit of information would make stories
+almost incomprehensible. Information that
+a reporter observed directly can be stated
+without attribution. Indisputable or wellaccepted facts do not need to be attributed,
+either. For example, a reporter could say which
+team won a soccer match without attribution
+because the final score would not be in doubt.
+But writing that one candidate won a political
+debate would need to be attributed, or it would
+cross the line from fact into opinion.
+
+Q uo te s a nd S ou n d B i te s
+
+N
+
+ews stories are told primarily in the
+reporter’s words, but most stories also
+include the words of other people,
+in quotations or sound bites. When
+used effectively, quotes make stories stronger
+by sharing the direct experience of someone
+involved. Using a quote up high in a story
+can make it more interesting to the audience,
+because quotes provide a personal connection
+to the story.
+By definition, a quotation must be
+attributed so the audience knows who said
+it. Direct quotes are at least one sentence
+long and are in the exact words of the speaker.
+They’re used when most of what a speaker said
+is worth repeating. Partial quotes, primarily
+used in print, can be just a word or a phrase
+the speaker said, which are used when the full
+sentence may be confusing or too long. The
+reporter has the responsibility of putting partial
+quotes into context so the meaning of what the
+
+28
+
+speaker said is unchanged. For example, when
+French President Jacques Chirac addressed his
+country after weeks of social unrest, he said:
+“We will build nothing lasting without fighting
+discrimination, which is a poison for society.”
+Some reporters used that full, direct quote
+in their stories. But in London’s Guardian
+newspaper, only one word of the quote
+appeared in the lead paragraph: “Jacques Chirac
+… launched an appeal to combat the ‘poison’ of
+racial discrimination.”
+It’s never worth quoting everything
+someone says in an interview. But how do you
+choose what to quote directly? The basic rule
+is simple: Don’t use a direct quote or sound
+bite if you can say it better yourself. Too many
+news stories are stuffed full of quotes that fail
+this test, most of which come out of the mouths
+of officials. Avoid quotes that merely state
+facts, especially in bureaucratic language. Who
+needs to hear the mayor say, “We expect to
+have a decision next week on contingency plans
+for the distribution of municipal funds to lowincome recipients”? That kind of information
+would be much better paraphrased, that is,
+rewritten in clear, concise language by the
+reporter. In this case, the reporter might have
+written, “It will be at least a week before people
+can expect to get any money from the city,
+according to the mayor.”
+The best quotes are subjective, adding
+insight and perspective to stories. They use
+colorful language and reflect on personal
+experience or expert knowledge. They have
+passion, says television investigative reporter
+Tony Kovaleski. “During interviews, try and
+capture the passion,” he says. “During writing,
+make sure not to miss it.” One good rule of
+thumb is to use quotes that sound authentic,
+not as if they have been read from a script.
+Once you’ve chosen the best quotes, build
+your story around them. But reporter Bob
+Dotson, with U.S. television network NBC,
+warns, “Don’t use sound bites as substitutes for
+more effective story telling.” Reporters who
+simply string quotes or sound bites together
+often are taking the lazy way out.
+
+Nu m be r s
+
+A
+
+journalism teacher once described her
+students as “do-gooders who hate math.”
+Most journalists will never come to
+love mathematics, but they need it, and
+they need to know why. Numbers may look
+solid and factual, but they are not infallible.
+Journalists need numerical competence
+in order to tell the difference between a
+meaningless number and a significant one, or
+they risk writing stories that are misleading and
+confusing, at best, and, at worst, flat out wrong.
+Journalists need mathematical intuition so
+they can tell when the numbers they’re looking
+at just don’t add up. They need math mechanics
+to find the meaning behind figures and data.
+They need mathematical concepts so they can
+understand banking and business, bankruptcy
+and boom times. Simply put, journalists need
+mathematics skills to make sense of numbers
+the way they need language skills to make sense
+of words.
+Competent journalists are both capable and
+careful with numbers. They’re quick to spot
+an implausible number, and they have a basic
+working knowledge of arithmetic and statistics
+so they can confirm their suspicions. They
+know how to calculate percentages, ratios, rates
+of change, and other relationships between
+numbers that tell far better stories than raw
+
+data can. They can and should translate
+numbers into terms that readers and viewers
+can easily understand.
+Journalists with numerical competence
+are more important than ever in today’s highly
+technical world. They are the writers and
+editors who can assess and explain scientific,
+medical, technological, and economic
+developments. They are the journalists who
+can find stories in databases by crunching
+numbers themselves, instead of waiting for
+someone with a vested interest to do it for
+them.
+Once the numbers have been checked and
+rechecked, the reporter has to decide how to
+use them in a story. The rule of thumb is: The
+fewer numbers, the better. Numbers should
+be rounded off for simplicity’s sake, and put
+in context for clarity. “A number has little
+significance on its own,” says Paul Hemp, author
+of Ten Practical Tips for Business and Economic
+Reporting in Developing Economies. “Its true
+meaning comes from its relative value.” So a
+story about an increase in school spending
+might translate the raw numbers into the
+additional amount that will be spent per child.
+A story about the number of people who die of
+lung cancer every year might note that it is the
+equivalent of a jumbo jet crashing every day.
+Journalists who fail to master mathematics
+lack a basic skill needed to decipher much of
+the information in the world around them, such
+as crime statistics, pollution standards, and
+unemployment figures. Without mathematics
+skills appropriate to their beat, journalists are
+bound to fall short in their quest for accuracy.
+
+29
+
+4
+
+30
+
+E D I T I N G T H E S TO RY
+
+It’s nine o’clock in the morning, and the editorial meeting in
+the newsroom begins with a discussion of the stories ever yone
+is working on for that day. Some repor ters and photographers
+already have assignments and are out covering today ’s news. A
+few got their assignments last night; others were sent out early
+this morning after a conference call involving
+top news managers. Reporters who do not have
+assigned stories yet “pitch” their story ideas at
+the meeting, seeking a manager’s approval to
+produce that story for tonight’s newscast or
+tomorrow’s newspaper. The assignment editor
+runs through a list of scheduled events that may
+or may not merit coverage. Once the decisions
+are made, the managers put together a “budget,”
+or line-up of stories that they hope will soon be
+available for publication or broadcast.
+At that point, you might think the managers
+could sit back and relax. But no decision
+in a newsroom is ever set in stone. Almost
+inevitably, plans change. News will happen that
+was not anticipated, and stories will be dropped
+because they didn’t turn out as expected.
+Others will require more reporting and won’t
+be completed today. Deciding what to run,
+what to drop, and what to hold is the job of the
+news managers, the editors, and producers.
+They will choose and change the stories of
+the day based on importance, interest, new
+developments, and the time or space available.
+But the editor’s job still isn’t done. Before the
+newspaper goes to press or the broadcast hits
+the air, editors have another critical role to play.
+It’s their job to ensure that the stories presented
+to the public are well written and presented, as
+well as accurate, complete, and fair.
+Most newsrooms have more than one editor.
+No single person could handle the volume of
+stories produced by most news organizations
+every day. In large newsrooms, there may be
+several layers of editors, who ultimately report
+
+to the person in charge of the news division, the
+chief newspaper editor or the broadcast news
+director. As you will see, the editor’s job calls
+for a variety of skills, a high degree of literacy, as
+well as the ability to handle a changing agenda
+and work relentlessly under pressure.
+
+Newspa per J o bs
+
+A
+
+typical daily newspaper has a staff
+of reporters who cover a wide range
+of news. Most of the reporters at a
+local newspaper usually work for the
+“city” or “metro” desk, covering stories in the
+community the newspaper serves. A large
+newspaper with national circulation adds
+national and international or foreign desks,
+with reporters based in the nation’s capital and
+in other countries. Some reporters work for
+specialized sections of the newspaper, covering
+sports, business, or features. Each of these
+desks or sections is headed by an editor, who
+oversees the reporters’ work and who may be
+assisted by one or more sub-editors.
+Newspaper editors assign the stories,
+they edit the written text or “copy,” and they
+supervise the design and layout of pages. In
+most large newspapers, editors specialize in just
+one of these tasks, but at smaller newspapers,
+one person may handle them all. In addition,
+newspapers may have a photo editor who
+oversees a staff of photographers, as well as
+a graphics editor who supervises the work
+of artists creating maps, charts, and other
+informational graphics. Large newspapers also
+31
+
+Editors need to be
+
+have a staff of researchers who help reporters
+find background on stories and who maintain a
+library, or “morgue,” of stories published by the
+newspaper.
+
+strong journalists
+and newsroom
+
+Bro ad c a st J obs
+
+B
+
+roadcast newsrooms are not organized
+like newspapers. Most broadcast
+reporters do not specialize in covering a
+particular type of story, but may instead
+be assigned to specific news broadcasts like
+the early morning news or the late night news.
+Each of these broadcasts is put together by a
+producer, who decides what stories will air,
+at what length, and in what order. In larger
+newsrooms, an executive producer supervises
+the work of the producers.
+In addition to reporters, broadcast
+newsrooms have presenters or “anchors” who
+appear on the air and introduce the stories the
+reporters have covered that day. Radio and
+television anchors usually appear on more than
+one newscast per day.
+The title of editor in a television newsroom
+sometimes is given to the person charged with
+the technical production of news stories, the
+one who cuts the video and sound together to
+make the finished product that goes on the air.
+In many newsrooms, the photojournalist who
+shot the video does the cutting, working with a
+script written and voiced by the reporter.
+
+The Ed itor ’s R ol e
+
+A
+
+recent job listing for an editor at a
+small newspaper read, “This person
+should have strong writing, editing,
+and layout skills. … He or she should be
+accurate, responsible, able to work well within
+a team atmosphere, and possess supervisory
+skills.” A large television station seeking to
+hire a new producer asked for “expert news
+judgment … superior writing skills … must
+have management skills, must be multi-task
+oriented, and well organized.”
+
+32
+
+leaders.
+As you can see, editors need to be strong
+journalists and newsroom leaders. They are
+involved in the news process from beginning
+to end. Editors need good news judgment
+because they serve as assignment managers,
+responsible for deciding what stories will be
+covered and by whom. They must be good
+writers in order to help to shape the story as it
+is developing, discussing it with reporters in the
+field and deciding where to deploy more people
+to cover additional angles. Editors are directly
+involved in decisions about story presentation,
+writing or choosing headlines, captions, photos,
+and illustrations. And they must lead and
+motivate the employees who report to them.
+Editors and producers work closely with
+reporters, discussing and reviewing their
+stories. Newspaper editors check copy, choose
+illustrations — either graphics or photos — and
+decide how the story will be laid out on the
+page as well as the headline. In most broadcast
+newsrooms, reporters do not record their
+scripts or assemble their stories until a producer
+has approved the content. Producers also
+decide the order of stories in the newscast and
+the amount of time to be allocated to each story.
+
+Co py Ed it in g
+
+E
+
+ditors serve as a second set of eyes
+looking for any errors in a story. The
+emphasis here is on a second set of eyes.
+That’s because reporters should always
+check their own copy for accuracy before
+submitting it to an editor. A first draft is a good
+start, but that’s all it is. Every writer should
+allow some time for revising his or her own
+copy. Good writing, by definition, requires
+rewriting.
+
+An accuracy check is the first level of copyediting. Editors look for grammatical and usage
+errors, as well as for spelling mistakes. They pay
+particular attention to subject-verb agreement
+and subject-pronoun agreement. Editors make
+sure that all numbers in a story are correct:
+addresses, telephone numbers, ages, date, and
+time references. They rework any calculations
+the reporter may have performed to make sure
+the math is correct. They confirm that the
+reporter has used proper titles for everyone
+who is quoted, and they review the use of
+attribution throughout the story.
+Editors also look closely for any errors of
+fact or issues of fairness. Thorough editors read
+stories with a skeptical eye, with questions like
+these in mind:
+•H
+ ow does the reporter know this?
+•W
+ hy should the audience believe this?
+• I s the main point of the story supported?
+•A
+ re the quotes accurate, and do they capture
+what the person really meant?
+•A
+ re all sides represented?
+• I s something missing?
+• I s the story fair?
+Editors also pay attention to matters of
+taste and language, which vary depending on
+the local culture. (We’ll talk more about that
+in Chapter 7, “Ethics and Law.”) Editors and
+reporters alike should read copy out loud —
+especially in broadcast newsrooms — listening
+for sentences that are too long, redundancies,
+awkward phrases, and double meanings. In
+many newsrooms, editors have the authority to
+change a reporter’s copy without consultation
+to fix these kinds of basic problems.
+Editors are not simply proofreaders,
+however. They are journalists in every sense of
+the word. Most editors and producers either
+have reporting experience or reporting skills.
+So when they read a reporter’s story, they are
+looking for much more than basic accuracy.
+They want to know if a story would make sense
+to someone who knows nothing about the
+subject. They’re mindful of the need to make
+stories engaging and interesting.
+
+If a story falls short, the editor or producer
+must be able to work with the reporter to
+improve the final product. That’s when their
+leadership skills come into play, as they use a
+process commonly called “coaching.”
+
+Co a ch in g
+
+C
+
+oaching is a way for editors to help
+reporters solve a story’s problems
+independently. It avoids the resentment
+reporters often feel when an editor fixes
+problems by rewriting their stories. And it
+helps reporters learn how to do better work,
+rather than repeating the same mistakes and
+letting the editor step in and fix them. “A
+good editor coaches reporters through talking
+to them while they report and write,” says
+Joyce Bazira, a news editor at the Tanzanian
+newspaper Alasiri. “Through coaching, writers
+can also … discuss the problems they are
+encountering in doing their assignments, with
+the editor trying to solve them.”
+The skills involved in coaching are some
+of the same skills that distinguish a good
+journalist: listening attentively and asking good
+questions. Coaching works because reporters
+generally know the problems they are having
+with a story, even if they can’t quite decide what
+to do about them. The job of the coach is to
+ask questions and listen, and help the reporter
+improve the work. That’s quite different from
+the “fixer” role that some editors play:
+33
+
+COACH
+Helps the writer;
+Helps throughout the
+process;
+Develops the writer;
+Builds on strengths;
+Fosters independence;
+Shares control.
+
+FIXER
+Fixes the story;
+Fixes on deadline;
+Undercuts the writer;
+Exposes weaknesses;
+Creates resentment;
+Takes control.
+
+Many editors resist coaching reporters
+because they think it takes too much time.
+They believe it’s faster to make the changes
+themselves. When the deadline looms,
+coaching may be impractical. The newspaper
+must be printed on time, the newscast must go
+on the air, and mistakes cannot be allowed to
+go through. But in newsrooms committed to
+coaching, editors don’t wait until the last minute
+to check a reporter’s copy. By working with
+reporters throughout the process, editors help
+reporters produce better stories that require
+less editing time at the end of the process.
+Botswanan journalist Rodrick Mukumbira,
+currently with the Ngami Times, says he
+considers coaching a central part of his job as a
+news editor. “An editor should not only assign
+a reporter and correct mistakes in the final
+draft,” Mukumbira says. “He should intervene
+in the reporting process — when the reporter is
+struggling with the lead — to save time on the
+final article.”
+A coaching editor will talk to reporters
+before they leave the newsroom, when they call
+in from the field, and as soon as they return,
+before they begin to write. The coaching editor
+asks simple questions that can help the reporter
+focus the story, such as:
+•W
+ hat happened?
+•W
+ hat is your story really about?
+•W
+ hat does the audience need to know?
+•H
+ ow can you make this clear?
+•W
+ hat do you think of your story so far?
+•W
+ hat needs work?
+•W
+ hat do you need to do next?
+•H
+ ow can I help you?
+
+34
+
+Editors who coach always look for
+something to praise and encourage in every
+story, and when they point out problems they
+focus on only a few at a time. The Poynter
+Institute’s Jill Geisler says that when she
+coaches, she sits on her hands. As a coach, she
+does not want to touch the reporter’s copy but
+rather to let the reporter talk about the story so
+she can listen for clarity and raise questions the
+writer needs to answer.
+Coaching creates sharper journalism in a
+more humane newsroom. It makes dialogue
+a reward, not a punishment. And because
+people remember what they practice, coaching
+ultimately helps journalists do better work.
+
+Hea d l in es, Ca pt io n s, a n d Tea ses
+
+B
+
+esides editing reporters’ stories, editors
+are responsible for additional material
+that accompanies the stories. In
+newspapers and online newsrooms,
+editors write headlines for stories and captions
+for photos. A headline is both a summary and
+an advertisement. It gives the audience a quick
+idea of what the story is about, and tells readers
+why they should be interested in reading the
+entire piece. A caption is more of a label, telling
+readers what the photograph or graphic shows.
+In broadcast newsrooms, producers may write
+headlines and also what are called teases,
+short descriptions of stories designed to make
+listeners or viewers want to stay tuned to get
+the full report.
+Headlines, by definition, are short and
+catchy. A print headline summarizes the story,
+gets the reader’s attention, helps to organize the
+news on the printed page, and, through the use
+of different sizes of type, indicates the relative
+importance of each story. When writing a
+headline, the editor simply does not compress
+the lead paragraph into just a few words. Good
+editors try to capture the central point of the
+story in the headline, so they need to understand
+a story fully before trying to write a headline.
+The editor has to read the story from beginning
+to end, and look at the photographs and graphics
+that will accompany the story. If the main point
+
+Headlines, by
+definition, are
+shor t and catchy.
+isn’t obvious, the editor should consult with the
+reporter rather than guess and risk printing a
+headline that is misleading or wrong. Besides, a
+confused editor is one indication that the story
+probably needs more work.
+The language in headlines should be simple
+and straightforward. Use proper names and
+present tense. It’s generally acceptable not to
+use conjunctions — articles like “the” — and to
+drop linking verbs like “is” or “were.” A story
+that tells how a woman and her boyfriend
+were arrested for a string of bank robberies
+might be headlined: “Bandit, Boyfriend Held
+in Robberies.” But avoid what editors call
+“headlinese,” verbs that appeal to headline
+writers just because they are short. Verbs like
+“probe,” “eye,” “nab,” “vie,” and “huddle” almost
+never are used in conversation, so they don’t
+belong in headlines.
+A headline should match the tone of the
+story. Hard news stories demand a straight
+summary, like this headline from The Zimbabwe
+Independent newspaper, “Smugglers Dent
+Zimbabwe’s Gold Production.” The headline
+makes sure the reader knows exactly what the
+story is about. Feature headlines, on the other
+hand, may only hint at the story’s content, since
+they are written primarily to pique the reader’s
+curiosity. For example, Argentina’s Buenos Aires
+Herald ran this headline over a review of a new
+recording: “Sassy Madonna Goes Back in Time.”
+Because headlines have to fit in a restricted
+amount of space, the newspaper editor creates
+headlines the way you would build a jigsaw
+puzzle. The copy editor for an American
+newspaper — the Newark Star-Ledger
+— Joel Pisetzner, says, “I put words together
+like assembling a kidnap note. Scramble,
+rescramble, mix and match.” While it can be
+fun, editors say it’s important to always keep
+
+the reader in mind. Avoid trite or overused
+expressions and be extremely careful with
+puns or double meanings. Headlines that try
+too hard to be funny, clever, or gripping often
+fail. Above all, headlines must be accurate and
+honest, not misleading. What is in the headline
+must be in the story. Nothing annoys a reader
+more than a story that doesn’t deliver what the
+headline promised.
+Much like a headline, a broadcast tease is
+designed to draw the viewer’s attention to the
+rest of the story. Teases are subject to many of
+the same rules as headlines. Producers must
+watch the story and talk to the reporter before
+writing a tease. Trite and clever don’t work in
+teases any more than they do in headlines. And
+teases should not over-promise or over-sell the
+content of the story that follows.
+Unlike a newspaper headline, the broadcast
+tease is written in complete sentences. It stands
+alone, separated from the story by other news
+or advertising content. A tease usually does
+not summarize the story the way a headline
+would, since its goal is to make the viewer
+want to stay tuned in order to learn more.
+Instead, producers write teases that leave some
+questions unanswered, or they may create
+anticipation by promising to deliver a benefit to
+the viewer who keeps watching.
+To illustrate the difference, consider the
+lead of this story from an American newspaper,
+the Los Angeles Times, reported from Amman,
+Jordan: “An Iraqi woman appeared on Jordanian
+state television Sunday and confessed to being
+the fourth member of an al-Qaida suicide
+bomber team that attacked three hotels here
+last week, killing 57 people.” The newspaper
+headlined the story: “Iraqi Woman Calmly
+Confesses How She Tried to Blow Up Hotel.”
+But the tease for that same story on the NBC
+Nightly News on television was this: “Who is
+she? And why did she agree to be the fourth
+would-be hotel suicide bomber in Jordan? New
+details tonight.” The television tease did not
+mention the woman’s confession, but instead
+promised to answer the viewer’s questions
+about her role.
+35
+
+Photo captions also have a different purpose
+from headlines. Instead of summarizing
+content the way a headline does, a caption
+helps the reader appreciate what’s inside the
+visual frame. The photograph and caption
+together form a small story that the reader can
+understand without having to read the text of
+the story that accompanies it.
+Captions should clearly identify the main
+people in a photograph. If several people are
+featured, it’s often helpful to let the reader know
+that the central character is the one “wearing a
+cap” or “standing on the right.” Captions should
+not repeat the exact wording of the headline
+or lift a sentence directly from the story. And
+caption writers don’t need to spell out what can
+be seen clearly in the photo. “Carlos Fernández
+smiles as he gets off the plane” is a less effective
+caption than: “A jubilant Carlos Fernández
+returns from 15 years in exile.”
+Most captions are short, just one or
+two lines in small type. But on occasion, a
+newspaper or online site will carry multiple
+photographs with longer captions in a photo
+essay that tells a complete story. Longer
+captions can use quotations from the people
+pictured.
+
+G raphic s a nd Vi s u al s
+
+N
+
+ewspaper reporters sometimes resent
+the use of graphics because they take up
+space, forcing stories to be shorter. But
+good graphics add to the visual appeal
+of the newspaper, attract readers’ attention, and
+make stories more understandable. They help
+reporters’ stories, rather than take away from
+them. As newspaper designer Ron Reason puts
+it, graphics are “information, not decoration.”
+
+Every graphic must have a purpose. Filling
+empty space or airtime is not a sufficient
+reason for using a graphic. A graphic should
+enhance the reader or viewer’s understanding
+of the story, which means the editor must
+fully understand the story before designing or
+choosing a graphic to go along with it. Graphic
+artists usually produce the visual images;
+the role of the editor is to conceptualize the
+graphic, find the information it should contain
+or illustrate, and ascertain its accuracy.
+Graphics can convey basic facts or illustrate
+a process. Imagine you are reporting on air
+pollution in your country. A map could be
+used to show where the air is most unhealthy.
+An illustration could be used to show how
+air pollution affects the lungs. Both types of
+graphics work just as well for broadcast as they
+do for print.
+Whatever the medium, avoid graphics that
+are crammed with too much information. The
+reader or viewer should be able to look at the
+graphic and take away one basic idea. Think of
+a graphic as a highway sign — the driver doesn’t
+get a chance to study it because things are going
+by too fast, so the information has to be clear
+and easily absorbed.
+Let’s imagine you have a story that says the
+city’s annual budget is twice as large as it was 10
+years ago. Reading closely, you notice that most
+of the growth has been in the last three years.
+A bar graph charting the size of the budget for
+each of the last 10 years would be an easy way
+to make that clear.
+45
+40
+35
+30
+25
+20
+15
+10
+5
+0
+
+1995
+
+1997
+
+1999
+
+2001
+
+Budget (in millions)
+
+36
+
+2003
+
+2005
+
+It is easier for readers and viewers to absorb
+information presented with shapes rather than
+raw numbers. For example, in a story about
+your city’s business development crowding
+out residents, you could list the number of
+apartments and office buildings in the area.
+However, it would be more effective to create
+a pie chart showing the relationship between
+the two. Compare rates whenever possible,
+not raw numbers. It is misleading to show
+that one town has twice as many deaths from
+AIDS as another, when the first town has 10
+times as many inhabitants. Calculate the rate
+of deaths per inhabitant so you can make a fair
+comparison. Editors who work with graphics
+need a grasp of statistics and a commitment to
+employ them transparently and accurately to
+enhance understanding.
+
+Supe r v ising
+
+A
+
+s we’ve already noted, editors are
+supervisors as well as journalists. As
+they work with reporters on daily
+stories, they also oversee their progress
+over the long term. They look for opportunities
+— either in person or on paper — to provide
+constructive feedback that will help reporters
+improve their work. Many editors also are
+responsible for annual performance reviews of
+the employees they supervise, which is a more
+formal type of feedback.
+Effective feedback is timely and specific. It
+is provided both in person and in writing. And
+most editors believe in providing some positive
+feedback in public but keeping all critical
+comments private. For most busy editors, the
+only way to ensure that their employees get
+the one-on-one feedback they deserve is to
+schedule regular feedback sessions. Letting
+employees know how they are doing on a
+routine basis is a good way to avoid unpleasant
+surprises at performance-review time.
+
+News managers should find a way to get
+honest feedback from the staff on their own
+performance. This can be done through
+informal conversations or by asking employees
+to fill out an anonymous questionnaire. Either
+way, it’s important for managers to stress that
+they want people to be candid, and to avoid
+bearing grudges if the results are not entirely
+favorable. The point is for them to learn how
+they’re doing so they can improve their own
+performance.
+Top editors and news directors set the tone
+for the newsroom and help to create a positive
+newsroom culture, establishing and reinforcing
+the norms and values that employees share.
+In a well-managed newsroom, editors avoid
+playing favorites. They encourage open
+communication and hold regular meetings
+to make sure everyone understands the goals
+of the news organization. Editors should pay
+close attention to staff morale, and do what
+they can to bolster it by celebrating successes
+and rewarding outstanding achievement.
+Recognizing good work in a public setting is
+one way to get more of it.
+
+37
+
+5
+
+38
+
+B R OA D C A S T A N D O N L I N E
+
+Radio, television, and online — or Web -based — journalism
+are specialized forms with demands and requirements over and
+above those we have discussed so far. Broadcast journalists use
+not only words, but also sound and video in construc ting their
+stories. What they write must be written to be heard, not read,
+by the audience. Like their TV counterparts,
+online journalists can include sound and video
+in their stories, as well as interactive elements
+that allow a reader to explore the story at his or
+her own pace.
+For simplicity’s sake, we’ll use the term
+broadcast in this chapter to describe all radio
+and television news, whether it’s transmitted
+over the air, on cable, or via satellite.
+
+Broa d c a st Sto r y Fo r ms an d Te r ms
+
+T
+
+he basic broadcast story forms are the
+“tell” or “reader” story, the “V/O” or voice
+over, and the “wrap” or “package.” A
+“reader” story is just what it appears to
+be — a story without additional sound bites or
+video — usually presented by the newscaster
+or anchor in the studio. A “V/O” is a television
+term for a story told with video but no “sound
+bites,” the broadcast term in English for direct
+quotes. The newsreader or anchor will read the
+script for the story while the video is playing.
+Adding a sound bite turns a V/O into a “V/
+O-SOT,” shorthand for sound on tape. Even
+though many stations now capture all video
+digitally without using tape, the abbreviation
+SOT appears to have stuck. These story
+forms — reader, V/O, and V/O-SOT — tend
+to be short: usually less than a minute, and
+sometimes only 10 or 15 seconds long.
+
+A complete story by a reporter is called
+a “wrap” in radio and a “package” in television
+news parlance. It consists of the reporter’s
+narration, also called “track,” and often includes
+sound bites and natural sound, sound that
+occurs naturally on location. Obviously, the
+television version has video, which may include
+graphics, either static or animated. These types
+of stories can be presented live or recorded in
+advance, and they tend to run longer than the
+other story forms — sometimes up to six or
+seven minutes, depending on the format of the
+newscast. Each package also has a “lead-in,”
+or introduction, to be read by the newscaster.
+Many also include a “tag,” which provides
+additional information at the end of the
+reporter’s package.
+Another type of broadcast story is known as
+a “natural sound” or “NATSOT” package. This
+story form is most often used in television but
+occasionally in radio as well. It does not include
+any reporter track. Instead, the people featured
+in the story have to provide the narration. This
+approach can require more planning and just
+as much reporting as any other story, but the
+results can be powerful. Photojournalists, who
+sometimes produce this type of story on their
+own without a reporter, have to make sure that
+every bit of information needed to tell the story
+is captured on tape or else the final product
+won’t make sense.
+
+39
+
+Radio and
+television stories
+are written for the
+l i s t e n e r ’s e a r.
+
+Bro ad c a st Wr iti n g
+
+R
+
+adio and television stories are written
+for the listener’s ear, not the reader’s
+eye. Reporters must write copy they can
+read out loud: clear, conversational copy
+that is easily understood. Unlike newspaper
+or online readers, the broadcast audience can’t
+go back and take a second look or listen to a
+story that didn’t quite make sense the first time.
+“The words are spoken and, once spoken, are
+irretrievable,” former CBS (U.S. TV network)
+News editor Ed Bliss once wrote.
+Broadcast journalists are more concise than
+their newspaper colleagues. They have to be.
+The printout of a half-hour news broadcast
+would fill only a page or two in the newspaper.
+A broadcast lead cannot include all 5 Ws
+and the H discussed in Chapter 2 — it would
+be too long and too hard to follow. Instead,
+a broadcast writer will select the two or three
+most significant points to use in the lead,
+and put the rest in the sentence that follows.
+Broadcast stories also tend to leave out some
+details, such as ages and addresses, which are
+routinely found in print. Broadcasters write
+shorter sentences so they can read them aloud
+without running out of breath.
+
+40
+
+Reporters for radio and television must be
+attuned to the sound of the words they use.
+Like poets, they are alert to pacing and rhythm.
+Consider this sentence from a script by Edward
+R. Murrow, the famed CBS correspondent
+who covered World War II from London,
+“The blackout stretches from Birmingham to
+Bethlehem, but tonight, over Britain, the skies
+are clear.” This is writing that is meant to be
+heard. The words are simple; the ending is
+crisp.
+Broadcast writers must be wary of language
+that might be correct on the printed page, but
+sounds ridiculous when read aloud. When
+the American actress and TV entertainer
+Lucille Ball died, a print story called her “the
+83-year-old Ball.” On the radio, the story said,
+“Lucille Ball was 83 years old.” (It thus avoided
+confusion over other meanings for “ball” in
+English.) Broadcast writers also should beware
+of words that sound alike but have different
+meanings. In English, for example, “miner”
+could easily be confused with “minor.” These
+words must be used in the proper context so
+their meaning is clear. Broadcast journalists
+make a habit of reading their copy out loud
+before going on the air to catch this kind of
+problem, as well as potentially embarrassing
+double meanings that are not obvious on paper.
+Reporting on a charity golf tournament, you
+don’t want to say that someone “played a round
+with the prime minister.” (“Play around” in
+English can connote “misbehaved with.”)
+Even though broadcast scripts are written
+to be read out loud, it’s just as important to
+spell correctly for broadcast as well as print.
+Misspellings often result in stumbles or
+mispronunciations on the air. To make sure
+they know how to correctly pronounce difficult
+words, broadcast journalists often include
+phonetic spellings in their scripts. Correct
+spelling also matters more today because many
+stations post their stories online. Some stations
+have computer software that automatically
+converts scripts into closed captioning or
+subtitling for their newscasts as a service to
+deaf viewers. In both cases, misspellings reflect
+badly on the reporters and the station.
+
+Radio and television news is written in a
+more conversational style than news in print.
+Put another way, broadcast journalists should
+write the way they speak. A newspaper story
+might read, “The man escaped in a red Toyota
+truck, police said.” But in broadcast, attribution
+comes first, so the script would read, “Police
+say the man escaped in a red Toyota truck.” To
+maintain a conversational tone, broadcasters
+don’t need to use complete names and titles
+in news stories. Generally speaking, middle
+initials are not used on the air unless the initial
+is an essential part of the name. And at times,
+not even the name is required. A newspaper
+story would note, “Pakistani Foreign Minister
+Khurshid Mahmood Kasuri met his Israeli
+counterpart Silvan Shalom in Istanbul, Turkey,
+on Thursday.” But the radio story might simply
+say, “The foreign ministers of Pakistan and Israel
+met in Turkey today.”
+Immediacy is a key feature of broadcast
+news. If something is happening while you
+are on the air, you can and should say so:
+“The president is flying to Capetown ... ” is
+more immediate than, “The president flies
+to Capetown today.” Generally speaking,
+radio and television reporters avoid using
+time references in their leads unless the
+event happened today. Where Wednesday’s
+
+newspaper would publish this lead: “President
+Mbeki flew to Capetown on Tuesday,” the
+radio newscast Wednesday morning would
+put it differently: “President Mbeki has arrived
+in Capetown.” Better yet, the writer would
+look forward to what the president is doing in
+Capetown on Wednesday so the story could
+be written in the present tense: “This morning,
+President Mbeki meets with students at the
+University of Capetown.”
+
+Sound
+
+T
+
+he sound bites that radio and television
+reporters use in their stories are the
+broadcast equivalent of quotes, but
+choosing them requires an additional
+layer of decision-making. It is not enough for
+the sound bite to make sense on paper. It must
+be clear enough to understand over the radio
+or on television. Broadcast journalists have
+to be mindful of how long a sound bite runs.
+What looks short on paper may actually take
+someone quite a long time to say — so long, in
+some cases, that it cannot be used in its entirety
+without making the entire story exceed its
+allotted time.
+Broadcast writers pay particular attention
+to the transitions into and out of sound bites.
+Their goal is to create a seamless narrative that
+will retain the attention of the audience all the
+way through the story. If a sound bite begins
+with a pronoun, for example, the writer must
+make the meaning clear at the front end, by
+crafting the sentence so that the ear gets the
+information needed to decode what’s coming
+next. Let’s say there’s an outbreak of head lice
+in the local schools. A school nurse says in
+a sound bite, “They come in here scratching
+and we just know what we’ve got. It’s so
+obvious.” When she says “they,” she means the
+schoolchildren. It won’t do if the sentence
+before that sound bite says, “School nurses say
+they are dealing with a terrible outbreak of head
+lice,” because the sound bite that follows would
+appear to suggest that “they” refers to head lice.
+41
+
+Instead, the reporter might say, “The outbreak
+of head lice means that nurses like Mary Smith
+are seeing a lot more children than usual today.”
+In addition to sound bites, stories on radio
+and television may include so-called “natural”
+or “wild” sound. This is sound that is captured
+while reporting a story: the whistling of the
+wind, a police siren, children shouting for joy.
+Using this sound in telling the story is standard
+practice in some parts of the world. Including
+natural sound allows listeners or viewers to
+experience a place or situation for themselves,
+instead of the reporter telling them about it.
+Sound also can provide an audio transition
+from one location to another, leading the
+audience into the next scene.
+Natural sound can be used at a low audio
+level, under the reporter’s words, or “up full” so
+it can be clearly heard. Either way, the sound
+helps the reporter tell the story. Like mortar
+between bricks, good natural sound holds the
+story together. American photojournalist Steve
+Sweitzer says that, in television, using natural
+sound is essential to tell a complete story.
+“Sound is the other part of the picture,” he says.
+
+Broadcast
+journalists should
+write the way
+they speak.
+
+42
+
+Pic t u res
+
+T
+
+elevision is much more than radio with
+pictures. Skilled television journalists
+marry their words with the video in order
+to tell a more powerful story. Pictures are
+not just video “wallpaper,” they are an essential
+part of the story. The visuals tell the “what” of
+the story. The words tell the “why.” To quote Ed
+Bliss again, “Seeing may be believing, but it isn’t
+understanding.”
+Television reporters need to know what
+video they will use in a story before beginning
+to write. Whenever possible, they should look
+at all of the video first, so they can be sure that
+what they write will match the pictures. This is
+not just an issue of style. Research has shown
+that viewers understand and remember stories
+much better when the words and video match,
+that is, when they tell the same basic story.
+When the video does not match the words,
+viewers tend to remember more of what they
+see than what they hear. Imagine, for example,
+a story about the effects of a major storm on a
+country’s fuel supplies. If the video shows only
+storm damage and its aftermath, the viewer
+might miss the central point that fuel supplies
+have been disrupted. The story would be easier
+to follow if the video showed storm damage
+while the reporter talked about the aftermath,
+and then switched to pictures of stranded fuel
+trucks or people waiting in line trying to buy
+gasoline while the reporter described the effect
+of the storm on fuel supplies.
+Synchronizing words and pictures does not
+mean that reporters should simply describe
+what the viewer can see. Let’s say the video
+shows a farm truck driving down a dusty dirt
+road. There’s no point in having a reporter say
+something obvious, such as, “The Robertsons
+live at the end of a long country road.” Instead,
+the audio track should offer information that
+adds context and meaning to the picture. In
+this case, the reporter might say, “The drought
+has been so bad that the Robertsons haven’t had
+any crops to sell this year.”
+
+Newsc a sts
+
+R
+
+eaders of newspapers or of news sites
+on the Internet have considerable
+control over how they receive the news.
+Radio listeners and television viewers
+have less. A newspaper reader can choose to
+begin with the front page, the sports section,
+or the obituaries. An online reader can scroll
+through a Web site’s home page offerings before
+deciding what specific item to read from start
+to finish. But a radio listener or a television
+viewer has to consume the news the way it’s
+made available; the order of stories is predetermined by the newscast producer.
+Newscasts generally begin, or “lead,” with
+what the producer believes is the major story
+of the day. That does not mean that every story
+following the lead is considered slightly less
+important than the one before it. The producer
+has to consider the impact of the newscast as a
+whole, not just each individual story. Producers
+often place an important or unusual story lower
+down in the newscast and “tease” what’s coming
+next as a way of holding the viewers’ interest
+and keeping them tuned in. (We talked about
+teases in Chapter 4.)
+Much as a newspaper editor decides on the
+layout of pages, the television news producer
+creates a rundown or lineup for the newscast,
+listing all stories in the order they will run. The
+producer’s job is to know exactly how long each
+story will last because the newscast must begin
+and end at a specific time. Once the program
+starts, the producer makes sure it stays on
+schedule. If a story runs longer than expected,
+the producer has to decide what to cut to make
+up for it. If a story is dropped, the producer has
+to provide material to fill the gap.
+
+O n l in e News
+
+O
+
+nline journalism has certain attributes
+of print journalism and of broadcast
+journalism, and other attributes that
+are unique to the Web. Frequently Web
+sites offer news articles to be read, just as they
+would be in a newspaper. At other times, the
+audience may select a video clip, so the Web
+site resembles a TV broadcast. An online story
+that takes full advantage of the new medium
+allows the reader to become a participant,
+choosing his or her own path through the
+information presented. “Only if there is some
+element of control by the user is it a new story
+form,” says Nora Paul, director of the University
+of Minnesota’s Institute for New Media Studies.
+“Online journalists must think on multiple
+levels at once: words, ideas, story structure,
+design, interactives, audio, video, photos, news
+judgment,” says Jonathan Dube, publisher of
+CyberJournalist.net, a Web site that focuses
+on how the Internet and other technologies
+are changing the media. “TV is about showing
+the news. Print is more about telling and
+explaining. Online is about showing, telling,
+demonstrating, and interacting.” To make that
+possible, online journalists present information
+in layers, using a variety of story forms.
+
+43
+
+O nli ne Stor y Fo r ms
+
+O n l in e Writ in g
+
+T
+
+O
+
+he most basic online-story form has
+been described as “print plus.” It’s a text
+story that includes additional elements
+like photographs, audio, and video, or
+hyperlinks to more information. By embedding
+links, the journalist can take the reader to
+additional information on separate Web pages,
+some of which may be provided by sources
+outside the news organization, with more
+background or history. Online stories can be
+enhanced by including links to databases that
+a user can search. For example, a story about
+falling test scores at secondary schools across
+the country could link to a database of results
+from all schools. The user could search for a
+specific school, for all schools in a particular
+city, or compare the results of different schools.
+A more innovative approach uses “clickable
+interactives” or multimedia graphics specifically
+designed to illustrate a story. The graphic
+elements are laid out in linear fashion, but the
+reader can explore them independently in any
+order. The same is true of most online “slideshows,” which combine text and audio with still
+photographs in a multi-media experience for
+the user.
+Tools that allow the reader to navigate
+through a 360-degree view of a location can
+enhance online storytelling, too. So can Flash
+animation, one of the software programs that
+allows you to design interactive content: video,
+graphics, and animation. For example, the
+BBC in London created a Web site about illegal
+drugs and alcohol that allowed the reader to
+“choose” a particular drug and dosage, and then
+select a part of the body — like the brain or
+heart — to read about the effects of that drug
+on that organ, as well as safety information.
+Online sites even have used quizzes and games
+to tell stories by breaking the information into
+questions and answers and letting the user
+discover what the reporter has already learned.
+
+44
+
+nline writing, says Jonathan Dube, is
+a cross between print and broadcast
+writing. He maintains that the short,
+simple style favored by broadcasters
+makes online writing easier to follow. But
+he says too many Web sites ignore the basic
+rules of good writing. A conversational tone
+is good, says Dube, but grammar and spelling
+still matter. Television news manager Scott
+Atkinson says his best advice is to write for
+the Internet as you would write an e-mail to a
+friend. “That doesn’t mean you can misspell
+words, ignore story structure, or leave out
+context,” he says. “What it does mean is you
+should write in the most intimate style you
+can muster.”
+Because Web-based news sites tend to offer
+readers many choices, writers should avoid
+delayed or anecdotal leads that don’t quickly
+indicate what a story is about. The lead should
+give the reader a good reason to continue
+reading; otherwise, he or she probably will
+click on another story. Stories on line generally
+are shorter than newspaper stories. A good
+guideline is to limit an online story to about 800
+words and to keep it all on one page. Studies
+have found that readers are willing to scroll
+through text on line; there is no need to force
+them to click to additional pages for more of
+the same story. But to make the text easier
+to absorb, Dube suggests that online writers
+break the text into more blocks and use more
+subheads and bullet points to separate ideas
+than they would in print.
+
+Online journalism may allow readers to
+respond immediately and directly to the writer
+or editor via e-mail or even in a live Web
+chat. In addition, many sites provide space for
+readers to post their feedback or opinions, so
+others can read what they have written and
+respond. Minnesota Public Radio (MPR) in the
+United States solicits input for stories both on
+the air and on line. Listeners are asked to call
+or e-mail additional information. Stories on
+the MPR Web site include a “Help us cover this
+story” link, so the audience can add comments
+and insights.
+MPR also surveys its audience before
+producing special reports, such as an
+examination of the state’s economy. MPR News
+Vice President Bill Buzenberg says audience
+input results in “much more sophisticated
+reporting, with more depth and lots of realworld examples and voices.”
+
+45
+
+6
+
+46
+
+SPECIALIZED JOURNALISM
+
+Many news organizations assign journalists to cover specific
+areas, either geographic or topical, known as “beats.” This is a
+term originally used to describe a regular route for a sentr y or
+policeman. Journalists get to know the territor y and people
+who make up their beat, and in many cases they have to learn
+specialized vocabulary in order to understand
+their sources. This does not mean they use that
+vocabulary in their stories. On the contrary,
+good beat reporters become translators and
+interpreters, making information that might
+otherwise be obscure accessible to the general
+public.
+Beats are rare in the smallest newsrooms,
+where every reporter is expected to cover every
+kind of story. But in larger news organizations,
+print and broadcast, journalists may have the
+opportunity to focus on a particular type of
+news. Some beats are traditional: government,
+police, courts, and business, for example.
+Others vary with the territory. Depending
+on a community’s make-up, reporters might
+be assigned to cover the environment, or the
+elderly, or education as a beat.
+Beat reporters have one basic responsibility:
+to stay on top of the news in their specialty
+area. They are expected to cover stories that
+arise on their beat — meetings, printed reports
+or Web postings, and other routine events
+— but they’re also responsible for finding news
+that goes beyond the obvious. Beat reporters
+develop stories through their own enterprise,
+by building relationships with sources who
+will keep them abreast of what’s really going
+on, not just in public but behind the scenes.
+They produce a wide variety of stories, from
+breaking news to feature profiles. “The best
+beat reporters I’ve known are well organized,
+determined, with a clear sense of mission, and
+
+a wide range of sources,” says Chip Scanlan,
+a former beat reporter for Knight Ridder
+newspapers and currently with The Poynter
+Institute.
+
+B eat R epo r t in g Sk il l s
+
+W
+
+hatever beat a journalist chooses or
+is assigned to cover, one basic skill is
+essential: the ability to understand
+the institutions that dominate the
+beat. Learning how the system works takes
+time and effort, but it pays off in stories that
+non-beat reporters can’t match. Eric Nalder,
+the reporter who uncovered the life raft story
+discussed in Chapter 2, uses these questions to
+begin learning his way around a beat:
+• Who are the players?
+• Who is in charge?
+• Who are the regulators?
+• What are the rules?
+• How are things done?
+• Where are the mistakes recorded?
+• Where is the spending recorded?
+• Who knows the real story and how can I
+get it?
+To get answers to these questions, a reporter
+has to study hard and “walk the beat.” Read
+everything you can about the topic, collect
+meeting schedules and agendas, subscribe to
+specialized publications. But most importantly,
+47
+
+A reporter has to
+study hard and
+“ w a l k t h e b e a t .”
+
+Covering a beat means getting to know
+people well enough that they will trust you,
+while still maintaining a professional distance.
+The hardest part of being a beat reporter, says
+Scanlan, is “dealing with sources you have to
+return to every day even if you’ve written a
+story they don’t like.”
+
+G overn ment a n d Po l it ics
+get up and go. Beat reporters cannot depend
+solely on the telephone; they have to spend time
+on the beat, meeting and talking with people.
+“No one ever got a story sitting around the
+newsroom,” says veteran American journalist
+Mike Mather, an investigative reporter at
+WTKR-TV in Norfolk, Virginia. Get to know
+everyone who could be helpful — from officials
+to clerks — and pass out your business card to
+everyone you meet on the beat. Build a source
+list with as much contact information as you
+can pry loose, and stay in touch with those
+people by making regular “beat checks.” In
+addition to covering the key players on the beat,
+a good beat reporter also looks at how their
+actions affect people in the community.
+Beat reporting requires strong
+organizational and personal skills. Staying
+organized means using a calendar to track
+meetings, hearings, and due dates for reports
+or action. It means having a reliable, portable
+system for filing and retrieving contact
+information, especially phone numbers and
+e-mail addresses. And it means keeping a file
+of future story ideas, with daily lists of things
+to follow up on. Many reporters now keep this
+information in their computers, using programs
+that make it easy to search for people and dates.
+But they also need it when they’re not in the
+office, so they either carry a printout, a laptop
+computer, or that useful hand-held device
+that allows remote Web access, the personal
+digital assistant (PDA). Since technology can
+be unreliable, it’s important to make a back-up
+copy of the information frequently.
+
+48
+
+R
+
+eporters who cover government need
+to understand its inner workings, and
+to look for the impact of government
+decisions. Reporters who ask the
+basic question, “Who cares?,” when covering
+government are able to find people whose lives
+are affected by what government does. Stories
+that feature these people are more interesting to
+the audience.
+Much of the business of government is
+conducted in meetings, so reporters on the beat
+should expect to cover plenty of them. A dull
+meeting does not justify a dull story, however.
+The audience depends on the journalist to tell
+them only what’s important, not everything
+that happened in chronological order. The
+best stories about meetings focus not on what
+happened in the room, but on the people who
+are affected by what happened.
+On the government beat, it’s critical for
+journalists to know how to read and interpret a
+budget and other financial statements. “Follow
+the money” is good advice for all journalists,
+but particularly for those covering government
+and politics. Stories about government funding
+may seem dry, but taxes and spending affect
+the audience directly and people need to
+know where their money is going. In general,
+documents are the lifeblood of government, so
+beat reporters must be able to obtain them and
+understand them.
+
+Political reporters in a democracy have one
+central mission: to provide citizens with the
+information they need to make an informed
+choice between the candidates for elective
+office. To do that, journalists need to examine
+the candidates’ backgrounds and qualifications,
+their positions on the key issues, and what the
+candidates are saying in campaign appearances
+and advertising. Reporters who cover politics
+look at the candidates’ supporters, too, since
+their interests can often shed light on what a
+politician will do if elected.
+Public opinion surveys are a staple of
+campaign coverage, but journalists need to
+look closely before deciding whether a poll’s
+results are worth reporting (See sidebar,
+“Questions Journalists Should Ask About
+Polls,” on page 53). “Horse-race” or “tracking”
+polls that tell the percentage of voters who
+support each candidate are of limited value
+except as a fleeting snapshot of the race on
+any given day. Some journalists believe these
+polls may actually bias voters in favor of the
+leading candidate because people generally
+want to support a winner. But researchers in
+the United States have discovered that voters
+who pay attention to polls also learn more
+
+about the issues involved in the campaign. The
+researchers’ advice to journalists is to keep
+reporting the results of legitimate “tracking”
+polls throughout the campaign, but not to make
+them a major focus of the coverage.
+When it comes to campaign issues,
+journalists should pay attention not only to
+what the candidates say but also to what the
+voters want to know. Many news organizations
+conduct “issue polls” to see what topics are of
+great interest to the public during an election
+year. Sometimes candidates may try to avoid
+discussing a controversial issue that matters
+deeply to voters. In that case, journalists should
+raise the questions the public is asking. Good
+political reporters do not simply point out
+where the candidates stand on the issues, they
+ask what the candidates have done about those
+issues in previous elected office or in other
+positions they may have held. To bring the
+issues to life, reporters look for people whose
+individual stories illustrate why the issues
+matter and what difference it would make if one
+candidate or the other wins the election.
+
+Busin ess a n d Eco n o mics
+
+T
+
+he business beat touches the lives of
+almost everyone. Unemployment, the
+cost of food and fuel, personal savings
+and investment, all of these topics matter
+not just to business leaders but also to workers
+and consumers. Covering the local business
+beat means reporting on employers and
+workers, construction, and property sales, as
+well as the business sectors that keep the local
+economy going, be it farming, manufacturing,
+mining, or health care. At the national level,
+business reporters cover more abstruse topics,
+such as commodity and stock markets, interest
+rates, and institutional debt.
+
+49
+
+Reporters covering business and economics
+have to make their stories accessible to a
+general audience. They must understand
+economic concepts and terms and be able to
+define or restate them in plain language. This
+is good practice even for reporters working for
+specialized publications or broadcasts, whose
+audience might be expected to be familiar with
+the terms. In the United States, for example,
+The Wall Street Journal is aimed at businesssavvy readers, but still it spells out the meaning
+of common terms like “gross national product,”
+the total value of a nation’s output of goods and
+services. Over time, business reporters develop
+their own list of concise definitions they can
+plug into their stories. The audience will
+appreciate a clear statement of what is meant
+by “debt conversion,” “currency devaluation,”
+“privatization,” and other economic terms.
+They will appreciate stories that explain why
+those concepts matter to individuals as well as
+to corporations and governments.
+Business reporters need to be able to read
+and understand financial statements, balance
+sheets, and annual reports. They often find
+stories by looking at changes in income or
+spending from year to year. They compare
+companies to others in the same industry or
+the same region. For example, when a business
+closes or fails, reporters will ask not only how
+many people have lost their jobs but also
+what impact the shutdown will have on the
+community. To answer that larger question,
+they need to know whether the company
+was one of the largest employers in the area,
+whether other local companies provide
+the same product or service, what the local
+unemployment rate is, and so on.
+The business beat requires a deeper
+knowledge of mathematics and statistics than
+most other topic areas. But business reporters
+should use numbers sparingly in their stories,
+because too many figures make a story dry and
+dull. The most compelling business stories
+show the significance of developments by
+putting them in human terms, describing how
+individuals have been or will be affected.
+50
+
+Hea l t h , S cien ce, a n d t h e
+Env iro n ment
+
+S
+
+tories about health and the environment
+have a direct impact on people’s lives.
+Reporters who cover AIDS know that
+ignorance can be almost as dangerous
+as the disease itself; their stories can educate
+people so they can protect themselves.
+Journalists on the health, science, and
+environment beat may report about everything
+from avian flu to the mapping of the human
+genome and the effects of damming rivers. For
+each of these topics, the underlying issues are
+complicated and the journalist’s job is to explain
+them clearly.
+When dealing with these kinds of stories,
+journalists need to be familiar with the
+language of scientists and medical researchers,
+which can be confusing to laymen. Don’t be
+intimidated by it, says reporter Dennis Bueckert
+of the Canadian Press news agency, and don’t
+use it in your stories, either. Like business
+reporters, science writers develop their own list
+of definitions and explanations for complicated
+terms so they can write stories that make sense
+to the general public.
+Reporters who cover scientific subjects
+need to understand the scientific method,
+basic mathematics, and statistics, so they can
+double-check the results of research studies.
+At the same time, they should resist the urge to
+turn every development into a breakthrough,
+or to press for “yes” or “no” answers instead of
+accepting probabilities. Their stories may not
+seem as dramatic but they will certainly be
+more accurate.
+Journalists who are trained to report all
+sides of a story often fall into a trap when
+covering science. Giving even-handed
+coverage to differing scientific opinions can
+actually mislead the audience. For example,
+
+Second, Rogers says, audiences don’t bring
+anywhere near the background journalists do
+to any kind of story, much less to complicated
+ones. So, if you’re covering a science
+conference, for example, do not assume your
+audience has heard or read yesterday’s story,
+or that they’ll hear tomorrow’s. Give them the
+background they need to understand the issue
+and do it as if your story were the only one they
+would ever read or hear on the subject. It may
+well be.
+
+Po l ice a n d Co ur t s
+
+R
+the overwhelming majority of scientists
+believe that exposure to lead can harm
+children’s intelligence levels. Only a few
+researchers dispute the connection. A reporter
+could mention both viewpoints, but not in
+such a way as to suggest there is no scientific
+consensus on the issue.
+Carol Rogers, a journalism professor at
+the University of Maryland who has edited
+books about science writing, has two useful
+tips for beat reporters. First: identification
+matters. Journalists often don’t identify the
+experts they quote in a meaningful way. The
+audience deserves to know why you are quoting
+a particular person. For example, a story about
+an international conference on climate change
+quoted the head of the White House Office of
+Science and Technology, but never mentioned
+that he was a respected climate scientist.
+Providing that information would have allowed
+the audience to better assess the validity of his
+comments.
+
+eporters who cover crime and the
+courts need to know how the system
+works. Few reporters have any training
+in criminal justice, but veterans on
+the police beat recommend taking at least
+one course on the subject. Police officials are
+notoriously reluctant to provide information
+to journalists, but if you know their rules,
+regulations, and procedures, you can ask better
+questions and improve your chances of finding
+out what you want to know.
+Police reporters need to know exactly
+how crimes are defined in the community
+they cover. In the United States, for example,
+a “burglary” and a “robbery” are not the same
+thing. Burglary involves breaking into a
+building to commit a crime. Robbery is stealing
+money or property by force. Developing
+a glossary of essential terms can prevent
+embarrassing mistakes. A police press release
+may provide the basic facts about a crime, but
+good reporters dig deeper. They go to the scene
+to look for details and to talk with neighbors or
+eyewitnesses, whenever possible.
+
+51
+
+Court reporters must understand the
+judicial process from beginning to end. They
+should know what happens when a suspect
+is arrested, charged, arraigned, tried, and
+sentenced or released. Experienced reporters
+say the best way to learn the process is to spend
+time at the courthouse. Begin with the court
+clerks, who keep track of the docket — the
+list of cases — and the calendar. Find out how
+to get copies of the court record, filings, and
+testimony. Read the case files — including
+motions and pleadings before the trial — and
+keep track of what’s reported about the case
+if you can’t be in court every day, which
+frequently happens.
+Defense attorneys are some of the best
+sources of information on the justice beat.
+They often are more willing than prosecutors
+to talk with reporters about cases on which
+they are working. Do your best to understand
+legal jargon, but avoid using it in your stories.
+“Lawyers are counseled to use big words
+to confuse journalists,” says S.L. Alexander,
+author of Covering the Courts: A Handbook for
+Journalists. “If you don’t know what something
+means, ask the person you’re interviewing to
+explain it,” she advises.
+
+52
+
+Spo r t s
+
+S
+
+ports reporters do some of the best
+writing in journalism. Their stories
+naturally involve drama, emotions,
+and outsized personalities, says former
+TV sports reporter Bill Schwanbeck, who
+now teaches at Quinnipiac University in
+Connecticut. Good sportswriters do much
+more than report the score of a game or the
+results of an athletic competition. They provide
+the basics, of course, but they also provide
+perspective and context that the audience can’t
+get from being at the game or watching it on
+television. Sportswriters explain the why and
+how of what happened, not just the who and
+the what. They also report on the business of
+sports, and write feature stories about athletes,
+team owners, and fans.
+But sports reporters still have to start
+with the fundamentals. They need to be
+knowledgeable about all sports, understand the
+rules of the game or sport they are covering,
+and how the score is determined. They work on
+very tight deadlines, especially when covering
+night games. They have to keep score and make
+notes at the same time, not an easy task during
+a fast-moving game. Most importantly, they
+need to find a theme for each story and build
+the details around it.
+In many cases, the best story is not on the
+field. Sportswriters probe for what’s happening
+behind the scenes, the atmosphere in the locker
+room, or the tension between two players that
+might be affecting the entire team. They treat
+players and managers with respect, but they do
+not engage in hero-worship. They often enjoy
+the sports they cover, but they are not fans or
+boosters of any one team. Like all journalists,
+they should be fair and independent observers
+of the stories they cover.
+
+Just as business and science reporters avoid
+economic and business jargon, sportswriters
+should avoid terms that only the most ardent
+fan or coach would know. “Keep it simple,”
+says former sports reporter Mike Reilley, now
+publisher of the online site The Journalist’s
+ToolBox. “Don’t get cute.” He also warns young
+journalists to expect some interviews with
+athletes and coaches to be confrontational,
+especially after a loss. Many professional
+athletes thrive on intimidation, Reilley says, so
+be prepared to stand your ground.
+
+Q ues tio n s J o urn alis ts Sh o uld
+As k Ab o ut Po lls
+• Who did the poll? Is this a legitimate survey
+organization? Who else do they poll for?
+• Who paid for the poll? What is their political
+agenda?
+• How many people were interviewed?
+• How were they selected?
+• What kinds of people were interviewed?
+• Are the results based on answers of all or
+some of those polled?
+• When was the poll conducted?
+• How was the poll conducted?
+• What were the questions?
+• What was the margin of error? What were
+the raw numbers?
+• Are the results different from other polls and,
+if so, why?
+• Is this poll worth reporting?
+Excerpted with permission from
+20 Questions a Journalist Should Ask About Poll
+Results, Third Edition, by Sheldon R. Gawiser,
+Ph.D., and G. Evans Witt.
+http://www.ncpp.org
+
+53
+
+7
+
+54
+
+E T H I C S A N D L AW
+
+A free press has tremendous power, if power is defined as the
+capacity to influence others. The news media in a democrac y
+generally have the right to repor t information without prior
+government approval. Many countries provide legal protec tions
+to journalists so they can exercise that right. But with rights
+come responsibilities. For journalists, the most
+basic responsibility in a free society is to report
+the news accurately and fairly: to practice
+ethical journalism.
+Ethics is a system of principles that guides
+action. While the law establishes what you can
+and cannot do in a given situation, ethics tells
+you what you should do. It is based on values
+— personal, professional, social, and moral —
+and springs from reasoning. Ethical decisionmaking simply means applying these values in
+your daily work.
+The Declaration of Chapultepec, approved
+by countries in the Americas in 1994 as a
+counter to pressures on freedom of expression
+throughout the hemisphere, makes clear that
+ethical journalism is essential to the long-term
+success of the news media:
+The credibility of the press is linked to its
+commitment to truth, to the pursuit of
+accuracy, fairness, and objectivity and to
+the clear distinction between news and
+advertising. The attainment of these goals
+and the respect for ethical and professional
+values may not be imposed. These are the
+exclusive responsibility of journalists and the
+media. In a free society, it is public opinion
+that rewards or punishes.
+Ethical lapses do occur in journalism.
+Reporters have invented information. Editors
+have accepted payments from sources. News
+organizations have published advertisements
+in the guise of news. When this happens, the
+
+public has a right to question everything that
+appears in the news media. All journalists, and
+all news organizations, suffer when journalists
+behave unethically because that behavior calls
+the profession’s credibility into question. When
+credibility suffers, so does a news organization’s
+ability to survive economically.
+
+Et h ica l Pr in cipl es
+“
+
+T
+
+here is one sacred rule of journalism,”
+said the late reporter and prize-winning
+novelist John Hersey, who covered the
+aftermath of the atomic bomb attack on
+Hiroshima. “The writer must not invent. The
+legend on the license must read: NONE OF
+THIS WAS MADE UP.” Ethical journalists do
+not put words in people’s mouths or pretend to
+have been somewhere they have not. And they
+do not pass off the work of others as their own.
+Fabrication and plagiarism are violations of
+basic journalistic standards the world over. But
+not all transgressions are so clear.
+Journalists face ethical dilemmas every
+day, under pressure from owners, competitors,
+advertisers, and the public. They need a
+process to resolve these dilemmas, so that the
+journalism they produce is ethical. They need
+a way of thinking about ethical issues that
+will help them make good decisions, even on
+deadline.
+
+55
+
+For journalists,
+the most basic
+responsibility in
+a free society is
+to report the news
+accurately and
+fairly.
+This way of thinking is grounded in the
+principles journalists rely on. These are
+the basic principles of the U.S. Society of
+Professional Journalists, a voluntary journalism
+organization:
+• S eek truth and report it.
+Journalists should be honest, fair, and
+courageous in gathering, reporting, and
+interpreting information.
+•M
+ inimize harm.
+Ethical journalists treat sources, subjects,
+and colleagues as human beings deserving of
+respect.
+•A
+ ct independently.
+Journalists should be free of obligation to any
+interest other than the public’s right to know.
+•B
+ e accountable.
+Journalists are accountable to their readers,
+listeners, viewers, and each other.
+On the surface, it may seem easy enough to
+abide by these principles. Of course, journalists
+should seek the truth and treat their sources
+with respect. But oftentimes, the principles
+themselves are in conflict. Journalists who seek
+the truth may discover information that will
+be hurtful to the family of a person involved
+in wrongdoing. A reporter’s membership in
+a non-governmental organization may allow
+her to learn more about a story the group is
+involved with, but her association with the
+group may also compromise her independence
+and be difficult to justify to the audience. In
+56
+
+many cases, making an ethical decision means
+choosing not between right and wrong but
+between right and right.
+How, then, can journalists possibly make
+good ethical decisions? Some situations are
+best dealt with by avoiding them in the first
+place. For example, reporters may choose not
+to belong to any outside groups, or they may
+disqualify themselves from covering stories
+involving any groups they do belong to. In other
+cases, a journalist must seek the best possible
+balance between conflicting principles, always
+keeping in mind the primary importance of
+seeking the truth and serving the public.
+
+Et h ica l D ecisio n -M a k in g
+
+S
+
+ome newsrooms deal with ethical
+quandaries from the top down.
+Whenever an issue or dilemma arises, a
+senior manager decides what to do. This
+approach has the advantage of being quick,
+but it can be arbitrary. It does nothing to help
+journalists make good decisions when they
+are out in the field or when the manager is
+unavailable. For that reason, many newsrooms
+have adopted an ethical decision-making
+process that is more inclusive and that helps all
+journalists make good decisions under a variety
+of circumstances.
+The first step in the process is to define the
+dilemma. Most people recognize when they
+are facing an ethical quandary. An internal
+alarm goes off. Something does not feel quite
+right about a situation. When that happens,
+it’s important to spell out what’s bothering you.
+What are the values that may be compromised?
+What journalistic issues are at stake? Often
+there is tension between a journalistic goal
+and an ethical stand. The reporter who has an
+exclusive story may want to rush it into print
+before any one else gets it, but he also needs
+to consider the possible consequences. What
+if the story turns out to be wrong? Journalists
+should not sacrifice their ethical values to
+achieve other objectives, such as beating the
+competition.
+
+The next step after defining the problem is
+to collect more information to help you make
+a good decision. Consult newsroom policies
+and guidelines, if any exist, and talk to others
+about the dilemma. Begin with colleagues and
+supervisors in the newsroom, but don’t stop
+there. It’s often useful to include other voices,
+people who are not directly involved in the
+story but who are knowledgeable about the
+circumstances.
+It’s important to note that journalists, unlike
+doctors, are not expected to promise to do no
+harm. Many truthful and important stories
+will hurt people’s feelings or reputations. It’s
+inevitable. But journalists do try to minimize
+the harm by not putting people at unnecessary
+risk. Bob Steele, who teaches journalism ethics
+at The Poynter Institute, likes to ask: “What if
+the roles were reversed? How would I feel?”
+Let’s say a reporter has discovered a factory
+where boys under the age of 12 work 10 hours a
+day, six days a week, and are paid less than half
+the country’s minimum wage. The country’s
+constitution prohibits employers from hiring
+anyone under 14 and it is illegal for anyone to
+work more than 45 hours a week. Finding the
+factory means the reporter has proof of child
+exploitation, but what more does he need to
+know before publishing or broadcasting the
+story?
+Telling the truth about the factory would
+certainly have consequences, and some of them
+could be hurtful. When faced with this kind of
+story, it can be helpful to create a list of people
+and institutions that might be affected by the
+
+Ethical journalism
+
+story and to consider the impact the story
+might have. The story about the factory would
+affect the boys directly, of course, but it would
+also affect their families and the factory owner.
+Knowing the possible consequences, journalists
+can begin to look at alternatives for presenting
+the information so the story remains truthful
+but does not cause as much harm. In the case
+of the factory, the journalist might decide to use
+photos of the children but not to name them,
+in an effort to limit the potential harm the story
+could cause.
+That’s just one example of a journalistic
+decision that can have ethical consequences.
+Others include the type and placement of the
+coverage, as well as its tone. The impact of a
+front-page story with a banner headline and a
+large photograph is considerably greater than
+a smaller story that runs on an inside page. A
+television story that is promoted multiple times
+before it airs would have more impact, and
+therefore greater ethical consequences, than a
+story told once in the middle of a newscast.
+Going through a process to make good
+ethical decisions puts journalists and news
+organizations in a position to justify their
+actions clearly. By explaining what was done
+and why, journalists are able to bolster their
+credibility and justify the public’s trust in them.
+Newsrooms that value ethical decisionmaking make sure these kinds of issues are
+discussed, and not just when a dilemma occurs.
+Some newsrooms hold regular meetings to
+discuss what they would do in hypothetical
+situations. Journalists who practice listening
+with an open mind and who keep their
+emotions in check and avoid becoming
+inflexible about their positions are able to put
+these skills to work when facing a real ethical
+concern.
+
+is essential to the
+long-term success of
+the news media.
+
+57
+
+Ethics Cod e s
+
+Co d es o f Co n d u c t
+
+J
+
+I
+
+ournalism associations and federations
+around the world have established codes
+of ethics to guide the work of member
+journalists. Ethics codes can cover
+everything from plagiarism to privacy and from
+corrections to confidentiality. Some are brief
+and vaguely worded, while others are lengthy
+and quite explicit. Claude-Jean Bertrand, who
+is a professor at the University of Paris’s French
+Press Institute and has examined ethics codes
+from many countries, says that most include
+these three basic elements:
+• F undamental values, including respect for life
+and human solidarity;
+• F undamental prohibitions, including not
+to lie, cause needless harm, or appropriate
+someone else’s property;
+• J ournalistic principles, including accuracy,
+fairness, and independence.
+These codes are sometimes voluntary
+in nature, with no clear consequences for
+violators. But the expectation is that peers and
+employers will hold journalists who behave
+unethically accountable. In some countries,
+press councils hear complaints against
+journalists and can recommend action to
+correct mistakes. Journalism review magazines
+also serve a corrective function by exposing the
+behavior of unethical journalists. Some news
+organizations have a staff person, commonly
+called an “ombudsman,” who watches out for
+errors and ethical lapses and serves as the
+public’s representative inside the newsroom.
+In countries where journalists are required
+to belong to a union or association, ethics codes
+often include an enforcement provision. For
+example, the Australian Journalists Association
+has judiciary committees that investigate
+charges of unethical behavior brought against
+journalists. A journalist found in violation can
+be rebuked, fined, or expelled from the group.
+
+58
+
+n addition to national and regional codes
+of ethics, many news organizations have
+their own codes of conduct or standards of
+practice that they expect their journalists
+to follow. These codes may spell out specific
+actions or activities that are either encouraged
+or prohibited, or that require the approval of a
+manager.
+Many news organizations limit what
+journalists can do both on and off the job. The
+main reason for these limitations is to protect
+the credibility of news organizations. Reporters
+and photographers may be told explicitly that
+they cannot manipulate or “stage” the news by
+asking people to do something for a story that
+they would not do ordinarily. Reporters may
+not be allowed to conceal their identities to get
+a story, unless there is a clear and compelling
+public interest in the information and it cannot
+be obtained any other way. A television station
+may explicitly forbid the use of hidden cameras
+or surreptitious recording in gathering the
+news, unless a manager approves it for publicinterest reasons.
+With the advent of digital photography,
+new standards have been added to prohibit
+altering photographs or video in a way that
+could mislead the audience. Several highprofile incidents contributed to these new
+policies, including a photograph on the cover of
+National Geographic magazine in the 1980s that
+digitally moved the famous Pyramids of Giza in
+Egypt closer together.
+Many of the regulations in newsroom
+codes of conduct address issues of journalistic
+independence. To avoid even the appearance of
+a conflict of interest, reporters may be forbidden
+to own stock or have a personal interest in
+companies they cover. Journalists may not be
+allowed to take a public position on a political
+issue or openly support a candidate for office.
+The news organization may prohibit journalists
+from having a business relationship with any
+news source, or from doing any outside work
+for pay unless approved by a manager.
+
+The ethics policy of the Detroit Free
+Press, an American newspaper in the state of
+Michigan, clearly spells out what the newspaper
+will and will not do. It prohibits paying sources
+for news and says that sources will not be
+allowed to review material before publication.
+The Canadian Broadcasting Company (CBC)
+has a lengthy standards manual that requires
+employees to refuse any gifts that may appear
+to influence a CBC decision; only modest gifts
+of goodwill or hospitality offered during the
+conduct of normal business may be accepted.
+CBC employees may not accept offers of free
+travel or accommodations in order to cover
+a story.
+It may not be possible to avoid every
+potential conflict, but journalists need to be
+aware that their conduct can reflect badly on
+the news organization. When they sense that
+a conflict might arise, they should be expected
+to notify their supervisors. A reporter with a
+personal connection to a story may ask that
+a different reporter take on the assignment.
+Many news organizations have made it their
+practice to have reporters disclose relationships
+in their stories that could even suggest a conflict
+of interest, even if none exists.
+
+Codes of conduct are typically internal
+documents, but more and more news
+organizations are posting them on their Web
+sites so the public knows what to expect and
+can hold the newspaper or station accountable
+if its standards are violated.
+
+Co mmu n it y St a n d a rd s
+
+N
+
+ews organizations often face conflicts
+between newsworthiness and
+community standards, and resolving
+them requires the skilful practice of
+ethical decision-making. Suppose an elected
+official has used a racial slur in discussing
+a member of the opposition party. Some
+newspapers might print the exact words the
+official used. Others could use a few letters
+followed by dashes to indicate what he said
+without spelling it out. And some newspapers
+would likely report only that the official had
+used offensive language. Newspaper editors
+choose different solutions depending on
+what they feel the readers would be willing to
+tolerate. But sometimes they go ahead with a
+decision they are certain would offend some
+readers. Editors face similar difficult choices
+when it comes to shocking photographs or
+video the audience may find distasteful, but
+that may be the most powerful way to tell an
+important story.
+To minimize the harm such a choice might
+cause, many news managers now choose to
+explain why they made the decision they did,
+either in the text of the story or in a separate
+“editor’s note” alongside it. For example, a
+photograph of a mother holding the emaciated
+body of her son who died of starvation would
+certainly be disturbing. Instead of waiting
+for angry phone calls and responding to each
+individual complaint, the editor’s note might
+say that this picture of suffering tells the story
+of famine much more clearly than words alone.
+By explaining their decisions to the public,
+journalists can live up to the guiding principle
+of accountability.
+59
+
+Le gal Issu e s
+
+T
+
+he cornerstone of international
+standards on the news media is Article 19
+of the United Nations Charter,
+which states:
+Everyone has the right to freedom of opinion
+and expression; this right includes freedom
+to hold opinions without interference and
+to seek, receive, and impart information and
+ideas through any media and regardless of
+frontiers.
+
+Countries that are members of the United
+Nations are committed to upholding the
+charter, including Article 19, but that hasn’t
+stopped some countries from suppressing
+their own news media and blocking access to
+international news. In some cases, journalists
+have been killed, imprisoned, or exiled for
+trying to do their jobs.
+Danilo Arbilla of the Inter American Press
+Association and Uruguay’s Búsqueda says the
+best press law is no law at all. In the ideal world,
+he says, legislation governing press freedom
+would take up no more than a couple of pages,
+“containing clear and frankly worded clauses
+prohibiting any attempt to regulate … freedom
+of expression.” Needless to say, the world is
+not an ideal place. Press laws vary around the
+world to such an extent that it is not possible
+to summarize them all. Some democratic
+countries have laws to ensure journalists’ access
+to public information, while others limit what
+information can be published or aired. In some
+countries, it is illegal to name the victim of a
+sexual crime, or to identify juveniles accused of
+criminal activity. Even within countries, there
+may be differing local laws covering issues such
+as whether a journalist can be forced to name
+a confidential source or provide reporting
+notes to a court of law, and under what
+circumstances. Suffice it to say that journalists
+need to be aware of the laws in the countries in
+which they work, as well as ongoing efforts to
+have restrictive laws lifted.
+
+60
+
+One of the most common kinds of legal
+issues journalists face is libel or defamation. In
+the United States, defamation is a statement of
+fact that is substantially false about someone
+who can be identified and that tends to injure
+that person’s reputation. Defamation is
+called “libel” when the statement is published
+and “slander” when it is broadcast, but the
+basic parameters are the same. Generally
+speaking, if a statement is true, it cannot be
+defamatory. Journalists therefore must confirm
+independently what their sources say, if those
+comments could defame another person.
+As new technology changes the way
+journalists do their work, media laws are being
+reexamined. At the forefront are questions
+such as: Should online reporters be granted
+the same rights and protections as journalists
+working for established news organizations?
+Should those same privileges extend to Internet
+bloggers? These questions are likely to remain
+unresolved for some time.
+Reporters obviously are subject to other
+laws that apply to individuals in a given
+country, such as laws governing privacy. A
+journalist who wants access to information
+cannot enter private property, take documents
+without permission, or wiretap a telephone
+and expect to face no legal consequences. A
+news organization might decide that some
+stories are so important they are worth the risk
+of legal sanctions, but that is a different matter
+to be decided jointly and carefully by editors,
+reporters, and management.
+
+8
+
+JOURNALISM RESOURCES
+
+M em be r ship G ro u p s
+American Society of Newspaper Editors
+http://www.asne.org/
+Represents daily newspaper editors in the
+Americas.
+Association for Women Journalists
+http://www.awjdfw.org/index.html
+Promotes fair treatment of women in the media
+and the newsroom through a scholarship
+program, career grants, networking, advocacy,
+career seminars, and the annual Vivian
+Castleberry Awards Competition.
+International Federation of Journalists
+http://www.ifj.org/
+Represents around 500,000 members in more
+than 100 countries.
+Investigative Reporters and Editors, Inc.
+http://www.ire.org/
+Represents investigative journalists.
+National Press Photographers Association
+http://www.nppa.org/
+Serves print and television photojournalists.
+Online News Association
+http://www.journalists.org/
+Serves online-media journalists.
+Organization of News Ombudsmen
+http://www.newsombudsmen.org/
+International association of ombudsmen, or
+internal newsroom critics.
+
+Radio-Television News Directors
+Association
+http://www.rtnda.org
+Membership group for electronic journalists
+worldwide.
+Society of Professional Journalists
+http://www.spj.org/
+The Society of Professional Journalists works
+to improve and protect journalism. SPJ also
+promotes the free practice of journalism and
+high ethical standards of behavior. Encourages
+the free flow of information vital to a wellinformed public, works to educate the next
+generation of journalists, and protects First
+Amendment guarantees of freedom of speech
+and press.
+Society for News Design
+http://www.snd.org/
+Represents designers, graphic artists,
+illustrators, and other visual journalists.
+
+R epo r t in g a n d Ed it in g
+Cyberjournalist.net
+http://www.cyberjournalist.net/tips_and_
+tools/
+CyberJournalist.net is a resource site that
+focuses on how the Internet, convergence
+(see note), and new technologies are changing
+the media. The site offers tips, news, and
+commentary about online journalism,
+citizen’s media, digital storytelling, converged
+news operations, and using the Internet as a
+reporting tool.
+61
+
+Note: Convergence in the media refers
+to cross-platform reporting. For example:
+newspaper reporters file stories for the
+newspaper, the paper’s Web site, and even a
+TV or radio station owned by the newspaper.
+
+Journalism.net
+http://www.journalismnet.com
+A full service site with dozens of useful links,
+developed by a Canadian reporter.
+NewsLab
+http://www.newslab.org
+Resources, story background, and training for
+television and radio journalists.
+Project for Excellence in Journalism
+http://www.journalism.org
+U.S. non-profit organization has resources and
+research.
+Reporter.org
+http://www.reporter.org
+Resources for journalists, including beat-related
+links.
+
+Spe c ia l ize d J ou r n al i s m
+Most of these groups are membership
+organizations that offer training at regularly
+scheduled conferences and resources on their
+Web sites.
+
+BUSINESS: National Center for Business
+Reporting
+http://www.businessjournalism.org/
+CONFLICT: Center for War, Peace, and the
+News Media
+http://www.bu.edu/globalbeat/
+ENVIRONMENT: International
+Federation of Environmental Journalists
+http://www.ifej.org/
+
+62
+
+INVESTIGATIVE: International
+Consortium of Investigative Journalists
+http://www.publicintegrity.org/icij/
+SCIENCE: International Science Writers
+Association
+http://internationalsciencewriters.org/
+SPORTS: Associated Press Sports Editors
+http://apse.dallasnews.com/
+
+J o u r n a l ism Tra in in g
+American Press Institute
+http://www.americanpressinstitute.org/
+Training center for print journalists based in the
+United States. Site offers resources, including
+useful links at The Journalist’s Toolbox.
+CIESPAL
+http://www.ciespal.net/
+International journalism center for Latin
+America, based in Ecuador. (Site is in Spanish.)
+European Journalism Centre
+http://www.ejc.nl/
+Training institute based in The Netherlands,
+has background information on European
+media and resources.
+IFRA Newsplex
+http://www.newsplex.org/home.shtml
+Training centers in the United States and
+Germany.
+Independent Journalism Foundation
+http://www.ijf-cij.org/
+Supports free press in Eastern Europe with
+training at four regional centers.
+
+International Center for Journalists
+http://www.icfj.org
+Training center based in the United States also
+has links to worldwide training and fellowship
+opportunities on its International Journalists’
+Network: http://www.ijnet.org/
+
+Internews
+http://www.internews.org/
+U.S. non-profit group offers journalism training
+around the world.
+Institute for the Advancement of
+Journalism
+http://www.iaj.org.za/
+South African media training institute.
+Institute for War and Peace Reporting
+http://www.iwpr.net
+Special reports by region from this Londonbased non-profit, in multiple languages.
+John S. Knight Fellowships
+http://knight.stanford.edu/program/index.html
+Offers one-year professional journalism
+fellowships at Stanford University for
+outstanding mid-career journalists.
+Journalismtraining.org (Society of
+Professional Journalists)
+http://www.journalismtraining.org/action/
+home
+Provides a centralized location for journalists
+seeking information about professional
+development. The centerpiece of the site is
+a searchable database of local, regional, and
+national journalism training programs.
+No Train-No Gain
+http://www.notrain-nogain.org/
+Newspaper training editors share ideas and
+exercises on this site.
+The Poynter Institute
+http://www.poynter.org/
+A school for journalists, based in the United
+States. Web site provides resources, story
+background information, and plenty of links.
+
+Freed o m o f Ex pressio n
+Article 19
+http://www.article19.org/
+International non-profit group supports
+freedom of expression and the free flow of
+information as fundamental human rights.
+Canadian Journalists for Free Expression
+http://www.cjfe.org/
+Nongovernmental group defends the rights of
+journalists throughout the world.
+Freedom Forum
+http://www.freedomforum.org/
+News outlet dealing primarily with U.S. First
+Amendment and Freedom of Information
+issues.
+Inter American Press Association
+http://www.sipiapa.org/
+Supports free press in the Western Hemisphere.
+Journalists for Human Rights
+http://www.jhr.ca/
+Canadian-based nonprofit, focused on
+reporting in Africa.
+The Reporters Committee for Freedom of
+the Press
+http://www.rcfp.org/
+A nonprofit organization dedicated to
+providing free legal assistance to journalists.
+Reporters Without Borders
+http://www.rsf.org/
+International press freedom organization,
+based in Paris. Resources in English, French,
+and Spanish.
+World Press Freedom Committee
+http://www.wpfc.org/
+International umbrella group defends and
+promotes press freedom.
+
+63
+
+B o o ks
+
+Et h ics Co d es
+
+Clark, Roy Peter and Cole C. Campbell (eds.)
+The Values and Craft of American Journalism:
+Essays From The Poynter Institute. Gainesville,
+FL: University Press of Florida, 2005.
+
+American Society of Newspaper Editors
+ASNE Statement of Principles. Reston, VA:
+American Society of Newspaper Editors, 2002.
+http://www.asne.org/kiosk/archive/
+principl.htm
+
+The First Amendment Handbook. Arlington,
+VA: The Reporters Committee for Freedom of
+the Press, 2003.
+http://www.rcfp.org/handbook/index.html
+Hachten, William A. Troubles of Journalism: A
+Critical Look at What’s Right and Wrong With
+the Press. Mahwah, NJ: Lawrence Erlbaum
+Associates, 3rd edition, 2004.
+Hamilton, James T. All the News That’s Fit to
+Sell: How the Market Transforms Information
+Into News. Princeton, NJ: Princeton University
+Press, 2003.
+Overholser, Geneva, and Kathleen Hall
+Jamieson. The Press. New York, NY: Oxford
+University Press, 2005.
+
+Radio-Television News Directors
+Association
+Code of Ethics and Professional Conduct.
+Washington, DC: Radio-Television News
+Directors Association, 2000.
+http://www.rtnda.org/ethics/coe.shtml
+Society of Professional Journalists
+SPJ Code of Ethics. Indianapolis, IN: Society of
+Professional Journalists, 1996.
+http://spj.org/ethics.asp
+International Center for Journalists
+Code of Ethics (by country and region).
+Washington, DC.
+English version: http://www.ijnet.org/
+Director.aspx?P=Ethics
+
+Sloan, W. David and Lisa Mullikin Parcell (eds.)
+American Journalism: History, Principles,
+Practices. Jefferson, NC: McFarland &
+Company, 2002.
+Sullivan, Marguerite H. A Responsible Press
+Office: An Insider’s Guide. Washington,
+DC: U.S. Department of State, International
+Information Programs, 2001.
+http://usinfo.state.gov/products/pubs/
+pressoffice/
+
+The U.S. Department of State assumes no
+responsibility for the content and availability
+of the resources from other agencies and
+organizations listed above. All Internet links
+were active as of Fall 2006.
+
+64
+
+Executive Editor : George Clack
+Writer : Deborah Potter
+Editor : Mildred Solá Neely
+Ar t Director/Design : Min-Chih Yao
+Illustrations : Bryan Leister
+
+This publication is a companion volume to
+A Responsible Press Office: An Insider’s
+Guide by Marguerite H. Sullivan
+(http://usinfo.state.gov/products/pubs/
+pressoffice/).
+
+The opinions expressed in this publication do
+not necessarily reflect the views or policies of
+the U.S. government.
+
+Bureau of International Information Programs
+U.S. Department of State
+http://usinfo.state.gov/
+2006
+
+Bureau of International Information Programs
+U.S. DEPARTMENT OF STATE
+http://usinfo.state.gov/
+
+

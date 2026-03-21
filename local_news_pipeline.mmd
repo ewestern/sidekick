@@ -1,0 +1,89 @@
+graph TD
+    %% Public data sources
+    V[Meeting videos]
+    A[Agendas & minutes]
+    B[Budgets & policy]
+
+    %% Source registry & search agents
+    SR[Source registry<br/><i>Schedules, URLs, reliability metadata</i>]
+    SD[Search: discovery<br/><i>Find new recurring sources</i>]
+    SRE[Search: research<br/><i>Find specific documents on request</i>]
+
+    %% Core pipeline
+    ING[Ingestion agents<br/><i>Discover, fetch, index, classify</i>]
+    PROC[Processing agents<br/><i>Transcribe, summarize, extract</i>]
+    AS[Artifact store<br/><i>Versioned intermediate outputs</i>]
+
+    %% Analysis layer
+    BEAT[Beat agents<br/><i>Stateful domain context</i>]
+    RES[Research agents<br/><i>Monitor policy, budgets</i>]
+    CONN[Connection agent<br/><i>Cross-beat, cross-geo</i>]
+
+    %% Editorial
+    ED[Editor agents<br/><i>Draft stories from flagged items</i>]
+    HUM[Human editorial<br/><i>Kill / edit + publish / assign</i>]
+
+    %% Publication layers
+    ST[State layer]
+    MT[Metro layer]
+    RF[Reader's feed]
+
+    %% Data flow: sources → ingestion
+    V --> ING
+    A --> ING
+    B --> ING
+
+    %% Registry feeds ingestion
+    SR -.->|schedules & URLs| ING
+
+    %% Discovery proposes to registry
+    SD -.->|propose sources| SR
+
+    %% Ingestion → processing → artifact store
+    ING --> PROC
+    PROC --> AS
+
+    %% Research search deposits into artifact store
+    SRE -.->|fetched docs| AS
+
+    %% Artifact store feeds analysis
+    AS --> BEAT
+    AS --> RES
+
+    %% Analysis agents can request docs from search
+    BEAT -.->|request docs| SRE
+    RES -.->|request docs| SRE
+
+    %% Analysis → connection agent
+    BEAT --> CONN
+    RES --> CONN
+
+    %% Connection → editor → human
+    CONN --> ED
+    ED --> HUM
+
+    %% Human feedback loops
+    HUM -.->|assign stories| BEAT
+    HUM -.->|assign lookups| SRE
+    HUM -.->|register sources| SR
+
+    %% Publication
+    HUM --> ST
+    HUM --> MT
+    ST --> RF
+    MT --> RF
+
+    %% Styling
+    classDef source fill:#f1efe8,stroke:#5f5e5a,color:#2c2c2a
+    classDef agent fill:#eeedfe,stroke:#534ab7,color:#26215c
+    classDef store fill:#f1efe8,stroke:#888780,color:#2c2c2a
+    classDef search fill:#faece7,stroke:#993c1d,color:#4a1b0c
+    classDef human fill:#faece7,stroke:#d85a30,color:#4a1b0c,stroke-width:2px
+    classDef pub fill:#e1f5ee,stroke:#0f6e56,color:#04342c
+
+    class V,A,B source
+    class ING,PROC,BEAT,RES,CONN,ED agent
+    class AS,SR store
+    class SD,SRE search
+    class HUM human
+    class ST,MT,RF pub

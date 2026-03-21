@@ -1,0 +1,102 @@
+graph TD
+    %% Public data sources
+    V[Meeting videos]
+    A[Agendas & minutes]
+    B[Budgets & policy]
+
+    %% Source registry & search agents
+    SR[Source registry\n<i>Schedules, URLs, health</i>]
+    SD[Search: discovery\n<i>Find new recurring sources</i>]
+    SRE[Search: research\n<i>Fetch specific documents</i>]
+
+    %% Ingestion & processing
+    ING[Ingestion agents\n<i>Discover, fetch, classify</i>]
+    PROC[Processing agents\n<i>Transcribe, summarize, extract</i>]
+
+    %% Unified artifact store with layers
+    subgraph AS [Unified artifact store]
+        RAW[raw\n<i>transcripts · documents · media</i>]
+        PROCD[processed\n<i>summaries · extracts · structured data</i>]
+        ANAL[analysis\n<i>briefs · flags · trend notes</i>]
+        CONNART[connections\n<i>cross-beat memos</i>]
+        DRAFT[drafts]
+        RAW --> PROCD --> ANAL --> CONNART --> DRAFT
+    end
+
+    %% Analysis agents
+    BEAT[Beat agents\n<i>Stateful domain context</i>]
+    RES[Research agents\n<i>Monitor policy, budgets</i>]
+    CONN[Connection agent\n<i>async · cross-beat · cross-geo</i>]
+
+    %% Editorial
+    ED[Editor agents\n<i>Draft stories from flagged items</i>]
+    HUM[Human editorial\n<i>Kill / edit + publish / assign</i>]
+    ASSIGN[Assignments\n<i>human or agent triggered</i>]
+
+    %% Publication
+    ST[State layer]
+    MT[Metro layer]
+    RF[Reader's feed]
+
+    %% Sources → ingestion
+    V & A & B --> ING
+
+    %% Registry ↔ ingestion
+    SR -.->|schedules & URLs| ING
+    SD -.->|propose sources| SR
+    ING -.->|health feedback| SR
+
+    %% Ingestion & research search → raw artifacts
+    ING -->|write raw| RAW
+    SRE -->|write fetched docs| RAW
+
+    %% Processing reads raw, writes processed
+    RAW -->|read| PROC
+    PROC -->|write| PROCD
+
+    %% Analysis agents read processed, write analysis
+    PROCD --> BEAT & RES
+    BEAT & RES -->|write| ANAL
+
+    %% Agents can request specific docs
+    BEAT & RES -.->|request docs| SRE
+
+    %% Connection agent — async, does not block pipeline
+    ANAL -.->|read async| CONN
+    CONN -.->|write| CONNART
+
+    %% Editor agents read analysis + connections
+    ANAL --> ED
+    CONNART -.->|enrich| ED
+    ED -->|write| DRAFT
+
+    %% Human editorial
+    DRAFT --> HUM
+    HUM -.->|send back| ED
+
+    %% Assignments
+    HUM --> ASSIGN
+    ASSIGN -.->|trigger analysis| BEAT
+    ASSIGN -.->|trigger lookup| SRE
+    ASSIGN -.->|register sources| SR
+
+    %% Publication
+    HUM --> ST & MT
+    ST & MT --> RF
+
+    %% Styling
+    classDef source fill:#f1efe8,stroke:#5f5e5a,color:#2c2c2a
+    classDef agent fill:#eeedfe,stroke:#534ab7,color:#26215c
+    classDef store fill:#f1efe8,stroke:#888780,color:#2c2c2a
+    classDef search fill:#faece7,stroke:#993c1d,color:#4a1b0c
+    classDef human fill:#faece7,stroke:#d85a30,color:#4a1b0c,stroke-width:2px
+    classDef pub fill:#e1f5ee,stroke:#0f6e56,color:#04342c
+    classDef assign fill:#fef9e7,stroke:#b7950b,color:#4a3c0c
+
+    class V,A,B source
+    class ING,PROC,BEAT,RES,CONN,ED agent
+    class RAW,PROCD,ANAL,CONNART,DRAFT,SR store
+    class SD,SRE search
+    class HUM human
+    class ST,MT,RF pub
+    class ASSIGN assign
