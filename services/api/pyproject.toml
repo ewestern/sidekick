@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sidekick-api"
+version = "0.1.0"
+description = "Public/editorial REST API service"
+requires-python = ">=3.12"
+dependencies = [
+    "sidekick-core",
+    "sidekick-migrations",
+    "fastapi>=0.116.0",
+    "uvicorn>=0.35.0",
+    "typer>=0.24.1",
+    "pyjwt[crypto]>=2.10.0",
+    "python-dotenv>=1.0",
+    "ulid-py>=1.1.0",
+
+]
+
+[project.scripts]
+sidekick-api = "sidekick.api.cli:main"
+
+[tool.uv.sources]
+sidekick-core = { workspace = true }
+sidekick-migrations = { workspace = true }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sidekick"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]

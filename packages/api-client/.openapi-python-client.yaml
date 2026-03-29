@@ -1,0 +1,11 @@
+# openapi-python-client configuration
+# https://openapi-python-client.readthedocs.io/en/latest/configuration/
+
+project_name_override: sidekick-api-client
+package_name_override: sidekick_client
+
+# Keep field names as-is from the API schema (snake_case throughout)
+field_prefix: ""
+
+# Don't generate a pyproject.toml — we manage our own
+use_path_prefixes_for_title_model_names: true
