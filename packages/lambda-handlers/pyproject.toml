@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sidekick-lambda-handlers"
+version = "0.1.0"
+description = "AWS Lambda entrypoints for Sidekick newsroom (shared core logic only)"
+requires-python = ">=3.12"
+dependencies = [
+    "sidekick-core",
+]
+
+[tool.uv.sources]
+sidekick-core = { workspace = true }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sidekick_lambda"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
