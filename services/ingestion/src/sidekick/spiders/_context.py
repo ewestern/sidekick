@@ -8,7 +8,7 @@ real objects here by that token.
 Usage::
 
     # In the runner, before starting the CrawlerProcess:
-    token = register(artifact_store=store, object_store=obj_store, event_bus=bus)
+    token = register(artifact_store=store, object_store=obj_store, max_items=None)
     settings["SIDEKICK_RUN_TOKEN"] = token
     ...
     # After the crawl:
@@ -17,16 +17,16 @@ Usage::
     # In a pipeline or middleware from_crawler classmethod:
     from sidekick.spiders._context import get
     ctx = get(crawler.settings["SIDEKICK_RUN_TOKEN"])
-    return cls(ctx.artifact_store, ctx.object_store, ctx.event_bus)
+    return cls(ctx.artifact_store, ctx.object_store)
 """
 
 from __future__ import annotations
 
 import uuid
-from dataclasses import dataclass
+from dataclasses import dataclass, field
+from datetime import date
 
 from sidekick.core.artifact_store import ArtifactStore
-from sidekick.core.event_bus import EventBus
 from sidekick.core.object_store import ObjectStore
 
 _registry: dict[str, "RunContext"] = {}
@@ -36,16 +36,25 @@ _registry: dict[str, "RunContext"] = {}
 class RunContext:
     artifact_store: ArtifactStore
     object_store: ObjectStore
-    event_bus: EventBus
+    artifact_results: dict[str, list[dict]] = field(default_factory=dict)
+    max_items: int | None = None
+    min_date: date | None = None
 
 
 def register(
-    artifact_store: ArtifactStore, object_store: ObjectStore, event_bus: EventBus
+    artifact_store: ArtifactStore,
+    object_store: ObjectStore,
+    *,
+    max_items: int | None = None,
+    min_date: date | None = None,
 ) -> str:
     """Store a run context and return its token."""
     token = str(uuid.uuid4())
     _registry[token] = RunContext(
-        artifact_store=artifact_store, object_store=object_store, event_bus=event_bus
+        artifact_store=artifact_store,
+        object_store=object_store,
+        max_items=max_items,
+        min_date=min_date,
     )
     return token
 

@@ -10,7 +10,8 @@ from sidekick.core.agent_config import AgentConfigRegistry
 
 load_dotenv()
 
-DEFAULT_MODEL = "claude-sonnet-4-6"
+
+DEFAULT_MODEL = "gpt-5.4-mini"
 
 _SUMMARY_SYSTEM = """\
 You are an expert journalist summarizing local government and public-interest documents.
@@ -21,6 +22,7 @@ Given a document or meeting transcript, produce a structured summary with:
 - A list of notable items, decisions, or announcements as concise bullet points
 - Lowercase, slug-style topic tags (e.g. ["zoning", "budget", "housing"])
 - Any specific dates mentioned in the document
+- A short list of source material labels referenced in the summary (e.g. ["meeting transcript", "agenda packet"])
 
 Focus on: policy decisions, budget impacts, formal actions taken, developing stories,
 and anything that would be newsworthy to a local audience. Be factual and specific.
@@ -34,6 +36,7 @@ Given a document or meeting transcript, identify:
 - Organizations: government bodies, companies, nonprofits mentioned
 - Places: streets, neighborhoods, facilities, districts
 - Documents: ordinances, resolutions, reports, contracts referenced by name or number
+- Lowercase, slug-style topic tags (e.g. ["zoning", "budget", "housing"])
 - Financial figures: budget amounts, appropriations, costs — include description, amount, and context
 - Motions or votes: formal actions taken — include description, result (passed/failed/tabled), and vote tally if available
 
@@ -50,19 +53,22 @@ def seed(db_url: str | None = None) -> None:
         agent_id="processor:summary",
         model=DEFAULT_MODEL,
         prompts={"system": _SUMMARY_SYSTEM},
+        skills=["news-values", "government-proceedings",
+                "numbers-and-data-literacy", "document-assessment"],
         updated_by="seed",
     )
     registry.set(
         agent_id="processor:entity-extract",
         model=DEFAULT_MODEL,
         prompts={"system": _ENTITY_EXTRACT_SYSTEM},
+        skills=["entity-and-actor-tracking", "document-assessment"],
         updated_by="seed",
     )
 
 
 def main() -> None:
     seed()
-    print("Seeded processor:summary and processor:entity-extract configs.")
+    print("Seeded processor:summary, processor:entity-extract, and processor:structured-data configs.")
 
 
 if __name__ == "__main__":

@@ -5,6 +5,13 @@ from __future__ import annotations
 from pydantic import BaseModel
 
 
+class SummarySourceReference(BaseModel):
+    """Source materials explicitly relied on in the summary."""
+
+    label: str
+    """Human-readable source label, e.g. "meeting transcript" or "agenda packet".""" 
+
+
 class SummaryOutput(BaseModel):
     """Structured summary of a government or public-interest document or transcript."""
 
@@ -22,6 +29,9 @@ class SummaryOutput(BaseModel):
 
     date_references: list[str]
     """Dates mentioned in the document (e.g. ["2026-03-11", "April 15, 2026"])."""
+
+    source_references: list[SummarySourceReference]
+    """Source materials referenced in the summary for rendering a Sources section."""
 
 
 class Entity(BaseModel):
@@ -45,6 +55,9 @@ class EntityExtractionOutput(BaseModel):
 
     entities: list[Entity]
     """People, organizations, places, and documents referenced in the text."""
+
+    topics: list[str]
+    """Lowercase, slug-style topic tags for filtering and retrieval."""
 
     financial_figures: list[dict[str, str]]
     """Financial amounts with context, e.g. [{"description": "FY2027 budget", "amount": "$4.2M", "context": "proposed increase"}]."""

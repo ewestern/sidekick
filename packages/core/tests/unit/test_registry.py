@@ -10,6 +10,7 @@ from unittest.mock import MagicMock, patch
 import pytest
 
 from sidekick.core.models import Source
+from sidekick.core.vocabulary import SourceStatus
 from sidekick.registry.registry import SourceRegistry
 
 
@@ -34,7 +35,6 @@ def _make_source(
     source_id: str = "src_test",
     schedule: dict | None = None,
     health: dict | None = None,
-    examination_status: str = "active",
     **kwargs,
 ) -> Source:
     return Source(
@@ -42,7 +42,6 @@ def _make_source(
         name="Test Source",
         schedule=schedule,
         health=health,
-        examination_status=examination_status,
         **kwargs,
     )
 
@@ -84,14 +83,6 @@ def test_list_returns_all_when_no_filters():
     assert len(results) == 2
 
 
-def test_list_examination_status_is_valid_filter():
-    reg = _registry()
-    src = _make_source("src_active", examination_status="active")
-    # Should not raise — examination_status is a supported filter key
-    with _patch_session(reg, stored={"src_active": src}):
-        results = reg.list(filters={"examination_status": "active"})
-    assert len(results) == 1
-
 
 # ------------------------------------------------------------------
 # create
@@ -125,16 +116,19 @@ def test_create_persists_new_source():
 
 def test_update_health_merges_fields():
     reg = _registry()
-    src = _make_source("src_h", health={"status": "active", "last_checked": "2026-01-01T00:00:00Z"})
+    src = _make_source(
+        "src_h", health={"status": "active", "last_checked": "2026-01-01T00:00:00Z"})
     mock_session = MagicMock()
     mock_session.__enter__ = lambda s: mock_session
     mock_session.__exit__ = MagicMock(return_value=False)
     mock_session.get = lambda model, pk: src
 
     with patch("sidekick.registry.registry.Session", return_value=mock_session):
-        reg.update_health("src_h", {"last_checked": "2026-03-18T08:00:00Z", "error_rate_30d": 0.01})
+        reg.update_health(
+            "src_h", {"last_checked": "2026-03-18T08:00:00Z", "error_rate_30d": 0.01})
 
     # Health should be merged, not replaced
+    assert src.health is not None
     assert src.health["status"] == "active"  # existing field preserved
     assert src.health["last_checked"] == "2026-03-18T08:00:00Z"  # updated
     assert src.health["error_rate_30d"] == 0.01  # new field added
@@ -157,7 +151,7 @@ def test_never_checked_source_is_always_due():
     src = _make_source(
         "src_never",
         schedule={"type": "cron", "expr": "0 8 * * MON"},
-        examination_status="active",
+        
     )
     with patch.object(reg, "list", return_value=[src]):
         due = reg.get_due_sources()
@@ -172,7 +166,7 @@ def test_source_due_when_next_run_has_passed():
         "src_overdue",
         schedule={"type": "cron", "expr": "0 8 * * MON"},
         health={"last_checked": two_weeks_ago},
-        examination_status="active",
+        
     )
     with patch.object(reg, "list", return_value=[src]):
         due = reg.get_due_sources()
@@ -187,39 +181,11 @@ def test_source_not_due_when_next_run_is_in_future():
         "src_fresh",
         schedule={"type": "cron", "expr": "0 8 * * MON"},
         health={"last_checked": just_now},
-        examination_status="active",
+        
     )
     with patch.object(reg, "list", return_value=[src]):
         due = reg.get_due_sources()
     assert not any(s.id == "src_fresh" for s in due)
-
-
-def test_pending_source_excluded():
-    """Sources with examination_status == 'pending' are not returned as due."""
-    reg = _registry()
-    src = _make_source(
-        "src_pending",
-        schedule={"type": "cron", "expr": "0 8 * * MON"},
-        examination_status="pending",
-    )
-    # get_due_sources calls list(filters={"examination_status": "active"}) internally;
-    # simulate that by returning an empty list when examination_status != active.
-    with patch.object(reg, "list", return_value=[]):
-        due = reg.get_due_sources()
-    assert len(due) == 0
-
-
-def test_failed_examination_source_excluded():
-    """Sources with examination_status == 'failed' are not returned as due."""
-    reg = _registry()
-    src = _make_source(
-        "src_failed",
-        schedule={"type": "cron", "expr": "0 8 * * MON"},
-        examination_status="failed",
-    )
-    with patch.object(reg, "list", return_value=[]):
-        due = reg.get_due_sources()
-    assert len(due) == 0
 
 
 def test_non_cron_source_excluded():
@@ -228,7 +194,7 @@ def test_non_cron_source_excluded():
     src = _make_source(
         "src_reactive",
         schedule={"type": "reactive"},
-        examination_status="active",
+        
     )
     with patch.object(reg, "list", return_value=[src]):
         due = reg.get_due_sources()
@@ -238,7 +204,20 @@ def test_non_cron_source_excluded():
 def test_source_with_no_schedule_excluded():
     """Sources with no schedule are not returned by get_due_sources."""
     reg = _registry()
-    src = _make_source("src_no_sched", schedule=None, examination_status="active")
+    src = _make_source("src_no_sched", schedule=None)
+    with patch.object(reg, "list", return_value=[src]):
+        due = reg.get_due_sources()
+    assert len(due) == 0
+
+
+def test_inactive_source_excluded_from_due():
+    """Inactive sources are not returned by get_due_sources even when cron is due."""
+    reg = _registry()
+    src = _make_source(
+        "src_inactive",
+        schedule={"type": "cron", "expr": "0 8 * * MON"},
+        status=SourceStatus.INACTIVE,
+    )
     with patch.object(reg, "list", return_value=[src]):
         due = reg.get_due_sources()
     assert len(due) == 0

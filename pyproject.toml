@@ -1,5 +1,12 @@
 [tool.uv.workspace]
-members = ["packages/*", "services/*"]
+members = ["packages/*", "services/*", "migrations"]
+
+[dependency-groups]
+dev = [
+    "autopep8>=2.3.2",
+    "openapi-python-client>=0.21",
+    "pyright>=1.1.408",
+]
 
 [tool.black]
 line-length = 100

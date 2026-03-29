@@ -20,7 +20,8 @@ def aws_credentials(monkeypatch):
 
 @mock_aws
 def test_put_returns_s3_uri():
-    boto3.client("s3", region_name="us-east-1").create_bucket(Bucket="test-bucket")
+    boto3.client(
+        "s3", region_name="us-east-1").create_bucket(Bucket="test-bucket")
     store = S3ObjectStore("test-bucket")
     uri = store.put("my/key.txt", b"hello world", "text/plain")
     assert uri == "s3://test-bucket/my/key.txt"
@@ -28,7 +29,8 @@ def test_put_returns_s3_uri():
 
 @mock_aws
 def test_get_returns_content():
-    boto3.client("s3", region_name="us-east-1").create_bucket(Bucket="test-bucket")
+    boto3.client(
+        "s3", region_name="us-east-1").create_bucket(Bucket="test-bucket")
     store = S3ObjectStore("test-bucket")
     store.put("my/key.txt", b"hello world")
     assert store.get("my/key.txt") == b"hello world"
@@ -36,15 +38,17 @@ def test_get_returns_content():
 
 @mock_aws
 def test_get_missing_key_raises():
-    boto3.client("s3", region_name="us-east-1").create_bucket(Bucket="test-bucket")
+    boto3.client(
+        "s3", region_name="us-east-1").create_bucket(Bucket="test-bucket")
     store = S3ObjectStore("test-bucket")
     with pytest.raises(KeyError):
         store.get("does/not/exist.txt")
 
 
 def test_artifact_key_convention():
-    key = S3ObjectStore.artifact_key("processed", "government:city_council", "us:il:springfield:springfield", "art_123")
-    assert key == "artifacts/processed/government-city_council/us-il-springfield-springfield/art_123"
+    key = S3ObjectStore.artifact_key(
+        "processed", "government:city-council", "us:il:springfield:springfield", "art_123")
+    assert key == "artifacts/processed/government-city-council/us-il-springfield-springfield/art_123"
 
 
 def test_artifact_key_unknown_beat_geo():

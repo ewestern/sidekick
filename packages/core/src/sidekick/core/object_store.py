@@ -13,13 +13,13 @@ from botocore.config import Config
 
 def normalize_for_uri(identifier: str | None) -> str:
     """Normalize an identifier for use in URI/path segments.
-    
+
     Replaces colons with hyphens to make identifiers URI-safe while preserving
     the hierarchical structure. Used for object store keys and other path-like IDs.
-    
+
     Args:
         identifier: Canonical identifier string (colon-delimited) or None.
-    
+
     Returns:
         URI-safe identifier with colons replaced by hyphens, or '_' if None.
     """
@@ -59,7 +59,7 @@ class S3ObjectStore:
     @staticmethod
     def artifact_key(stage: str, beat: str | None, geo: str | None, artifact_id: str) -> str:
         """Return the canonical S3 key for an artifact.
-        
+
         Convention: artifacts/{stage}/{beat}/{geo}/{artifact_id}
         Beat and geo identifiers are normalized for URI safety (colons -> hyphens).
         Unknown beat/geo segments are replaced with '_'.

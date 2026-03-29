@@ -13,7 +13,7 @@ Common cross-beat patterns worth flagging, with examples from local government c
 **Why it matters**: each approval may look routine in isolation. Together they represent a coordinated strategy to extract public value (zoning approvals, tax breaks, infrastructure commitments) for a single set of beneficiaries. The sum is more than the parts.
 
 **Detection indicators**:
-- Same company or related entities appearing in `housing_zoning`, `budget_finance`, and `government:city_council` beat artifacts within a 12-month window
+- Same company or related entities appearing in `housing_zoning`, `budget_finance`, and `government:city-council` beat artifacts within a 12-month window
 - Entity cross-reference: common principal names across different entity registrations
 - Timing: zoning application, development agreement, and tax incentive request clustered in a single budget cycle
 
@@ -29,7 +29,7 @@ Common cross-beat patterns worth flagging, with examples from local government c
 
 **Detection indicators**:
 - Facility closures, hour reductions, or staffing cuts concentrated in artifacts tagged with the same geographic area across different beats
-- Entity/place tracking: the same neighborhood or facility name appearing in negative-outcome artifacts across `education:school_board`, `government:city_council`, and parks/recreation beats
+- Entity/place tracking: the same neighborhood or facility name appearing in negative-outcome artifacts across `education:school_board`, `government:city-council`, and parks/recreation beats
 - Temporal clustering within a budget cycle
 
 ---

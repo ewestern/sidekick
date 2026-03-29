@@ -9,7 +9,7 @@ Two-phase acquisition contract for async formats (HLS, yt-dlp):
        status="pending_acquisition"
        acquisition_url=<source_url>  (URL the acquisition worker must fetch)
        content_uri=None  (not yet populated)
-  3. Pipeline publishes an "acquisition_needed" event.
+  3. Pipeline writes a pending acquisition stub for asynchronous formats.
   4. Acquisition worker runs ffmpeg/yt-dlp against acquisition_url, writes the result to S3,
      then ArtifactStore.complete_acquisition(): status="active", content_uri=<s3_key>,
      acquisition_url=None.
@@ -23,6 +23,8 @@ from enum import StrEnum
 
 from pydantic import BaseModel, computed_field
 
+from sidekick.core.vocabulary import ContentType, Stage
+
 
 class AcquisitionMethod(StrEnum):
     HTTP_DOWNLOAD = "HTTP_DOWNLOAD"   # GET URL, store bytes
@@ -31,7 +33,8 @@ class AcquisitionMethod(StrEnum):
     INLINE_TEXT = "INLINE_TEXT"        # fetch and decode body, store inline
 
 
-_ASYNC_METHODS = frozenset({AcquisitionMethod.HLS_CAPTURE, AcquisitionMethod.YTDLP_AUDIO})
+_ASYNC_METHODS = frozenset(
+    {AcquisitionMethod.HLS_CAPTURE, AcquisitionMethod.YTDLP_AUDIO})
 
 
 class FormatSpec(BaseModel, frozen=True):
@@ -39,8 +42,10 @@ class FormatSpec(BaseModel, frozen=True):
 
     format_id: str
     acquisition: AcquisitionMethod
-    stored_mime_type: str   # MIME type stored in the artifact (may differ from source MIME)
-    content_type: str       # controlled artifact content_type vocabulary
+    stage: Stage
+    # MIME type stored in the artifact (may differ from source MIME)
+    stored_mime_type: str
+    content_type: ContentType
 
     @computed_field  # type: ignore[prop-decorator]
     @property
@@ -54,89 +59,110 @@ class FormatSpec(BaseModel, frozen=True):
 # ---------------------------------------------------------------------------
 
 FORMAT_REGISTRY: dict[str, FormatSpec] = {
+    "txt": FormatSpec(
+        format_id="txt",
+        acquisition=AcquisitionMethod.INLINE_TEXT,
+        stage=Stage.PROCESSED,
+        stored_mime_type="text/plain",
+        content_type=ContentType.DOCUMENT_TEXT,
+    ),
     "pdf": FormatSpec(
         format_id="pdf",
         acquisition=AcquisitionMethod.HTTP_DOWNLOAD,
+        stage=Stage.RAW,
         stored_mime_type="application/pdf",
-        content_type="document-raw",
+        content_type=ContentType.DOCUMENT_RAW,
     ),
     "html": FormatSpec(
         format_id="html",
         acquisition=AcquisitionMethod.INLINE_TEXT,
+        stage=Stage.RAW,
         stored_mime_type="text/html",
-        content_type="document-raw",
+        content_type=ContentType.DOCUMENT_RAW,
     ),
     "xlsx": FormatSpec(
         format_id="xlsx",
         acquisition=AcquisitionMethod.HTTP_DOWNLOAD,
+        stage=Stage.RAW,
         stored_mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-        content_type="document-raw",
+        content_type=ContentType.DOCUMENT_RAW,
     ),
     "csv": FormatSpec(
         format_id="csv",
         acquisition=AcquisitionMethod.INLINE_TEXT,
+        stage=Stage.RAW,
         stored_mime_type="text/csv",
-        content_type="document-raw",
+        content_type=ContentType.DOCUMENT_RAW,
     ),
     "docx": FormatSpec(
         format_id="docx",
         acquisition=AcquisitionMethod.HTTP_DOWNLOAD,
+        stage=Stage.RAW,
         stored_mime_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-        content_type="document-raw",
+        content_type=ContentType.DOCUMENT_RAW,
     ),
     "mp3": FormatSpec(
         format_id="mp3",
         acquisition=AcquisitionMethod.HTTP_DOWNLOAD,
+        stage=Stage.RAW,
         stored_mime_type="audio/mpeg",
-        content_type="audio-raw",
+        content_type=ContentType.AUDIO_RAW,
     ),
     "wav": FormatSpec(
         format_id="wav",
         acquisition=AcquisitionMethod.HTTP_DOWNLOAD,
+        stage=Stage.RAW,
         stored_mime_type="audio/wav",
-        content_type="audio-raw",
+        content_type=ContentType.AUDIO_RAW,
     ),
     "ogg": FormatSpec(
         format_id="ogg",
         acquisition=AcquisitionMethod.HTTP_DOWNLOAD,
+        stage=Stage.RAW,
         stored_mime_type="audio/ogg",
-        content_type="audio-raw",
+        content_type=ContentType.AUDIO_RAW,
     ),
     "aac": FormatSpec(
         format_id="aac",
         acquisition=AcquisitionMethod.HTTP_DOWNLOAD,
+        stage=Stage.RAW,
         stored_mime_type="audio/aac",
-        content_type="audio-raw",
+        content_type=ContentType.AUDIO_RAW,
     ),
     "mp4": FormatSpec(
         format_id="mp4",
         acquisition=AcquisitionMethod.HTTP_DOWNLOAD,
+        stage=Stage.RAW,
         stored_mime_type="video/mp4",
-        content_type="video-raw",
+        content_type=ContentType.VIDEO_RAW,
     ),
     "webm": FormatSpec(
         format_id="webm",
         acquisition=AcquisitionMethod.HTTP_DOWNLOAD,
+        stage=Stage.RAW,
         stored_mime_type="video/webm",
-        content_type="video-raw",
+        content_type=ContentType.VIDEO_RAW,
     ),
     "mov": FormatSpec(
         format_id="mov",
         acquisition=AcquisitionMethod.HTTP_DOWNLOAD,
+        stage=Stage.RAW,
         stored_mime_type="video/quicktime",
-        content_type="video-raw",
+        content_type=ContentType.VIDEO_RAW,
     ),
     "hls": FormatSpec(
         format_id="hls",
         acquisition=AcquisitionMethod.HLS_CAPTURE,
+        stage=Stage.RAW,
         stored_mime_type="audio/mpeg",
-        content_type="audio-raw",
+        content_type=ContentType.AUDIO_RAW,
     ),
     "mpeg-ts": FormatSpec(
         format_id="mpeg-ts",
         acquisition=AcquisitionMethod.HLS_CAPTURE,
+        stage=Stage.RAW,
         stored_mime_type="audio/mpeg",
-        content_type="audio-raw",
+        content_type=ContentType.AUDIO_RAW,
     ),
 }
 
@@ -147,7 +173,7 @@ FORMAT_REGISTRY: dict[str, FormatSpec] = {
 MIME_TO_FORMAT: dict[str, str] = {
     "application/pdf": "pdf",
     "text/html": "html",
-    "text/plain": "html",
+    "text/plain": "txt",
     "application/x-mpegurl": "hls",
     "application/vnd.apple.mpegurl": "hls",
     "video/mp2t": "mpeg-ts",
@@ -173,6 +199,7 @@ MIME_TO_FORMAT: dict[str, str] = {
 # ---------------------------------------------------------------------------
 
 EXT_TO_FORMAT: dict[str, str] = {
+    ".txt": "txt",
     ".pdf": "pdf",
     ".html": "html",
     ".htm": "html",

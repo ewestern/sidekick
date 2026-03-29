@@ -11,7 +11,6 @@ from dotenv import load_dotenv
 from sqlmodel import SQLModel
 
 from sidekick.core.artifact_store import ArtifactStore
-from sidekick.core.event_bus import LocalEventBus
 from sidekick.core.object_store import S3ObjectStore
 
 load_dotenv()
@@ -28,13 +27,8 @@ def object_store() -> S3ObjectStore:
     return store
 
 
-@pytest.fixture(scope="session")
-def event_bus() -> LocalEventBus:
-    return LocalEventBus(dsn=DB_URL)
-
-
 @pytest.fixture()
-def artifact_store(object_store, event_bus) -> ArtifactStore:
+def artifact_store(object_store) -> ArtifactStore:
     from sqlalchemy import create_engine
 
     engine = create_engine(DB_URL)
@@ -45,5 +39,4 @@ def artifact_store(object_store, event_bus) -> ArtifactStore:
     return ArtifactStore(
         db_url=DB_URL,
         object_store=object_store,
-        event_bus=event_bus,
     )

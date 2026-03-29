@@ -8,6 +8,8 @@ Results are cached with a 60-second TTL. Writes (set/delete) immediately
 invalidate the local cache entry so the next resolve() re-fetches from DB.
 """
 
+from __future__ import annotations
+
 import logging
 from datetime import UTC, datetime
 from time import monotonic
@@ -32,6 +34,7 @@ class ResolvedAgentConfig(BaseModel):
     agent_id: str
     model: str
     prompts: dict[str, str]  # slot_name -> prompt text
+    skills: list[str] = []  # skill IDs — directories under skills/
 
 
 class AgentConfigRegistry:
@@ -68,7 +71,8 @@ class AgentConfigRegistry:
         Raises:
             KeyError: If no config row exists for agent_id. Seed one with set().
         """
-        cached, ts = self._cache.get(agent_id, (None, 0.0))  # type: ignore[misc]
+        cached, ts = self._cache.get(
+            agent_id, (None, 0.0))  # type: ignore[misc]
         if cached is not None and (monotonic() - ts) < _CACHE_TTL_SECONDS:
             return cached
 
@@ -86,6 +90,7 @@ class AgentConfigRegistry:
             agent_id=row.agent_id,
             model=row.model,
             prompts=row.prompts,
+            skills=row.skills or [],
         )
         self._cache[agent_id] = (result, monotonic())
         return result
@@ -104,6 +109,7 @@ class AgentConfigRegistry:
         agent_id: str,
         model: str,
         prompts: dict[str, str],
+        skills: list[str] | None = None,
         updated_by: str | None = None,
     ) -> AgentConfig:
         """Create or update the config for agent_id.
@@ -114,6 +120,7 @@ class AgentConfigRegistry:
             agent_id: Logical agent name.
             model: Model identifier (e.g. "claude-sonnet-4-6").
             prompts: Dict of slot_name -> prompt text.
+            skills: List of skill IDs (directory names under skills/).
             updated_by: Optional user ID for audit trail.
 
         Returns:
@@ -121,6 +128,7 @@ class AgentConfigRegistry:
         """
         self._cache.pop(agent_id, None)
         now = datetime.now(UTC)
+        skills_value = list(skills) if skills is not None else []
 
         with Session(self._engine) as session:
             stmt = select(AgentConfig).where(AgentConfig.agent_id == agent_id)
@@ -131,6 +139,7 @@ class AgentConfigRegistry:
                     agent_id=agent_id,
                     model=model,
                     prompts=prompts,
+                    skills=skills_value,
                     updated_at=now,
                     updated_by=updated_by,
                 )
@@ -138,6 +147,7 @@ class AgentConfigRegistry:
             else:
                 row.model = model
                 row.prompts = prompts
+                row.skills = skills_value
                 row.updated_at = now
                 row.updated_by = updated_by
                 session.add(row)

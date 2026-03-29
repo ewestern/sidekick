@@ -23,6 +23,7 @@ def upgrade() -> None:
         sa.Column("agent_id", sa.Text(), nullable=False),
         sa.Column("model", sa.Text(), nullable=False),
         sa.Column("prompts", sa.JSON(), nullable=False),
+        sa.Column("skills", sa.JSON(), nullable=False, server_default="[]"),
         sa.Column("updated_at", sa.DateTime(timezone=True), nullable=False),
         sa.Column("updated_by", sa.Text(), nullable=True),
         sa.PrimaryKeyConstraint("id"),

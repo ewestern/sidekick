@@ -10,7 +10,7 @@ uv sync                       # install dependencies
 alembic upgrade head          # run migrations
 ```
 
-After migrations, seed agent configs (required before running examination/ingestion):
+After migrations, seed agent configs (required before running processing agents that use the registry):
 
 ```bash
 uv run --directory services/ingestion sidekick seed-configs
@@ -32,10 +32,10 @@ See `.env.example`. Key variables:
 
 ```bash
 # Ingestion CLI (needs DATABASE_URL, S3_BUCKET, AWS_*, OPENAI_API_KEY)
-uv run --directory services/ingestion sidekick examine --url URL --beat BEAT --geo GEO
-uv run --directory services/ingestion sidekick sources list
-uv run --directory services/ingestion sidekick ingest run SOURCE_ID
-uv run --directory services/ingestion sidekick ingest due
+uv run --directory services/ingestion sidekick spiders list
+uv run --directory services/ingestion sidekick spiders list-due
+uv run --directory services/ingestion sidekick spiders run SOURCE_ID
+uv run --directory services/ingestion sidekick spiders due
 
 # Tests
 pytest packages/core/tests/unit/

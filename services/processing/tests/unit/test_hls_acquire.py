@@ -3,6 +3,7 @@
 from pathlib import Path
 from unittest.mock import MagicMock, patch
 
+from sidekick.core.vocabulary import ContentType, Stage, ArtifactStatus
 from sidekick.core.models import Artifact
 
 from sidekick.processing.acquisition.hls import acquire_hls_stub
@@ -15,11 +16,12 @@ def _write_fake_audio(_url: str, out_path: Path) -> None:
 def test_acquire_hls_stub_puts_bytes_and_completes():
     row = Artifact(
         id="art_hls",
-        content_type="audio-raw",
-        stage="raw",
-        status="pending_acquisition",
+        title="March Agenda",
+        content_type=ContentType.AUDIO_RAW,
+        stage=Stage.RAW,
+        status=ArtifactStatus.PENDING_ACQUISITION,
         acquisition_url="https://example.com/stream.m3u8",
-        beat="government:city_council",
+        beat="government:city-council",
         geo="us:il:springfield:springfield",
     )
     store = MagicMock()

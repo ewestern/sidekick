@@ -6,19 +6,22 @@ Run with: pytest tests/integration/ (requires docker compose up)
 import pytest
 
 from sidekick.core.models import Artifact
+from sidekick.core.vocabulary import ContentType, Stage
 from sidekick.core.object_store import S3ObjectStore
 
 
 def test_write_and_read_raw(artifact_store, object_store: S3ObjectStore):
     artifact = Artifact(
         id="int_art_1",
-        content_type="document-raw",
-        stage="raw",
-        beat="government:city_council",
-        geo="us:ca:san_bernardino:san_bernardino",
+        title="March Agenda",
+        content_type=ContentType.DOCUMENT_RAW,
+        stage=Stage.RAW,
+        beat="government:city-council",
+        geo="us:ca:san-bernardino:san-bernardino",
     )
     body = b"Council meeting agenda for March 11 2026."
-    key = S3ObjectStore.artifact_key("raw", "government:city_council", "us:ca:san_bernardino:san_bernardino", "int_art_1")
+    key = S3ObjectStore.artifact_key(
+        "raw", "government:city-council", "us:ca:san-bernardino:san-bernardino", "int_art_1")
     uri = object_store.put(key, body, content_type="text/plain")
     artifact.content_uri = uri
     artifact_store.write(artifact)
@@ -32,15 +35,37 @@ def test_write_and_read_raw(artifact_store, object_store: S3ObjectStore):
 def test_write_processed_requires_derived_from(artifact_store):
     artifact = Artifact(
         id="int_art_no_lineage",
-        content_type="summary",
-        stage="processed",
+        title="March Agenda",
+        content_type=ContentType.SUMMARY,
+        stage=Stage.PROCESSED,
     )
     with pytest.raises(ValueError, match="derived_from is required"):
         artifact_store.write(artifact)
 
 
+def test_write_direct_ingested_document_text_without_derived_from(artifact_store, object_store: S3ObjectStore):
+    artifact = Artifact(
+        id="int_art_text_ingest",
+        title="March Agenda",
+        content_type=ContentType.DOCUMENT_TEXT,
+        stage=Stage.PROCESSED,
+        media_type="text/plain",
+    )
+    uri = object_store.put(
+        S3ObjectStore.artifact_key("processed", None, None, "int_art_text_ingest"),
+        b"Pre-made transcript already in canonical text form.",
+        content_type="text/plain",
+    )
+    artifact.content_uri = uri
+    artifact_store.write(artifact)
+
+    fetched = artifact_store.read("int_art_text_ingest")
+    assert fetched.content_type == "document-text"
+
+
 def test_lineage_up(artifact_store, object_store: S3ObjectStore):
-    raw = Artifact(id="lineage_raw", content_type="document-raw", stage="raw")
+    raw = Artifact(id="lineage_raw", title="March Agenda",
+                   content_type=ContentType.DOCUMENT_RAW, stage=Stage.RAW)
     raw.content_uri = object_store.put(
         S3ObjectStore.artifact_key("raw", None, None, "lineage_raw"),
         b"x",
@@ -48,8 +73,9 @@ def test_lineage_up(artifact_store, object_store: S3ObjectStore):
     )
     processed = Artifact(
         id="lineage_proc",
-        content_type="summary",
-        stage="processed",
+        title="March Agenda",
+        content_type=ContentType.SUMMARY,
+        stage=Stage.PROCESSED,
         derived_from=["lineage_raw"],
     )
     processed.content_uri = object_store.put(
@@ -59,8 +85,9 @@ def test_lineage_up(artifact_store, object_store: S3ObjectStore):
     )
     analysis = Artifact(
         id="lineage_anal",
-        content_type="beat-brief",
-        stage="analysis",
+        title="March Agenda",
+        content_type=ContentType.BEAT_BRIEF,
+        stage=Stage.ANALYSIS,
         derived_from=["lineage_proc"],
     )
     analysis.content_uri = object_store.put(
@@ -79,7 +106,8 @@ def test_lineage_up(artifact_store, object_store: S3ObjectStore):
 
 
 def test_lineage_down(artifact_store, object_store: S3ObjectStore):
-    raw = Artifact(id="down_raw", content_type="document-raw", stage="raw")
+    raw = Artifact(
+        id="down_raw", title="March Agenda", content_type=ContentType.DOCUMENT_RAW, stage=Stage.RAW)
     raw.content_uri = object_store.put(
         S3ObjectStore.artifact_key("raw", None, None, "down_raw"),
         b"x",
@@ -87,8 +115,9 @@ def test_lineage_down(artifact_store, object_store: S3ObjectStore):
     )
     proc = Artifact(
         id="down_proc",
-        content_type="summary",
-        stage="processed",
+        title="March Agenda",
+        content_type=ContentType.SUMMARY,
+        stage=Stage.PROCESSED,
         derived_from=["down_raw"],
     )
     proc.content_uri = object_store.put(
@@ -106,32 +135,37 @@ def test_lineage_down(artifact_store, object_store: S3ObjectStore):
 def test_query_by_beat_and_stage(artifact_store, object_store: S3ObjectStore):
     a1 = Artifact(
         id="q_art_1",
-        content_type="document-raw",
-        stage="raw",
-        beat="government:city_council",
-        geo="us:ca:san_bernardino:san_bernardino",
+        title="March Agenda",
+        content_type=ContentType.DOCUMENT_RAW,
+        stage=Stage.RAW,
+        beat="government:city-council",
+        geo="us:ca:san-bernardino:san-bernardino",
     )
     a1.content_uri = object_store.put(
-        S3ObjectStore.artifact_key("raw", "government:city_council", "us:ca:san_bernardino:san_bernardino", "q_art_1"),
+        S3ObjectStore.artifact_key(
+            "raw", "government:city-council", "us:ca:san-bernardino:san-bernardino", "q_art_1"),
         b"a",
         content_type="text/plain",
     )
     a2 = Artifact(
         id="q_art_2",
-        content_type="document-raw",
-        stage="raw",
-        beat="education:school_board",
-        geo="us:ca:san_bernardino:san_bernardino",
+        title="March Agenda",
+        content_type=ContentType.DOCUMENT_RAW,
+        stage=Stage.RAW,
+        beat="education:school-board",
+        geo="us:ca:san-bernardino:san-bernardino",
     )
     a2.content_uri = object_store.put(
-        S3ObjectStore.artifact_key("raw", "education:school_board", "us:ca:san_bernardino:san_bernardino", "q_art_2"),
+        S3ObjectStore.artifact_key(
+            "raw", "education:school-board", "us:ca:san-bernardino:san-bernardino", "q_art_2"),
         b"b",
         content_type="text/plain",
     )
     artifact_store.write(a1)
     artifact_store.write(a2)
 
-    results = artifact_store.query(filters={"beat": "government:city_council", "stage": "raw"})
+    results = artifact_store.query(
+        filters={"beat": "government:city-council", "stage": "raw"})
     ids = {r.id for r in results}
     assert "q_art_1" in ids
     assert "q_art_2" not in ids
@@ -140,8 +174,9 @@ def test_query_by_beat_and_stage(artifact_store, object_store: S3ObjectStore):
 def test_write_with_bytes_round_trip(artifact_store, object_store: S3ObjectStore):
     artifact = Artifact(
         id="wb_art",
-        content_type="document-text",
-        stage="processed",
+        title="March Agenda",
+        content_type=ContentType.DOCUMENT_TEXT,
+        stage=Stage.PROCESSED,
         media_type="text/plain",
         derived_from=["parent"],
     )

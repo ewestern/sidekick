@@ -2,42 +2,22 @@
 
 > **Status**: stable
 > **Scope**: Framework selection, state design, memory architecture, modularity, error handling, and LLM conventions — authoritative for how agents in this pipeline are implemented
-> **Last updated**: 2026-03-19
+> **Last updated**: 2026-03-23 (enrichment processors reclassified as DeepAgents)
 
 ---
 
 ## Agent architecture selection
 
-Two top-level implementation patterns matter for this pipeline:
+Two implementation patterns are used in this pipeline:
 
-| Pattern | When to use | Tradeoff |
-|---|---|---|
-| **LangGraph Graph API** | Workflow topology is known: explicit stages, bounded branching, fan-out/fan-in, resumability, typed state | More structure up front, but orchestration is explicit and testable |
-| **DeepAgents** | Workflow is genuinely open-ended: unknown number of steps, unknown tool ordering, model must plan its own path | Highest flexibility, but also highest context and orchestration overhead |
+| Pattern | When to use |
+|---|---|
+| **DeepAgents** | Any agent that makes decisions, uses tools, or manages multi-step workflows |
+| **Plain functions** | Stateless, deterministic transforms with no decision-making |
 
-### Selection rules
+All agent roles use DeepAgents. The distinction between "known topology" and "open-ended" is not the right split — beat agents deciding whether to write a brief, flag an item, or query prior entity history are making real decisions, not executing predetermined steps. `write_brief` and `flag_item` are tools the agent calls when warranted, alongside artifact retrieval, entity lookup, and others. DeepAgents provides built-in tools, context summarization, `interrupt_on` for human-in-the-loop gating, `CompositeBackend` for separating per-run scratch from durable cross-run state, and subagent delegation for context isolation.
 
-- Use LangGraph when the workflow can be expressed as a small DAG without inventing fake branches.
-- Use DeepAgents only when encoding the control flow would be more complex than letting the model plan.
-- Prefer moving deterministic routing, deduplication, storage, retries, and health updates into code even when some stages still use an LLM.
-- If one part of a workflow is open-ended but the surrounding orchestration is not, keep the outer workflow explicit and isolate only that stage behind an agent node.
-
-### Node types inside a graph
-
-Graphs may contain multiple kinds of nodes. Be explicit about which kind you are using.
-
-| Node type | Use when | Important property |
-|---|---|---|
-| **Agent node** | The node may need tool use, reflection, or recursive problem solving | Can recurse and re-plan within the node |
-| **Plain LLM call node** | The task is a single bounded generation or extraction step with no need for tool selection or reflection | Cheaper and simpler, but no recursion or internal planning |
-| **Deterministic code node** | Routing, normalization, deduplication, validation, persistence, counters, health updates | Should own non-LLM control flow and policy |
-
-### Preference order inside graphs
-
-- Prefer deterministic code nodes for work that does not require model judgment.
-- Prefer agent nodes over plain LLM call nodes when the stage may need to inspect, retry, or reflect before producing a result.
-- Prefer plain LLM call nodes over agent nodes when the stage is truly a single bounded inference with a clear schema and no need for tool use.
-- Do not treat plain Python functions as an \"agent framework\" choice on their own. They are supporting node implementations inside a larger architecture, not usually a top-level agent pattern.
+Plain functions are appropriate only for **normalization processors** — genuinely stateless transforms (PDF → text, audio → transcript) with no decision-making or tool use. **Enrichment processors** (summary, entity-extract) **are DeepAgents** — they use the skills system for domain-informed extraction and produce structured output via `response_format=ToolStrategy(PydanticModel)`.
 
 ---
 
@@ -72,56 +52,48 @@ This applies everywhere: beat briefs, entity extraction, query param extraction 
 
 Every agent that makes LLM calls requires a config row in `agent_configs` before it can be invoked. See `docs/AGENT_CONFIG.md` for full details.
 
-**Rule**: agent factory functions and constructors accept `config_registry: AgentConfigRegistry` as a dependency. Call `resolve()` at the start of each run — never hardcode model names or prompt text in agent code.
+**Rule**: agent factory functions accept `config_registry: AgentConfigRegistry` as a dependency. Call `resolve()` at the start of each run — never hardcode model names or prompt text in agent code.
 
 ```python
-# DeepAgents agent (factory pattern)
-class IngestionWorker:
-    AGENT_ID = "ingestion-worker"
-
-    def __init__(self, ..., config_registry: AgentConfigRegistry) -> None:
-        self._config_registry = config_registry
-
-    def run_source(self, source_id: str) -> int:
-        config = self._config_registry.resolve(self.AGENT_ID)
-        llm = ChatAnthropic(model=config.model)
-        # pass config.prompts["system"] to the DeepAgents invocation
-        ...
-
-# LangGraph agent (state pattern)
-class BeatAgent:
-    AGENT_ID = "beat-agent"
-
-    def handle_artifact_written(self, event: dict) -> None:
-        agent_id = f"{self.AGENT_ID}:{self._beat}:{self._geo}"
-        config = self._config_registry.resolve(agent_id)
-        self._graph.invoke({"event": event, "agent_config": config.model_dump()}, ...)
+def create_beat_agent(
+    beat: str,
+    geo: str,
+    artifact_store: ArtifactStore,
+    config_registry: AgentConfigRegistry,
+) -> Agent:
+    agent_id = f"beat-agent:{beat}:{geo}"
+    config = config_registry.resolve(agent_id)
+    return create_deep_agent(
+        tools=[write_brief_tool, flag_item_tool, query_artifacts_tool, ...],
+        system_prompt=config.prompts["system"],
+        model=config.model,
+        backend=make_backend(agent_id),
+    )
 ```
-
-For LangGraph agents, pass the resolved config into graph state as `agent_config: dict` (JSON-serializable for checkpointing). Nodes reconstruct it via `ResolvedAgentConfig.model_validate(state["agent_config"])` when needed.
 
 ---
 
-## State schema design
+## Durable state design
 
-Store raw data in state, not formatted text. Format inside nodes on-demand.
+Store raw structured data in durable state, not formatted text. Format inside tool calls on-demand.
 
 ```python
-# Good — raw structured data; different nodes format it differently
-class BeatAgentState(TypedDict):
-    beat: str
-    geo: str
-    narrative: str                    # prose summary updated by analyze node
-    known_entities: list[dict]        # {name, type, role, first_seen}
-    developing_stories: list[dict]    # {id, title, artifact_ids, status, last_updated}
-    pending_flags: list[str]          # artifact IDs — formatted into prompts inside nodes
+# Good — raw structured data persisted under /memories/
+{
+    "open_threads": [
+        {"id": "t1", "title": "...", "artifact_ids": [...], "last_seen": "2026-03-20"}
+    ],
+    "known_entity_aliases": {"Jane Smith": ["J. Smith", "Councilwoman Smith"]},
+    "seen_artifact_ids": ["art_a1b2c3", "art_x9y8z7"],
+}
 
 # Bad — pre-formatted prompt text; you've discarded the raw data
-class BadState(TypedDict):
-    context_prompt: str
+{
+    "context_prompt": "As of last week, Jane Smith proposed a zoning ordinance..."
+}
 ```
 
-State fields should be the **minimum needed to reconstruct context**. Heavy content (transcripts, full documents) lives in the artifact store; state holds IDs and metadata only.
+Durable state fields should be the **minimum needed to reconstruct context** across runs. Heavy content (transcripts, full documents) lives in the artifact store; durable state holds IDs and metadata only.
 
 ---
 
@@ -131,7 +103,7 @@ Context growth is an architectural concern, not just a prompt-tuning problem.
 
 ### Rules
 
-- Do not let large intermediate payloads accumulate across unrelated steps in the same conversation or graph state.
+- Do not let large intermediate payloads accumulate across unrelated steps in the same conversation or agent run.
 - Keep heavy page/document bodies local to the stage that needs them; return structured results, not raw source material.
 - When a workflow fans out over many similar items, isolate each item's heavy processing so item A does not carry item B's context.
 - Use typed contracts between stages. Good boundaries return fields like `urls`, `title`, `entities`, `requires_followup`; bad boundaries return full HTML, whole documents, or free-form summaries that must be reparsed.
@@ -139,112 +111,82 @@ Context growth is an architectural concern, not just a prompt-tuning problem.
 
 ### Heuristic
 
-If you find yourself saying "this stage only needs one page / one record / one artifact, not the whole run history," that stage probably needs explicit context isolation.
+If you find yourself saying "this stage only needs one page / one record / one artifact, not the whole run history," that stage probably needs explicit context isolation — use a subagent.
 
 ---
 
-## Orchestration boundaries
+## Code vs tool calls
 
-Use the workflow layer to own sequencing. Do not hide important control flow inside prompts when the sequence is already known.
+Keep deterministic work in code, not agent tool calls.
 
-### Prefer explicit graphs when:
+- **Plain code** owns: routing, deduplication, storage writes, retries, health updates, schema validation.
+- **Tool calls** are for: decisions requiring model judgment, actions where the right choice isn't known in advance, multi-step sub-tasks worth delegating.
 
-- the next stage is known from structured metadata
-- there is fan-out or fan-in across repeated tasks
-- some stages are deterministic and others are LLM-backed
-- retries, short-circuits, or health updates must happen predictably
-- you need to prove that one stage cannot see another stage's heavy inputs
-
-### Prefer agent planning when:
-
-- the order of operations is genuinely unknown
-- the agent must discover which tools matter while working
-- the number of steps is not meaningfully bounded ahead of time
-
-### Rule of thumb
-
-If the workflow can be drawn as a small DAG without inventing fake branches, it should usually be implemented as a graph and not as a single general-purpose agent loop.
+If a step would produce the same result regardless of artifact content, it belongs in deterministic code. Tool calls are for when the agent must evaluate content and decide.
 
 ---
 
 ## Memory architecture
 
-Two distinct concerns requiring different solutions:
+Use a three-layer model. This is the canonical rule set for all services.
 
-### Within-run memory (LangGraph checkpoint state)
+### Layer 1: artifact knowledge (system source of truth)
 
-`PostgresSaver` handles this automatically on stateful agents. Use `thread_id = f"{beat}-{geo}"` for beat and research agents so each domain pair has its own checkpoint.
+The artifact store is the durable knowledge substrate. Anything that should be searchable, auditable, shared between agents, or reused across threads belongs in artifacts.
 
-```python
-from langgraph.checkpoint.postgres import PostgresSaver
+- Examples: summaries, extracted entities, policy diffs, drafts, and the lineage graph linking them.
+- Implication: beat/research/context knowledge should be reconstructed from artifact reads plus targeted retrieval, not copied into large long-term agent state.
 
-checkpointer = PostgresSaver.from_conn_string(DATABASE_URL)
-graph = graph.compile(checkpointer=checkpointer)
+### Layer 2: per-run working state (ephemeral)
 
-# Each beat/geo pair resumes from its own checkpoint
-config = {"configurable": {"thread_id": "government:city_council:us:il:springfield:springfield"}}
-graph.invoke(event, config=config)
-```
+Each agent invocation has ephemeral scratch state via the DeepAgents `StateBackend`. This holds in-progress reasoning context for that run and is discarded afterward. It is not a persistence mechanism.
 
-### Cross-thread / long-term memory
+### Layer 3: durable agent state (minimal cross-run memory)
 
-For information that must survive restarts or be shared across invocations:
+Use durable memory stores only for compact state that improves control flow and reduces repeated work but is not itself the newsroom knowledge base.
 
-- **LangGraph Store** (Beat, Research, Connection agents): structured key-value store queryable by namespace. Good for entity registries and historical baselines.
-- **DeepAgents `CompositeBackend`** (Discovery, Editor agents): routes `/memories/` paths to `StoreBackend` for persistence; everything else to ephemeral `StateBackend`.
+- Good durable state: open investigation threads, alias maps, suppression/de-dup markers, reminders, cursor/bookmark positions.
+- Bad durable state: large narrative history, full entity registries, or raw content copies that should be artifacts.
+
+Use a `CompositeBackend` that keeps scratch ephemeral and durable memory explicitly namespaced:
 
 ```python
-# DeepAgents long-term memory
 from deepagents.backends import CompositeBackend, StateBackend, StoreBackend
 
-def make_backend(runtime):
+def make_backend(agent_id: str, runtime) -> CompositeBackend:
     return CompositeBackend(
         default=StateBackend(runtime),
-        routes={"/memories/": StoreBackend(runtime)},
+        routes={"/memories/": StoreBackend(runtime, namespace=agent_id)},
     )
-
-agent = create_deep_agent(backend=make_backend, store=PostgresStore(DATABASE_URL))
 ```
 
 Use `InMemoryStore` locally; `PostgresStore` in production.
 
-### Checkpointer configuration by context
+### Backend matrix by agent role
 
-| Context | Setting | Reason |
-|---|---|---|
-| Stateful agents (Beat, Research, Connection) | `PostgresSaver` | Thread-level persistence across restarts |
-| Subgraphs within a stateful graph | `None` (default, per-invocation) | Independent calls; most multi-agent applications |
-| Processing agents | No checkpointer | Plain functions; LangGraph not used |
-| Editor / search agents (DeepAgents) | Managed by DeepAgents | Per-run ephemeral; no cross-run state |
+| Agent role | Per-run scratch | Durable state backend | Primary retrieval backend | Primary writes |
+|---|---|---|---|---|
+| Normalization (PDF text, STT) | N/A (plain functions) | None | ArtifactStore read by ID | `processed` artifacts (`document-text`) |
+| Enrichment (summary, entity-extract) | N/A (ephemeral DeepAgent — `StoreBackend` + `InMemoryStore` for skills) | None | ArtifactStore read by ID | `processed` artifacts (`summary`, `entity-extract`) |
+| Beat / Research | DeepAgents `StateBackend` (ephemeral) | `StoreBackend` under `/memories/` (minimal state) | ArtifactStore structured + semantic + lineage queries | `analysis` artifacts |
+| Connection | DeepAgents `StateBackend` (ephemeral) | `StoreBackend` under `/memories/` (minimal cross-run state) | ArtifactStore semantic + entity cross-reference queries | `connections` artifacts |
+| Editor | DeepAgents `StateBackend` (ephemeral) | Optional `StoreBackend` under `/memories/` for lightweight editorial memory | ArtifactStore + lineage traversal | `draft` artifacts |
+| Discovery search | DeepAgents `StateBackend` (ephemeral) | `StoreBackend` under `/memories/` for explored-domain memory | Source registry + external web + ArtifactStore signals | Source proposals |
+| Research search | DeepAgents `StateBackend` (ephemeral) | None (stateless by default) | External web + assignment/request context | `raw` artifacts |
+
+### Decision boundary: artifact vs durable state
+
+When deciding where data lives:
+
+1. If another agent may need it, it must be queryable, or humans must audit it later → write an artifact.
+2. If it only improves one agent's control flow across runs → keep it in minimal durable state.
+3. If it is only needed for the current invocation → per-run scratch (discarded after run).
 
 ---
 
-## Modularity
+## Modularity: subagents
 
-### LangGraph subgraphs
-
-Use when a cluster of nodes is shared across multiple graphs, or when a team owns a sub-workflow independently.
-
-Two wiring patterns depending on state overlap:
-
-```python
-# Different state schemas — wrap in a node function to transform at the boundary
-def run_analysis_subgraph(state: BeatAgentState) -> dict:
-    subgraph_input = {"artifact_id": state["current_artifact_id"], ...}
-    result = analysis_subgraph.invoke(subgraph_input)
-    return {"brief": result["brief"]}
-
-parent_graph.add_node("analyze", run_analysis_subgraph)
-
-# Shared state keys — add compiled subgraph directly as a node
-parent_graph.add_node("analyze", analysis_subgraph)
-```
-
-The `write_brief + flag_item` cluster from beat agents is a candidate subgraph — both beat and research agents produce analysis artifacts via the same logic.
-
-### DeepAgents subagents
-
-Use for context isolation and delegation. The main agent spawns an ephemeral subagent, gets a concise result, and discards the intermediate work.
+Use subagents for context isolation and delegation. The main agent spawns an ephemeral subagent, gets a concise result, and discards the intermediate work.
 
 **Critical rule**: subagent responses must be concise — return summaries, not raw data. Keep responses under ~400 words.
 
@@ -274,33 +216,19 @@ Four categories requiring different handling:
 
 | Error type | Example in this pipeline | How to handle |
 |---|---|---|
-| **Transient** | Network timeout fetching a source | Retry policy on the node |
-| **LLM-recoverable** | Structured output validation fails | Store error in state; let the next analyze pass self-correct |
-| **User-fixable** | Editor approval required before publishing | `interrupt()` — pause indefinitely, resume after human input |
+| **Transient** | Network timeout fetching a source | Retry policy in the tool implementation |
+| **LLM-recoverable** | Structured output validation fails | Surface error in tool result; agent self-corrects on next step |
+| **User-fixable** | Editor approval required before publishing | `interrupt_on` — gate the tool call pending human input |
 | **Unexpected** | Database connection lost mid-write | Bubble up — do not mask |
 
-### `interrupt()` for human-in-the-loop
+### `interrupt_on` for human-in-the-loop
 
-```python
-from langgraph.types import interrupt
-
-def draft_node(state: EditorState) -> dict:
-    draft = structured_llm.invoke(prompt)
-    if state.get("requires_editorial_approval"):
-        interrupt({"draft": draft.model_dump(), "reason": state["flag_reason"]})
-    return {"draft": draft}
-```
-
-State is preserved indefinitely across the pause. Resumption picks up at the exact node where `interrupt()` fired.
-
-### `interrupt_on` for DeepAgents
-
-Use `interrupt_on` to gate destructive or high-stakes tool calls:
+Use `interrupt_on` to gate high-stakes tool calls. The agent pauses before executing the named tool and resumes when the human approves or modifies the call.
 
 ```python
 agent = create_deep_agent(
     tools=[...],
-    interrupt_on=["publish_story", "activate_source"],
+    interrupt_on=["publish_story", "activate_source", "create_story_assignment"],
 )
 ```
 
@@ -308,37 +236,41 @@ agent = create_deep_agent(
 
 ## Human-in-the-loop placement
 
-Use `interrupt()` or `interrupt_on` at these specific points:
+Use `interrupt_on` at these specific points:
 
-| Point | Mechanism | Condition |
+| Point | Gated tool | Condition |
 |---|---|---|
-| Editor agent draft | `interrupt()` in `draft` node | Beat agent set `flag.requires_editor_approval` |
-| Discovery agent source proposal | `interrupt_on` | Always — no agent-proposed source auto-activates |
-| Connection agent assignment creation | `interrupt()` | Creating a story-type assignment (per ASSIGNMENTS.md human gate rule) |
-| Research search agent | `interrupt_on` | Writing artifacts from an untrusted source |
+| Editor agent draft publication | `publish_story` | Always — human approves before publish |
+| Discovery agent source proposal | `activate_source` | Always — no agent-proposed source auto-activates |
+| Connection agent story assignment creation | `create_story_assignment` | Always — per ASSIGNMENTS.md human gate rule |
+| Research search agent artifact write | `write_artifact` | When source trust level is below threshold |
 
 ---
 
 ## Agent interface contract
 
-Each agent module exposes a single entry point. No agent imports from another agent module — the interface is: receive an event, read from the artifact store, write to the artifact store.
+Each agent module exposes a factory function. No agent imports from another agent module — the interface is: receive an event, read from the artifact store, write to the artifact store.
 
 ```python
-# LangGraph agents
-class BeatAgent:
-    def handle_artifact_written(self, event: ArtifactEvent) -> None:
-        """Entry point from event bus. Reads artifact, runs graph, writes outputs."""
-        config = {"configurable": {"thread_id": f"{self.beat}-{self.geo}"}}
-        self.graph.invoke({"event": event}, config=config)
-
-# DeepAgents agents
-def create_editor_agent(artifact_store: ArtifactStore, event_bus: EventBus) -> Agent:
+def create_beat_agent(
+    beat: str,
+    geo: str,
+    artifact_store: ArtifactStore,
+    config_registry: AgentConfigRegistry,
+) -> Agent:
     """Factory. Inject dependencies; return a configured DeepAgent."""
-    ...
-    return create_deep_agent(tools=[...], system_prompt=...)
+    agent_id = f"beat-agent:{beat}:{geo}"
+    config = config_registry.resolve(agent_id)
+    return create_deep_agent(
+        tools=[write_brief_tool, flag_item_tool, query_artifacts_tool, ...],
+        system_prompt=config.prompts["system"],
+        model=config.model,
+        backend=make_backend(agent_id),
+        interrupt_on=[],
+    )
 ```
 
-Dependencies (`ArtifactStore`, `EventBus`, `ObjectStore`) are always injected — never instantiated inside agent code. This keeps agents testable and environment-agnostic.
+Dependencies (`ArtifactStore`, `ObjectStore`) are always injected — never instantiated inside agent code. This keeps agents testable and environment-agnostic.
 
 ---
 
@@ -365,11 +297,11 @@ Per-agent READMEs should document how a specific agent composes shared helpers, 
 
 ## Summary: pattern → implementation
 
-| Pattern | Framework | Memory | Checkpointer |
-|---|---|---|---|
-| Stateless transform | Plain functions | None | — |
-| Fixed workflow with typed stages | LangGraph Graph API | Optional, depending on statefulness | Usually yes for persistent workflows |
-| Open-ended tool-using planner | DeepAgents | Usually ephemeral unless explicitly persisted | Managed by framework choice |
+| Pattern | Framework | Durable state |
+|---|---|---|
+| Normalization (PDF → text, audio → transcript) | Plain functions | None |
+| Enrichment (summary, entity-extract) | DeepAgents (ephemeral — `StoreBackend` + `InMemoryStore` for skills) | None |
+| All other agent roles (decisions, tool use, multi-step) | DeepAgents | `StoreBackend` under `/memories/` where cross-run state is needed |
 
 ---
 
@@ -384,3 +316,6 @@ Per-agent READMEs should document how a specific agent composes shared helpers, 
 | 2026-03-19 | Added context-isolation and orchestration-boundary guidance | Large intermediate payloads should stay local to the stage that needs them; explicit DAGs are preferable when the workflow shape is already known |
 | 2026-03-19 | Clarified criteria for shared agent tools | Shared helpers should be reusable without knowledge of a particular agent's current orchestration |
 | 2026-03-19 | Distinguished graph agent nodes from plain LLM call nodes | Agent nodes can recurse and reflect; plain LLM nodes are only appropriate for bounded single-step inference |
+| 2026-03-22 | Reframed memory as artifact-first with explicit three-layer model + backend matrix | Removes checkpoint-vs-memory ambiguity and sets a buildable contract for what belongs in artifacts, checkpoints, and durable agent state |
+| 2026-03-23 | Standardized on DeepAgents for all agent roles; removed LangGraph Graph API as a pattern | Beat/research/connection agents make real decisions (`write_brief`, `flag_item`, entity lookups) — these are tool calls made when warranted, not predetermined graph nodes. DeepAgents provides built-in tools, context management, `interrupt_on`, and `CompositeBackend` covering all agent needs without artificial topology constraints |
+| 2026-03-23 | Reclassified enrichment processors (summary, entity-extract) as DeepAgents with skills | Enrichment is domain-informed extraction that benefits from journalistic skill files (news-values, entity-and-actor-tracking, etc.). Plain functions cannot use the skills system. Processors are ephemeral — `StoreBackend` + `InMemoryStore` provides skills access without any durable state |

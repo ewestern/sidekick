@@ -10,6 +10,15 @@ from pgvector.sqlalchemy import Vector
 from sqlalchemy import ARRAY, JSON, Column, Text, UniqueConstraint
 from sqlmodel import Field, SQLModel
 
+from sidekick.core.vocabulary import (
+    ArtifactStatus,
+    ContentType,
+    ProcessingProfile,
+    SourceStatus,
+    SourceTier,
+    Stage,
+)
+
 
 class AgentConfig(SQLModel, table=True):
     """Runtime configuration for a named agent — model and prompt definitions.
@@ -19,7 +28,7 @@ class AgentConfig(SQLModel, table=True):
 
     agent_id examples:
         "ingestion-worker"
-        "source-examination"
+        "processor:summary"
         "beat-agent:city-council:springfield-il"
         "editor-agent"
 
@@ -27,13 +36,16 @@ class AgentConfig(SQLModel, table=True):
         {"system": "...", "analyze_template": "..."}
     """
 
-    __tablename__ = "agent_configs"
+    __tablename__ = "agent_configs"  # pyright: ignore[reportAssignmentType]
     __table_args__ = (UniqueConstraint("agent_id"),)
 
     id: str = Field(primary_key=True)
     agent_id: str
     model: str  # e.g. "claude-sonnet-4-6"
-    prompts: dict[str, str] = Field(sa_column=Column(JSON))  # slot_name -> prompt text
+    prompts: dict[str, str] = Field(
+        sa_column=Column(JSON))  # slot_name -> prompt text
+    # skill IDs from skills/
+    skills: list[str] = Field(default_factory=list, sa_column=Column(JSON))
     updated_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
     updated_by: str | None = None  # user ID from editorial API
 
@@ -41,37 +53,42 @@ class AgentConfig(SQLModel, table=True):
 class Source(SQLModel, table=True):
     """A recurring information channel (e.g. a council agenda page, an RSS feed)."""
 
-    __tablename__ = "sources"
+    __tablename__ = "sources"  # pyright: ignore[reportAssignmentType]
 
     id: str = Field(primary_key=True)
     name: str
     endpoint: str | None = None
-    schedule: dict[str, Any] | None = Field(default=None, sa_column=Column(JSON))
-    expected_content: list[dict] | None = Field(
-        default=None, sa_column=Column(JSON)
-    )  # [{media_type, content_type}] declared at registration; guides examination
+    schedule: dict[str, Any] | None = Field(
+        default=None, sa_column=Column(JSON))
     beat: str | None = None
     geo: str | None = None
     related_sources: list[str] | None = Field(
         default=None, sa_column=Column(ARRAY(Text))
     )
-    discovered_by: str | None = None  # human | agent | derived
     registered_at: datetime | None = None
-    examination_status: str = Field(default="pending")  # pending | active | failed | paused
     health: dict[str, Any] | None = Field(default=None, sa_column=Column(JSON))
+    # primary (default) | secondary — see SOURCE_STRATEGIES.md
+    source_tier: SourceTier = Field(default=SourceTier.PRIMARY)
+    # Name of the publishing outlet; required when source_tier=secondary (e.g. "Associated Press")
+    outlet: str | None = None
+    # active (default) | inactive — inactive sources are excluded from scheduled list-due
+    status: SourceStatus = Field(default=SourceStatus.ACTIVE)
 
 
 class Artifact(SQLModel, table=True):
     """A unit of content at any pipeline stage — raw, processed, analysis, connections, or draft."""
 
-    __tablename__ = "artifacts"
+    __tablename__ = "artifacts"  # pyright: ignore[reportAssignmentType]
 
     id: str = Field(primary_key=True)
-    content_type: str  # controlled vocabulary — see ARTIFACT_STORE.md
-    stage: str  # raw | processed | analysis | connections | draft
+    title: str
+    content_type: ContentType
+    stage: Stage
     media_type: str | None = None
+    # Ingest-time routing intent; inherited on derived artifacts. None = legacy rows (treat as full).
+    processing_profile: ProcessingProfile | None = None
 
-    # Lineage — mandatory on all non-raw artifacts, enforced by ArtifactStore.write()
+    # Lineage — required for derived artifacts. Direct-ingested canonical text may omit it.
     derived_from: list[str] | None = Field(
         default=None, sa_column=Column(ARRAY(Text))
     )
@@ -84,10 +101,13 @@ class Artifact(SQLModel, table=True):
     period_start: date | None = None
     period_end: date | None = None
     assignment_id: str | None = None
+    story_key: str | None = None
 
     # Discovery
-    entities: list[dict[str, Any]] | None = Field(default=None, sa_column=Column(JSON))
-    topics: list[str] | None = Field(default=None, sa_column=Column(ARRAY(Text)))
+    entities: list[dict[str, Any]] | None = Field(
+        default=None, sa_column=Column(JSON))
+    topics: list[str] | None = Field(
+        default=None, sa_column=Column(ARRAY(Text)))
     # 1536-dim vector for text-embedding-3-small. Dimension is baked in — changing requires
     # rebuilding the column and the ivfflat index.
     embedding: list[float] | None = Field(
@@ -95,7 +115,8 @@ class Artifact(SQLModel, table=True):
     )
 
     # Content — bodies live in object storage (see ARTIFACT_STORE.md)
-    content_uri: str | None = None  # s3://bucket/artifacts/{stage}/{beat}/{geo}/{id}
+    # s3://bucket/artifacts/{stage}/{beat}/{geo}/{id}
+    content_uri: str | None = None
     # Set on pending_acquisition stubs — the source URL the acquisition worker must fetch.
     # Cleared (set to None) once acquisition completes and content_uri is populated.
     acquisition_url: str | None = None
@@ -105,28 +126,37 @@ class Artifact(SQLModel, table=True):
     created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
     # Status
-    status: str = Field(default="active")  # active | pending_acquisition | superseded | retracted
+    status: ArtifactStatus = Field(default=ArtifactStatus.ACTIVE)
     superseded_by: str | None = Field(default=None, foreign_key="artifacts.id")
+
+    def model_post_init(self, __context: Any) -> None:
+        if self.content_type == "transcript-clean":
+            self.content_type = ContentType.DOCUMENT_TEXT
+        elif self.content_type == "transcript-raw":
+            self.content_type = ContentType.DOCUMENT_RAW
 
 
 class Assignment(SQLModel, table=True):
     """A targeted investigation request — research, story, or monitor type."""
 
-    __tablename__ = "assignments"
+    __tablename__ = "assignments"  # pyright: ignore[reportAssignmentType]
 
     id: str = Field(primary_key=True)
     type: str  # research | story | monitor
-    status: str = Field(default="open")  # open | in-progress | complete | cancelled
+    # open | in-progress | complete | cancelled
+    status: str = Field(default="open")
 
     # Intent — query_text preserved exactly; query_params extracted by LLM at creation time
     query_text: str
-    query_params: dict[str, Any] | None = Field(default=None, sa_column=Column(JSON))
+    query_params: dict[str, Any] | None = Field(
+        default=None, sa_column=Column(JSON))
 
     # Provenance
     triggered_by: str | None = None  # human | connection-agent | beat-agent | schedule
     triggered_by_id: str | None = None
     triggered_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
-    parent_assignment: str | None = Field(default=None, foreign_key="assignments.id")
+    parent_assignment: str | None = Field(
+        default=None, foreign_key="assignments.id")
 
     # Execution
     artifacts_in: list[str] | None = Field(
@@ -140,4 +170,48 @@ class Assignment(SQLModel, table=True):
     )
 
     # Monitor-type only
-    monitor: dict[str, Any] | None = Field(default=None, sa_column=Column(JSON))
+    monitor: dict[str, Any] | None = Field(
+        default=None, sa_column=Column(JSON))
+
+
+class AnalysisScope(SQLModel, table=True):
+    """Durable coordination state for one analysis scope (currently one event group)."""
+
+    __tablename__ = "analysis_scopes"  # pyright: ignore[reportAssignmentType]
+
+    scope_key: str = Field(primary_key=True)
+    event_group: str
+    beat: str
+    geo: str
+    status: str = Field(default="idle")
+    dirty: bool = Field(default=False)
+    revision: int = Field(default=0)
+    active_execution_arn: str | None = None
+    last_input_at: datetime | None = None
+    last_run_started_at: datetime | None = None
+    last_run_completed_at: datetime | None = None
+    last_revision_started: int | None = None
+    last_revision_completed: int | None = None
+    last_brief_artifact_id: str | None = Field(
+        default=None, foreign_key="artifacts.id")
+    last_error: str | None = None
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
+
+
+class ApiClient(SQLModel, table=True):
+    """Machine API client credentials and authorization metadata."""
+
+    __tablename__ = "api_clients"  # pyright: ignore[reportAssignmentType]
+
+    id: str = Field(primary_key=True)
+    name: str
+    key_prefix: str = Field(index=True)
+    key_hash: str
+    roles: list[str] = Field(default_factory=list, sa_column=Column(JSON))
+    scopes: list[str] = Field(default_factory=list, sa_column=Column(JSON))
+    status: str = Field(default="active")  # active | revoked
+    created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
+    last_used_at: datetime | None = None
+    expires_at: datetime | None = None
+    rotated_from: str | None = Field(
+        default=None, foreign_key="api_clients.id")

@@ -1,11 +1,9 @@
 """Unit tests for shared fetch_url tool."""
 
-from types import SimpleNamespace
+from unittest.mock import MagicMock, patch
 
-import httpx
 import pytest
 
-from sidekick.agents.tools import http as http_tools
 from sidekick.agents.tools.http import (
     fetch_item_page_html,
     fetch_listing_html,
@@ -13,98 +11,88 @@ from sidekick.agents.tools.http import (
 )
 
 
-@pytest.fixture
-def httpx_mock(monkeypatch):
-    responses: list[tuple[str, dict]] = []
+def _make_pw_mock(
+    html: str | None = None,
+    content_type: str = "text/html; charset=utf-8",
+    status: int = 200,
+    url: str = "https://example.com/",
+    error: Exception | None = None,
+):
+    """Build a sync_playwright context manager mock."""
+    mock_response = MagicMock()
+    mock_response.status = status
+    mock_response.url = url
+    mock_response.headers = {"content-type": content_type}
 
-    def add_response(
-        url: str,
-        html: str | None = None,
-        content: bytes | None = None,
-        headers: dict | None = None,
-    ) -> None:
-        responses.append(
-            (
-                url,
-                {
-                    "html": html,
-                    "content": content,
-                    "headers": headers or {},
-                },
-            )
-        )
+    mock_page = MagicMock()
+    if error is not None:
+        mock_page.goto.side_effect = error
+    else:
+        mock_page.goto.return_value = mock_response
+    mock_page.content.return_value = html or ""
+    mock_page.route.return_value = None
 
-    def add_exception(exc: Exception, url: str) -> None:
-        responses.append((url, {"exc": exc}))
+    mock_context = MagicMock()
+    mock_context.new_page.return_value = mock_page
 
-    def handler(request: httpx.Request) -> httpx.Response:
-        for u, spec in responses:
-            if request.url.host in u or str(request.url) == u:
-                if "exc" in spec:
-                    raise spec["exc"]
-                body = spec.get("content")
-                if body is None and spec.get("html") is not None:
-                    body = spec["html"].encode()
-                elif body is None:
-                    body = b""
-                h = {"content-type": "text/html; charset=utf-8", **spec.get("headers", {})}
-                return httpx.Response(200, content=body, headers=h)
-        return httpx.Response(404)
+    mock_browser = MagicMock()
+    mock_browser.new_context.return_value = mock_context
 
-    transport = httpx.MockTransport(handler)
-    real = httpx.Client
+    mock_chromium = MagicMock()
+    mock_chromium.launch.return_value = mock_browser
 
-    def client_factory(**kw: object) -> httpx.Client:
-        return real(
-            transport=transport,
-            timeout=kw.get("timeout", 60.0),
-            follow_redirects=kw.get("follow_redirects", True),
-        )
+    mock_pw = MagicMock()
+    mock_pw.chromium = mock_chromium
 
-    monkeypatch.setattr(http_tools, "_http_client", client_factory)
-    return SimpleNamespace(add_response=add_response, add_exception=add_exception)
+    # sync_playwright() is used as a context manager
+    mock_cm = MagicMock()
+    mock_cm.__enter__ = MagicMock(return_value=mock_pw)
+    mock_cm.__exit__ = MagicMock(return_value=False)
+
+    return mock_cm
 
 
-def test_fetch_url_returns_text_for_html(httpx_mock):
-    httpx_mock.add_response(url="https://example.com/", html="<p>hi</p>")
-    r = fetch_url("https://example.com/", max_bytes=10000)
+def test_fetch_url_returns_text_for_html():
+    with patch("sidekick.agents.tools.http.sync_playwright", return_value=_make_pw_mock(html="<p>hi</p>")):
+        r = fetch_url("https://example.com/", max_bytes=10000)
     assert r.status_code == 200
     assert r.body_encoding == "text"
     assert "<p>hi</p>" in r.body
     assert r.error is None
 
 
-def test_fetch_url_base64_for_pdf(httpx_mock):
-    pdf = b"%PDF-1.4 minimal"
-    httpx_mock.add_response(
-        url="https://x.com/a.pdf",
-        content=pdf,
-        headers={"content-type": "application/pdf"},
-    )
-    r = fetch_url("https://x.com/a.pdf")
-    assert r.body_encoding == "base64"
+def test_fetch_url_empty_body_for_pdf():
+    with patch("sidekick.agents.tools.http.sync_playwright", return_value=_make_pw_mock(
+        content_type="application/pdf", url="https://x.com/a.pdf"
+    )):
+        r = fetch_url("https://x.com/a.pdf")
+    assert r.body == ""
     assert r.status_code == 200
+    assert "application/pdf" in r.content_type
 
 
-def test_fetch_url_records_error(httpx_mock):
-    httpx_mock.add_exception(httpx.ConnectError("refused"), url="https://bad.test/")
-    r = fetch_url("https://bad.test/")
+def test_fetch_url_records_error():
+    from playwright.sync_api import Error as PlaywrightError
+    with patch("sidekick.agents.tools.http.sync_playwright", return_value=_make_pw_mock(
+        error=PlaywrightError("refused")
+    )):
+        r = fetch_url("https://bad.test/")
     assert r.status_code == 0
     assert r.error
 
 
-def test_fetch_listing_html_strips_scripts(httpx_mock):
+def test_fetch_listing_html_strips_scripts():
     html = "<html><script>x</script><body><a href='/x'>a</a></body></html>"
-    httpx_mock.add_response(url="https://list.example/", html=html)
-    r = fetch_listing_html("https://list.example/")
+    with patch("sidekick.agents.tools.http.sync_playwright", return_value=_make_pw_mock(html=html)):
+        r = fetch_listing_html("https://list.example/")
     assert r.status_code == 200
     assert "<script" not in r.body
     assert "/x" in r.body or "a" in r.body
 
 
-def test_fetch_item_page_html_keeps_scripts(httpx_mock):
+def test_fetch_item_page_html_keeps_scripts():
     html = "<html><script>window.__ctx={}</script><body>y</body></html>"
-    httpx_mock.add_response(url="https://item.example/", html=html)
-    r = fetch_item_page_html("https://item.example/")
+    with patch("sidekick.agents.tools.http.sync_playwright", return_value=_make_pw_mock(html=html)):
+        r = fetch_item_page_html("https://item.example/")
     assert r.status_code == 200
     assert "window.__ctx" in r.body

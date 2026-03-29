@@ -1,5 +1,7 @@
 """Source registry service — CRUD operations on the sources table."""
 
+from __future__ import annotations
+
 import logging
 from datetime import UTC, datetime
 from typing import Any
@@ -8,7 +10,7 @@ from croniter import croniter
 from sqlmodel import Session, create_engine, select
 
 from sidekick.core.models import Source
-from sidekick.core.vocabulary import validate_beat, validate_geo
+from sidekick.core.vocabulary import SourceStatus, validate_beat, validate_geo
 
 logger = logging.getLogger(__name__)
 
@@ -47,14 +49,13 @@ class SourceRegistry:
         """List sources, optionally filtered by top-level column equality.
 
         Args:
-            filters: Column equality filters. Supported keys:
-                     beat, geo, examination_status, discovered_by.
+            filters: Column equality filters. Supported keys: beat, geo.
 
         Returns:
             All matching sources ordered by name.
         """
         filters = filters or {}
-        allowed = {"beat", "geo", "examination_status", "discovered_by"}
+        allowed = {"beat", "geo"}
         for key in filters:
             if key not in allowed:
                 raise ValueError(f"Unsupported filter key: {key!r}")
@@ -70,17 +71,19 @@ class SourceRegistry:
         """Return sources whose cron schedule is due for a fetch run.
 
         A source is due when:
-        - Its examination_status is "active" (examination has succeeded)
+        - Its ``status`` is ``active``
         - Its schedule type is "cron"
         - The next scheduled run after last_checked is at or before now
 
         Sources with no health record (never checked) are always due if they have a cron schedule.
         """
         now = datetime.now(UTC)
-        candidates = self.list(filters={"examination_status": "active"})
+        candidates = self.list()
         due = []
 
         for source in candidates:
+            if source.status != SourceStatus.ACTIVE:
+                continue
             if not source.schedule or source.schedule.get("type") != "cron":
                 continue
 
@@ -108,7 +111,8 @@ class SourceRegistry:
                 if next_run <= now:
                     due.append(source)
             except Exception:
-                logger.exception("Failed to evaluate cron for source %s", source.id)
+                logger.exception(
+                    "Failed to evaluate cron for source %s", source.id)
 
         return due
 

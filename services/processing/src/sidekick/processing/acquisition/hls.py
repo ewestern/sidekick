@@ -46,7 +46,8 @@ def _ffmpeg_hls_to_mp3(m3u8_url: str, out_path: Path) -> None:
             err_parts.append(exc.stderr.strip())
         if exc.stdout and exc.stdout.strip():
             err_parts.append(exc.stdout.strip())
-        detail = "\n".join(err_parts) if err_parts else f"exit code {exc.returncode}"
+        detail = "\n".join(
+            err_parts) if err_parts else f"exit code {exc.returncode}"
         raise RuntimeError(f"ffmpeg failed: {detail}") from exc
     except FileNotFoundError as exc:
         raise RuntimeError(

@@ -1,17 +1,13 @@
-"""Route raw artifacts to acquisition or content processors, and processed text to enrichment."""
+"""Eligibility helpers for acquisition, normalization, and enrichment — not a workflow engine."""
 
 from __future__ import annotations
 
 from typing import Literal
 
 from sidekick.core.models import Artifact
+from sidekick.core.vocabulary import ArtifactStatus, ProcessingProfile, Stage
 
 ProcessKind = Literal["pdf_text", "transcript"]
-EnrichKind = Literal["summary", "entity_extract"]
-
-_ENRICHABLE_CONTENT_TYPES = {"document-text", "transcript-clean"}
-
-
 class UnsupportedProcessingError(ValueError):
     """Raised when no acquisition or processor applies to an artifact."""
 
@@ -24,8 +20,8 @@ def _is_hls_url(url: str) -> bool:
 def can_acquire_hls_stub(artifact: Artifact) -> bool:
     """Return True if this row is an HLS stub awaiting ffmpeg capture."""
     return (
-        artifact.stage == "raw"
-        and artifact.status == "pending_acquisition"
+        artifact.stage == Stage.RAW
+        and artifact.status == ArtifactStatus.PENDING_ACQUISITION
         and artifact.acquisition_url is not None
         and _is_hls_url(artifact.acquisition_url)
     )
@@ -34,20 +30,27 @@ def can_acquire_hls_stub(artifact: Artifact) -> bool:
 def resolve_active_raw_processor(artifact: Artifact) -> ProcessKind:
     """Return the processor kind for a **complete** raw artifact.
 
+    ``processing_profile=evidence`` skips PDF text extraction and STT normalization
+    (archive-only raw).
+
     Args:
         artifact: Must be ``stage="raw"`` and ``status="active"`` with bytes available.
 
     Raises:
         UnsupportedProcessingError: If the artifact is not processable.
     """
-    if artifact.stage != "raw":
+    if artifact.stage != Stage.RAW:
         raise UnsupportedProcessingError(
             f"Processing expects stage=raw; got {artifact.stage!r}"
         )
-    if artifact.status != "active":
+    if artifact.status != ArtifactStatus.ACTIVE:
         raise UnsupportedProcessingError(
             f"Processing expects status=active (complete raw); got {artifact.status!r}. "
             "Run `sidekick-process acquire` for pending_acquisition stubs first."
+        )
+    if artifact.processing_profile == ProcessingProfile.EVIDENCE:
+        raise UnsupportedProcessingError(
+            "processing_profile=evidence skips normalization (archive-only raw)."
         )
     mt = artifact.media_type or ""
     if mt == "application/pdf":
@@ -57,32 +60,3 @@ def resolve_active_raw_processor(artifact: Artifact) -> ProcessKind:
     raise UnsupportedProcessingError(
         f"No processor for media_type={mt!r} content_type={artifact.content_type!r}"
     )
-
-
-def resolve_enrichment_input(artifact: Artifact) -> list[EnrichKind]:
-    """Return the enrichment processors to run against a processed text artifact.
-
-    Args:
-        artifact: Must be ``stage="processed"``, ``status="active"``, and
-            ``content_type`` one of ``document-text`` or ``transcript-clean``.
-
-    Returns:
-        List of enrichment processor kinds to run (always both summary and entity_extract).
-
-    Raises:
-        UnsupportedProcessingError: If the artifact cannot be enriched.
-    """
-    if artifact.stage != "processed":
-        raise UnsupportedProcessingError(
-            f"Enrichment expects stage=processed; got {artifact.stage!r}"
-        )
-    if artifact.status != "active":
-        raise UnsupportedProcessingError(
-            f"Enrichment expects status=active; got {artifact.status!r}"
-        )
-    if artifact.content_type not in _ENRICHABLE_CONTENT_TYPES:
-        raise UnsupportedProcessingError(
-            f"Enrichment expects content_type in {sorted(_ENRICHABLE_CONTENT_TYPES)}; "
-            f"got {artifact.content_type!r}"
-        )
-    return ["summary", "entity_extract"]

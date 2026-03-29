@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "sidekick-core"
 version = "0.1.0"
 description = "Shared data layer for the local news pipeline"
-requires-python = ">=3.12"
+requires-python = ">=3.13"
 dependencies = [
     "sqlmodel>=0.0.21",
     "alembic>=1.13",
@@ -16,7 +16,6 @@ dependencies = [
     "boto3>=1.34",
     "pydantic>=2.7",
     "pydantic-settings>=2.3",
-    "numpy>=1.26",
     "openai>=1.30",
     "python-dotenv>=1.0",
     "ulid-py>=1.1",

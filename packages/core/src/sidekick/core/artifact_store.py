@@ -7,7 +7,6 @@ Responsibilities:
 - Persist all bodies in object storage (`content_uri`); no inline column
 - Insert artifact row to Postgres
 - Complete two-phase raw stubs via :meth:`complete_acquisition`
-- Fire NOTIFY artifact_written after every successful write/update that should notify
 - Support structured + semantic query and lineage traversal
 """
 
@@ -16,17 +15,14 @@ import logging
 from typing import Any, Callable
 
 from sqlalchemy import text
-from sqlmodel import Session, create_engine, select
+from sqlmodel import Session, create_engine, select, desc
 
-from sidekick.core.event_bus import EventBus
 from sidekick.core.models import Artifact
 from sidekick.core.object_store import ObjectStore, S3ObjectStore
-from sidekick.core.vocabulary import validate_beat, validate_geo
+from sidekick.core.vocabulary import ArtifactStatus, ContentType, Stage, validate_beat, validate_geo
 
 logger = logging.getLogger(__name__)
 
-# Stages that do not require a derived_from lineage link
-_RAW_STAGES = {"raw"}
 
 class ArtifactStore:
     """Service for reading and writing pipeline artifacts.
@@ -38,20 +34,17 @@ class ArtifactStore:
         self,
         db_url: str,
         object_store: ObjectStore,
-        event_bus: EventBus,
         embed_fn: Callable[[str], list[float]] | None = None,
     ) -> None:
         """
         Args:
             db_url: SQLAlchemy-compatible Postgres connection string.
             object_store: ObjectStore implementation (S3/MinIO).
-            event_bus: EventBus implementation (LocalEventBus/AWSEventBus).
             embed_fn: Optional callable that takes a string and returns a list of 1536 floats.
                       When provided, artifacts without an embedding will have one generated.
         """
         self._engine = create_engine(db_url)
         self._object_store = object_store
-        self._event_bus = event_bus
         self._embed_fn = embed_fn
 
     # ------------------------------------------------------------------
@@ -84,7 +77,6 @@ class ArtifactStore:
             session.commit()
             session.refresh(artifact)
 
-        self._notify(artifact)
         logger.debug(
             "Wrote artifact %s (%s/%s)", artifact.id, artifact.stage, artifact.content_type
         )
@@ -148,12 +140,12 @@ class ArtifactStore:
             row = session.get(Artifact, artifact_id)
             if row is None:
                 raise KeyError(f"Artifact not found: {artifact_id}")
-            if row.status != "pending_acquisition":
+            if row.status != ArtifactStatus.PENDING_ACQUISITION:
                 raise ValueError(
                     f"complete_acquisition only applies to pending_acquisition stubs; "
                     f"artifact {artifact_id!r} has status={row.status!r}"
                 )
-            row.status = "active"
+            row.status = ArtifactStatus.ACTIVE
             row.content_uri = content_uri
             row.acquisition_url = None
             if media_type is not None:
@@ -167,7 +159,6 @@ class ArtifactStore:
             session.refresh(row)
             updated = row
 
-        self._notify(updated)
         logger.debug("Completed acquisition for artifact %s", artifact_id)
         return artifact_id
 
@@ -198,6 +189,27 @@ class ArtifactStore:
             KeyError: If the artifact does not exist.
         """
         return self.read_row(artifact_id)
+
+    def patch(self, artifact_id: str, **updates: Any) -> Artifact:
+        """Apply partial updates to an existing artifact row.
+
+        This is intended for metadata-only changes such as supersession pointers.
+
+        Raises:
+            KeyError: If the artifact does not exist.
+        """
+        with Session(self._engine) as session:
+            row = session.get(Artifact, artifact_id)
+            if row is None:
+                raise KeyError(f"Artifact not found: {artifact_id}")
+            for key, value in updates.items():
+                if not hasattr(row, key):
+                    raise ValueError(f"Unsupported artifact field: {key!r}")
+                setattr(row, key, value)
+            session.add(row)
+            session.commit()
+            session.refresh(row)
+            return row
 
     def get_content_bytes(self, artifact: Artifact) -> bytes:
         """Return raw bytes for an artifact with ``content_uri`` set.
@@ -249,22 +261,58 @@ class ArtifactStore:
 
             allowed_filters = {
                 "stage", "beat", "geo", "content_type", "event_group",
-                "assignment_id", "status", "source_id",
+                "assignment_id", "status", "source_id", "created_by",
+                "id", "topics", "period_start", "period_end", "story_key",
             }
             for key, value in filters.items():
+                if key.endswith("_gte") or key.endswith("_lte"):
+                    base_key = key[:-4]
+                    if base_key not in {"period_start", "period_end", "created_at"}:
+                        raise ValueError(f"Unsupported filter key: {key!r}")
+                    column = getattr(Artifact, base_key)
+                    stmt = stmt.where(column >= value if key.endswith("_gte") else column <= value)
+                    continue
+                if key == "ids":
+                    stmt = stmt.where(Artifact.id.in_(value))  # type: ignore[arg-type]
+                    continue
                 if key not in allowed_filters:
                     raise ValueError(f"Unsupported filter key: {key!r}")
-                stmt = stmt.where(getattr(Artifact, key) == value)
+                column = getattr(Artifact, key)
+                if key == "topics":
+                    values = value if isinstance(value, (list, tuple, set)) else [value]
+                    for topic in values:
+                        stmt = stmt.where(text("(:topic) = ANY(topics)").bindparams(topic=topic))
+                    continue
+                if isinstance(value, (list, tuple, set)):
+                    stmt = stmt.where(column.in_(list(value)))  # type: ignore[arg-type]
+                else:
+                    stmt = stmt.where(column == value)
 
             if embedding is not None:
                 stmt = stmt.order_by(
                     text("embedding <=> CAST(:vec AS vector)")
                 ).params(vec=json.dumps(embedding))
             else:
-                stmt = stmt.order_by(Artifact.created_at.desc())  # type: ignore[attr-defined]
+                # type: ignore[attr-defined]
+                stmt = stmt.order_by(desc(Artifact.created_at))
 
             stmt = stmt.limit(limit)
             return list(session.exec(stmt).all())
+
+    def semantic_query_text(
+        self,
+        query_text: str,
+        *,
+        filters: dict[str, Any] | None = None,
+        limit: int = 20,
+    ) -> list[Artifact]:
+        """Find artifacts similar to the supplied query text."""
+        if self._embed_fn is None:
+            raise ValueError("Semantic query requires embed_fn to be configured.")
+        query_text = query_text.strip()
+        if not query_text:
+            return []
+        return self.query(filters=filters, embedding=self._embed_fn(query_text), limit=limit)
 
     # ------------------------------------------------------------------
     # Lineage
@@ -283,7 +331,8 @@ class ArtifactStore:
             The starting artifact is not included.
         """
         if direction not in ("up", "down"):
-            raise ValueError(f"direction must be 'up' or 'down', got {direction!r}")
+            raise ValueError(
+                f"direction must be 'up' or 'down', got {direction!r}")
 
         visited: set[str] = {artifact_id}
         queue: list[str] = [artifact_id]
@@ -297,11 +346,13 @@ class ArtifactStore:
                     current = session.get(Artifact, current_id)
                     if current is None or not current.derived_from:
                         continue
-                    next_ids = [aid for aid in current.derived_from if aid not in visited]
+                    next_ids = [
+                        aid for aid in current.derived_from if aid not in visited]
                 else:
                     rows = session.exec(
                         select(Artifact).where(
-                            text("(:id) = ANY(derived_from)").bindparams(id=current_id)
+                            text("(:id) = ANY(derived_from)").bindparams(
+                                id=current_id)
                         )
                     ).all()
                     next_ids = [r.id for r in rows if r.id not in visited]
@@ -326,10 +377,26 @@ class ArtifactStore:
             raise ValueError("Artifact.content_type is required")
         if not artifact.stage:
             raise ValueError("Artifact.stage is required")
-        if artifact.stage not in _RAW_STAGES and not artifact.derived_from:
+        try:
+            ContentType(artifact.content_type)
+        except ValueError:
+            raise ValueError(
+                f"Unknown content_type {artifact.content_type!r}. "
+                f"Allowed values: {sorted(e.value for e in ContentType)}. "
+                "Adding a new content type requires updating ContentType in vocabulary.py and ARTIFACT_STORE.md."
+            )
+        if (
+            artifact.stage != Stage.RAW
+            and not artifact.derived_from
+            and not (
+                artifact.stage == Stage.PROCESSED
+                and artifact.content_type == ContentType.DOCUMENT_TEXT
+            )
+        ):
             raise ValueError(
                 f"Artifact.derived_from is required for stage={artifact.stage!r}. "
-                "Every non-raw artifact must declare what it was derived from."
+                "Every non-raw artifact must declare what it was derived from, "
+                "except direct-ingested processed document-text artifacts."
             )
         if artifact.beat is not None:
             validate_beat(artifact.beat)
@@ -339,7 +406,7 @@ class ArtifactStore:
 
     def _validate_content_storage(self, artifact: Artifact) -> None:
         """Require object storage for all rows except pending acquisition stubs."""
-        if artifact.status == "pending_acquisition":
+        if artifact.status == ArtifactStatus.PENDING_ACQUISITION:
             if not artifact.acquisition_url:
                 raise ValueError(
                     "pending_acquisition artifacts must set acquisition_url until completed."
@@ -359,31 +426,16 @@ class ArtifactStore:
         if artifact.content_uri:
             mt = (artifact.media_type or "").split(";")[0].strip().lower()
             if mt.startswith("text/") or artifact.content_type in (
-                "document-text",
-                "transcript-clean",
-                "summary",
+                ContentType.DOCUMENT_TEXT,
+                ContentType.SUMMARY,
             ):
                 try:
                     raw = self.get_content_bytes(artifact).decode("utf-8")
                     return raw[:8_000]
                 except (UnicodeDecodeError, ValueError):
                     pass
-        parts = [artifact.content_type, artifact.beat, artifact.geo, artifact.event_group]
+        parts = [artifact.content_type, artifact.beat,
+                 artifact.geo, artifact.event_group]
         if artifact.topics:
             parts.extend(artifact.topics)
         return " ".join(p for p in parts if p) or None
-
-    def _notify(self, artifact: Artifact) -> None:
-        """Fire artifact_written NOTIFY with a small routing payload."""
-        payload = {
-            "id": artifact.id,
-            "stage": artifact.stage,
-            "content_type": artifact.content_type,
-            "beat": artifact.beat,
-            "geo": artifact.geo,
-            "status": artifact.status,  # lets subscribers skip pending_acquisition stubs
-        }
-        try:
-            self._event_bus.publish("artifact_written", payload)
-        except Exception:
-            logger.exception("Failed to publish artifact_written for %s", artifact.id)

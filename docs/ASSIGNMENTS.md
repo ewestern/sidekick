@@ -2,7 +2,7 @@
 
 > **Status**: stable
 > **Scope**: Assignment types, execution flow, sub-assignment rules, and monitor lifecycle — authoritative for how targeted investigation requests are created, dispatched, and closed
-> **Last updated**: 2026-03-20
+> **Last updated**: 2026-03-22
 
 ---
 
@@ -92,14 +92,30 @@ Search the artifact store for what already exists on the topic. This combines:
 
 If existing artifacts are sufficient to answer the question, the assignment may complete here without dispatching any new work.
 
+### Artifact-chain templates (deterministic gap rules)
+
+Gap analysis uses explicit templates rather than ad hoc expectations:
+
+| Input artifact class | Required downstream chain |
+|---|---|
+| `raw` PDF (`status=active`) | `document-text` -> `entity-extract` -> `summary` |
+| `raw` audio/video (`status=active`) | `document-text` -> `entity-extract` -> `summary` |
+| `raw` with `status=pending_acquisition` | `complete_acquisition` first, then evaluate media template above |
+| Assignment requiring numeric/policy comparison | include `structured-data` when source content supports extraction |
+
+Event-group completeness is measured against these templates for all artifacts sharing the same `event_group`.
+
 ### 2. Gap Analysis
-Compare what exists against what would be needed for a complete picture:
-- Missing raw documents (no source coverage of this entity or event)
-- **Raw incomplete**: a `raw` row exists with **`status="pending_acquisition"`** (URL recorded; bytes not acquired yet). This is **not** “ready to process” — dispatch **acquisition** (ffmpeg / yt-dlp), not summarization or STT.
-- Missing processed artifacts (**`raw` exists, `status="active"`**, and content is present but no `document-text` / `transcript-clean` / etc. as required)
-- Missing analysis (processed exists but no beat agent has written a brief)
-- Missing angles (topic covered in one geo but not others that are relevant)
-- Missing time range (coverage exists but has a hole)
+Compare what exists against template requirements and assignment scope:
+- Missing raw source artifacts (no source coverage for target entities/event window)
+- **Raw incomplete**: `raw` exists with `status="pending_acquisition"` -> dispatch acquisition only
+- Missing normalization contract (`document-text`) for `raw` + `active`
+- Missing extraction/synthesis contracts (`entity-extract`, `summary`, and optionally `structured-data` when required by assignment type)
+- Missing analysis artifacts (`beat-brief`, `trend-note`, etc.) after required processed contracts exist
+- Missing cross-geo/cross-beat coverage required by scope
+- Missing time slices in requested period
+
+Deterministic rule: a processed gap is only closed when every required contract in the applicable chain template exists for the same lineage branch.
 
 ### 3. Dispatch
 For each identified gap, issue a targeted request:
@@ -198,3 +214,4 @@ Record significant design changes here. Keep the doc body current; use this log 
 | Date | Change | Rationale |
 |------|--------|-----------|
 | 2026-03-20 | Gap analysis distinguishes `pending_acquisition` from process-ready raw | Prevents assigning STT/summarization when bytes are not in object storage yet |
+| 2026-03-22 | Added explicit artifact-chain templates and event_group completeness rules for gap analysis | Makes assignment dispatch deterministic and implementable without implicit “as required” interpretation |

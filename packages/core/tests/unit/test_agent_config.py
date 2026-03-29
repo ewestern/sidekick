@@ -21,12 +21,14 @@ def _make_row(
     agent_id: str = "test-agent",
     model: str = "claude-sonnet-4-6",
     prompts: dict | None = None,
+    skills: list | None = None,
 ) -> AgentConfig:
     return AgentConfig(
         id="cfg_01",
         agent_id=agent_id,
         model=model,
         prompts=prompts or {"system": "You are a test agent."},
+        skills=skills or [],
     )
 
 
@@ -56,6 +58,15 @@ def test_resolve_returns_config_when_exists():
     assert result.agent_id == "ingestion-worker"
     assert result.model == "claude-sonnet-4-6"
     assert result.prompts == {"system": "You are a test agent."}
+    assert result.skills == []
+
+
+def test_resolve_returns_skills():
+    reg = _registry()
+    row = _make_row(skills=["news-values", "government-proceedings"])
+    with _patch_session(reg, row=row):
+        result = reg.resolve("test-agent")
+    assert result.skills == ["news-values", "government-proceedings"]
 
 
 def test_resolve_raises_when_no_config_exists():
@@ -145,7 +156,8 @@ def test_set_creates_new_config():
     mock_session.refresh = lambda obj: None
 
     with patch("sidekick.core.agent_config.Session", return_value=mock_session):
-        reg.set("new-agent", model="claude-sonnet-4-6", prompts={"system": "Hello"})
+        reg.set("new-agent", model="claude-sonnet-4-6",
+                prompts={"system": "Hello"})
 
     mock_session.add.assert_called_once()
     mock_session.commit.assert_called_once()
@@ -164,10 +176,12 @@ def test_set_updates_existing_config():
     mock_session.refresh = lambda obj: None
 
     with patch("sidekick.core.agent_config.Session", return_value=mock_session):
-        reg.set("test-agent", model="claude-opus-4-6", prompts={"system": "Updated"})
+        reg.set("test-agent", model="claude-opus-4-6", prompts={"system": "Updated"},
+                skills=["news-values"])
 
     assert existing.model == "claude-opus-4-6"
     assert existing.prompts == {"system": "Updated"}
+    assert existing.skills == ["news-values"]
 
 
 def test_set_invalidates_cache():

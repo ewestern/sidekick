@@ -2,7 +2,7 @@
 
 > **Status**: stable
 > **Scope**: Model and prompt configuration for agents — authoritative for how agent configs are stored, retrieved, and swapped at runtime
-> **Last updated**: 2026-03-18
+> **Last updated**: 2026-03-29 (agent-configs API endpoints built)
 
 ---
 
@@ -26,8 +26,7 @@ Each agent type defines a string constant for its `agent_id`. Examples:
 | Agent | agent_id |
 |---|---|
 | Ingestion worker | `"ingestion-worker"` |
-| Source examination | `"source-examination"` |
-| Beat agent (city council, Springfield) | `"beat-agent:government:city_council:us:il:springfield:springfield"` |
+| Beat agent (city council, Springfield) | `"beat-agent:government:city-council:us:il:springfield:springfield"` |
 | Editor agent | `"editor-agent"` |
 
 Beat and research agents may use colon-delimited IDs to allow per-beat or per-geo configs. Each is an independent row — there is no cascading lookup.
@@ -76,15 +75,19 @@ In a multi-process deployment (e.g. multiple Fargate tasks running beat agents),
 
 ---
 
-## Editorial API Endpoints (Phase 5)
+## API Endpoints
 
-The following endpoints will be added to the FastAPI editorial interface:
+The following endpoints are live in the FastAPI service (`services/api/`):
 
-| Method | Path | Action |
-|---|---|---|
-| `GET` | `/agent-configs` | List all config rows with current model and prompt slot names |
-| `PUT` | `/agent-configs/{agent_id}` | Create or update config (model + prompts) |
-| `DELETE` | `/agent-configs/{agent_id}` | Delete config row |
+| Method | Path | Roles | Action |
+|---|---|---|---|
+| `POST` | `/agent-configs` | admin | Create a new config row |
+| `GET` | `/agent-configs` | reader, editor, admin | List all config rows |
+| `GET` | `/agent-configs/{agent_id}` | reader, editor, admin | Get config by logical agent ID |
+| `PUT` | `/agent-configs/{agent_id}` | admin | Create or fully replace config (upsert) |
+| `DELETE` | `/agent-configs/{agent_id}` | admin | Delete config row |
+
+Authorization uses shared role guards (`reader`, `editor`, `admin`, `machine`) from `sidekick.api.auth`.
 
 ---
 
@@ -96,9 +99,12 @@ class AgentConfig(SQLModel, table=True):
     agent_id: str             # unique — logical agent name
     model: str                # LLM model identifier
     prompts: dict[str, str]   # slot_name -> prompt text
+    skills: list[str]         # skill IDs — directory names under skills/ (e.g. ["news-values"])
     updated_at: datetime
     updated_by: str | None    # user ID for audit trail
 ```
+
+The `skills` field is a list of skill directory names under the repo-level `skills/` directory (or `SKILLS_DIR` env var override in production). Agents that use skills load them via `load_skills_from_disk()` (core) and expose them through `StoreBackend` + `InMemoryStore`. An empty list means no skills are loaded.
 
 ---
 
@@ -107,4 +113,7 @@ class AgentConfig(SQLModel, table=True):
 | Date | Change | Rationale |
 |------|--------|-----------|
 | 2026-03-18 | Initial document — no code-level defaults, DB row required | Explicit configuration makes the active model and prompts unambiguous. Code defaults create silent fallback risk and discourage proper seeding |
+| 2026-03-23 | Added `skills` field — list of skill IDs loaded by agents at runtime | Enrichment processors and future agents need domain skills; storing skill IDs in the config row makes them auditable, swappable at runtime, and consistent with the model/prompt management pattern |
+| 2026-03-26 | Removed `source-examination` from the example agent ID table | Matches removal of the code-gen examination flow; spiders are hand-authored |
+| 2026-03-29 | Agent-configs API endpoints built in Phase 5 API layer | Updated section from future tense; actual routes include POST + GET-by-agent-id in addition to the planned PUT/DELETE |
 

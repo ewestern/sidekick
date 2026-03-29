@@ -34,7 +34,8 @@ def upgrade() -> None:
         sa.Column("related_sources", sa.ARRAY(sa.Text()), nullable=True),
         sa.Column("discovered_by", sa.Text(), nullable=True),
         sa.Column("registered_at", sa.DateTime(timezone=True), nullable=True),
-        sa.Column("examination_status", sa.Text(), server_default="pending", nullable=False),
+        sa.Column("examination_status", sa.Text(),
+                  server_default="pending", nullable=False),
         sa.Column("health", sa.JSON(), nullable=True),
         sa.PrimaryKeyConstraint("id"),
     )
@@ -60,8 +61,10 @@ def upgrade() -> None:
         sa.Column("content_uri", sa.Text(), nullable=True),
         sa.Column("acquisition_url", sa.Text(), nullable=True),
         sa.Column("created_by", sa.Text(), nullable=True),
-        sa.Column("created_at", sa.DateTime(timezone=True), server_default=sa.func.now()),
-        sa.Column("status", sa.Text(), server_default="active", nullable=False),
+        sa.Column("created_at", sa.DateTime(timezone=True),
+                  server_default=sa.func.now()),
+        sa.Column("status", sa.Text(),
+                  server_default="active", nullable=False),
         sa.Column("superseded_by", sa.Text(), nullable=True),
         sa.ForeignKeyConstraint(["source_id"], ["sources.id"]),
         sa.ForeignKeyConstraint(["superseded_by"], ["artifacts.id"]),
@@ -73,7 +76,8 @@ def upgrade() -> None:
         ["stage", "beat", "geo"],
     )
     op.create_index("ix_artifacts_event_group", "artifacts", ["event_group"])
-    op.create_index("ix_artifacts_assignment_id", "artifacts", ["assignment_id"])
+    op.create_index("ix_artifacts_assignment_id",
+                    "artifacts", ["assignment_id"])
     # ivfflat index for approximate nearest-neighbour cosine search
     op.execute(
         "CREATE INDEX ix_artifacts_embedding ON artifacts "
@@ -90,7 +94,8 @@ def upgrade() -> None:
         sa.Column("query_params", sa.JSON(), nullable=True),
         sa.Column("triggered_by", sa.Text(), nullable=True),
         sa.Column("triggered_by_id", sa.Text(), nullable=True),
-        sa.Column("triggered_at", sa.DateTime(timezone=True), server_default=sa.func.now()),
+        sa.Column("triggered_at", sa.DateTime(
+            timezone=True), server_default=sa.func.now()),
         sa.Column("parent_assignment", sa.Text(), nullable=True),
         sa.Column("artifacts_in", sa.ARRAY(sa.Text()), nullable=True),
         sa.Column("artifacts_out", sa.ARRAY(sa.Text()), nullable=True),

@@ -2,26 +2,31 @@
 
 > **Status**: stable
 > **Scope**: Stack decisions and build phases — authoritative for technology choices, local/production environment split, and build order
-> **Last updated**: 2026-03-20 (Phase 3 enrichment required before Phase 4)
+> **Last updated**: 2026-03-29 (Phase 4 complete; Phase 5 API layer built; Terraform expanded)
 
 ---
 
 > See `AGENT_DESIGN_PATTERNS.md` for framework selection rationale, state design, memory architecture, structured output conventions, and error handling patterns. This doc covers stack and build order; that doc covers implementation patterns.
 
+## AWS infrastructure (Terraform)
+
+- Module: [`infrastructure/modules/newsroom`](../infrastructure/modules/newsroom/README.md) — ECS Fargate task definitions (ingestion / processing / transcription / analysis), Lambda container images (`packages/lambda-handlers/Dockerfile` → ECR), RDS PostgreSQL, S3 artifact bucket, EFS (for agent skills), AWS Batch (GPU transcription), and four Step Functions state machines: `ingestion`, `processing`, `analysis`, and `orchestration`. The `analysis` machine is event-driven via EventBridge: a `summary` or `entity-extract` artifact write triggers the scope workflow (debounce → claim → run beat agent on Fargate → record → check for new inputs → quiet period → release). See [step_functions.tf](../infrastructure/modules/newsroom/step_functions.tf).
+- Module: [`infrastructure/modules/api`](../infrastructure/modules/api/README.md) — ECS Fargate service for the FastAPI API, ALB, and supporting IAM/security group config.
+- Module: [`infrastructure/modules/cognito`](../infrastructure/modules/cognito/README.md) — Cognito user pool and app client for human editorial authentication.
+- Production root: [`infrastructure/environments/production/`](../infrastructure/environments/production/) — wires all modules to the existing VPC and ECS cluster; set `newsroom_private_subnet_ids` via `terraform.tfvars` (see `terraform.tfvars.example`).
+
 ## Stack
 
 | Concern | Local | Production (AWS) |
 |---|---|---|
-| Stateful agent orchestration (Beat, Research, Connection) | LangGraph Graph API | LangGraph Graph API |
-| Open-ended agents (Editor, Discovery, Research search, Source examination) | DeepAgents (built on LangGraph) | DeepAgents (built on LangGraph) |
+| All agent roles (Beat, Research, Connection, Editor, Discovery, Research search) | DeepAgents (built on LangGraph) | DeepAgents (built on LangGraph) |
 | Scheduled ingestion | Scrapy (`CrawlerProcess`) | Scrapy (`CrawlerProcess`) |
 | Artifact metadata + vector index | Postgres + pgvector | Postgres + pgvector (RDS) |
 | Document / media storage | MinIO (S3-compatible) | S3 |
 | Inter-agent messaging | Postgres LISTEN/NOTIFY | EventBridge / SQS |
 | Assignment store | Postgres (separate table) | Postgres (RDS) |
-| Beat agent persistent state | LangGraph checkpoints via `PostgresSaver` | LangGraph checkpoints via `PostgresSaver` |
 | Schema management | SQLModel + Alembic | SQLModel + Alembic |
-| STT | WhisperX on CPU (small model) | WhisperX on AWS Batch (g4dn.xlarge spot) |
+| STT | WhisperX on CPU via **`sidekick-transcribe`** (`services/transcription`) | WhisperX on AWS Batch (g4dn.xlarge spot) with **sidekick-transcription** image |
 | Long-running agents (beat, connection) | Local processes | Fargate |
 | Short-lived jobs (ingestion, processing) | Local processes | Lambda or Fargate |
 
@@ -42,7 +47,6 @@ CREATE TABLE sources (
     name TEXT NOT NULL,
     endpoint TEXT,
     schedule JSONB,
-    expected_content JSONB,       -- declared at registration; guides examination
     beat TEXT,
     geo TEXT,
     related_sources TEXT[],
@@ -151,7 +155,7 @@ class ArtifactStore:
 `write()` fires a NOTIFY after every successful artifact insert:
 
 ```python
-NOTIFY artifact_written, '{"id": "art_a1b2c3", "stage": "processed", "beat": "government:city_council", "geo": "us:il:springfield:springfield", "content_type": "summary"}';
+NOTIFY artifact_written, '{"id": "art_a1b2c3", "stage": "processed", "beat": "government:city-council", "geo": "us:il:springfield:springfield", "content_type": "summary"}';
 ```
 
 Agents subscribe via a `NotifyListener` wrapper that:
@@ -173,30 +177,23 @@ Use **SQLModel + Alembic**. SQLModel (by the FastAPI author) lets you define Pyd
 
 **Environment abstraction**
 
-The event bus and object store differ between local and AWS. Define interfaces up front so agent code never imports environment-specific libraries directly:
+The object store differs between local and AWS. Define interfaces up front so agent code never imports environment-specific libraries directly:
 
 ```python
-class EventBus(Protocol):
-    def publish(self, event_type: str, payload: dict) -> None: ...
-    def subscribe(self, event_type: str, handler: Callable) -> None: ...
-
 class ObjectStore(Protocol):
     def put(self, key: str, content: bytes) -> str: ...   # returns URI
     def get(self, key: str) -> bytes: ...
 ```
 
-Two implementations:
-- `LocalEventBus`: wraps Postgres LISTEN/NOTIFY
-- `AWSEventBus`: wraps EventBridge/SQS; `subscribe()` is a no-op at runtime — routing is configured in infrastructure (CDK/Terraform)
-
+Implementation:
 - `MinIOObjectStore` / `S3ObjectStore`: identical boto3 code, different `endpoint_url`. Set `AWS_ENDPOINT_URL=http://localhost:9000` locally; unset in production.
 
-Agent code only ever sees the `EventBus` and `ObjectStore` protocols. Swap implementations via dependency injection at startup.
+Agent code only ever sees the `ObjectStore` protocol. Swap implementations via dependency injection at startup.
 
 For event handlers, use a decorator that works in both environments:
 
 ```python
-@event_handler("artifact_written", stage="processed", beat="government:city_council")
+@event_handler("artifact_written", stage="processed", beat="government:city-council")
 def handle_new_processed_artifact(event: ArtifactEvent):
     ...
 ```
@@ -212,7 +209,16 @@ Docker Compose with three services:
 
 One command to get a fully functional local environment: `docker compose up`.
 
-**Deliverable**: artifact store service with write/read/query/lineage, pub/sub listener, `AgentConfigRegistry` with TTL cache, Alembic migrations, environment abstraction layer, Docker Compose local dev setup, and basic tests against a local Postgres + MinIO instance.
+**Deliverable** ✓: artifact store service with write/read/query/lineage, pub/sub listener, `AgentConfigRegistry` with TTL cache, Alembic migrations, environment abstraction layer, Docker Compose local dev setup, and basic tests against a local Postgres + MinIO instance.
+
+Additional items built beyond the original Phase 1 scope:
+- `AssignmentStore` (`packages/core/src/sidekick/core/assignment_store.py`) — CRUD wrapper for the assignments table; used by beat agents to create research follow-up assignments.
+- `vocabulary.py` — controlled `ContentType`, `Stage`, and `ArtifactStatus` enums shared across all services.
+- `skills.py` — utility to build a DeepAgents `InMemoryStore` from flat skill text files.
+- `embeddings.py` — thin wrapper around OpenAI embeddings.
+- Migration 003: `api_clients` table (hashed API keys for machine auth).
+- Migration 004: `processing_profile` column on `artifacts` (controls which processors run).
+- Migration 005: `analysis_scopes` table — scope coordinator for the Step Functions beat-agent workflow (tracks dirty state, active execution ARN, revision counter, last brief artifact ID).
 
 ---
 
@@ -222,21 +228,15 @@ One command to get a fully functional local environment: `docker compose up`.
 
 CRUD operations on the `sources` table. Thin layer — no complex logic.
 
-**Source examination agent**
+**Spider authoring**
 
-DeepAgents (LangChain `create_react_agent`) — examining a source involves open-ended browsing where the number of steps is unknown at design time.
-
-The agent browses the source endpoint and writes a `SidekickSpider` subclass to `services/ingestion/src/sidekick/spiders/`. It does not create a DB row — that happens via `spiders sync` after developer review. Model configured inline; no `agent_configs` DB row required.
-
-```
-sidekick examine --url URL --beat BEAT --geo GEO [--name NAME]
-```
+New sources use `sidekick spiders scaffold` to generate a stub, then developers implement `SidekickSpider` subclasses under `services/ingestion/src/sidekick/spiders/`. `sidekick spiders sync` upserts registry rows after review. There is no separate code-gen CLI.
 
 **Spider harness**
 
 Scrapy-based deterministic ingestion. No LLM at crawl time. Components:
 - `SidekickSpider` base class — required class attributes validated via `SpiderMeta` (Pydantic)
-- `ArtifactWriterPipeline` — converts `RawItem` → `Artifact`; binary to object store, text inline
+- `ArtifactWriterPipeline` — converts `RawItem` → `Artifact`; stores all payloads in object storage via `content_uri`
 - `DeduplicationMiddleware` — loads seen URLs from artifact store on `spider_opened`; drops duplicates
 - `run_spider()` / `run_spiders()` — wires `CrawlerProcess`; updates source health afterward
 
@@ -247,106 +247,106 @@ Scrapy-based deterministic ingestion. No LLM at crawl time. Components:
 - `spiders due` — run all spiders whose cron schedule is due
 - `spiders test SPIDER_NAME` — dry-run (no artifact writes)
 
-**Deliverable** ✓: `sidekick examine` generates a spider file; `spiders sync` registers the source; `spiders run` fetches from it; `raw` artifacts appear in the store and fire `artifact_written` notifications.
+**Deliverable** ✓: committed spider files; `spiders sync` registers the source; `spiders run` / `spiders due` fetch from it; `raw` artifacts appear in the store and fire `artifact_written` notifications.
 
 ---
 
-### Phase 3 — Processing agents
+### Phase 3 — Processing agents ✓ (complete)
 
-Phase 3 lives in **`services/processing/`**: acquisition (complete async raw stubs) plus **text normalization and enrichment**. Orchestration in production can be Step Functions / Batch; locally, use the **`sidekick-process`** CLI.
+Phase 3 spans **`services/processing/`** and **`services/transcription/`**: acquisition (complete async raw stubs), **PDF text normalization**, **speech-to-text** (WhisperX in the transcription service), and **LLM enrichment**. Orchestration in production uses Step Functions / Batch; locally, use **`sidekick-process`** (processing) and **`sidekick-transcribe <artifact_id>`** (STT).
 
-Phase 3 must complete the full processing chain through `summary` and `entity-extract` before beat agents (Phase 4) are built. Beat agents' primary input is these enriched artifacts — not raw text or full transcripts. This keeps beat agents focused on longitudinal synthesis rather than per-document extraction, and means a single enrichment pass serves multiple downstream agents independently.
+Phase 3 must complete the full processing chain through `summary` and `entity-extract` before beat agents (Phase 4) are built. Beat agents' primary input is these enrichment contracts — not raw text or full transcripts. This keeps beat agents focused on longitudinal synthesis rather than per-document extraction, and means a single enrichment pass serves multiple downstream agents independently.
 
 **Event triggers**
 
 - **`acquisition_needed`** (from ingestion for HLS / yt-dlp stubs): dispatch acquisition — ffmpeg / yt-dlp, then `ArtifactStore.complete_acquisition()`.
-- **`artifact_written`** with `stage="raw"` and `status="active"`: triggers text extraction processors (`document-text`, `transcript-clean`). Ignore `pending_acquisition` stubs (no bytes yet).
-- **`artifact_written`** with `stage="processed"` and `content_type in ("document-text", "transcript-clean")`: triggers enrichment processors (`summary`, `entity-extract`).
+- **`artifact_written`** with `stage="raw"` and `status="active"`: triggers PDF → `document-text` (processing) and audio/video → `document-text` (transcription service). Ignore `pending_acquisition` stubs (no bytes yet).
+- **`artifact_written`** with `stage="processed"` and `content_type = "document-text"`: triggers enrichment through orchestration. For `full`, run `entity-extract` first and `summary` second; for `index`, run `entity-extract`; for `structured`, run `structured-data`.
 
 **Processors**
 
-Processing runs in two passes. The first pass normalizes bytes to text; the second enriches text into structured analysis artifacts.
+Processing runs in two passes. The first pass normalizes bytes to text; the second enriches text into extraction/synthesis contracts.
 
 | Step / processor | Triggers on | Produces |
 |---|---|---|
 | Acquisition (HLS, etc.) | `acquisition_needed` + raw stub | Completes same raw row (`active`, `content_uri` set) |
 | PDF text extraction | `raw` + `active` + `media_type = application/pdf` | `document-text` |
-| Transcript (STT) | `raw` + `active` + `audio/*` or `video/*` | `transcript-clean` |
-| Summarization | `processed` + `document-text` or `transcript-clean` | `summary` |
-| Entity extraction | `processed` + `document-text` or `transcript-clean` | `entity-extract` |
+| Transcript (STT) | `raw` + `active` + `audio/*` or `video/*` | `document-text` ( **`services/transcription`** ) |
+| Entity extraction | `processed` + `document-text` | `entity-extract` |
+| Summarization | `processed` + `document-text` + sibling `entity-extract` | `summary` |
 | Structured data extractor | `processed` + `document-text` where `content_type = budget` or `agenda` | `structured-data` |
 
-Each processor is a simple function, not a LangGraph graph — stateless transformation with no memory needed. **`document-text`** is the required intermediate for LLM-friendly plain text before summarization and NER. Enrichment processors (`summary`, `entity-extract`) use `llm.with_structured_output(PydanticModel)` — see `AGENT_DESIGN_PATTERNS.md`.
+Normalization to `document-text` is done by plain functions — stateless transforms with no decision-making — or by direct text ingestion when the spider already has canonical plain text. **Enrichment processors** (`summary`, `entity-extract`) **are DeepAgents** — they use the skills system for domain-informed extraction. Skills are loaded from the agent config row into an ephemeral `InMemoryStore` and exposed via `StoreBackend`. Structured output is produced via `response_format=ToolStrategy(PydanticModel)` — see `AGENT_DESIGN_PATTERNS.md`. **`document-text`** is the required intermediate for LLM-friendly plain text before enrichment.
 
 **Transcript processor (STT)**
 
-Use **WhisperX** in production — Faster-Whisper (CTranslate2 backend) with pyannote.audio for speaker diarization. Local development may use **faster-whisper** (CPU) in the processing service until WhisperX is wired.
+Implemented in **`services/transcription/`** — **WhisperX** (Faster-Whisper / CTranslate2 backend) with pyannote.audio for speaker diarization. CLI: **`sidekick-transcribe <artifact_id>`**. CPU locally, GPU on Batch in production.
 
 Context prompts are constructed per-source from source registry metadata:
 ```
 "Springfield City Council meeting. Members: Jane Smith, Bob Jones, Alice Chen.
 Topics may include: Zoning Ordinance 2026-14, FY2027 budget, Maple Street Elementary."
 ```
-The source registry entry knows the beat and geo; the beat agent's `known_entities` provides the entity list. Processing agents request this context when invoking WhisperX.
+The source registry entry provides beat/geo context. Optional named-entity hints can come from recent `entity-extract` artifacts on the same source/event group; do not couple STT bootstrapping to beat-agent internal state.
 
 *Locally*: run a small model on CPU. Keep a short test clip (5-10 min) for iteration.
 
-*On AWS*: AWS Batch job on a **g4dn.xlarge spot instance** (~$0.16/hr spot). Flow: **`raw` + `active`** audio/video artifact → job → WhisperX large-v3 → **`transcript-clean`** artifact written. A typical 2-hour council meeting costs ~$0.32 in GPU time.
+*On AWS*: AWS Batch job on a **g4dn.xlarge spot instance** (~$0.16/hr spot) using the **sidekick-transcription** container image. Flow: **`raw` + `active`** audio/video artifact → job → WhisperX large-v3 → **`document-text`** artifact written. A typical 2-hour council meeting costs ~$0.32 in GPU time.
 
 Use `large-v3` in production. The T4 GPU on g4dn.xlarge handles it at roughly real-time speed.
 
-**Deliverable**: Async raw stubs are acquired; `active` raw artifacts produce `document-text` and `transcript-clean`; those in turn produce `summary` and `entity-extract`. Each step fires another `artifact_written` notification. Processing runnable locally and deployable as container/Batch jobs. Beat agents (Phase 4) can start only after enrichment artifacts exist.
+**Deliverable** ✓: Async raw stubs are acquired; `active` raw artifacts and direct-ingested text artifacts produce `document-text`; those in turn produce `summary` and `entity-extract`. Each step fires another `artifact_written` notification. Processing runnable locally and deployable as container/Batch jobs.
 
 ---
 
-### Phase 4 — Beat agents
+### Phase 4 — Beat agents ✓ (complete)
 
-This is the first LangGraph graph in the system and the reference implementation for all stateful agents. All LLM calls use `llm.with_structured_output(PydanticModel)` — see `AGENT_DESIGN_PATTERNS.md`.
+Beat agents are DeepAgents — see `AGENT_DESIGN_PATTERNS.md` for the full pattern.
 
-**Primary input**: `summary` and `entity-extract` artifacts from Phase 3 enrichment. Beat agents read full `document-text` or `transcript-clean` artifacts only as an exception — when a summary is too lossy for a specific analytical question. Raw artifacts are accessible via lineage traversal but should never be the default read path. This separation ensures beat agents focus on longitudinal synthesis (tracking patterns, entities, and developments across time) rather than per-document extraction, which is already handled by Phase 3.
+**Primary input**: `summary` and `entity-extract` artifacts from Phase 3 enrichment. Beat agents read full `document-text` artifacts only as an exception — when a summary is too lossy for a specific analytical question.
 
-**Graph structure**
+**Tools** (actual): `query_artifacts`, `write_beat_brief`, `flag_item`, `create_research_assignment`. The agent decides which tools to call based on the artifact content.
 
-```
-[LISTEN for artifact_written] → receive_artifact → analyze → write_brief → update_state
-                                                          ↓
-                                                     flag_item (if warranted)
-```
+**Production orchestration** (event-driven via Step Functions + EventBridge):
+A `summary` or `entity-extract` artifact write fires an EventBridge event (`artifact_written`, `stage=processed`). The `analysis` Step Functions state machine handles:
+1. `UpsertScopeState` (Lambda) — creates or updates the `AnalysisScope` row for the event group; increments revision; marks dirty.
+2. `WaitDebounce` — configurable wait to absorb bursts of enrichment writes for the same event group.
+3. `ClaimScope` (Lambda) — acquires exclusive ownership; skips if another execution holds the lock.
+4. `RunBeatAgent` — launches the analysis ECS Fargate task running `sidekick-beat brief --beat … --geo … --event-group … --output-json`. Task token used for async completion.
+5. `RecordRunResult` (Lambda) — persists written artifact IDs and marks revision completed.
+6. `CheckForNewInputs` / `NeedsFollowupRun` — reruns if new enrichment arrived during execution.
+7. `WaitQuietPeriod` / `CheckQuietPeriod` / `QuietPeriodStable` — quiet-period reevaluation before releasing the scope.
+8. `ReleaseScope` (Lambda) — clears the execution lock.
 
-Beat agents wake on `artifact_written` filtered to `stage="processed"` and `content_type in ("summary", "entity-extract")` for their beat/geo.
+Locally: run directly with `sidekick-beat brief --beat <beat> --geo <geo> --event-group <id>` (event-group scope) or `--since <date> --until <date>` (date window scope, used for assignment-driven runs).
 
-**State schema**
+The `AnalysisScope` table (`analysis_scopes`, migration 005) is the coordination layer — it tracks `dirty`, `revision`, `active_execution_arn`, and `last_brief_artifact_id`. Scope coordination Lambdas live in `packages/lambda-handlers/`.
 
-```python
-class BeatAgentState(TypedDict):
-    beat: str
-    geo: str
-    narrative: str          # running summary of what's happening on this beat
-    known_entities: list[dict]
-    developing_stories: list[dict]  # {title, first_seen, artifact_ids, status}
-    pending_flags: list[str]        # artifact IDs flagged, not yet surfaced
-```
+**Agent state**: each beat-agent run is stateless (ephemeral DeepAgents run). No durable `/memories/` state is persisted between runs. Coordination state is fully captured by `AnalysisScope`.
 
-State is checkpointed to Postgres via `PostgresSaver` after every run. The beat agent's persistent memory is its LangGraph checkpoint — no separate memory system needed.
+**Reference implementation** ✓: `government` beat agent (`beat-agent:government` config) for `us:ca:shasta` sources.
 
-**Instantiation**
-
-One graph instance per beat (× geo). A `beat_agent_manager` process:
-- Reads the set of active beats/geos from the source registry
-- Starts a listener for each
-- Resumes from checkpoint if one exists
-
-**Reference implementation**: `government:city_council` beat agent in `us:il:springfield:springfield`. Build this one fully before generalizing.
-
-**Deliverable**: processed artifacts on a beat produce `beat-brief` and `flag` analysis artifacts; beat agent state persists across runs.
+**Deliverable** ✓: processed artifacts on a beat produce `beat-brief` and `flag` analysis artifacts; the analysis Step Functions workflow debounces, coordinates, and retries runs correctly.
 
 ---
 
-### Phase 5 — Editor agents and human editorial interface
+### Phase 5 — Editor agents and human editorial interface (API layer complete; editor agent pending)
 
-**Editor agent**
+**API service** ✓ (`services/api/`)
 
-DeepAgents (not LangGraph) — drafting and revision involve an open-ended multi-step loop whose length isn't known at design time. DeepAgents' built-in context summarization handles the long multi-turn feedback cycle cleanly. Each draft is an independent run (ephemeral `StateBackend`; no persistent state).
+FastAPI REST API with authentication built and deployed:
+- **Authentication**: Cognito JWT Bearer tokens (public users) + `X-API-Key` hashed in `api_clients` (machine/process clients). Route authorization via shared role guards: `reader`, `editor`, `admin`, `machine`.
+- **Routers built**: sources (CRUD), artifacts (list/get/patch/retract), assignments (CRUD), agent_configs (CRUD), api_clients (create/list/rotate/revoke).
+- **Terraform**: `infrastructure/modules/api/` (ECS Fargate service, ALB) and `infrastructure/modules/cognito/` (user pool + app client).
+- **Generated client**: `packages/api-client/` — typed Python client generated from the OpenAPI schema; used by agents and CLI tooling to call the API.
+
+**Remaining (editor agent and editorial workflow)**
+
+The editorial draft-review workflow is not yet built. What remains:
+
+*Editor agent* (`services/editor/` — not yet created):
+
+DeepAgents — drafting and revision involve an open-ended multi-step loop whose length isn't known at design time. Each draft is an independent run (ephemeral `StateBackend`; no persistent state).
 
 ```
 receive_flag → [DeepAgents: gather context, draft, iterate on feedback] → write_draft_artifact
@@ -356,18 +356,11 @@ receive_flag → [DeepAgents: gather context, draft, iterate on feedback] → wr
 
 Triggered when a `flag` artifact is written, or when a story assignment completes dispatch.
 
-**Human editorial interface**
-
-An API (FastAPI) exposing:
+*Draft review routes* (not yet added to `services/api/`):
 - `GET /queue` — drafts awaiting review, grouped by assignment if applicable
 - `POST /draft/{id}/approve` — publishes or moves to publication layer
 - `POST /draft/{id}/reject` — archives with reason
 - `POST /draft/{id}/send-back` — returns to editor agent with feedback note
-- `POST /assignments` — creates a new assignment
-- `GET /assignments/{id}` — assignment status and associated artifacts
-- `POST /sources` — register a new source; triggers source examination agent automatically
-- `GET /sources/{id}` — source entry with health and examination status
-- `POST /sources/{id}/examine` — manually trigger re-examination (e.g., after a site redesign)
 
 The send-back flow: the feedback note is appended to the editor agent's context, and it re-runs from `draft`.
 
@@ -383,13 +376,9 @@ Build these after the base pipeline is proven on real data, because:
 
 **Connection agent**
 
-LangGraph graph with persistent state. Runs on a schedule (e.g., every 4 hours) rather than event-triggered — it reads the full analysis layer, not individual artifacts.
+DeepAgent — see `AGENT_DESIGN_PATTERNS.md`. Runs on a schedule (e.g., every 4 hours) rather than event-triggered — it reads the full analysis layer, not individual artifacts.
 
-State tracks cross-beat threads it has already surfaced, to avoid repetition.
-
-```
-scan_new_analysis → semantic_cluster → entity_cross_reference → write_connection_memo
-```
+**Tools**: `semantic_cluster`, `entity_cross_reference`, `write_connection_memo`, `create_assignment`. Durable state under `/memories/` tracks cross-beat threads already surfaced to avoid repetition.
 
 Semantic clustering: embed the query "what themes appear across beats in the last N days?" and find artifact clusters. Entity cross-reference: find entities appearing in >1 beat.
 
@@ -426,15 +415,15 @@ Both use **DeepAgents** — they are open-ended search tasks where the number of
 ## Build sequence summary
 
 ```
-Phase 1: DB schema + artifact store service + pub/sub
-Phase 2: Source registry + ingestion agents
-Phase 3: Processing agents
-Phase 4: Beat agents (LangGraph, checkpointed)
-Phase 5: Editor agents + editorial API
-Phase 6: Connection agent + assignment system
+Phase 1: DB schema + artifact store service + pub/sub          ✓ complete
+Phase 2: Source registry + ingestion agents                    ✓ complete
+Phase 3: Processing agents                                     ✓ complete
+Phase 4: Beat agents (DeepAgents)                              ✓ complete
+Phase 5: Editor agents + editorial API                         ~ in progress (API layer done; editor agent pending)
+Phase 6: Connection agent + assignment system                  not started
 ```
 
-Each phase produces a testable vertical slice. After Phase 3 you can run ingestion → processing on real sources. After Phase 4 you have analysis. After Phase 5 you have a complete pipeline from source to human review.
+After Phase 3 you can run ingestion → processing on real sources. After Phase 4 (now complete) you have analysis artifacts. After Phase 5 you have a complete pipeline from source to human review.
 
 ---
 
@@ -442,13 +431,21 @@ Each phase produces a testable vertical slice. After Phase 3 you can run ingesti
 
 1. **Embedding model**: OpenAI `text-embedding-3-small` (1536-dim) is the pragmatic default. Dimension is baked into the schema (`vector(1536)`) and the ivfflat index — changing it later requires rebuilding the column. Decide before running the first migration.
 
-2. **LangGraph deployment**: LangGraph Cloud vs. self-hosted `langgraph-cli`. Cloud is easier to start; self-hosted avoids ongoing vendor dependency for a long-running production system.
-
-3. **Notification fan-out**: A single `artifact_written` channel works for small agent counts. If you end up with many beat agents, consider per-beat channels (`artifact_written:government:city_council:us:il:springfield:springfield`) to avoid agents waking up for irrelevant events. Easy to change early, harder to change once agents are deployed.
+2. **Notification fan-out**: A single `artifact_written` channel works for small agent counts. If you end up with many beat agents, consider per-beat channels (`artifact_written:government:city-council:us:il:springfield:springfield`) to avoid agents waking up for irrelevant events. Easy to change early, harder to change once agents are deployed.
 
 **Decided** (see `AGENT_DESIGN_PATTERNS.md` for rationale):
-- Agent framework split: LangGraph Graph API for Beat/Research/Connection; DeepAgents for Editor/Discovery/Research search/Source examination; Scrapy for ingestion; plain functions for Processing.
+- Agent framework: DeepAgents for all agent roles (including enrichment processors); Scrapy for ingestion; plain functions for normalization only (PDF text extraction, STT).
 - All LLM calls use `llm.with_structured_output(PydanticModel)` — no free-form string parsing.
+
+## Post-doc implementation follow-ups
+
+These are implementation tickets implied by the reconciled design docs:
+
+1. Enforce controlled `content_type` validation in `ArtifactStore.write()` (parallel to existing beat/geo validation).
+2. Define and implement row-level projection strategy for `entity-extract` structured fields (especially financial figures and motions/votes).
+3. Set embedding policy for extraction/index artifacts (including whether and how `entity-extract` bodies are embedded).
+4. Specify and implement connection-agent execution mode in production (schedule cadence, threshold buffering, replay behavior).
+5. Formalize artifact-chain templates in assignment orchestrator code so gap analysis is deterministic.
 
 ---
 
@@ -458,7 +455,9 @@ Record significant design changes here. Keep the doc body current; use this log 
 
 | Date | Change | Rationale |
 |------|--------|-----------|
-| 2026-03-18 | Split agent framework: LangGraph for Beat/Research/Connection; DeepAgents for Editor/Discovery/Research search/Source examination; plain functions for Processing | Match framework to control-flow ownership — fixed topology → LangGraph; open-ended planning → DeepAgents; stateless transform → no framework |
+| 2026-03-18 | Split agent framework: LangGraph for Beat/Research/Connection; DeepAgents for Editor/Discovery/Research search; plain functions for Processing | Match framework to control-flow ownership — fixed topology → LangGraph; open-ended planning → DeepAgents; stateless transform → no framework |
+| 2026-03-26 | Removed `sidekick examine` and source examination agent from the plan | Spiders are hand-authored; code-gen path was removed |
+| 2026-03-23 | Standardized on DeepAgents for all agent roles; removed LangGraph Graph API | Beat/research/connection agents make real decisions (`write_brief`, `flag_item`, entity lookups) — these are tool calls made when warranted, not predetermined graph nodes. DeepAgents covers all agent needs uniformly; stateless transforms remain plain functions |
 | 2026-03-18 | All LLM calls require `with_structured_output(PydanticModel)` | Type safety and explicit contracts; free-form string parsing is fragile at scale |
 | 2026-03-18 | Replaced fetch strategy vocabulary with playbook model; split ingestion into Source Examination Agent + Ingestion Worker | Fixed strategy types can't express real-world source complexity without growing into a DSL |
 | 2026-03-18 | Added `agent_configs` table and `AgentConfigRegistry` to Phase 1 | Model and prompt configuration must exist before any agent runs; belongs in the data layer alongside the other registries |
@@ -467,3 +466,12 @@ Record significant design changes here. Keep the doc body current; use this log 
 | 2026-03-20 | Phase 3: `services/processing/`, acquisition via `complete_acquisition`, processors only on `raw`+`active`; add `document-text` | Aligns processing with two-phase raw stubs; separates byte capture from STT/PDF text extraction; Step-Functions-friendly dispatch |
 | 2026-03-20 | Phase 3 now includes `summary` + `entity-extract` enrichment as required deliverables before Phase 4 | Beat agents' primary input must be enriched artifacts, not raw text. Enrichment is stateless per-document work (belongs in processing); beat agents' job is longitudinal synthesis. A single enrichment pass also serves multiple downstream agents independently. Phase 4 cannot start until Phase 3 enrichment is complete. |
 | 2026-03-21 | Phase 3 complete: `structured-data` extractor deferred | `summary` + `entity-extract` are the hard prerequisites for Phase 4 beat agents. `structured-data` is conditional on content_type (budget/agenda) and adds scope; deferred until the enrichment pattern is proven and beat agents are consuming the required artifacts. |
+| 2026-03-21 | Added Terraform `newsroom` module (ECS task defs, RDS Postgres, Step Functions skeleton) | Establishes production execution/orchestration primitives without recreating VPC or ECS cluster; production env wires module + documents subnet tfvars. |
+| 2026-03-22 | Aligned memory and artifact semantics with reconciled design docs; added implementation follow-up list | Removes checkpoint-as-primary-memory ambiguity and turns taxonomy/assignment decisions into concrete build tasks |
+| 2026-03-22 | Split STT into **`services/transcription`** (`sidekick-transcribe`, dedicated GPU Dockerfile) separate from **`services/processing`** | Independent deps and images; optional `stt` extra on processing was the wrong boundary |
+| 2026-03-23 | Reclassified enrichment processors (summary, entity-extract) as DeepAgents with skills | Skills provide domain knowledge (news-values, entity-and-actor-tracking, etc.) that plain functions cannot access. Processors are ephemeral — no durable state. Plain functions remain correct for normalization-only steps (PDF text, STT). |
+| 2026-03-24 | Ingestion `list-due` in production: shared logic in `sidekick.core.due_sources`; Lambda package `packages/lambda-handlers`; Terraform `null_resource` + `data.archive_file` zip + Step Functions `lambda:invoke` | Avoid Fargate for a trivial DB query; keep Scrapy out of the Lambda artifact; DB remains source of truth for due sources. |
+| 2026-03-28 | Beat agent orchestration via Step Functions + EventBridge instead of a `beat_agent_manager` process | Event-driven scope workflow (debounce → claim → RunBeatAgent on Fargate → record → check → quiet period → release) is more resilient and observable than a long-running listener process. `AnalysisScope` table provides coordination state; no durable agent memory needed. |
+| 2026-03-28 | Beat agent is stateless per run — no durable `/memories/` state | The scope coordination layer (`AnalysisScope`) captures all orchestration state. Agent memory across runs was not needed to produce useful `beat-brief` and `flag` artifacts in practice; added complexity for unproven benefit. Can be revisited once the base pipeline is running on real data. |
+| 2026-03-28 | Phase 5 split: API layer (auth + CRUD + Terraform) built first, editor agent deferred | The API foundation (Cognito, api_clients, all resource routes) is a prerequisite for the editorial workflow and useful independently for tooling. Editor agent and draft review routes are the remaining Phase 5 deliverable. |
+| 2026-03-29 | Added `packages/api-client/` — generated Python client for the API | Typed client used by agents, CLI tools, and tests to call the API without raw HTTP; generated from OpenAPI schema so it stays in sync automatically. |

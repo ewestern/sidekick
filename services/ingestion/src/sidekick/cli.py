@@ -1,23 +1,28 @@
-"""sidekick CLI — seed configs, examine sources, run spiders."""
+"""sidekick CLI — seed configs, fetch-url, spider scaffold/sync/run."""
 
 from __future__ import annotations
 
 import asyncio
+import json
 import logging
-from datetime import UTC, datetime
+from dataclasses import asdict
+from datetime import UTC, date, datetime
 
 import typer
 from rich.console import Console
+from rich.syntax import Syntax
 from rich.table import Table
 
-from sidekick.agents.examination.examination import examine_source
-from sidekick.core.models import Source
+from sidekick.agents.tools.http import fetch_url as http_fetch
+from sidekick.core.due_sources import list_due_spiders_payload
 from sidekick.core.object_store import create_object_store
 from sidekick.core.vocabulary import validate_beat, validate_geo
 from sidekick.runtime import build_runtime
 from sidekick.seed_configs import seed as seed_agent_configs
 from sidekick.spiders._discovery import discover_spiders
-from sidekick.spiders._runner import run_spider, run_spiders
+from sidekick.spiders._runner import RunResult, run_spider, run_spiders
+from sidekick.spiders._scaffold import scaffold_spider
+from sidekick.spiders.sync import sync_spiders
 
 app = typer.Typer(no_args_is_help=True, help="Local news ingestion CLI")
 console = Console()
@@ -25,52 +30,36 @@ console = Console()
 
 @app.command("seed-configs")
 def cmd_seed_configs() -> None:
-    """Upsert agent_configs for the source-examination (code-gen) agent."""
+    """Upsert agent_configs (ingestion seed hook; may be empty)."""
     seed_agent_configs()
     console.print("[green]Seeded agent_configs.[/green]")
 
 
-@app.command("examine")
-def cmd_examine(
-    goal: str = typer.Argument(help="What are we trying to retrieve from the source?"),
-    url: str = typer.Argument(help="Source endpoint URL"),
-    beat: str = typer.Argument(help="Coverage beat in canonical format (e.g. government:city_council)"),
-    geo: str = typer.Argument(help="Geography identifier in canonical format (e.g. us:il:springfield:springfield)"),
-    name: str | None = typer.Argument(None, help="Provisional source name"),
-    verbose: bool = typer.Option(False, "--verbose", "-v", help="Log each tool call and result"),
+@app.command("fetch-url")
+def cmd_fetch_url(
+    url: str = typer.Argument(help="URL to fetch"),
+    raw: bool = typer.Option(
+        False, "--raw", help="Print raw JSON result instead of rendered HTML"),
 ) -> None:
-    """Browse a source and generate a Scrapy spider file.
+    """Fetch a URL through the headless browser and print what the agent sees.
 
-    The agent browses the source, understands the page structure, and writes a spider
-    to sidekick/spiders/.  Review and commit the generated file, then run
-    ``sidekick spiders sync`` to register it in the database.
+    Useful for inspecting JS-rendered pages before editing a spider.
     """
-    if verbose:
-        logging.basicConfig(level=logging.INFO, format="%(message)s")
 
-    try:
-        validate_beat(beat)
-        validate_geo(geo)
-    except ValueError as exc:
-        console.print(f"[red]Error:[/red] {exc}")
-        raise typer.Exit(code=1)
-
-    console.print(f"Examining [cyan]{url}[/cyan]...")
-    path = asyncio.run(
-        examine_source(
-            goal=goal,
-            url=url,
-            beat=beat,
-            geo=geo,
-            name=name,
-        )
-    )
-    if path:
-        console.print(f"[green]Spider written to:[/green] {path}")
-        console.print("Review the file, then run [bold]sidekick spiders sync[/bold].")
+    result = http_fetch(url)
+    if raw:
+        console.print_json(json.dumps(result.to_dict()))
     else:
-        console.print("[red]Examination agent did not produce a spider file.[/red]")
-        raise typer.Exit(code=1)
+        if result.error:
+            console.print(
+                f"[red]Error:[/red] {result.error} (status {result.status_code})")
+            raise typer.Exit(code=1)
+        console.print(
+            f"[dim]status={result.status_code} url={result.final_url} content_type={result.content_type}[/dim]")
+        if result.body:
+            console.print(Syntax(result.body, "html", word_wrap=True))
+        else:
+            console.print("[yellow](empty body — binary or redirect)[/yellow]")
 
 
 # ── spiders sub-app ────────────────────────────────────────────────────────────
@@ -79,31 +68,91 @@ spiders_app = typer.Typer(help="Spider management commands")
 app.add_typer(spiders_app, name="spiders")
 
 
+@spiders_app.command("scaffold")
+def cmd_spiders_scaffold(
+    geo: str = typer.Argument(
+        help="Geo identifier (e.g. us:ca:shasta:redding)"),
+    endpoint: str = typer.Argument(help="Starting URL for the spider"),
+    source: str = typer.Argument(
+        help='Short source descriptor (e.g. "agendas", "videos", "packets")'),
+    beat: str | None = typer.Option(
+        None, "--beat", help="Optional default beat identifier for this spider"),
+    schedule: str | None = typer.Option(
+        None,
+        "--schedule",
+        "-s",
+        help='Cron expression (default: daily at local time when you run this command)',
+    ),
+) -> None:
+    """Generate a stub spider file ready for manual implementation.
+
+    File and identifiers are derived from geo + source:
+      agendas.py
+      src_us_ca_shasta_redding_agendas
+      redding-agendas  (Scrapy name)
+
+    Validates geo and optional beat, then writes a stub to services/ingestion/src/sidekick/spiders/.
+    Open the file and implement parse() — see services/ingestion/SPIDERS.md for guidance.
+    """
+    try:
+        if beat is not None:
+            validate_beat(beat)
+        validate_geo(geo)
+    except ValueError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(code=1)
+
+    try:
+        path = scaffold_spider(
+            beat=beat, geo=geo, source=source, endpoint=endpoint, schedule=schedule)
+    except (ValueError, FileExistsError) as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(code=1)
+
+    console.print(f"[green]Spider stub written to:[/green] {path}")
+    console.print(
+        "Implement [bold]parse()[/bold], then run [bold]sidekick spiders sync[/bold].")
+    console.print(
+        f"Inspect the page first: [bold]sidekick fetch-url {endpoint}[/bold]")
+
+
+@spiders_app.command("list-due")
+def cmd_spiders_list_due() -> None:
+    """Emit JSON list of source IDs whose cron schedule is due. No side effects.
+
+    Uses the source registry only (DB as source of truth); does not scan spider modules.
+    """
+    registry, _, _ = build_runtime()
+    output = list_due_spiders_payload(registry)
+    print(json.dumps(output))
+
+
 @spiders_app.command("list")
 def cmd_spiders_list() -> None:
     """List all discovered spider classes with DB health."""
-    registry, _, _, _ = build_runtime()
+    registry, _, _ = build_runtime()
     spiders = discover_spiders()
     if not spiders:
         console.print("No spiders found.")
         return
 
-    table = Table("source_id", "name", "beat", "geo", "schedule", "last_checked", "status")
+    table = Table("source_id", "name", "beat", "geo",
+                  "schedule", "last_checked", "status")
     for source_id, cls in sorted(spiders.items()):
         meta = cls.get_meta()
         try:
             source = registry.get(source_id)
             health = source.health or {}
             last_checked = health.get("last_checked", "-")
-            status = health.get("status", source.examination_status)
+            status = health.get("status", "-")
         except KeyError:
             last_checked = "(not synced)"
             status = "-"
         table.add_row(
             source_id,
             meta.name,
-            meta.beat,
-            meta.geo,
+            meta.beat.beat_id if meta.beat is not None else "-",
+            meta.geo.geo_id,
             meta.schedule or "-",
             last_checked,
             status,
@@ -113,56 +162,20 @@ def cmd_spiders_list() -> None:
 
 @spiders_app.command("sync")
 def cmd_spiders_sync() -> None:
-    """Upsert Source rows in DB from discovered spider classes.
+    """Upsert Source rows via the Sidekick API from discovered spider classes.
 
+    Reads SIDEKICK_API_URL and SIDEKICK_API_KEY from the environment.
     Health fields (last_checked, last_new_item, status) are preserved on update.
-    ``examination_status`` is set to ``active`` for all discovered spiders.
     """
-    registry, _, _, _ = build_runtime()
-    spiders = discover_spiders()
-    if not spiders:
+    try:
+        created, updated = sync_spiders()
+    except RuntimeError as exc:
+        console.print(f"[red]Error:[/red] {exc}")
+        raise typer.Exit(code=1)
+
+    if created == 0 and updated == 0:
         console.print("No spiders found — nothing to sync.")
         return
-
-    created = updated = 0
-    for source_id, cls in spiders.items():
-        meta = cls.get_meta()
-        schedule_dict = (
-            {"type": "cron", "expr": meta.schedule} if meta.schedule else None
-        )
-        try:
-            registry.get(source_id)
-            # Exists — update metadata fields but preserve health
-            registry.update(
-                source_id,
-                {
-                    "name": meta.name,
-                    "endpoint": meta.endpoint,
-                    "beat": meta.beat,
-                    "geo": meta.geo,
-                    "schedule": schedule_dict,
-                    "expected_content": meta.expected_content,
-                    "examination_status": "active",
-                },
-            )
-            updated += 1
-            console.print(f"  Updated [cyan]{source_id}[/cyan]")
-        except KeyError:
-            source = Source(
-                id=source_id,
-                name=meta.name,
-                endpoint=meta.endpoint,
-                beat=meta.beat,
-                geo=meta.geo,
-                schedule=schedule_dict,
-                expected_content=meta.expected_content,
-                examination_status="active",
-                discovered_by="spider",
-                registered_at=datetime.now(UTC),
-            )
-            registry.create(source)
-            created += 1
-            console.print(f"  Created [green]{source_id}[/green]")
 
     console.print(f"Sync complete: {created} created, {updated} updated.")
 
@@ -171,6 +184,19 @@ def cmd_spiders_sync() -> None:
 def cmd_spiders_run(
     spider_name: str = typer.Argument(help="Spider source_id or Scrapy name"),
     verbose: bool = typer.Option(False, "--verbose", "-v"),
+    output_json: bool = typer.Option(
+        False, "--output-json", help="Emit JSON artifact list and send SFN task success"),
+    max_items: int | None = typer.Option(
+        None,
+        "--max-items",
+        min=1,
+        help="Approximate cap on new RawItems emitted this run (natural crawl drain; omit for no cap)",
+    ),
+    min_date: str | None = typer.Option(
+        None,
+        "--min-date",
+        help="Drop items older than this date (YYYY-MM-DD). Requests with a known date are skipped before download.",
+    ),
 ) -> None:
     """Run a specific spider by source_id."""
     if verbose:
@@ -187,10 +213,28 @@ def cmd_spiders_run(
         console.print(f"[red]Spider not found:[/red] {spider_name}")
         raise typer.Exit(code=1)
 
-    registry, _, artifact_store, event_bus = build_runtime()
+    parsed_min_date: date | None = (
+        date.fromisoformat(min_date) if min_date else None
+    )
+    registry, _, artifact_store = build_runtime()
     object_store = create_object_store()
-    n = run_spider(cls, artifact_store, object_store, registry, event_bus, verbose=verbose)
-    console.print(f"Ingested [green]{n}[/green] new item(s).")
+    result: RunResult = run_spider(
+        cls,
+        artifact_store,
+        object_store,
+        registry,
+        verbose=verbose,
+        max_items=max_items,
+        min_date=parsed_min_date,
+    )
+    if output_json:
+        payload = {
+            "source_id": result.source_id,
+            "artifacts": [asdict(a) for a in result.artifacts],
+        }
+        print(json.dumps(payload))
+    else:
+        console.print(f"Ingested [green]{result.count}[/green] new item(s).")
 
 
 @spiders_app.command("due")
@@ -201,10 +245,10 @@ def cmd_spiders_due(
     if verbose:
         logging.basicConfig(level=logging.INFO, format="%(message)s")
 
-    registry, _, artifact_store, event_bus = build_runtime()
+    registry, _, artifact_store = build_runtime()
     object_store = create_object_store()
 
-    # get_due_sources() checks examination_status="active" + cron schedule
+    # get_due_sources() returns active sources whose cron schedule is due
     due_sources = registry.get_due_sources()
     if not due_sources:
         console.print("No sources due.")
@@ -219,15 +263,28 @@ def cmd_spiders_due(
         return
 
     console.print(f"Running {len(due_spiders)} spider(s)...")
-    results = run_spiders(due_spiders, artifact_store, object_store, registry, event_bus, verbose=verbose)
-    for source_id, count in results.items():
-        console.print(f"  {source_id}: [green]{count}[/green] new")
+    results = run_spiders(due_spiders, artifact_store,
+                          object_store, registry, verbose=verbose)
+    for source_id, result in results.items():
+        console.print(f"  {source_id}: [green]{result.count}[/green] new")
 
 
 @spiders_app.command("test")
 def cmd_spiders_test(
     spider_name: str = typer.Argument(help="Spider source_id or Scrapy name"),
-    dry_run: bool = typer.Option(False, "--dry-run", help="Skip artifact writes"),
+    max_items: int | None = typer.Option(
+        None,
+        "--max-items",
+        min=1,
+        help="Approximate cap on new RawItems emitted this run (natural crawl drain; omit for no cap)",
+    ),
+    min_date: str | None = typer.Option(
+        None,
+        "--min-date",
+        help="Drop items older than this date (YYYY-MM-DD). Requests with a known date are skipped before download.",
+    ),
+    dry_run: bool = typer.Option(
+        False, "--dry-run", help="Skip artifact writes"),
 ) -> None:
     """Run a spider with verbose logging but without writing artifacts (dry run).
 
@@ -244,7 +301,8 @@ def cmd_spiders_test(
     logging.basicConfig(level=logging.DEBUG, format="%(message)s")
 
     if dry_run:
-        console.print("[yellow]Dry run — no artifacts will be written.[/yellow]")
+        console.print(
+            "[yellow]Dry run — no artifacts will be written.[/yellow]")
         # Import here so Scrapy settings don't need real infra for a dry run
         from unittest.mock import MagicMock
 
@@ -254,13 +312,17 @@ def cmd_spiders_test(
         object_store.put.return_value = "s3://dry-run/fake"
         registry = MagicMock()
         registry.update_health.return_value = None
-        event_bus = MagicMock()
     else:
-        registry, _, artifact_store, event_bus = build_runtime()
+        registry, _, artifact_store = build_runtime()
         object_store = create_object_store()
+    parsed_min_date: date | None = (
+        date.fromisoformat(min_date) if min_date else None
+    )
 
-    n = run_spider(cls, artifact_store, object_store, registry, event_bus, verbose=True)
-    console.print(f"[green]{n}[/green] item(s) would be written.")
+    result = run_spider(cls, artifact_store, object_store,
+                        registry, verbose=True, max_items=max_items, min_date=parsed_min_date)
+    console.print(f"[green]{result.count}[/green] item(s) would be written.")
+    console.print(f"Artifacts: {json.dumps([asdict(a) for a in result.artifacts], indent=2)}")
 
 
 def main() -> None:

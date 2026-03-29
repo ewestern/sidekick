@@ -13,15 +13,13 @@ load_dotenv()
 # ── Base class source (included verbatim in the prompt) ───────────────────────
 
 
-
 DEFAULT_MODEL = "openai:gpt-5.4-mini"
 
 
 def seed(db_url: str | None = None) -> None:
     """Upsert agent_configs rows for unsupervised pipeline agents.
 
-    The source-examination agent is run interactively by developers and is
-    configured inline in examination.py — it does not need a DB row.
+    Ingestion does not currently seed agent rows beyond future pipeline needs.
     """
     # Nothing to seed yet — future agents (beat, editor, etc.) go here.
     _ = db_url  # reserved for when rows are added

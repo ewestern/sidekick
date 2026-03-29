@@ -3,3 +3,15 @@ __pycache__/**
 *.env
 .DS_Store
 .pytest_cache/**
+.cursor
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json

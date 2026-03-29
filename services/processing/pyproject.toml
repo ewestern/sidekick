@@ -10,10 +10,9 @@ requires-python = ">=3.12"
 dependencies = [
     "sidekick-core",
     "typer>=0.24.1",
-    "pypdf>=5.0",
+    "marker-pdf>=1.5",
     "python-dotenv>=1.0",
-    "torch>=2.10",
-    "whisperx>=3.1.1",
+    "deepagents>=0.4.11",
     "langchain-anthropic>=0.3",
     "langchain-core>=0.3",
 ]
