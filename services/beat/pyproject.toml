@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sidekick-beat"
+version = "0.1.0"
+description = "Beat agent — analysis tier (Phase 4)"
+requires-python = ">=3.12"
+dependencies = [
+    "sidekick-core",
+    "typer>=0.24.1",
+    "python-dotenv>=1.0",
+    "deepagents>=0.4.11",
+    "langchain-anthropic>=0.3",
+    "langchain-core>=0.3",
+]
+
+[project.scripts]
+sidekick-beat = "sidekick.beat.cli:main"
+
+[tool.uv.sources]
+sidekick-core = { workspace = true }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sidekick"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "pytest-asyncio>=1.3.0",
+]
