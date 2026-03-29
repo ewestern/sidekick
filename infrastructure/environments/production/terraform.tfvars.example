@@ -1,0 +1,33 @@
+# Copy to terraform.tfvars (not committed) and set real subnet IDs from your VPC.
+public_subnet_ids  = ["subnet-public-a", "subnet-public-b"]
+private_subnet_ids = ["subnet-private-a", "subnet-private-b"]
+# newsroom_name_prefix = "griffin-production-newsroom"
+newsroom_cognito_domain_prefix = "sidekick-newsroom-prod"
+# Admin SPA: callback for OAuth code flow; logout URL is the SPA origin (matches VITE_LOGOUT_URI).
+newsroom_cognito_callback_urls = [
+  "https://admin.example.com/callback",
+  "https://api.example.com/docs/oauth2-redirect",
+]
+newsroom_cognito_logout_urls = [
+  "https://admin.example.com/",
+]
+
+# Shared platform (ALB + ECS cluster)
+# shared_alb_name        = "sidekick-production-shared-alb"
+# shared_ecs_cluster_name = "griffin-production"
+# shared_alb_internal    = true
+# shared_rds_identifier  = "sidekick-production-postgres"
+# shared_rds_instance_class = "db.t4g.micro"
+# shared_rds_allocated_storage = 20
+# shared_rds_engine_version = "16"
+# shared_rds_database_name = "sidekick"
+# shared_rds_master_username = "sidekick"
+# shared_rds_skip_final_snapshot = false
+# shared_rds_deletion_protection = true
+# shared_rds_backup_retention_period = 7
+
+# Public API (ECS + ALB listener rule + target group)
+# api_name_prefix = "sidekick-production-api"
+# api_assign_public_ip  = false
+# api_container_image   = "123456789012.dkr.ecr.us-west-2.amazonaws.com/sidekick/api:latest"
+# api_extra_environment = { S3_BUCKET = "my-bucket" }
